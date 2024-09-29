@@ -6,7 +6,7 @@ has_toc: false
 nav_order: 1
 ---
 # PIC32CM JH01 Curiosity Nano+ Touch Evaluation Kit 
-<h4 align="left"> <img src = "image.png"> </h4>
+<h4 align="left"> <img src = "image.jpg"> </h4>
 
 This folder contains the MPLAB® Harmony 3 reference applications developed on [PIC32CM JH01 Curiosity Nano+ Touch Evaluation Kit](https://www.microchip.com/en-us/development-tool/EV29G58A).
 

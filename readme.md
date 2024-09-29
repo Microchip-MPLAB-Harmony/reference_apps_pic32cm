@@ -1,7 +1,7 @@
 ﻿![Microchip logo](https://raw.githubusercontent.com/wiki/Microchip-MPLAB-Harmony/Microchip-MPLAB-Harmony.github.io/images/microchip_logo.png)
 ![Harmony logo small](https://raw.githubusercontent.com/wiki/Microchip-MPLAB-Harmony/Microchip-MPLAB-Harmony.github.io/images/microchip_mplab_harmony_logo_small.png)
 
-# MPLAB® Harmony 3 Reference Applications on PIC32CM MCUs
+# MPLAB® Harmony 3 Reference Applications for PIC32CM MCUs
 
 MPLAB® Harmony 3 is an extension of the MPLAB® ecosystem for creating embedded firmware solutions for Microchip 32-bit SAM and PIC® microcontroller and microprocessor devices.  Refer to the following links for more information.
 
@@ -11,9 +11,9 @@ MPLAB® Harmony 3 is an extension of the MPLAB® ecosystem for creating embedded
 - [Microchip MPLAB® Harmony](https://www.microchip.com/mplab/mplab-harmony)
 - [Microchip MPLAB® Harmony Pages](https://microchip-mplab-harmony.github.io/)
 
-This repository contains the MPLAB® Harmony 3 Reference Applications on PIC32CM MCUs.
+This repository contains the MPLAB® Harmony 3 Reference Applications for PIC32CM MCUs.
 
-Reference Applications on PIC32CM MCUs are standalone applications which demonstrates specific features or capabilities of Microchip PIC32CM MCUs. These applications are developed on Microchip's PIC32CM MCU development boards/kits.
+Reference Applications for PIC32CM MCUs are standalone applications which demonstrates specific features or capabilities of Microchip PIC32CM MCUs. These applications are developed on Microchip's PIC32CM MCU development boards/kits.
 
 In addition to having the MCU, the PIC32CM MCU development boards/kits
 also provide support to exercise the features of MCU through extension hardware
@@ -27,7 +27,7 @@ Following are the typical application types in this repository
 - Applications demonstrating capabilities of Microchip PIC32CM MCU development boards/kits (Curiosity, Nano, etc.) which allows extending hardware capability through mikroBUS Click or Xplained Pro extensions.
 - Getting started applications pertaining to the PIC32CM MCU products. These getting started applications demonstrates usage of MPLAB Harmony 3 framework with MCC UI by exercising commonly used peripheral features.
 
-The above application types serve as a reference source to evaluate solutions on PIC32CM MCUs by developing applications using MPLAB Harmony 3 software framework.  
+The above application types serve as a reference source to evaluate solutions for PIC32CM MCUs by developing applications using MPLAB Harmony 3 software framework.  
 
 <span style="color:blue"> Note: The application examples in this repository are an alternative source of reference covering the above types. MPLAB Harmony 3 provides more product-specific examples on peripherals, drivers and middleware technologies. More such examples are available in the product/technology-specific repositories. </span>  
 
@@ -56,7 +56,7 @@ The above is not an exhaustive list of all MPLAB Harmony 3 packages and correspo
 
 | Folder     | Description                                               |
 | ---        | ---                                                       |
-| apps       | 32-bit MCU Example reference applications on PIC32CM MCUs |
+| apps       | 32-bit MCU Example reference applications for PIC32CM MCUs |
 | docs       | Reference applications help documentation                 |
 
 
