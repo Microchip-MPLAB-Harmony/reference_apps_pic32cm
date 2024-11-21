@@ -12,6 +12,7 @@ This folder contains the MPLAB® Harmony 3 reference applications developed on [
 | SI No | Demo Name | Download Link |  
 | --- | --- | -- |  
 | 1 | [SD Card](./pic32cm_ls00_cnano_sdcard/readme.md) | [Click Here](https://github.com/Microchip-MPLAB-Harmony/reference_apps_pic32cm/releases/latest/download/pic32cm_ls00_cnano_sdcard.zip)  | 
+| 2 | [Temperature Demo](./pic32cm_ls00_cnano_temp/readme.md) | [Click Here](https://github.com/Microchip-MPLAB-Harmony/reference_apps/releases/latest/download/pic32cm_ls00_cnano_temp.zip)  |  
 
 
 ### More Application Demos
