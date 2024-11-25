@@ -125,8 +125,8 @@ void APP_Initialize ( void )
 {   
     
     printf("\n\n\r-------------------------------------------------------------");
-    printf("\n\r       SD Card Example Application on PIC32CM LS00 Cnano      ");
-    printf("\n\r-------------------------------------------------------------");
+    printf("\n\n\r       SD Card Example Application on PIC32CM LS00 Cnano      ");
+    printf("\n\n\r-------------------------------------------------------------");
 
      /* Indicating that the process is beginning */
     printf("\n\n\r  Starting the process..."); 

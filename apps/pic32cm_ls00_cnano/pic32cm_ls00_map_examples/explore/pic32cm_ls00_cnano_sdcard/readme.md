@@ -46,7 +46,7 @@ nav_order: 2
 - [MPLAB X IDE](https://www.microchip.com/en-us/tools-resources/develop/mplab-x-ide) v6.20
 - [MPLAB Code Configurator Plugin](https://www.microchip.com/en-us/tools-resources/configure/mplab-code-configurator)  v5.5.1
 - [MPLAB XC32 Compiler](https://www.microchip.com/en-us/tools-resources/develop/mplab-xc-compilers) v4.45
-- [csp](https://github.com/Microchip-MPLAB-Harmony/csp) v3.19.6
+- [csp](https://github.com/Microchip-MPLAB-Harmony/csp) v3.19.7
 - CMSIS_5 v5.9.0
 - PIC32CM-LS_DFP v1.2.274
 
@@ -105,8 +105,7 @@ The pre-built hex file can be programmed by following the below steps.
 
 	<img src = "images/console_output.png">
 
-- After getting the **SD Card file writing is successful..!** output message in the serial terminal, the file on the SD card is verified by inserting the SD card into a PC, opening the file, and checking its contents. This confirms the file has been written correctly.
-
+- After receiving the **'SD Card file writing is successful..!'** message in the serial terminal, the file on the SD card is verified by inserting the SD card into a PC, opening the file, and checking its contents. This confirms that the file has been written correctly.
 ## Comments:
 - Reference Training Module: [Arm TrustZone Getting Started Application on PIC32CM LS60 (Arm Cortex-M23) MCUs](https://developerhelp.microchip.com/xwiki/bin/view/software-tools/harmony/pic32cm-trustzone-getting-started-training-module/)
 - This application demo builds and works out of box by following the instructions above in "Running the Demo" section. If you need to enhance/customize this application demo, you need to use the MPLAB Harmony v3 Software framework. Refer links below to setup and build your applications using MPLAB Harmony.

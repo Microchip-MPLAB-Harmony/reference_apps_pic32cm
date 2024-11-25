@@ -600,7 +600,7 @@
         <property key="memories.programmemory.ranges" value="0-7ffff"/>
         <property key="poweroptions.powerenable" value="false"/>
         <property key="programmerToGoFilePath"
-                  value="D:/harmony_projects/pic32cm_ls00_cnano/map_demo/explore/pic32cm_ls00_cnano_sdcard/firmware/sdcard_pic32cm_ls00_cnano.X/debug/pic32cm_ls00_cnano/sdcard_pic32cm_ls00_cnano_ptg"/>
+                  value="D:/h3/pic32cm_ls00_cnano_sdcard/firmware/sdcard_pic32cm_ls00_cnano.X/debug/pic32cm_ls00_cnano/sdcard_pic32cm_ls00_cnano_ptg"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.preservedataflash" value="false"/>
         <property key="programoptions.preservedataflash.ranges"
