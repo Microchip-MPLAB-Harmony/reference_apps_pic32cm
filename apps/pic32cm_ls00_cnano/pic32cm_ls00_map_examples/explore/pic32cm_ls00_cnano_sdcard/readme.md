@@ -105,6 +105,8 @@ The pre-built hex file can be programmed by following the below steps.
 
 	<img src = "images/console_output.png">
 
+- After getting the **SD Card file writing is successful..!** output message in the serial terminal, the file on the SD card is verified by inserting the SD card into a PC, opening the file, and checking its contents. This confirms the file has been written correctly.
+
 ## Comments:
 - Reference Training Module: [Arm TrustZone Getting Started Application on PIC32CM LS60 (Arm Cortex-M23) MCUs](https://developerhelp.microchip.com/xwiki/bin/view/software-tools/harmony/pic32cm-trustzone-getting-started-training-module/)
 - This application demo builds and works out of box by following the instructions above in "Running the Demo" section. If you need to enhance/customize this application demo, you need to use the MPLAB Harmony v3 Software framework. Refer links below to setup and build your applications using MPLAB Harmony.
