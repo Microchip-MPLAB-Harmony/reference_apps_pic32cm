@@ -40,7 +40,7 @@ The MCC Harmony project graph would look like this:
 - [MPLAB X IDE](https://www.microchip.com/en-us/tools-resources/develop/mplab-x-ide) v6.20
 - [MPLAB Code Configurator Plugin](https://www.microchip.com/en-us/tools-resources/configure/mplab-code-configurator)  v5.5.1
 - [MPLAB XC32 Compiler](https://www.microchip.com/en-us/tools-resources/develop/mplab-xc-compilers) v4.45
-- [csp](https://github.com/Microchip-MPLAB-Harmony/csp) v3.19.6
+- [csp](https://github.com/Microchip-MPLAB-Harmony/csp) v3.19.7
 - CMSIS_5 v5.9.0
 - PIC32CM-LS_DFP v1.2.274
 

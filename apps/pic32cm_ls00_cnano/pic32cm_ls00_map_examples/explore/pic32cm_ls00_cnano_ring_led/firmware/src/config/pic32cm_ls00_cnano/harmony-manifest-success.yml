@@ -4,7 +4,7 @@
 
 
 project: pic32cm_ls00_cnano_ring_led
-creation_date: 2024-11-13T16:08:50.794+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+creation_date: 2024-11-26T16:31:13.990+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
 operating_system: Windows 10
 mcc_mode: IDE            # [IDE|Standalone|Headless]
 mcc_version: v5.5.1
@@ -14,7 +14,7 @@ harmony_version: v1.5.3
 compiler: XC32 4.45
 
 modules:
-    - {name: "csp", version: "v3.19.6"}
+    - {name: "csp", version: "v3.19.7"}
     - {name: "CMSIS_5", version: "5.9.0"}
 
 packs:
