@@ -204,9 +204,6 @@
           <itemPath>../src/config/pic32cm_ls00_cnano/initialization.c</itemPath>
         </logicalFolder>
       </logicalFolder>
-      <logicalFolder name="trustZone" displayName="trustZone" projectFiles="true">
-        <itemPath>../src/trustZone/nonsecure_entry.c</itemPath>
-      </logicalFolder>
       <itemPath>../src/main.c</itemPath>
     </logicalFolder>
   </logicalFolder>
@@ -315,8 +312,7 @@
         <property key="additional-options-use-response-files" value="false"/>
         <property key="additional-options-write-sla" value="false"/>
         <property key="allocate-dinit" value="false"/>
-        <property key="appendMe"
-                  value=",--cmse-implib --out-implib=../../firmware/temp_pic32cm_ls00_cnano.X/temp_pic32cm_ls00_cnano_secure_sg_veneer.lib"/>
+        <property key="appendMe" value=""/>
         <property key="code-dinit" value="false"/>
         <property key="ebase-addr" value=""/>
         <property key="enable-check-sections" value="false"/>
@@ -344,7 +340,7 @@
         <property key="oXC32ld-extra-opts" value=""/>
         <property key="optimization-level" value=""/>
         <property key="preprocessor-macros"
-                  value="ANSC_SIZE=0x200;AS_SIZE=0x40000;BNSC_SIZE=0x0;BOOTPROT_SIZE=0x0;RS_SIZE=0x8000;SECURE"/>
+                  value="ANSC_SIZE=0x0;AS_SIZE=0x40000;BNSC_SIZE=0x0;BOOTPROT_SIZE=0x0;RS_SIZE=0x8000;SECURE"/>
         <property key="remove-unused-sections" value="true"/>
         <property key="report-memory-usage" value="false"/>
         <property key="serial-length" value=""/>
@@ -353,7 +349,6 @@
         <property key="symbol-stripping" value=""/>
         <property key="trace-symbols" value=""/>
         <property key="warn-section-align" value="false"/>
-        <appendMe value=",--cmse-implib --out-implib=../../firmware/temp_pic32cm_ls00_cnano.X/temp_pic32cm_ls00_cnano_secure_sg_veneer.lib"/>
       </C32-LD>
       <C32CPP>
         <property key="additional-warnings" value="false"/>

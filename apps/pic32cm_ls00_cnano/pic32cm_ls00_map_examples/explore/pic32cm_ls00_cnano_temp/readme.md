@@ -1,6 +1,6 @@
 ---
 grand_parent: Reference Applications
-parent: PIC32CM LS00 Curiosity Nano+ Touch Evaluation Kit
+parent: PIC32CM LS00 Curiosity Nano + Touch Evaluation Kit
 title: Temperature example Application
 nav_order: 11
 ---
@@ -8,13 +8,13 @@ nav_order: 11
 <img src = "images/microchip_logo.png">
 <img src = "images/microchip_mplab_harmony_logo_small.png">
 
-# Temperature example Application on PIC32CM LS00 Curiosity Nano+ Touch Evaluation Kit
+# Temperature example Application on PIC32CM LS00 Curiosity Nano + Touch Evaluation Kit
 <h2 align="center"> <a href="https://github.com/Microchip-MPLAB-Harmony/reference_apps/releases/latest/download/pic32cm_ls00_cnano_temp.zip" > Download </a> </h2>
 
 -----
 ## Description:
 
-> The application reads the current room temperature from the temperature sensor on the Curiosity Nano Explorer. The temperature read is displayed on a serial console periodically every 500 milliseconds. The periodicity of the temperature values displayed on the serial console is changed to 1 second, 2 seconds, 4 seconds and back to 500 milliseconds every time the switch SW1 is pressed on the PIC32CM LS00 Curiosity Nano+ Touch Evaluation Kit. Also, an LED1 is toggled every time the temperature is displayed on the serial console.
+> The application reads the current room temperature from the temperature sensor on the Curiosity Nano Explorer. The temperature read is displayed on a serial console periodically every 500 milliseconds. The periodicity of the temperature values displayed on the serial console is changed to 1 second, 2 seconds, 4 seconds and back to 500 milliseconds every time the switch SW1 is pressed on the PIC32CM LS00 Curiosity Nano + Touch Evaluation Kit. Also, an LED1 is toggled every time the temperature is displayed on the serial console.
 
 
 ## Modules/Technology Used:
@@ -35,7 +35,7 @@ The MCC Harmony project graph would look like this:
 
 ## Hardware Used:
 
-- [PIC32CM LS00 Curiosity Nano+ Touch Evaluation Kit](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/EV41C56A)
+- [PIC32CM LS00 Curiosity Nano + Touch Evaluation Kit](https://www.microchip.com/DevelopmentTools/ProductDetails/PartNO/EV41C56A)
 - [Curiosity Nano Explorer](https://www.microchip.com/en-us/development-tool/EV58G97A)
 
 ## Software/Tools Used:
@@ -43,7 +43,7 @@ The MCC Harmony project graph would look like this:
 - [MPLAB X IDE](https://www.microchip.com/en-us/tools-resources/develop/mplab-x-ide) v6.20
 - [MPLAB Code Configurator Plugin](https://www.microchip.com/en-us/tools-resources/configure/mplab-code-configurator)  v5.5.1
 - [MPLAB XC32 Compiler](https://www.microchip.com/en-us/tools-resources/develop/mplab-xc-compilers) v4.45
-- [csp](https://github.com/Microchip-MPLAB-Harmony/csp) v3.19.5
+- [csp](https://github.com/Microchip-MPLAB-Harmony/csp) v3.19.7
 - CMSIS_5 v5.9.0
 - PIC32CM-LS_DFP v1.2.274
 
@@ -53,9 +53,9 @@ Refer [Project Manifest](./firmware/src/config/pic32cm_ls00_cnano/harmony-manife
 <span style="color:blue"> Because Microchip regularly update tools, occasionally issue(s) could be discovered while using the newer versions of the tools. If the project doesn’t seem to work and version incompatibility is suspected, It is recommended to double-check and use the same versions that the project was tested with. </span> To download original version of MPLAB Harmony v3 packages, refer to document [How to Use the MPLAB Harmony v3 Project Manifest Feature](https://ww1.microchip.com/downloads/en/DeviceDoc/How-to-Use-the-MPLAB-Harmony-v3-Project-Manifest-Feature-DS90003305.pdf)
 
 ## Setup:
-- Connect the Type-A male to Micro-B USB cable to Micro-B DEBUG USB port to program and debug the PIC32CM LS00 Curiosity Nano+ Touch Evaluation Kit.  
+- Connect the Type-A male to Micro-B USB cable to Micro-B DEBUG USB port to program and debug the PIC32CM LS00 Curiosity Nano + Touch Evaluation Kit.  
 
-  <img src = "images/LS00_cnano_setup.png" width="670" height="570" align="middle">
+  <img src = "images/ls00_cnano_setup.png" width="670" height="570" align="middle">
  
  **Note:** Remove the shorted jumper on the *Microphone OUT* for I2C communication as shown in the above figure.
 
@@ -92,14 +92,14 @@ The pre-built hex file can be programmed by following the below steps.
 - Vary the temperature by placing your finger on the temperature sensor (for a few seconds)
 
   <img src = "images/temp_sensor_placement.png" width="630" height="550" align="middle">  
-- Press the switch SW1 on PIC32CM LS00 Curiosity Nano+ Touch Evaluation Kit to change the default sampling rate to one second
+- Press the switch SW1 on PIC32CM LS00 Curiosity Nano + Touch Evaluation Kit to change the default sampling rate to one second
 
   <img src = "images/user_button_placement.png" width="615" height="520" align="middle">
   
 - After the switch SW1 press, the following message is displayed in the serial terminal. 
 
   <img src = "images/result2.png" width="600" height="280" align="middle">  
-- Every subsequent pressing of switch SW1 on PIC32CM LS00 Curiosity Nano+ Touch Evaluation Kit changes the default sampling rate to two seconds, four seconds and 500 ms and back to one second in cyclic order as shown below
+- Every subsequent pressing of switch SW1 on PIC32CM LS00 Curiosity Nano + Touch Evaluation Kit changes the default sampling rate to two seconds, four seconds and 500 ms and back to one second in cyclic order as shown below
 
   <img src = "images/result3.png" width="600" height="510" align="middle">  
 - While the temperature sampling rate changes on every switch SW1 press, notice the LED1 toggling at the same sampling rate
