@@ -10,7 +10,7 @@ This folder contains the MPLAB® Harmony 3 reference applications developed on [
 
 | SI No | Demo Name | Download Link |  
 | --- | --- | -- |  
-| 1 | TBD | TBD  |  
+| 1 | [Sensor Fusion AWS IoT](./pic32cm_ls00_cnano_aws_iot/readme.md) | [Click Here](https://github.com/Microchip-MPLAB-Harmony/reference_apps/releases/latest/download/pic32cm_ls00_cnano_aws_iot.zip)  |  
 
 
 ### More Application Demos
