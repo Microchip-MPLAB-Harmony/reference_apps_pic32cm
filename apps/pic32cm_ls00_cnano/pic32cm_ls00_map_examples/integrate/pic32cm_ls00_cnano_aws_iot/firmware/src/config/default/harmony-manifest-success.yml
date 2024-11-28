@@ -4,7 +4,7 @@
 
 
 project: pic32cm_ls00_cnano_aws_iot
-creation_date: 2024-11-05T15:41:01.698+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+creation_date: 2024-11-28T18:22:51.807+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
 operating_system: Windows 10
 mcc_mode: IDE            # [IDE|Standalone|Headless]
 mcc_version: v5.5.1
@@ -14,7 +14,7 @@ harmony_version: v1.5.3
 compiler: XC32 4.45
 
 modules:
-    - {name: "csp", version: "v3.19.6"}
+    - {name: "csp", version: "v3.19.7"}
     - {name: "core", version: "v3.13.5"}
     - {name: "wireless_system_rnwf", version: "v2.0.0"}
     - {name: "CMSIS_5", version: "5.9.0"}

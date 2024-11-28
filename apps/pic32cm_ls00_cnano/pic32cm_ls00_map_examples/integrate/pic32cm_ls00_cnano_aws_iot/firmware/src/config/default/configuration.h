@@ -118,18 +118,18 @@ extern "C" {
 #define SYS_RNWF_MQTT_TLS_SERVER_NAME        "a1iq91fd6ih7tv-ats.iot.us-east-2.amazonaws.com"
 #define SYS_MQTT_AZURE_DOMAIN_NAME_VERIFY    NULL
 #define SYS_RNWF_MQTT_CallbackHandler           APP_MQTT_Callback
+/* TIME System Service Configuration Options */
+#define SYS_TIME_INDEX_0                            (0)
+#define SYS_TIME_MAX_TIMERS                         (10)
+#define SYS_TIME_HW_COUNTER_WIDTH                   (24)
+#define SYS_TIME_TICK_FREQ_IN_HZ                    (1000)
+
 
 #define SYS_DEBUG_ENABLE
 #define SYS_DEBUG_GLOBAL_ERROR_LEVEL       SYS_ERROR_DEBUG
 #define SYS_DEBUG_BUFFER_DMA_READY
 #define SYS_DEBUG_USE_CONSOLE
 
-
-/* TIME System Service Configuration Options */
-#define SYS_TIME_INDEX_0                            (0)
-#define SYS_TIME_MAX_TIMERS                         (5)
-#define SYS_TIME_HW_COUNTER_WIDTH                   (24)
-#define SYS_TIME_TICK_FREQ_IN_HZ                    (1000)
 
 #define SYS_CONSOLE_DEVICE_MAX_INSTANCES   			(1U)
 #define SYS_CONSOLE_UART_MAX_INSTANCES 	   			(1U)

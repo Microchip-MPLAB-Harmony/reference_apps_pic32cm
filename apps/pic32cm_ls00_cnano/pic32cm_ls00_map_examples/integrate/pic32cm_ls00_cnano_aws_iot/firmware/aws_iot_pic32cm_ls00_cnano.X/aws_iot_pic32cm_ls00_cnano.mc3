@@ -3233,7 +3233,7 @@
         &lt;ElementPosition dnOrder=&quot;16&quot; id=&quot;sysWifiRNWF&quot; x=&quot;560&quot; y=&quot;18&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;17&quot; id=&quot;sys_console&quot; x=&quot;514&quot; y=&quot;255&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;18&quot; id=&quot;sys_debug&quot; x=&quot;704&quot; y=&quot;313&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;19&quot; id=&quot;sys_time&quot; x=&quot;174&quot; y=&quot;147&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;19&quot; id=&quot;sys_time&quot; x=&quot;177&quot; y=&quot;147&quot;/&gt;
       &lt;/ElementPositions&gt;
     &lt;/ComponentGraph&gt;
   &lt;/UserData&gt;
@@ -4135,6 +4135,17 @@
 </value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="FUSE_SYMBOL_VALUE16"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;FUSE_SYMBOL_VALUE16&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;0&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="FUSE_SYMBOL_VALUE29"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;FUSE_SYMBOL_VALUE29&quot;&gt;
@@ -4499,12 +4510,50 @@
 </value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="IDAU_ANSC_SIZE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;IDAU_ANSC_SIZE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;16&quot;/&gt;
+      &lt;User dnOrder=&quot;1&quot; value=&quot;0&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="MCLK_APBC_INITIAL_VALUE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;MCLK_APBC_INITIAL_VALUE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
       &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;0x1fffff&quot;/&gt;
     &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="NONSECURE_ENTRY_C"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;NONSECURE_ENTRY_C&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="NONSECURE_ENTRY_H"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;NONSECURE_ENTRY_H&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
   &lt;/core&gt;
 &lt;/core&gt;
 </value>
@@ -6963,6 +7012,19 @@
 </value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="SEC_XC32_LINKER_CMSE_FLAG"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;SEC_XC32_LINKER_CMSE_FLAG&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="SERCOM0_0_INTERRUPT_ENABLE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;SERCOM0_0_INTERRUPT_ENABLE&quot;&gt;
@@ -8157,6 +8219,19 @@
       &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;160000&quot;/&gt;
       &lt;User dnOrder=&quot;1&quot; value=&quot;512&quot;/&gt;
     &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="XC32_LINKER_LIBRARY_"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;XC32_LINKER_LIBRARY_&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
   &lt;/core&gt;
 &lt;/core&gt;
 </value>
@@ -53763,7 +53838,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sys_time" name="SYS_TIME_MAX_TIMERS"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sys_time&gt;
   &lt;sys_time dnOrder=&quot;0&quot; id=&quot;SYS_TIME_MAX_TIMERS&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;10&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/sys_time&gt;
 &lt;/sys_time&gt;
 </value>
@@ -53959,11 +54036,11 @@
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\configuration.h</file>
-         <hash>d2bae8a4b02755805c2c6e257655da288127211af79e1f0b4914ff60893497cc</hash>
+         <hash>fddc813863bbdfe4f367fa290a060e53fb44ec850731a0ca04953ddb66c6f7ca</hash>
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\definitions.h</file>
-         <hash>d7da11ab93d474f4daa0b8169bbaedc2abce87fc68211ac95fa67f84369adc56</hash>
+         <hash>9991d17f278e5e439705dbb37039c037927dfa6cf0df0cc05477cf2c1b605e05</hash>
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\device.h</file>
@@ -54007,7 +54084,7 @@
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\initialization.c</file>
-         <hash>22f3b5ea02d876b72873e8f5b774b4dafc06ff130ace499e64b31c7dc1312cb5</hash>
+         <hash>ab6b32e8f749eb8c618c084a600a601937470034b4dad0158946e71e264b8df4</hash>
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\interrupts.c</file>
@@ -54287,7 +54364,7 @@
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\touch\touch.h</file>
-         <hash>37c7e559d994c560b110c0d501e3d443e8bb9f88660fba808c8900a1d704b40f</hash>
+         <hash>3678b91ec2d9b98072fa16be25e3ecfb0c7d1d07768f817492807d618f9f0ecd</hash>
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\touch\touch_api_ptc.h</file>
@@ -54658,10 +54735,6 @@
          <hash>c1cdff26e2eb749cb83c11735fb9eafba15b1f27a75c008c41f0920d1d5954d7</hash>
       </entry>
       <entry>
-         <file>..\..\firmware\src\trustZone\nonsecure_entry.h</file>
-         <hash>9e0dffed059e825cb174ea36db2db88b0ae63e786e393d9fcbe8a20c4078e598</hash>
-      </entry>
-      <entry>
          <file>..\..\firmware_secure\src\config\default\PIC32CM5164LS00048.ld</file>
          <hash>30191e9762084f61078552f0f3c0c72f9ae205f659a0b5c8a39366bd0f159676</hash>
       </entry>
@@ -54687,7 +54760,7 @@
       </entry>
       <entry>
          <file>..\..\firmware_secure\src\config\default\initialization.c</file>
-         <hash>eb994a9523e2db7239e00d77ce67f0bf212e1faecfdc5a71da29db6879f85854</hash>
+         <hash>44ad3f1b513c110e5fe78a9191734858ec93589a9c3d3bf8c232dae64cdb65ad</hash>
       </entry>
       <entry>
          <file>..\..\firmware_secure\src\config\default\interrupts.c</file>
@@ -55112,10 +55185,6 @@
       <entry>
          <file>..\..\firmware_secure\src\packs\PIC32CM5164LS00048_DFP\pio\pic32cm5164ls00048.h</file>
          <hash>c1cdff26e2eb749cb83c11735fb9eafba15b1f27a75c008c41f0920d1d5954d7</hash>
-      </entry>
-      <entry>
-         <file>..\..\firmware_secure\src\trustZone\nonsecure_entry.c</file>
-         <hash>60217d96bd5dc9dc5567affd81197c8ae35e604fd864453cc25414d8b5a0fdd5</hash>
       </entry>
    </generatedFileHashHistoryMap>
 </config>

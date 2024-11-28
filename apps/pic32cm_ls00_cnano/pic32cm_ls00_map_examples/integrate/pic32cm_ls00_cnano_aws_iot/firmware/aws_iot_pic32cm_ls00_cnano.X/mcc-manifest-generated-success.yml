@@ -2,7 +2,7 @@
 
 manifest_file_version: 1.0.0
 project: aws_iot_pic32cm_ls00_cnano
-creation_date: 2024-11-05T15:41:01.606+05:30[Asia/Calcutta]
+creation_date: 2024-11-28T18:22:51.724+05:30[Asia/Calcutta]
 operating_system: Windows 10
 mcc_mode: IDE
 mcc_mode_version: v6.20
@@ -18,7 +18,7 @@ device_library: {library_class: com.microchip.mcc.harmony.Harmony3Library, name:
     V3, version: 1.5.3}
 packs: {name: PIC32CM-LS_DFP, version: 1.3.278}
 modules:
-- {name: csp, type: HARMONY, version: v3.19.6}
+- {name: csp, type: HARMONY, version: v3.19.7}
 - {name: core, type: HARMONY, version: v3.13.5}
 - {name: wireless_system_rnwf, type: HARMONY, version: v2.0.0}
 - {name: CMSIS_5, type: HARMONY, version: 5.9.0}

@@ -220,9 +220,6 @@
           <itemPath>../src/packs/PIC32CM5164LS00048_DFP/pic32cm5164ls00048.h</itemPath>
         </logicalFolder>
       </logicalFolder>
-      <logicalFolder name="trustZone" displayName="trustZone" projectFiles="true">
-        <itemPath>../src/trustZone/nonsecure_entry.h</itemPath>
-      </logicalFolder>
       <itemPath>../src/app_aws.h</itemPath>
       <itemPath>../src/app_temp.h</itemPath>
       <itemPath>../src/app_light.h</itemPath>
@@ -351,8 +348,8 @@
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="CMSIS" vendor="ARM" version="5.8.0"/>
         <pack name="PIC32CM-LS_DFP" vendor="Microchip" version="1.3.278"/>
+        <pack name="CMSIS" vendor="ARM" version="5.8.0"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -460,8 +457,7 @@
         <property key="additional-options-use-response-files" value="false"/>
         <property key="additional-options-write-sla" value="false"/>
         <property key="allocate-dinit" value="false"/>
-        <property key="appendMe"
-                  value="-l:aws_iot_pic32cm_ls00_cnano_secure_sg_veneer.lib"/>
+        <property key="appendMe" value=""/>
         <property key="code-dinit" value="false"/>
         <property key="ebase-addr" value=""/>
         <property key="enable-check-sections" value="false"/>
@@ -498,7 +494,6 @@
         <property key="symbol-stripping" value=""/>
         <property key="trace-symbols" value=""/>
         <property key="warn-section-align" value="false"/>
-        <appendMe value="-l:aws_iot_pic32cm_ls00_cnano_secure_sg_veneer.lib"/>
       </C32-LD>
       <C32CPP>
         <property key="additional-warnings" value="false"/>
@@ -579,6 +574,8 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-7ffff"/>
         <property key="poweroptions.powerenable" value="false"/>
+        <property key="programmerToGoFilePath"
+                  value="C:/Users/I20866/Pictures/integrate/pic32cm_ls00_cnano_aws_iot/firmware/aws_iot_pic32cm_ls00_cnano.X/debug/default/aws_iot_pic32cm_ls00_cnano_ptg"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.preservedataflash" value="false"/>
         <property key="programoptions.preservedataflash.ranges"
