@@ -14,7 +14,7 @@ This folder contains the MPLAB® Harmony 3 reference applications developed on [
 | 1 | [SD Card](./pic32cm_ls00_cnano_sdcard/readme.md) | [Click Here](https://github.com/Microchip-MPLAB-Harmony/reference_apps_pic32cm/releases/latest/download/pic32cm_ls00_cnano_sdcard.zip)  | 
 | 2 | [Temperature Demo](./pic32cm_ls00_cnano_temp/readme.md) | [Click Here](https://github.com/Microchip-MPLAB-Harmony/reference_apps/releases/latest/download/pic32cm_ls00_cnano_temp.zip)  |
 | 3 | [Ring LED](./pic32cm_ls00_cnano_ring_led/readme.md) | [Click Here](https://github.com/Microchip-MPLAB-Harmony/reference_apps/releases/latest/download/pic32cm_ls00_cnano_ring_led.zip)  |  
-
+| 4 | [Proximity Sensor](./pic32cm_ls00_cnano_proximity/readme.md) | [Click Here](https://github.com/Microchip-MPLAB-Harmony/reference_apps/releases/latest/download/pic32cm_ls00_cnano_proximity.zip)  |
 
 ### More Application Demos
 
