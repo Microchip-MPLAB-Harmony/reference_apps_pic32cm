@@ -29,20 +29,25 @@ nav_order: 1
 	- EVSYS
 	- NVMCTRL
 	- PORT
+  - RTC
+  - PTC
 
 - Drivers
-    - I2C Driver
+  - I2C Driver
 
 - System Service
-    - Core
-	- Console
-	- Debug
-	- Time
+  - Core
+    - Console
+    - Debug
+    - Time
+
+- Library
+  - Touch 
 	
 - Wireless System Service
- 	- RNWF WINCS Wi-Fi Service 
-	- RNWF WINCS Net Service
-	- RNWF WINCS MQTT Service
+  - RNWF WINCS Wi-Fi Service
+  - RNWF WINCS Net Service
+  - RNWF WINCS MQTT Service
 
 The MCC Harmony project graph would look like this:
 	
@@ -102,6 +107,8 @@ The pre-built hex file can be programmed by following the below steps.
 
 ## Programming/Debugging Application Project:
 - Open the project group (pic32cm_ls00_cnano_aws_iot/firmware/aws_iot_pic32cm_ls00_cnanogroup) in MPLAB® X IDE
+- Right click on "aws_iot_pic32cm_ls00_cnanogroup" file and go to *Open Required projects > Open All Projects*.
+- Then right click on the non-secure project and click *Set as Main Project*.
 - Ensure "PIC32CM LS00 Curiosity Nano" is selected as hardware tool to program/debug the application
 - Build the code and program the device by clicking on the "make and program" button in MPLAB® X IDE tool bar
 - Debugging the project can be done by clicking on the “Debug Main Project” button in MPLAB® X IDE tool bar
@@ -109,16 +116,22 @@ The pre-built hex file can be programmed by following the below steps.
 
 ## Running the Demo:
 - Open a standard terminal application on the computer (like Putty or Tera Term) and configure the virtual COM port
+
 - Set the serial baud rate to 115200 baud in the terminal application.
 
+- To Reset the device, run this command: **ipecmd.exe -P32CM5164LS00048 -TPNEDBG -OK** from the following location: *C:/Program Files/Microchip/MPLABX/v6.20/mplab_platform/mplab_ipe*
+	<img src = "images/reset_command.png" align="middle" width = "480">
+
+  **NOTE**: PIC32CM LS00 Curiosity Nano + Touch Evaluation Kit does not include a reset button. Therefore, the device can be reset by executing the reset command in the CMD prompt.
+
 - Wait for the initialization prints in the serial port terminal
-  <img src = "images/output_0.jpg" align="middle" width = "480" > 
+  <img src = "images/output_0.jpg" align="middle" width = "480"> 
 
 - Press the touch button on the PIC32CM LS00 Curiosity Nano + Touch Evaluation Kit to start the message pubishing in the AWS IoT Cloud
   <img src = "images/output_1.jpg" align="middle" width = "480">
 
 - After the button press, the serial console shows the published sensor data 
-<img src = "images/output_2.jpg" align="middle" width = "480"> 
+  <img src = "images/output_2.jpg" align="middle" width = "480"> 
 
 - Open the AWS IoT Cloud in the browser and select the MQTT test client
   <img src = "images/aws_output_0.jpg" align="middle" height = 300>    
@@ -130,8 +143,16 @@ The pre-built hex file can be programmed by following the below steps.
   <img src = "images/aws_output_2.jpg" align="middle" width = "480"> 
   
 
-  ## Note:
-  RGB LED indicates MQTT connected or not:
+## Note:
+- The Wi-Fi SSID and Password is configured through MCC under RNWF WINCS Wi-Fi Service configuration or the user can modify the credentials manually in the configurations.h file of the pic32cm_ls00_cnano_aws_iot project as below
+
+  - MCC Configuration:
+  <img src = "images/wifi_cerdentials_0.jpg" align="middle" width = "480">
+  
+  - Manual Configuration:
+  <img src = "images/wifi_cerdentials_1.jpg" align="middle" width = "480">
+
+- RGB LED indicates MQTT connected or not:
 
  	- The RED LED is turned ON when the board is not connected to MQTT
 	<img src = "images/mqtt_disconnected.jpg" align="middle" width = "480">  
