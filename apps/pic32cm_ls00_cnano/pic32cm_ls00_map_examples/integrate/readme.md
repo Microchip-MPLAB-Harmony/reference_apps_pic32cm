@@ -1,4 +1,3 @@
-
 # Integrate MAP example applications on PIC32CM LS00 Curiosity Nano + Touch Evaluation Kit
 
 -------

@@ -1,5 +1,3 @@
-
-
 # Getting Started Application on PIC32CM MC00 Curiosity Pro Development Board
 
 -------

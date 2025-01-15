@@ -1,4 +1,3 @@
-
 # PIC32CM LS60 Smart Lock Reference Board
 
 -------

@@ -1,4 +1,3 @@
-
 # PIC32CM MC00 Curiosity Nano Evaluation Kit
 
 -------

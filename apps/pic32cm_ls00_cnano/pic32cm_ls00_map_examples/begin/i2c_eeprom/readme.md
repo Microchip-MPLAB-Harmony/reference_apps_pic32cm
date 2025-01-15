@@ -1,4 +1,3 @@
-
 # SERCOM I2C EEPROM read write on PIC32CM LS00 Curiosity Nano+ Touch Evaluation Kit
 
 -------

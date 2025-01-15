@@ -1,5 +1,3 @@
-
-
 # Smart Lock Application on PIC32CM LS60 Smart Lock Reference Board
 
 -------

@@ -1,5 +1,3 @@
-
-
 # TrustZone Getting Started on PIC32CM LS60 Curiosity Pro Evaluation Kit
 
 -------

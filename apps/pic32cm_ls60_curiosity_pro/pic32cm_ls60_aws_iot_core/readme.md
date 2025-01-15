@@ -1,6 +1,4 @@
-
-
-<h1> AWS Cloud IoT Core Application on PIC32CM LS60 Curiosity Pro Evaluation Kit </h1>
+AWS Cloud IoT Core Application on PIC32CM LS60 Curiosity Pro Evaluation Kit 
 
 -------
 

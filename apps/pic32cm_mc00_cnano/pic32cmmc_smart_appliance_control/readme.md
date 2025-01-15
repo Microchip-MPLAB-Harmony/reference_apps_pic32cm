@@ -1,5 +1,3 @@
-
-
 # Smart Appliance Control on PIC32CM MC00 Curiosity Nano Evaluation kit
 
 -------

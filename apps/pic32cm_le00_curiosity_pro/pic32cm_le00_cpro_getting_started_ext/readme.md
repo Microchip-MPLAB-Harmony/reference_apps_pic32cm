@@ -1,5 +1,3 @@
-
-
 # Getting Started Extended Application on PIC32CM LE00 Curiosity Pro Evaluation Kit
 
 -------

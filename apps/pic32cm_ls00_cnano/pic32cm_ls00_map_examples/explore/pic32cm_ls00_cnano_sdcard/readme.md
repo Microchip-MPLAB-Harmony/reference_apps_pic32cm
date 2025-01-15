@@ -1,5 +1,3 @@
-
-
 # SD Card Example Application on PIC32CM LS00 Curiosity Nano + Touch Evaluation Kit
 
 -------

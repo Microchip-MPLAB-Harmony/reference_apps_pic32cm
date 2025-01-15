@@ -1,5 +1,3 @@
-
-
 # Example of EIC Interrupt on PIC32CM LS00 Curiosity Nano+ Touch Evaluation Kit
 
 -------

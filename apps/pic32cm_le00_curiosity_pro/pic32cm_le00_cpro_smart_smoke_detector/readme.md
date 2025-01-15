@@ -1,5 +1,3 @@
-
-
 # Smart Flame Detector Application Demonstration on PIC32CM LE00 Curiosity Pro Evaluation Kit
 
 -------

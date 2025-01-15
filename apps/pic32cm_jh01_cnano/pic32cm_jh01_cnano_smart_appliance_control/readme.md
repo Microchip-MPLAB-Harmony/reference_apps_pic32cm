@@ -1,5 +1,3 @@
-
-
 # Smart Appliance Control on PIC32CM JH01 Curiosity Nano+ Touch Evaluation Kit
 
 -------

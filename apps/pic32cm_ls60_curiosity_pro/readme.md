@@ -1,5 +1,3 @@
-
-
 # PIC32CM LS60 Curiosity Pro Evaluation Kit
 
 -------

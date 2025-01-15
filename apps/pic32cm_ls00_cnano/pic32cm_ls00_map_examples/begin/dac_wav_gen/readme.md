@@ -1,5 +1,3 @@
-
-
 # Example of DAC wave generation on PIC32CM LS00 Curiosity Nano+ Touch Evaluation Kit
 
 -------

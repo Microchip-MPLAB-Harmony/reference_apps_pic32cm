@@ -1,5 +1,3 @@
-
-
 # Getting Started Application on PIC32CM JH01 Curiosity Nano+ Touch Evaluation Kit
 
 -------
