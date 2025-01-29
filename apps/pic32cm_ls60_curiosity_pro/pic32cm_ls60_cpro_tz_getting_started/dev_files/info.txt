@@ -1,0 +1,2 @@
+1. The source and header files in this (dev_files) folder are provided for creating the demo application from scratch using the training module "Arm® TrustZone® Getting Started Application on PIC32CM LS60 (Arm Cortex®-M23) MCUs" on Microchip Developer Help ( https://developerhelp.microchip.com/xwiki/bin/view/software-tools/harmony/ ).
+2. These are not needed while building or running the demo application out of box.

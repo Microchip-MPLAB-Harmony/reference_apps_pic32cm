@@ -1,0 +1,2 @@
+1. The source and header files in this (dev_files) folder are provided for creating the demo application from scratch using the training module "Rapid prototyping with 32-bit MCU-based Curiosity Nano Evaluation Kit using MPLAB® Harmony v3 Software Framework" on Microchip Developer Help ( https://developerhelp.microchip.com/xwiki/bin/view/software-tools/harmony/ ).
+2. These are not needed while building or running the demo application out of box.
