@@ -10,6 +10,6 @@
         <Dependency name="bootloader" version="3.7.0"/>
         <Dependency name="cryptoauthlib" version="20241015"/>
         <Dependency name="wireless_rnbd" version="v2.0.4"/>
-		<Dependency name="wireless_system_rnwf", version: "v3.0.0"/>		
+		<Dependency name="wireless_system_rnwf" version="v3.0.0"/>		
     </Dependencies>
 </Package>
