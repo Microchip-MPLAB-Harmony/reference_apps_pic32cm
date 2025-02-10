@@ -57,8 +57,8 @@
 #include "peripheral/nvic/plib_nvic.h"
 #include "peripheral/systick/plib_systick.h"
 #include "peripheral/dmac/plib_dmac.h"
-#include "peripheral/pm/plib_pm.h"
 #include "peripheral/sercom/i2c_master/plib_sercom5_i2c_master.h"
+#include "peripheral/pm/plib_pm.h"
 #include "peripheral/eic/plib_eic.h"
 #include "peripheral/rtc/plib_rtc.h"
 
@@ -71,13 +71,13 @@ extern "C" {
 // DOM-IGNORE-END
 
 /* Device Information */
-#define DEVICE_NAME			 "PIC32CM5164LE00100"
-#define DEVICE_ARCH			 "CORTEX-M23"
-#define DEVICE_FAMILY		 "PIC32CM"
-#define DEVICE_SERIES		 "PIC32CMLE00"
+#define DEVICE_NAME          "PIC32CM5164LE00100"
+#define DEVICE_ARCH          "CORTEX-M23"
+#define DEVICE_FAMILY        "PIC32CM"
+#define DEVICE_SERIES        "PIC32CMLE00"
 
 /* CPU clock frequency */
-#define CPU_CLOCK_FREQUENCY 48000000
+#define CPU_CLOCK_FREQUENCY 48000000U
 
 // *****************************************************************************
 // *****************************************************************************
