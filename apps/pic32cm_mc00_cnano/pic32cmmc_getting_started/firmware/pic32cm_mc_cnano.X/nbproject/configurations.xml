@@ -151,6 +151,13 @@
         </logicalFolder>
       </logicalFolder>
     </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="true">
+      <itemPath>Makefile</itemPath>
+      <itemPath>../src/config/default/harmony-manifest-success.yml</itemPath>
+      <itemPath>getting_started_pic32cm_mc_cnano.mc3</itemPath>
+    </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
                    projectFiles="true">
@@ -209,13 +216,6 @@
       <itemPath>../src/main.c</itemPath>
       <itemPath>../src/config/default/pin_configurations.csv</itemPath>
     </logicalFolder>
-    <logicalFolder name="ExternalFiles"
-                   displayName="Important Files"
-                   projectFiles="false">
-      <itemPath>Makefile</itemPath>
-      <itemPath>../src/config/default/harmony-manifest-success.yml</itemPath>
-      <itemPath>getting_started_pic32cm_mc_cnano.mc3</itemPath>
-    </logicalFolder>
   </logicalFolder>
   <sourceRootList>
     <Elem>../src</Elem>
@@ -230,12 +230,12 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>nEdbgTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.30</languageToolchainVersion>
+        <languageToolchainVersion>4.45</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="PIC32CM-MC_DFP" vendor="Microchip" version="1.4.67"/>
         <pack name="CMSIS" vendor="ARM" version="5.8.0"/>
+        <pack name="PIC32CM-MC_DFP" vendor="Microchip" version="1.4.67"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -967,6 +967,7 @@
         <property key="debugoptions.debug-startup" value="Use system settings"/>
         <property key="debugoptions.reset-behaviour" value="Use system settings"/>
         <property key="debugoptions.useswbreakpoints" value="false"/>
+        <property key="event.recorder.debugger.behavior" value="Running"/>
         <property key="event.recorder.enabled" value="false"/>
         <property key="event.recorder.scvd.files" value=""/>
         <property key="firmware.path"
@@ -1025,6 +1026,7 @@
         <property key="debugoptions.debug-startup" value="Use system settings"/>
         <property key="debugoptions.reset-behaviour" value="Use system settings"/>
         <property key="debugoptions.useswbreakpoints" value="false"/>
+        <property key="event.recorder.debugger.behavior" value="Running"/>
         <property key="event.recorder.enabled" value="false"/>
         <property key="event.recorder.scvd.files" value=""/>
         <property key="firmware.path"
@@ -1050,7 +1052,7 @@
         <property key="memories.programmemory.ranges" value="0-1ffff"/>
         <property key="poweroptions.powerenable" value="true"/>
         <property key="programmerToGoFilePath"
-                  value="C:/Users/I76741/reference_apps/apps/pic32cm_mc00_cnano/pic32cmmc_getting_started/firmware/pic32cm_mc_cnano.X/debug/default/pic32cm_mc_cnano_ptg"/>
+                  value="C:/Users/x55308/Documents/a1/pic32cmmc_getting_started/firmware/pic32cm_mc_cnano.X/debug/default/pic32cm_mc_cnano_ptg"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.preservedataflash" value="false"/>
         <property key="programoptions.preservedataflash.ranges"
@@ -1070,7 +1072,6 @@
         <property key="toolpack.updateoptions.packversion"
                   value="Press to select which tool pack to use"/>
         <property key="voltagevalue" value="3.3"/>
-        <property key="x.erase.clearprot" value="true"/>
       </nEdbgTool>
     </conf>
   </confs>
