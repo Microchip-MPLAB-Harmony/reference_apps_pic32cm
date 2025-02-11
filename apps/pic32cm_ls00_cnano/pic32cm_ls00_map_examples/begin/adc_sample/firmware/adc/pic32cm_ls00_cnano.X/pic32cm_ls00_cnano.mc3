@@ -47,7 +47,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.2"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.4"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -1152,17 +1152,17 @@
     &lt;/PowerProfiles&gt;
     &lt;ComponentGraph dnOrder=&quot;2&quot; id=&quot;__ROOTVIEW&quot;&gt;
       &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
-        &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;adc&quot; x=&quot;265&quot; y=&quot;281&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;adc&quot; x=&quot;466&quot; y=&quot;209&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;cmsis&quot; x=&quot;313&quot; y=&quot;135&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;2&quot; id=&quot;core&quot; x=&quot;354&quot; y=&quot;43&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;3&quot; id=&quot;dac&quot; x=&quot;469&quot; y=&quot;297&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;3&quot; id=&quot;dac&quot; x=&quot;294&quot; y=&quot;224&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;4&quot; id=&quot;dfp&quot; x=&quot;460&quot; y=&quot;41&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;5&quot; id=&quot;eic&quot; x=&quot;35&quot; y=&quot;307&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;5&quot; id=&quot;eic&quot; x=&quot;16&quot; y=&quot;234&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;6&quot; id=&quot;evsys&quot; x=&quot;179&quot; y=&quot;42&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;7&quot; id=&quot;nvmctrl&quot; x=&quot;17&quot; y=&quot;39&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;8&quot; id=&quot;pm&quot; x=&quot;484&quot; y=&quot;163&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;9&quot; id=&quot;sercom3&quot; x=&quot;35&quot; y=&quot;165&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;10&quot; id=&quot;stdio&quot; x=&quot;196&quot; y=&quot;179&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;8&quot; id=&quot;pm&quot; x=&quot;462&quot; y=&quot;105&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;9&quot; id=&quot;sercom3&quot; x=&quot;18&quot; y=&quot;130&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;10&quot; id=&quot;stdio&quot; x=&quot;174&quot; y=&quot;120&quot;/&gt;
       &lt;/ElementPositions&gt;
     &lt;/ComponentGraph&gt;
   &lt;/UserData&gt;
@@ -5853,7 +5853,7 @@
       </entry>
       <entry>
          <file>..\..\adc\src\config\pic32cm_ls00_cnano\definitions.h</file>
-         <hash>9e006826ef4b040cdda7906d3eac13a6a056538c5a4795f843ce28cbcd6404ed</hash>
+         <hash>37e69d68197d5428917df9e8147f4a5377803f8ab5fb094d0d77ef11ee81be60</hash>
       </entry>
       <entry>
          <file>..\..\adc\src\config\pic32cm_ls00_cnano\device.h</file>
@@ -5869,11 +5869,11 @@
       </entry>
       <entry>
          <file>..\..\adc\src\config\pic32cm_ls00_cnano\exceptions.c</file>
-         <hash>5efbe5a64a17c496d2f5b177bc9cd66a7f0f80323d9558e220c073a13570a2a7</hash>
+         <hash>42f9da2668e04ccb3473d45b149683a00f80072c6883c7918d6ce93997cd6987</hash>
       </entry>
       <entry>
          <file>..\..\adc\src\config\pic32cm_ls00_cnano\initialization.c</file>
-         <hash>af7d0014a25184f10d4fda9556cc2728ef51c268b43c51deb1e968f1a595f904</hash>
+         <hash>523116cf892765d303a1cb3ca211ed4926978f3c5cb07a0e39d1e2d81c070a95</hash>
       </entry>
       <entry>
          <file>..\..\adc\src\config\pic32cm_ls00_cnano\interrupts.c</file>
@@ -5889,7 +5889,7 @@
       </entry>
       <entry>
          <file>..\..\adc\src\config\pic32cm_ls00_cnano\peripheral\adc\plib_adc.c</file>
-         <hash>03d493586b12b99a63196a0affac19c4a08562e38e292aa22fe31b7a01eef781</hash>
+         <hash>f90c9ef038e7c71d28f9d246c21823f97b5bc56ba02fd6018a9ef744a4cfa272</hash>
       </entry>
       <entry>
          <file>..\..\adc\src\config\pic32cm_ls00_cnano\peripheral\adc\plib_adc.h</file>
@@ -5897,7 +5897,7 @@
       </entry>
       <entry>
          <file>..\..\adc\src\config\pic32cm_ls00_cnano\peripheral\adc\plib_adc_common.h</file>
-         <hash>c8ee05ef0a002566e1b0d9318f3fcf6809f807198c36d5b9bfd45f71e9f512d7</hash>
+         <hash>49b797f995c200ea33d613a8a073f4567b652e3304f18eea7fe6567fad67b608</hash>
       </entry>
       <entry>
          <file>..\..\adc\src\config\pic32cm_ls00_cnano\peripheral\dac\plib_dac.c</file>
@@ -5921,7 +5921,7 @@
       </entry>
       <entry>
          <file>..\..\adc\src\config\pic32cm_ls00_cnano\peripheral\nvic\plib_nvic.h</file>
-         <hash>81e813a093101d546799e00723cbf7245e2d18471fa51c8d130c5809cecca03e</hash>
+         <hash>9936ac782115af41003255283fa2f603f4ff2212d16275b7c80ea8d067a9e208</hash>
       </entry>
       <entry>
          <file>..\..\adc\src\config\pic32cm_ls00_cnano\peripheral\port\plib_port.c</file>
@@ -5933,19 +5933,19 @@
       </entry>
       <entry>
          <file>..\..\adc\src\config\pic32cm_ls00_cnano\peripheral\sercom\usart\plib_sercom3_usart.c</file>
-         <hash>157404d773c75b3d1b5bf28c1342819bbc709c3e38f47038086bafbe3b3fadc9</hash>
+         <hash>37d594b7addf2927753b7ccfe5da5d6ba47e7183b534cabb8842027dfc29611f</hash>
       </entry>
       <entry>
          <file>..\..\adc\src\config\pic32cm_ls00_cnano\peripheral\sercom\usart\plib_sercom3_usart.h</file>
-         <hash>38bd5f257a7dfce1144c3375178920ba13770e7ec6283d7e5014f8af56aeb1bc</hash>
+         <hash>e6b3c5a74a4cc6d70a66fbe08e802db7436d4ec81921d06c37d35e2ca30fe870</hash>
       </entry>
       <entry>
          <file>..\..\adc\src\config\pic32cm_ls00_cnano\peripheral\sercom\usart\plib_sercom_usart_common.h</file>
-         <hash>f19dafabe0928d60dd83d7e19f35889f200e3fbadff09e2f42523d320acf780a</hash>
+         <hash>3653b66472c558c50f7037a1dd25d2678e9a13aa718f3c53a2195e6f3919ea48</hash>
       </entry>
       <entry>
          <file>..\..\adc\src\config\pic32cm_ls00_cnano\peripheral\systick\plib_systick.c</file>
-         <hash>da0bd14778220cc5252d17bfe0641fa09e618d6cf5e4408bc21339dd0e7d28b8</hash>
+         <hash>df4bbe2a5fc85a321f00e90a9b8735bf3ccf1a3a964f3ea9c610c3e5923fc5c3</hash>
       </entry>
       <entry>
          <file>..\..\adc\src\config\pic32cm_ls00_cnano\peripheral\systick\plib_systick.h</file>
@@ -6369,11 +6369,11 @@
       </entry>
       <entry>
          <file>..\..\adc_secure\src\config\pic32cm_ls00_cnano\peripheral\clock\plib_clock.h</file>
-         <hash>721136c42046a932de696b169a84343465a44ea204bae3fb8c620a7778dcbf57</hash>
+         <hash>48855ddfcdc10b43a141321e043ab6ad2eb994b09fdba511f17f1d93911c536c</hash>
       </entry>
       <entry>
          <file>..\..\adc_secure\src\config\pic32cm_ls00_cnano\peripheral\eic\plib_eic.c</file>
-         <hash>dae21073e0c50db20912b03aa202f4c95510029357251dfa5b06d24982695f93</hash>
+         <hash>e9156fd5ac1029b0d32f4b8e40bb4682c245140120cec3dde44534abfe1f84ca</hash>
       </entry>
       <entry>
          <file>..\..\adc_secure\src\config\pic32cm_ls00_cnano\peripheral\eic\plib_eic.h</file>
@@ -6389,11 +6389,11 @@
       </entry>
       <entry>
          <file>..\..\adc_secure\src\config\pic32cm_ls00_cnano\peripheral\nvic\plib_nvic.c</file>
-         <hash>1226886c16be4fd4dfe0a392a43ba7d7abe39901c8b2996cbe92d4febf986283</hash>
+         <hash>b38e174dd171ba460a17f6c7d3564c61c4cc1e8fb6a227e28fb1cebc7efde953</hash>
       </entry>
       <entry>
          <file>..\..\adc_secure\src\config\pic32cm_ls00_cnano\peripheral\nvic\plib_nvic.h</file>
-         <hash>81e813a093101d546799e00723cbf7245e2d18471fa51c8d130c5809cecca03e</hash>
+         <hash>9936ac782115af41003255283fa2f603f4ff2212d16275b7c80ea8d067a9e208</hash>
       </entry>
       <entry>
          <file>..\..\adc_secure\src\config\pic32cm_ls00_cnano\peripheral\nvmctrl\plib_nvmctrl.c</file>
@@ -6413,7 +6413,7 @@
       </entry>
       <entry>
          <file>..\..\adc_secure\src\config\pic32cm_ls00_cnano\peripheral\port\plib_port.c</file>
-         <hash>065e858f6faf1f5b825613796e01505359fac8ba2e016012385bf9e0e5ca6468</hash>
+         <hash>89632d67cca30f0b10ffb878656cd503aa2ecc2b6f88cac9c29e805540566f49</hash>
       </entry>
       <entry>
          <file>..\..\adc_secure\src\config\pic32cm_ls00_cnano\peripheral\port\plib_port.h</file>
