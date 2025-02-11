@@ -43,7 +43,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.2"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.4"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -5986,114 +5986,6 @@
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="rtc" name="TAMP_CHANNEL4_ACTION"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;rtc&gt;
-  &lt;rtc dnOrder=&quot;0&quot; id=&quot;TAMP_CHANNEL4_ACTION&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/rtc&gt;
-&lt;/rtc&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="rtc" name="TAMP_CHANNEL4_DEBNC"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;rtc&gt;
-  &lt;rtc dnOrder=&quot;0&quot; id=&quot;TAMP_CHANNEL4_DEBNC&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/rtc&gt;
-&lt;/rtc&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="rtc" name="TAMP_CHANNEL4_LEVEL"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;rtc&gt;
-  &lt;rtc dnOrder=&quot;0&quot; id=&quot;TAMP_CHANNEL4_LEVEL&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/rtc&gt;
-&lt;/rtc&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="rtc" name="TAMP_CHANNEL5_ACTION"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;rtc&gt;
-  &lt;rtc dnOrder=&quot;0&quot; id=&quot;TAMP_CHANNEL5_ACTION&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/rtc&gt;
-&lt;/rtc&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="rtc" name="TAMP_CHANNEL5_DEBNC"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;rtc&gt;
-  &lt;rtc dnOrder=&quot;0&quot; id=&quot;TAMP_CHANNEL5_DEBNC&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/rtc&gt;
-&lt;/rtc&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="rtc" name="TAMP_CHANNEL5_LEVEL"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;rtc&gt;
-  &lt;rtc dnOrder=&quot;0&quot; id=&quot;TAMP_CHANNEL5_LEVEL&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/rtc&gt;
-&lt;/rtc&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="rtc" name="TAMP_CHANNEL6_ACTION"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;rtc&gt;
-  &lt;rtc dnOrder=&quot;0&quot; id=&quot;TAMP_CHANNEL6_ACTION&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/rtc&gt;
-&lt;/rtc&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="rtc" name="TAMP_CHANNEL6_DEBNC"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;rtc&gt;
-  &lt;rtc dnOrder=&quot;0&quot; id=&quot;TAMP_CHANNEL6_DEBNC&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/rtc&gt;
-&lt;/rtc&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="rtc" name="TAMP_CHANNEL6_LEVEL"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;rtc&gt;
-  &lt;rtc dnOrder=&quot;0&quot; id=&quot;TAMP_CHANNEL6_LEVEL&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/rtc&gt;
-&lt;/rtc&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="rtc" name="TAMP_CHANNEL7_ACTION"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;rtc&gt;
-  &lt;rtc dnOrder=&quot;0&quot; id=&quot;TAMP_CHANNEL7_ACTION&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/rtc&gt;
-&lt;/rtc&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="rtc" name="TAMP_CHANNEL7_DEBNC"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;rtc&gt;
-  &lt;rtc dnOrder=&quot;0&quot; id=&quot;TAMP_CHANNEL7_DEBNC&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/rtc&gt;
-&lt;/rtc&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="rtc" name="TAMP_CHANNEL7_LEVEL"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;rtc&gt;
-  &lt;rtc dnOrder=&quot;0&quot; id=&quot;TAMP_CHANNEL7_LEVEL&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/rtc&gt;
-&lt;/rtc&gt;
-</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="rtc" name="TAMP_DEBOUNCE_ASYNCH"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;rtc&gt;
   &lt;rtc dnOrder=&quot;0&quot; id=&quot;TAMP_DEBOUNCE_ASYNCH&quot;&gt;
@@ -8564,7 +8456,7 @@
       </entry>
       <entry>
          <file>..\..\firmware\src\config\pic32cm_ls00_cnano\definitions.h</file>
-         <hash>458ec88f74064b72b640f01438d256875f3ae595c1d1b4628d3898077b2235e1</hash>
+         <hash>5c172b8dfeeb16f8ec5739368a39d69c118fcd440aa2d0eb2517be9c807c1cda</hash>
       </entry>
       <entry>
          <file>..\..\firmware\src\config\pic32cm_ls00_cnano\device.h</file>
@@ -8580,11 +8472,11 @@
       </entry>
       <entry>
          <file>..\..\firmware\src\config\pic32cm_ls00_cnano\exceptions.c</file>
-         <hash>5efbe5a64a17c496d2f5b177bc9cd66a7f0f80323d9558e220c073a13570a2a7</hash>
+         <hash>42f9da2668e04ccb3473d45b149683a00f80072c6883c7918d6ce93997cd6987</hash>
       </entry>
       <entry>
          <file>..\..\firmware\src\config\pic32cm_ls00_cnano\initialization.c</file>
-         <hash>d5ae45f847166c9700a63cc4ea372415763cca8a9b28d991f393618d11ac1ced</hash>
+         <hash>a9be7919d90905aadd366273a81d5be2df52a70cc014e7de1dbd7906167d2b91</hash>
       </entry>
       <entry>
          <file>..\..\firmware\src\config\pic32cm_ls00_cnano\interrupts.c</file>
@@ -8632,7 +8524,7 @@
       </entry>
       <entry>
          <file>..\..\firmware\src\config\pic32cm_ls00_cnano\peripheral\rtc\plib_rtc.h</file>
-         <hash>fa7385b5930ea5b0775de954391d0a2cd7c49b1949c66106177e085342dbeb3a</hash>
+         <hash>86a57416099d16db539eb418d49cf5bf88346dddd2e2a4a9f244b71eb028b3ab</hash>
       </entry>
       <entry>
          <file>..\..\firmware\src\config\pic32cm_ls00_cnano\peripheral\rtc\plib_rtc_timer.c</file>
@@ -8640,11 +8532,11 @@
       </entry>
       <entry>
          <file>..\..\firmware\src\config\pic32cm_ls00_cnano\peripheral\sercom\i2c_master\plib_sercom2_i2c_master.c</file>
-         <hash>71c3dfe14ac61fc91ed8754d8ce15faa78b216afb0d9bb07ec84789c34d7aaff</hash>
+         <hash>3d8b09955d2ce8ad0c12e001173c945e32f4811f3d12617b12197600087f83d1</hash>
       </entry>
       <entry>
          <file>..\..\firmware\src\config\pic32cm_ls00_cnano\peripheral\sercom\i2c_master\plib_sercom2_i2c_master.h</file>
-         <hash>3cb19d0a127d35f4200481e1b1e15356f5d46c98174a15297e8ffef2665d3fb6</hash>
+         <hash>5c38db7cf8afbf7ea812c743ac5469b709ce601038509cf3298c500011585f91</hash>
       </entry>
       <entry>
          <file>..\..\firmware\src\config\pic32cm_ls00_cnano\peripheral\sercom\i2c_master\plib_sercom_i2c_master_common.h</file>
@@ -8652,15 +8544,15 @@
       </entry>
       <entry>
          <file>..\..\firmware\src\config\pic32cm_ls00_cnano\peripheral\sercom\usart\plib_sercom3_usart.c</file>
-         <hash>157404d773c75b3d1b5bf28c1342819bbc709c3e38f47038086bafbe3b3fadc9</hash>
+         <hash>812561ce855c8078c10c2614ea9596c615748344380072f8204e106c20b2e690</hash>
       </entry>
       <entry>
          <file>..\..\firmware\src\config\pic32cm_ls00_cnano\peripheral\sercom\usart\plib_sercom3_usart.h</file>
-         <hash>38bd5f257a7dfce1144c3375178920ba13770e7ec6283d7e5014f8af56aeb1bc</hash>
+         <hash>e6b3c5a74a4cc6d70a66fbe08e802db7436d4ec81921d06c37d35e2ca30fe870</hash>
       </entry>
       <entry>
          <file>..\..\firmware\src\config\pic32cm_ls00_cnano\peripheral\sercom\usart\plib_sercom_usart_common.h</file>
-         <hash>f19dafabe0928d60dd83d7e19f35889f200e3fbadff09e2f42523d320acf780a</hash>
+         <hash>3653b66472c558c50f7037a1dd25d2678e9a13aa718f3c53a2195e6f3919ea48</hash>
       </entry>
       <entry>
          <file>..\..\firmware\src\config\pic32cm_ls00_cnano\pin_configurations.csv</file>
@@ -9076,11 +8968,11 @@
       </entry>
       <entry>
          <file>..\..\firmware_secure\src\config\pic32cm_ls00_cnano\peripheral\clock\plib_clock.h</file>
-         <hash>721136c42046a932de696b169a84343465a44ea204bae3fb8c620a7778dcbf57</hash>
+         <hash>48855ddfcdc10b43a141321e043ab6ad2eb994b09fdba511f17f1d93911c536c</hash>
       </entry>
       <entry>
          <file>..\..\firmware_secure\src\config\pic32cm_ls00_cnano\peripheral\eic\plib_eic.c</file>
-         <hash>d2ab0dde93aa1a25359af09c273e87c1154c57ac60c74afac661bf942af3e2d4</hash>
+         <hash>69dfe6f6df4f300112d9d2f2dbbc5360bc6e1ebce11ed4bf8cba61ef534342bc</hash>
       </entry>
       <entry>
          <file>..\..\firmware_secure\src\config\pic32cm_ls00_cnano\peripheral\eic\plib_eic.h</file>
@@ -9120,7 +9012,7 @@
       </entry>
       <entry>
          <file>..\..\firmware_secure\src\config\pic32cm_ls00_cnano\peripheral\port\plib_port.c</file>
-         <hash>52b19183c0e6527c1188002980bfa4c4d037af59ebd27906f7f69b87c14a46dd</hash>
+         <hash>13a6eb39c3fc0a2eb8cc0d60ee15c2f486fb84442683ed5022d4c483a14e3347</hash>
       </entry>
       <entry>
          <file>..\..\firmware_secure\src\config\pic32cm_ls00_cnano\peripheral\port\plib_port.h</file>
