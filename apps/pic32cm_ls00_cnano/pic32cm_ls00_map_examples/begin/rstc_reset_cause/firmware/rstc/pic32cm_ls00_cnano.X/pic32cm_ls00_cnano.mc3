@@ -43,7 +43,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.2"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.4"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -4264,7 +4264,7 @@
       </entry>
       <entry>
          <file>..\..\rstc\src\config\pic32cm_ls00_cnano\definitions.h</file>
-         <hash>b54a895d61865057cd3a947524f40c91090553061608170cda064761962bc77a</hash>
+         <hash>ce9a78ebda496d947c7d1143450c05bb5289a08033e3827a6ed601157ee2a85f</hash>
       </entry>
       <entry>
          <file>..\..\rstc\src\config\pic32cm_ls00_cnano\device.h</file>
@@ -4280,11 +4280,11 @@
       </entry>
       <entry>
          <file>..\..\rstc\src\config\pic32cm_ls00_cnano\exceptions.c</file>
-         <hash>5efbe5a64a17c496d2f5b177bc9cd66a7f0f80323d9558e220c073a13570a2a7</hash>
+         <hash>42f9da2668e04ccb3473d45b149683a00f80072c6883c7918d6ce93997cd6987</hash>
       </entry>
       <entry>
          <file>..\..\rstc\src\config\pic32cm_ls00_cnano\initialization.c</file>
-         <hash>02788e59ae0dafa3d37a32124857a4f83e9e4805f79cafafbd2adca134e3ca3d</hash>
+         <hash>292ec403d3733cc016791c12f0348491027f6311694b1e3bfc0e2e4c3173abea</hash>
       </entry>
       <entry>
          <file>..\..\rstc\src\config\pic32cm_ls00_cnano\interrupts.c</file>
@@ -4312,7 +4312,7 @@
       </entry>
       <entry>
          <file>..\..\rstc\src\config\pic32cm_ls00_cnano\peripheral\nvic\plib_nvic.h</file>
-         <hash>81e813a093101d546799e00723cbf7245e2d18471fa51c8d130c5809cecca03e</hash>
+         <hash>9936ac782115af41003255283fa2f603f4ff2212d16275b7c80ea8d067a9e208</hash>
       </entry>
       <entry>
          <file>..\..\rstc\src\config\pic32cm_ls00_cnano\peripheral\port\plib_port.c</file>
@@ -4332,15 +4332,15 @@
       </entry>
       <entry>
          <file>..\..\rstc\src\config\pic32cm_ls00_cnano\peripheral\sercom\usart\plib_sercom3_usart.c</file>
-         <hash>157404d773c75b3d1b5bf28c1342819bbc709c3e38f47038086bafbe3b3fadc9</hash>
+         <hash>37d594b7addf2927753b7ccfe5da5d6ba47e7183b534cabb8842027dfc29611f</hash>
       </entry>
       <entry>
          <file>..\..\rstc\src\config\pic32cm_ls00_cnano\peripheral\sercom\usart\plib_sercom3_usart.h</file>
-         <hash>38bd5f257a7dfce1144c3375178920ba13770e7ec6283d7e5014f8af56aeb1bc</hash>
+         <hash>e6b3c5a74a4cc6d70a66fbe08e802db7436d4ec81921d06c37d35e2ca30fe870</hash>
       </entry>
       <entry>
          <file>..\..\rstc\src\config\pic32cm_ls00_cnano\peripheral\sercom\usart\plib_sercom_usart_common.h</file>
-         <hash>f19dafabe0928d60dd83d7e19f35889f200e3fbadff09e2f42523d320acf780a</hash>
+         <hash>3653b66472c558c50f7037a1dd25d2678e9a13aa718f3c53a2195e6f3919ea48</hash>
       </entry>
       <entry>
          <file>..\..\rstc\src\config\pic32cm_ls00_cnano\peripheral\systick\plib_systick.c</file>
@@ -4776,11 +4776,11 @@
       </entry>
       <entry>
          <file>..\..\rstc_secure\src\config\pic32cm_ls00_cnano\peripheral\clock\plib_clock.h</file>
-         <hash>721136c42046a932de696b169a84343465a44ea204bae3fb8c620a7778dcbf57</hash>
+         <hash>48855ddfcdc10b43a141321e043ab6ad2eb994b09fdba511f17f1d93911c536c</hash>
       </entry>
       <entry>
          <file>..\..\rstc_secure\src\config\pic32cm_ls00_cnano\peripheral\eic\plib_eic.c</file>
-         <hash>baff6ba4e6000adee24fe1124c4c1a6eff990d35ad48088164154b4344476404</hash>
+         <hash>558b93ad7fd1c464242c1603ec0ba9bd55c98f5558c9976cbe7215cadd32f168</hash>
       </entry>
       <entry>
          <file>..\..\rstc_secure\src\config\pic32cm_ls00_cnano\peripheral\eic\plib_eic.h</file>
@@ -4796,11 +4796,11 @@
       </entry>
       <entry>
          <file>..\..\rstc_secure\src\config\pic32cm_ls00_cnano\peripheral\nvic\plib_nvic.c</file>
-         <hash>1226886c16be4fd4dfe0a392a43ba7d7abe39901c8b2996cbe92d4febf986283</hash>
+         <hash>b38e174dd171ba460a17f6c7d3564c61c4cc1e8fb6a227e28fb1cebc7efde953</hash>
       </entry>
       <entry>
          <file>..\..\rstc_secure\src\config\pic32cm_ls00_cnano\peripheral\nvic\plib_nvic.h</file>
-         <hash>81e813a093101d546799e00723cbf7245e2d18471fa51c8d130c5809cecca03e</hash>
+         <hash>9936ac782115af41003255283fa2f603f4ff2212d16275b7c80ea8d067a9e208</hash>
       </entry>
       <entry>
          <file>..\..\rstc_secure\src\config\pic32cm_ls00_cnano\peripheral\nvmctrl\plib_nvmctrl.c</file>
@@ -4820,7 +4820,7 @@
       </entry>
       <entry>
          <file>..\..\rstc_secure\src\config\pic32cm_ls00_cnano\peripheral\port\plib_port.c</file>
-         <hash>e2fd00252387b72529b597a7bbf558aa09c23e7a2eaadbd6b47e0f5d871dae18</hash>
+         <hash>453f79ff23d859aee10e6e80e17ac15293b5275f382341be6b5653ab6bd014db</hash>
       </entry>
       <entry>
          <file>..\..\rstc_secure\src\config\pic32cm_ls00_cnano\peripheral\port\plib_port.h</file>

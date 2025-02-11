@@ -63,7 +63,7 @@
 // *****************************************************************************
 
 /* EIC Channel Callback object */
-volatile static EIC_CALLBACK_OBJ    eicCallbackObject[EXTINT_COUNT];
+static volatile EIC_CALLBACK_OBJ    eicCallbackObject[EXTINT_COUNT];
 
 
 void EIC_Initialize (void)
@@ -81,6 +81,7 @@ void EIC_Initialize (void)
     EIC_SEC_REGS->EIC_CTRLA |= EIC_CTRLA_CKSEL_Msk;
 
     /* NMI Control register */
+
 
     /* Interrupt sense type and filter control for EXTINT channels 0 to (16-1) */
     EIC_SEC_REGS->EIC_CONFIG0 =  EIC_CONFIG0_SENSE0_NONE 
@@ -100,6 +101,7 @@ void EIC_Initialize (void)
         | EIC_CONFIG1_SENSE13_NONE 
         | EIC_CONFIG1_SENSE14_NONE 
         | EIC_CONFIG1_SENSE15_NONE ;
+
 
 
 
