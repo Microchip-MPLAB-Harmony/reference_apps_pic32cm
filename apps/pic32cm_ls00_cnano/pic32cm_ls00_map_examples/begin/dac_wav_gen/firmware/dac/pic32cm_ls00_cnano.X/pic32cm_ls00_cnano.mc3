@@ -39,7 +39,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.2"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.4"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -3257,7 +3257,7 @@
       </entry>
       <entry>
          <file>..\..\dac\src\config\pic32cm_ls00_cnano\definitions.h</file>
-         <hash>9d469d0d2c9f080b60276f8106dd5d3aa67131af7da3078bf7dbbab8e6644a77</hash>
+         <hash>1d9eef35339ffc04b4479a75315fe66170951bc2145dcc7c624015ffcdb4a14c</hash>
       </entry>
       <entry>
          <file>..\..\dac\src\config\pic32cm_ls00_cnano\device.h</file>
@@ -3273,11 +3273,11 @@
       </entry>
       <entry>
          <file>..\..\dac\src\config\pic32cm_ls00_cnano\exceptions.c</file>
-         <hash>5efbe5a64a17c496d2f5b177bc9cd66a7f0f80323d9558e220c073a13570a2a7</hash>
+         <hash>42f9da2668e04ccb3473d45b149683a00f80072c6883c7918d6ce93997cd6987</hash>
       </entry>
       <entry>
          <file>..\..\dac\src\config\pic32cm_ls00_cnano\initialization.c</file>
-         <hash>757e6a08c8a24386de53352bc1a3cd0585aa428216946ea1d62c8ef05fb2d6cd</hash>
+         <hash>ba0981c06c64580bfd9e4fe276ee81428b702a78efb405f8c519b5cf660c6a9d</hash>
       </entry>
       <entry>
          <file>..\..\dac\src\config\pic32cm_ls00_cnano\interrupts.c</file>
@@ -3313,7 +3313,7 @@
       </entry>
       <entry>
          <file>..\..\dac\src\config\pic32cm_ls00_cnano\peripheral\nvic\plib_nvic.h</file>
-         <hash>81e813a093101d546799e00723cbf7245e2d18471fa51c8d130c5809cecca03e</hash>
+         <hash>9936ac782115af41003255283fa2f603f4ff2212d16275b7c80ea8d067a9e208</hash>
       </entry>
       <entry>
          <file>..\..\dac\src\config\pic32cm_ls00_cnano\peripheral\port\plib_port.c</file>
@@ -3325,7 +3325,7 @@
       </entry>
       <entry>
          <file>..\..\dac\src\config\pic32cm_ls00_cnano\peripheral\tc\plib_tc0.c</file>
-         <hash>b9b261bd8df002646311d59197423a218d58cd840173f9208311e699fe39f5e1</hash>
+         <hash>e16e99015ee071cc9c74af1f0ea77103b68e81c79c9dc7a0073a707c060033cf</hash>
       </entry>
       <entry>
          <file>..\..\dac\src\config\pic32cm_ls00_cnano\peripheral\tc\plib_tc0.h</file>
@@ -3753,11 +3753,11 @@
       </entry>
       <entry>
          <file>..\..\dac_secure\src\config\pic32cm_ls00_cnano\peripheral\clock\plib_clock.h</file>
-         <hash>721136c42046a932de696b169a84343465a44ea204bae3fb8c620a7778dcbf57</hash>
+         <hash>48855ddfcdc10b43a141321e043ab6ad2eb994b09fdba511f17f1d93911c536c</hash>
       </entry>
       <entry>
          <file>..\..\dac_secure\src\config\pic32cm_ls00_cnano\peripheral\eic\plib_eic.c</file>
-         <hash>e0af91c0260b5df2e545a276428062d174bbd0b0aaa4bc7cffee77f5095b9a2a</hash>
+         <hash>d8868f3adf209e8f41cb8f2992584ff428dbe6e2399058318fceab14b1e22191</hash>
       </entry>
       <entry>
          <file>..\..\dac_secure\src\config\pic32cm_ls00_cnano\peripheral\eic\plib_eic.h</file>
@@ -3773,11 +3773,11 @@
       </entry>
       <entry>
          <file>..\..\dac_secure\src\config\pic32cm_ls00_cnano\peripheral\nvic\plib_nvic.c</file>
-         <hash>3026a6073e0a46a62155f4c1ae44cbb5634dff4f9a27faece728d72081233451</hash>
+         <hash>ecf9b32df72532c8aa06a9a46e48ba1ee49cf18e5ab855eb98ea2919799dddc4</hash>
       </entry>
       <entry>
          <file>..\..\dac_secure\src\config\pic32cm_ls00_cnano\peripheral\nvic\plib_nvic.h</file>
-         <hash>81e813a093101d546799e00723cbf7245e2d18471fa51c8d130c5809cecca03e</hash>
+         <hash>9936ac782115af41003255283fa2f603f4ff2212d16275b7c80ea8d067a9e208</hash>
       </entry>
       <entry>
          <file>..\..\dac_secure\src\config\pic32cm_ls00_cnano\peripheral\nvmctrl\plib_nvmctrl.c</file>
@@ -3797,7 +3797,7 @@
       </entry>
       <entry>
          <file>..\..\dac_secure\src\config\pic32cm_ls00_cnano\peripheral\port\plib_port.c</file>
-         <hash>537a42d3fcddd2ca0cf1dc9d33e5b29d9a71ef2b37e0e1016e595b21d7c234f9</hash>
+         <hash>6562657102e060df406aaebecb225fafa17362b5a7613a32010e6f0afb64d7a0</hash>
       </entry>
       <entry>
          <file>..\..\dac_secure\src\config\pic32cm_ls00_cnano\peripheral\port\plib_port.h</file>
