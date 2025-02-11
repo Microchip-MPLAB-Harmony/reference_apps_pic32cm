@@ -61,7 +61,7 @@ void TCC3_PWMInitialize(void)
 {
     /* Reset TCC */
     TCC3_REGS->TCC_CTRLA = TCC_CTRLA_SWRST_Msk;
-    while ((TCC3_REGS->TCC_SYNCBUSY & TCC_SYNCBUSY_SWRST_Msk) != 0U)
+    while((TCC3_REGS->TCC_SYNCBUSY & TCC_SYNCBUSY_SWRST_Msk) == TCC_SYNCBUSY_SWRST_Msk)
     {
         /* Wait for sync */
     }
@@ -96,7 +96,7 @@ void TCC3_PWMInitialize(void)
 void TCC3_PWMStart(void)
 {
     TCC3_REGS->TCC_CTRLA |= TCC_CTRLA_ENABLE_Msk;
-    while ((TCC3_REGS->TCC_SYNCBUSY & TCC_SYNCBUSY_ENABLE_Msk) != 0U)
+    while((TCC3_REGS->TCC_SYNCBUSY & TCC_SYNCBUSY_ENABLE_Msk) == TCC_SYNCBUSY_ENABLE_Msk)
     {
         /* Wait for sync */
     }
@@ -106,7 +106,7 @@ void TCC3_PWMStart(void)
 void TCC3_PWMStop (void)
 {
     TCC3_REGS->TCC_CTRLA &= ~TCC_CTRLA_ENABLE_Msk;
-    while ((TCC3_REGS->TCC_SYNCBUSY & TCC_SYNCBUSY_ENABLE_Msk) != 0U)
+    while((TCC3_REGS->TCC_SYNCBUSY & TCC_SYNCBUSY_ENABLE_Msk) == TCC_SYNCBUSY_ENABLE_Msk)
     {
         /* Wait for sync */
     }
@@ -128,7 +128,7 @@ bool TCC3_PWM24bitPeriodSet (uint32_t period)
 /* Read TCC period */
 uint32_t TCC3_PWM24bitPeriodGet (void)
 {
-    while ((TCC3_REGS->TCC_SYNCBUSY & TCC_SYNCBUSY_PER_Msk) != 0U)
+    while ((TCC3_REGS->TCC_SYNCBUSY & TCC_SYNCBUSY_PER_Msk) == TCC_SYNCBUSY_PER_Msk)
     {
         /* Wait for sync */
     }
@@ -179,7 +179,7 @@ uint32_t TCC3_PWM24bitCounterGet( void )
 void TCC3_PWM24bitCounterSet (uint32_t countVal)
 {
     TCC3_REGS->TCC_COUNT = countVal & 0xFFFFFFU;
-    while ((TCC3_REGS->TCC_SYNCBUSY & TCC_SYNCBUSY_COUNT_Msk) != 0U)
+    while ((TCC3_REGS->TCC_SYNCBUSY & TCC_SYNCBUSY_COUNT_Msk) == TCC_SYNCBUSY_COUNT_Msk)
     {
         /* Wait for sync */
     }
@@ -189,7 +189,7 @@ void TCC3_PWM24bitCounterSet (uint32_t countVal)
 void TCC3_PWMForceUpdate(void)
 {
     TCC3_REGS->TCC_CTRLBSET |= (uint8_t)TCC_CTRLBCLR_CMD_UPDATE;
-    while ((TCC3_REGS->TCC_SYNCBUSY & TCC_SYNCBUSY_CTRLB_Msk) != 0U)
+    while ((TCC3_REGS->TCC_SYNCBUSY & TCC_SYNCBUSY_CTRLB_Msk) == TCC_SYNCBUSY_CTRLB_Msk)
     {
         /* Wait for sync */
     }

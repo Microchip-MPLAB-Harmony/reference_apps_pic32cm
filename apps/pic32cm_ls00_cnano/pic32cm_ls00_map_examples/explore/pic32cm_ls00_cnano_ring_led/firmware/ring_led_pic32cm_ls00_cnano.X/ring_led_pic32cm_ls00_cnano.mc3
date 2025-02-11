@@ -31,7 +31,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.3"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.4"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -3474,7 +3474,7 @@
       </entry>
       <entry>
          <file>..\..\firmware\src\config\pic32cm_ls00_cnano\definitions.h</file>
-         <hash>7c2a06778a5e792e91f3dd03a9c22003436526ff7165c5688a483e776389df13</hash>
+         <hash>02971f5a39e1072e12e01e312dbe8809f302d8325f48633009845a181cfe3159</hash>
       </entry>
       <entry>
          <file>..\..\firmware\src\config\pic32cm_ls00_cnano\device.h</file>
@@ -3490,11 +3490,11 @@
       </entry>
       <entry>
          <file>..\..\firmware\src\config\pic32cm_ls00_cnano\exceptions.c</file>
-         <hash>5efbe5a64a17c496d2f5b177bc9cd66a7f0f80323d9558e220c073a13570a2a7</hash>
+         <hash>42f9da2668e04ccb3473d45b149683a00f80072c6883c7918d6ce93997cd6987</hash>
       </entry>
       <entry>
          <file>..\..\firmware\src\config\pic32cm_ls00_cnano\initialization.c</file>
-         <hash>22ce91796c75753f0424a633a4514170132391a5d9a23676b75114560f934ef2</hash>
+         <hash>3141cd43f002e7b3e83a6ebfd68d037e9c0fca9d74ab7f30e77953f4db954f0e</hash>
       </entry>
       <entry>
          <file>..\..\firmware\src\config\pic32cm_ls00_cnano\interrupts.c</file>
@@ -3542,7 +3542,7 @@
       </entry>
       <entry>
          <file>..\..\firmware\src\config\pic32cm_ls00_cnano\peripheral\tcc\plib_tcc3.c</file>
-         <hash>7155c2d46e020e43c2d33015d654afb628432fa46669805b7732ad1e216e509d</hash>
+         <hash>ef1d722dd6af67a78f38cc2f97d584ef3b7136164dcc96dc6e07bb8baa9779a3</hash>
       </entry>
       <entry>
          <file>..\..\firmware\src\config\pic32cm_ls00_cnano\peripheral\tcc\plib_tcc3.h</file>
@@ -3966,7 +3966,7 @@
       </entry>
       <entry>
          <file>..\..\firmware_secure\src\config\pic32cm_ls00_cnano\peripheral\clock\plib_clock.h</file>
-         <hash>721136c42046a932de696b169a84343465a44ea204bae3fb8c620a7778dcbf57</hash>
+         <hash>48855ddfcdc10b43a141321e043ab6ad2eb994b09fdba511f17f1d93911c536c</hash>
       </entry>
       <entry>
          <file>..\..\firmware_secure\src\config\pic32cm_ls00_cnano\peripheral\evsys\plib_evsys.c</file>
@@ -4002,7 +4002,7 @@
       </entry>
       <entry>
          <file>..\..\firmware_secure\src\config\pic32cm_ls00_cnano\peripheral\port\plib_port.c</file>
-         <hash>5b7e1d564fafc89d58ac6b17c93674720e7c6a74ed0cc72c4f715af2be62b1b3</hash>
+         <hash>bcbfb4eba65fc35dfe4c1c772e65300e2ad349104c4775e4bbc0c5ff6b924074</hash>
       </entry>
       <entry>
          <file>..\..\firmware_secure\src\config\pic32cm_ls00_cnano\peripheral\port\plib_port.h</file>
