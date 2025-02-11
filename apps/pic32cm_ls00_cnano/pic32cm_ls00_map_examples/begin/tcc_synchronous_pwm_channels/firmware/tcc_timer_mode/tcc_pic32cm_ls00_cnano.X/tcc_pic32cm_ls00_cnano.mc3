@@ -31,7 +31,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.2"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.4"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -4846,7 +4846,7 @@
       </entry>
       <entry>
          <file>..\..\tcc_timer_mode\src\config\pic32cm_ls00_cnano\definitions.h</file>
-         <hash>421d751736b0aef0b45271ba35c0e3e6457aa74d654a2567aa4f945fb60760da</hash>
+         <hash>7819a55ab6c1313183c179da52374389783f2aed2e33e9b242bf74339c21b120</hash>
       </entry>
       <entry>
          <file>..\..\tcc_timer_mode\src\config\pic32cm_ls00_cnano\device.h</file>
@@ -4862,11 +4862,11 @@
       </entry>
       <entry>
          <file>..\..\tcc_timer_mode\src\config\pic32cm_ls00_cnano\exceptions.c</file>
-         <hash>5efbe5a64a17c496d2f5b177bc9cd66a7f0f80323d9558e220c073a13570a2a7</hash>
+         <hash>42f9da2668e04ccb3473d45b149683a00f80072c6883c7918d6ce93997cd6987</hash>
       </entry>
       <entry>
          <file>..\..\tcc_timer_mode\src\config\pic32cm_ls00_cnano\initialization.c</file>
-         <hash>27a2d7771f98006ef3fe239d82e71dce2f0429ba08a02462aaf39f1e59c84bfa</hash>
+         <hash>914b97a9ae80db0130a18b3485daaf7073cc7d8653b22b72b12090d5d6e2731f</hash>
       </entry>
       <entry>
          <file>..\..\tcc_timer_mode\src\config\pic32cm_ls00_cnano\interrupts.c</file>
@@ -4886,7 +4886,7 @@
       </entry>
       <entry>
          <file>..\..\tcc_timer_mode\src\config\pic32cm_ls00_cnano\peripheral\nvic\plib_nvic.h</file>
-         <hash>81e813a093101d546799e00723cbf7245e2d18471fa51c8d130c5809cecca03e</hash>
+         <hash>9936ac782115af41003255283fa2f603f4ff2212d16275b7c80ea8d067a9e208</hash>
       </entry>
       <entry>
          <file>..\..\tcc_timer_mode\src\config\pic32cm_ls00_cnano\peripheral\port\plib_port.c</file>
@@ -4898,7 +4898,7 @@
       </entry>
       <entry>
          <file>..\..\tcc_timer_mode\src\config\pic32cm_ls00_cnano\peripheral\tcc\plib_tcc0.c</file>
-         <hash>6c97564381ebd36f0b945b339c511b2a7aeb3874a0449888e4032f53fb2fe693</hash>
+         <hash>37869a9366da0820fb2ab5b3fa507284d6f2d19f0901f885d091411533874575</hash>
       </entry>
       <entry>
          <file>..\..\tcc_timer_mode\src\config\pic32cm_ls00_cnano\peripheral\tcc\plib_tcc0.h</file>
@@ -5326,7 +5326,7 @@
       </entry>
       <entry>
          <file>..\..\tcc_timer_mode_secure\src\config\pic32cm_ls00_cnano\peripheral\clock\plib_clock.h</file>
-         <hash>721136c42046a932de696b169a84343465a44ea204bae3fb8c620a7778dcbf57</hash>
+         <hash>48855ddfcdc10b43a141321e043ab6ad2eb994b09fdba511f17f1d93911c536c</hash>
       </entry>
       <entry>
          <file>..\..\tcc_timer_mode_secure\src\config\pic32cm_ls00_cnano\peripheral\evsys\plib_evsys.c</file>
@@ -5338,11 +5338,11 @@
       </entry>
       <entry>
          <file>..\..\tcc_timer_mode_secure\src\config\pic32cm_ls00_cnano\peripheral\nvic\plib_nvic.c</file>
-         <hash>84dc2976be17eaef23ecac2ee78dc5b990e4e5c41512f923a6327f4ac30d8b18</hash>
+         <hash>9ca295da59c83acc46ad3c99960f49beb79be21621301ab7724e3c565dd39ff8</hash>
       </entry>
       <entry>
          <file>..\..\tcc_timer_mode_secure\src\config\pic32cm_ls00_cnano\peripheral\nvic\plib_nvic.h</file>
-         <hash>81e813a093101d546799e00723cbf7245e2d18471fa51c8d130c5809cecca03e</hash>
+         <hash>9936ac782115af41003255283fa2f603f4ff2212d16275b7c80ea8d067a9e208</hash>
       </entry>
       <entry>
          <file>..\..\tcc_timer_mode_secure\src\config\pic32cm_ls00_cnano\peripheral\nvmctrl\plib_nvmctrl.c</file>
@@ -5362,7 +5362,7 @@
       </entry>
       <entry>
          <file>..\..\tcc_timer_mode_secure\src\config\pic32cm_ls00_cnano\peripheral\port\plib_port.c</file>
-         <hash>fecbceee4ee9713b7d428e4a47fe61fac1a8fdd84a05a28b396176b9cd14ce54</hash>
+         <hash>1240f2ed99ade517f0551f2844925e3cf8df3d884ff41f5c3a0e2429fa8f57a3</hash>
       </entry>
       <entry>
          <file>..\..\tcc_timer_mode_secure\src\config\pic32cm_ls00_cnano\peripheral\port\plib_port.h</file>
