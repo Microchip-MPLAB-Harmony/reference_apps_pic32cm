@@ -35,7 +35,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.2"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.4"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -1856,7 +1856,7 @@
       </entry>
       <entry>
          <file>..\..\trustzone_basic\src\config\pic32cm_ls00_cnano\definitions.h</file>
-         <hash>b0a572bf76d4ffb25dc6e1aa15a511fb39f03fd83030cc449fba66b42fbe79d8</hash>
+         <hash>841b55d49789509aa62f36d4c199451b7e0a5159f9893c99389a4abe2a7fcf79</hash>
       </entry>
       <entry>
          <file>..\..\trustzone_basic\src\config\pic32cm_ls00_cnano\device.h</file>
@@ -1872,11 +1872,11 @@
       </entry>
       <entry>
          <file>..\..\trustzone_basic\src\config\pic32cm_ls00_cnano\exceptions.c</file>
-         <hash>5efbe5a64a17c496d2f5b177bc9cd66a7f0f80323d9558e220c073a13570a2a7</hash>
+         <hash>42f9da2668e04ccb3473d45b149683a00f80072c6883c7918d6ce93997cd6987</hash>
       </entry>
       <entry>
          <file>..\..\trustzone_basic\src\config\pic32cm_ls00_cnano\initialization.c</file>
-         <hash>80a646860e326b62b311702affe565b8794b1885a16d06f200c083532f0dbb6e</hash>
+         <hash>71b853e37e3670fe12f7f3ee45b18063cc64f6d734350ce69f44cba8e8bc6dee</hash>
       </entry>
       <entry>
          <file>..\..\trustzone_basic\src\config\pic32cm_ls00_cnano\interrupts.c</file>
@@ -1896,7 +1896,7 @@
       </entry>
       <entry>
          <file>..\..\trustzone_basic\src\config\pic32cm_ls00_cnano\peripheral\nvic\plib_nvic.h</file>
-         <hash>81e813a093101d546799e00723cbf7245e2d18471fa51c8d130c5809cecca03e</hash>
+         <hash>9936ac782115af41003255283fa2f603f4ff2212d16275b7c80ea8d067a9e208</hash>
       </entry>
       <entry>
          <file>..\..\trustzone_basic\src\config\pic32cm_ls00_cnano\peripheral\port\plib_port.c</file>
@@ -1908,15 +1908,15 @@
       </entry>
       <entry>
          <file>..\..\trustzone_basic\src\config\pic32cm_ls00_cnano\peripheral\sercom\usart\plib_sercom3_usart.c</file>
-         <hash>157404d773c75b3d1b5bf28c1342819bbc709c3e38f47038086bafbe3b3fadc9</hash>
+         <hash>812561ce855c8078c10c2614ea9596c615748344380072f8204e106c20b2e690</hash>
       </entry>
       <entry>
          <file>..\..\trustzone_basic\src\config\pic32cm_ls00_cnano\peripheral\sercom\usart\plib_sercom3_usart.h</file>
-         <hash>38bd5f257a7dfce1144c3375178920ba13770e7ec6283d7e5014f8af56aeb1bc</hash>
+         <hash>e6b3c5a74a4cc6d70a66fbe08e802db7436d4ec81921d06c37d35e2ca30fe870</hash>
       </entry>
       <entry>
          <file>..\..\trustzone_basic\src\config\pic32cm_ls00_cnano\peripheral\sercom\usart\plib_sercom_usart_common.h</file>
-         <hash>f19dafabe0928d60dd83d7e19f35889f200e3fbadff09e2f42523d320acf780a</hash>
+         <hash>3653b66472c558c50f7037a1dd25d2678e9a13aa718f3c53a2195e6f3919ea48</hash>
       </entry>
       <entry>
          <file>..\..\trustzone_basic\src\config\pic32cm_ls00_cnano\pin_configurations.csv</file>
@@ -2336,7 +2336,7 @@
       </entry>
       <entry>
          <file>..\..\trustzone_basic_secure\src\config\pic32cm_ls00_cnano\peripheral\clock\plib_clock.h</file>
-         <hash>721136c42046a932de696b169a84343465a44ea204bae3fb8c620a7778dcbf57</hash>
+         <hash>48855ddfcdc10b43a141321e043ab6ad2eb994b09fdba511f17f1d93911c536c</hash>
       </entry>
       <entry>
          <file>..\..\trustzone_basic_secure\src\config\pic32cm_ls00_cnano\peripheral\evsys\plib_evsys.c</file>
@@ -2348,11 +2348,11 @@
       </entry>
       <entry>
          <file>..\..\trustzone_basic_secure\src\config\pic32cm_ls00_cnano\peripheral\nvic\plib_nvic.c</file>
-         <hash>056a589ef1f8f3bbb9c37fd4685b97207b957116104636b2ead4e442cc135a46</hash>
+         <hash>d17bdfa86168bdfc1dd73f6785fdae850b5e041462997d96caf174cad18431f6</hash>
       </entry>
       <entry>
          <file>..\..\trustzone_basic_secure\src\config\pic32cm_ls00_cnano\peripheral\nvic\plib_nvic.h</file>
-         <hash>81e813a093101d546799e00723cbf7245e2d18471fa51c8d130c5809cecca03e</hash>
+         <hash>9936ac782115af41003255283fa2f603f4ff2212d16275b7c80ea8d067a9e208</hash>
       </entry>
       <entry>
          <file>..\..\trustzone_basic_secure\src\config\pic32cm_ls00_cnano\peripheral\nvmctrl\plib_nvmctrl.c</file>
@@ -2372,7 +2372,7 @@
       </entry>
       <entry>
          <file>..\..\trustzone_basic_secure\src\config\pic32cm_ls00_cnano\peripheral\port\plib_port.c</file>
-         <hash>f5b8b894a5840249a8d75d886460b0909ca22880a15dbff07c17734863df2605</hash>
+         <hash>45349314a23ee47568740dda1ec68cb6b3096fac91eaa9640a69036b420d1141</hash>
       </entry>
       <entry>
          <file>..\..\trustzone_basic_secure\src\config\pic32cm_ls00_cnano\peripheral\port\plib_port.h</file>
