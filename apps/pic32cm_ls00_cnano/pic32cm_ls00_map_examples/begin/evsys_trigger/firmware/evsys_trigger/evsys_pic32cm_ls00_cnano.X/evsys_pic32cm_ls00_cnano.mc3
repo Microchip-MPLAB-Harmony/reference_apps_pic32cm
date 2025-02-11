@@ -31,7 +31,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.2"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.4"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -2415,7 +2415,7 @@
       </entry>
       <entry>
          <file>..\..\evsys_trigger\src\config\pic32cm_ls00_cnano\definitions.h</file>
-         <hash>40259e780015377c0b32e5af02be71f69adffce772e18c44d9eaaee7300cd693</hash>
+         <hash>9b2dc913ceadffe06decdd473785e2e88ae00b490d7885c577df5f8588ddbd42</hash>
       </entry>
       <entry>
          <file>..\..\evsys_trigger\src\config\pic32cm_ls00_cnano\device.h</file>
@@ -2431,15 +2431,15 @@
       </entry>
       <entry>
          <file>..\..\evsys_trigger\src\config\pic32cm_ls00_cnano\exceptions.c</file>
-         <hash>5efbe5a64a17c496d2f5b177bc9cd66a7f0f80323d9558e220c073a13570a2a7</hash>
+         <hash>42f9da2668e04ccb3473d45b149683a00f80072c6883c7918d6ce93997cd6987</hash>
       </entry>
       <entry>
          <file>..\..\evsys_trigger\src\config\pic32cm_ls00_cnano\initialization.c</file>
-         <hash>72396092676083af7849c0da032a70c48f7f674c4a6f5043ac07e92a6c017bc0</hash>
+         <hash>3ea01012bed2c29ae6b8651a0daafbcf611ed20b0bc177ccafa06b7db206d2bf</hash>
       </entry>
       <entry>
          <file>..\..\evsys_trigger\src\config\pic32cm_ls00_cnano\interrupts.c</file>
-         <hash>94fc239042628a97da7773c45600cf59a4975201ceb850be3ae629871e327276</hash>
+         <hash>96bf0eef540674dda4b6b1cd0cf6431fc7738395b7d21e405fe058ae16341c04</hash>
       </entry>
       <entry>
          <file>..\..\evsys_trigger\src\config\pic32cm_ls00_cnano\interrupts.h</file>
@@ -2456,6 +2456,14 @@
       <entry>
          <file>..\..\evsys_trigger\src\config\pic32cm_ls00_cnano\peripheral\eic\plib_eic.h</file>
          <hash>cd30f4a63d1e2f2a841ea3aaebf18a07a11c6b65666e9afa5c6a05bc319f0f8e</hash>
+      </entry>
+      <entry>
+         <file>..\..\evsys_trigger\src\config\pic32cm_ls00_cnano\peripheral\evsys\plib_evsys.c</file>
+         <hash>44a0320603ba4300ebf8afad892e30a85ff49b613dd693f72fd2950778595f44</hash>
+      </entry>
+      <entry>
+         <file>..\..\evsys_trigger\src\config\pic32cm_ls00_cnano\peripheral\evsys\plib_evsys.h</file>
+         <hash>c7a9ec9859be5653920db4c570427eea7335905617b9416ec1c13e325eaaccbf</hash>
       </entry>
       <entry>
          <file>..\..\evsys_trigger\src\config\pic32cm_ls00_cnano\peripheral\nvic\plib_nvic.c</file>
@@ -2875,7 +2883,7 @@
       </entry>
       <entry>
          <file>..\..\evsys_trigger_secure\src\config\pic32cm_ls00_cnano\interrupts.c</file>
-         <hash>03ac1e654dc16f7cc819692941d9939e26e15c534fe17ff79f52c6245c0c68ba</hash>
+         <hash>ce7c64a06322a864bb44e1085a7dd357ffb45c56ef572195c2fa57272f7f7b88</hash>
       </entry>
       <entry>
          <file>..\..\evsys_trigger_secure\src\config\pic32cm_ls00_cnano\interrupts.h</file>
@@ -2891,11 +2899,11 @@
       </entry>
       <entry>
          <file>..\..\evsys_trigger_secure\src\config\pic32cm_ls00_cnano\peripheral\clock\plib_clock.h</file>
-         <hash>721136c42046a932de696b169a84343465a44ea204bae3fb8c620a7778dcbf57</hash>
+         <hash>48855ddfcdc10b43a141321e043ab6ad2eb994b09fdba511f17f1d93911c536c</hash>
       </entry>
       <entry>
          <file>..\..\evsys_trigger_secure\src\config\pic32cm_ls00_cnano\peripheral\eic\plib_eic.c</file>
-         <hash>8d657cb84e5539b10af8f666e2c316632d9053c9675aec81f7a5cef0547d3033</hash>
+         <hash>0d2ef722dc780e84976d3e74e9a123ea54fab5c336a5662ac5a8558495a3f323</hash>
       </entry>
       <entry>
          <file>..\..\evsys_trigger_secure\src\config\pic32cm_ls00_cnano\peripheral\eic\plib_eic.h</file>
@@ -2903,7 +2911,7 @@
       </entry>
       <entry>
          <file>..\..\evsys_trigger_secure\src\config\pic32cm_ls00_cnano\peripheral\evsys\plib_evsys.c</file>
-         <hash>e1d86e9fb5dbe48f5a78f6e3b72cd21762f0ec994816128322c2aa8064b7779e</hash>
+         <hash>e0af9f820999a1fa1eefde66d0c1b746ed1153c8a8e88c908e5b8adf272e8a21</hash>
       </entry>
       <entry>
          <file>..\..\evsys_trigger_secure\src\config\pic32cm_ls00_cnano\peripheral\evsys\plib_evsys.h</file>
@@ -2935,7 +2943,7 @@
       </entry>
       <entry>
          <file>..\..\evsys_trigger_secure\src\config\pic32cm_ls00_cnano\peripheral\port\plib_port.c</file>
-         <hash>2a52b015fd8292e174823dcd27f6b9961990d29c4333ab2abb66766fc14eddf1</hash>
+         <hash>367ce58f3695de3a27e97430f682791da3acaec52e36c025a059e2d6f003f641</hash>
       </entry>
       <entry>
          <file>..\..\evsys_trigger_secure\src\config\pic32cm_ls00_cnano\peripheral\port\plib_port.h</file>

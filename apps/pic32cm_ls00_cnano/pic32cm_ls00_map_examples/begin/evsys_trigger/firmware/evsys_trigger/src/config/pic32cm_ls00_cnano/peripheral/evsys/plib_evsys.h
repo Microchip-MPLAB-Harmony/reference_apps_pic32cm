@@ -1,18 +1,18 @@
 /*******************************************************************************
-  EVSYS Peripheral Library
+  Interface definition of EVSYS PLIB.
 
   Company:
     Microchip Technology Inc.
 
   File Name:
-    plib_evsys.c
+    plib_evsys.h
 
   Summary:
-    EVSYS Source File
+    Interface definition of the Event System Plib (EVSYS).
 
   Description:
-    None
-
+    This file defines the interface for the EVSYS Plib.
+    It allows user to setup event generators and users.
 *******************************************************************************/
 
 /*******************************************************************************
@@ -38,22 +38,38 @@
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
 
-#include "plib_evsys.h"
-#include "interrupts.h"
+#ifndef EVSYS_H    // Guards against multiple inclusion
+#define EVSYS_H
+
+#include "device.h"
+#include <stdint.h>
+#include <stddef.h>
+
+#ifdef __cplusplus // Provide C++ Compatibility
+ extern "C" {
+#endif
 
 
-
-void EVSYS_Initialize( void )
+// *****************************************************************************
+// *****************************************************************************
+// Section: Interface
+// *****************************************************************************
+// *****************************************************************************
+typedef enum
 {
-    /*Event Channel User Configuration*/
-    EVSYS_SEC_REGS->EVSYS_USER[3] = EVSYS_USER_CHANNEL(0x1U);
-
-    EVSYS_SEC_REGS->EVSYS_NONSECUSER0 = 0x8;
-
-    /* Event Channel 0 Configuration */
-    EVSYS_SEC_REGS->CHANNEL[0].EVSYS_CHANNEL = EVSYS_CHANNEL_EVGEN(19U) | EVSYS_CHANNEL_PATH(2U) | EVSYS_CHANNEL_EDGSEL(0U) \
-                                     ;
-    EVSYS_SEC_REGS->EVSYS_NONSECCHAN = 0x1;
-}
+   EVSYS_CHANNEL_0 = 0,
+} EVSYS_CHANNEL;
 
 
+/***************************** EVSYS API *******************************/
+void EVSYS_GeneratorEnable(EVSYS_CHANNEL channel, uint8_t generator);
+void EVSYS_GeneratorDisable(EVSYS_CHANNEL channel);
+void EVSYS_UserEnable(EVSYS_CHANNEL channel, uint8_t user);
+void EVSYS_UserDisable(uint8_t user);
+
+
+#ifdef __cplusplus // Provide C++ Compatibility
+ }
+#endif
+
+#endif

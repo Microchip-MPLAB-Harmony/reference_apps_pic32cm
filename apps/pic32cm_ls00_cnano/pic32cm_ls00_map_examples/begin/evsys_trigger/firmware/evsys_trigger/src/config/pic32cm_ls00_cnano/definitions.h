@@ -48,6 +48,7 @@
 #include <stdint.h>
 #include <stddef.h>
 #include <stdbool.h>
+#include "peripheral/evsys/plib_evsys.h"
 #include "peripheral/port/plib_port.h"
 #include "peripheral/nvic/plib_nvic.h"
 #include "peripheral/eic/plib_eic.h"
@@ -61,13 +62,13 @@ extern "C" {
 // DOM-IGNORE-END
 
 /* Device Information */
-#define DEVICE_NAME			 "PIC32CM5164LS00048"
-#define DEVICE_ARCH			 "CORTEX-M23"
-#define DEVICE_FAMILY		 "PIC32CM"
-#define DEVICE_SERIES		 "PIC32CMLS00"
+#define DEVICE_NAME          "PIC32CM5164LS00048"
+#define DEVICE_ARCH          "CORTEX-M23"
+#define DEVICE_FAMILY        "PIC32CM"
+#define DEVICE_SERIES        "PIC32CMLS00"
 
 /* CPU clock frequency */
-#define CPU_CLOCK_FREQUENCY 48000000
+#define CPU_CLOCK_FREQUENCY 48000000U
 
 // *****************************************************************************
 // *****************************************************************************
