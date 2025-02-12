@@ -27,7 +27,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.2"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.4"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -1116,7 +1116,7 @@
       </entry>
       <entry>
          <file>..\..\port\src\config\pic32cm_ls00_cnano\definitions.h</file>
-         <hash>57a1a50c061799caa8b5fc64bb83ae0d3a1a40237624b9cb875ecdc58ebca0ff</hash>
+         <hash>0f7e5ffc5b3ff2cf6684a9a07d7d598b718869502af46a7a91618d5ca61bbae6</hash>
       </entry>
       <entry>
          <file>..\..\port\src\config\pic32cm_ls00_cnano\device.h</file>
@@ -1132,11 +1132,11 @@
       </entry>
       <entry>
          <file>..\..\port\src\config\pic32cm_ls00_cnano\exceptions.c</file>
-         <hash>5efbe5a64a17c496d2f5b177bc9cd66a7f0f80323d9558e220c073a13570a2a7</hash>
+         <hash>42f9da2668e04ccb3473d45b149683a00f80072c6883c7918d6ce93997cd6987</hash>
       </entry>
       <entry>
          <file>..\..\port\src\config\pic32cm_ls00_cnano\initialization.c</file>
-         <hash>92ae5c3066eedba3351303fbcceaaa3c30d3cb9f40de81471348b3c3387705b4</hash>
+         <hash>98ebe350e7e839d1aebc335f9bcca331dd1f191f6a828a752c59093ed64409d4</hash>
       </entry>
       <entry>
          <file>..\..\port\src\config\pic32cm_ls00_cnano\interrupts.c</file>
@@ -1156,7 +1156,7 @@
       </entry>
       <entry>
          <file>..\..\port\src\config\pic32cm_ls00_cnano\peripheral\nvic\plib_nvic.h</file>
-         <hash>81e813a093101d546799e00723cbf7245e2d18471fa51c8d130c5809cecca03e</hash>
+         <hash>9936ac782115af41003255283fa2f603f4ff2212d16275b7c80ea8d067a9e208</hash>
       </entry>
       <entry>
          <file>..\..\port\src\config\pic32cm_ls00_cnano\peripheral\port\plib_port.c</file>
@@ -1584,7 +1584,7 @@
       </entry>
       <entry>
          <file>..\..\port_secure\src\config\pic32cm_ls00_cnano\peripheral\clock\plib_clock.h</file>
-         <hash>721136c42046a932de696b169a84343465a44ea204bae3fb8c620a7778dcbf57</hash>
+         <hash>48855ddfcdc10b43a141321e043ab6ad2eb994b09fdba511f17f1d93911c536c</hash>
       </entry>
       <entry>
          <file>..\..\port_secure\src\config\pic32cm_ls00_cnano\peripheral\evsys\plib_evsys.c</file>
@@ -1596,11 +1596,11 @@
       </entry>
       <entry>
          <file>..\..\port_secure\src\config\pic32cm_ls00_cnano\peripheral\nvic\plib_nvic.c</file>
-         <hash>056a589ef1f8f3bbb9c37fd4685b97207b957116104636b2ead4e442cc135a46</hash>
+         <hash>d17bdfa86168bdfc1dd73f6785fdae850b5e041462997d96caf174cad18431f6</hash>
       </entry>
       <entry>
          <file>..\..\port_secure\src\config\pic32cm_ls00_cnano\peripheral\nvic\plib_nvic.h</file>
-         <hash>81e813a093101d546799e00723cbf7245e2d18471fa51c8d130c5809cecca03e</hash>
+         <hash>9936ac782115af41003255283fa2f603f4ff2212d16275b7c80ea8d067a9e208</hash>
       </entry>
       <entry>
          <file>..\..\port_secure\src\config\pic32cm_ls00_cnano\peripheral\nvmctrl\plib_nvmctrl.c</file>
@@ -1620,7 +1620,7 @@
       </entry>
       <entry>
          <file>..\..\port_secure\src\config\pic32cm_ls00_cnano\peripheral\port\plib_port.c</file>
-         <hash>02fa2316a567f91295a5995bce0902a4d7bc4291f22ecf8591dd9c3654b4f86e</hash>
+         <hash>f61116d7339654aec7b8a805945010d42c2e03b3fb3ee123ddafe4ecadedc4bb</hash>
       </entry>
       <entry>
          <file>..\..\port_secure\src\config\pic32cm_ls00_cnano\peripheral\port\plib_port.h</file>
