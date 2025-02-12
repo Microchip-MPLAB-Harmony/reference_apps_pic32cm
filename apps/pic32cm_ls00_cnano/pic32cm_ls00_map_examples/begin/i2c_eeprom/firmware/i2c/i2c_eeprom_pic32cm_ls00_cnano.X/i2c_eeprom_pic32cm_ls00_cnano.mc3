@@ -31,7 +31,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.2"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.4"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -2578,7 +2578,7 @@
       </entry>
       <entry>
          <file>..\..\i2c\src\config\pic32cm_ls00_cnano\definitions.h</file>
-         <hash>4c0a567dd9161a77d153eb4ebb3c5a05fd054180a7395cb8088d904621932378</hash>
+         <hash>e4cf25cad720e1fff5792d4b519045cc583d8796171f745d4848466e4aacd3fd</hash>
       </entry>
       <entry>
          <file>..\..\i2c\src\config\pic32cm_ls00_cnano\device.h</file>
@@ -2594,11 +2594,11 @@
       </entry>
       <entry>
          <file>..\..\i2c\src\config\pic32cm_ls00_cnano\exceptions.c</file>
-         <hash>5efbe5a64a17c496d2f5b177bc9cd66a7f0f80323d9558e220c073a13570a2a7</hash>
+         <hash>42f9da2668e04ccb3473d45b149683a00f80072c6883c7918d6ce93997cd6987</hash>
       </entry>
       <entry>
          <file>..\..\i2c\src\config\pic32cm_ls00_cnano\initialization.c</file>
-         <hash>609d619f60b818082b3fa5433c858840c1b914bae3d010dc812ebc2a6cae2bbb</hash>
+         <hash>53d34286fc306c6ce8b67a861c9684a870f01c850a62fd9704860f8db9d5c74a</hash>
       </entry>
       <entry>
          <file>..\..\i2c\src\config\pic32cm_ls00_cnano\interrupts.c</file>
@@ -2618,7 +2618,7 @@
       </entry>
       <entry>
          <file>..\..\i2c\src\config\pic32cm_ls00_cnano\peripheral\nvic\plib_nvic.h</file>
-         <hash>81e813a093101d546799e00723cbf7245e2d18471fa51c8d130c5809cecca03e</hash>
+         <hash>9936ac782115af41003255283fa2f603f4ff2212d16275b7c80ea8d067a9e208</hash>
       </entry>
       <entry>
          <file>..\..\i2c\src\config\pic32cm_ls00_cnano\peripheral\port\plib_port.c</file>
@@ -2630,11 +2630,11 @@
       </entry>
       <entry>
          <file>..\..\i2c\src\config\pic32cm_ls00_cnano\peripheral\sercom\i2c_master\plib_sercom2_i2c_master.c</file>
-         <hash>7b3d41f50b3ac76b49e7f1ba03cf19658a607713de455235169058dcce5caa15</hash>
+         <hash>c1698c7760392b4c32151ba80d79642500e86424cbcb42f40ccec9ade65d1dcc</hash>
       </entry>
       <entry>
          <file>..\..\i2c\src\config\pic32cm_ls00_cnano\peripheral\sercom\i2c_master\plib_sercom2_i2c_master.h</file>
-         <hash>3cb19d0a127d35f4200481e1b1e15356f5d46c98174a15297e8ffef2665d3fb6</hash>
+         <hash>5c38db7cf8afbf7ea812c743ac5469b709ce601038509cf3298c500011585f91</hash>
       </entry>
       <entry>
          <file>..\..\i2c\src\config\pic32cm_ls00_cnano\peripheral\sercom\i2c_master\plib_sercom_i2c_master_common.h</file>
@@ -3058,7 +3058,7 @@
       </entry>
       <entry>
          <file>..\..\i2c_secure\src\config\pic32cm_ls00_cnano\peripheral\clock\plib_clock.h</file>
-         <hash>721136c42046a932de696b169a84343465a44ea204bae3fb8c620a7778dcbf57</hash>
+         <hash>48855ddfcdc10b43a141321e043ab6ad2eb994b09fdba511f17f1d93911c536c</hash>
       </entry>
       <entry>
          <file>..\..\i2c_secure\src\config\pic32cm_ls00_cnano\peripheral\evsys\plib_evsys.c</file>
@@ -3070,11 +3070,11 @@
       </entry>
       <entry>
          <file>..\..\i2c_secure\src\config\pic32cm_ls00_cnano\peripheral\nvic\plib_nvic.c</file>
-         <hash>b1982dae47c80c176a43e3d949b2b37a7c2def3f9a0294f944c00c01ca2c0f82</hash>
+         <hash>544ed0ce1b7b1793a55d75cfd6ac39d0f1eeed13566b606df3599a86797d3d1b</hash>
       </entry>
       <entry>
          <file>..\..\i2c_secure\src\config\pic32cm_ls00_cnano\peripheral\nvic\plib_nvic.h</file>
-         <hash>81e813a093101d546799e00723cbf7245e2d18471fa51c8d130c5809cecca03e</hash>
+         <hash>9936ac782115af41003255283fa2f603f4ff2212d16275b7c80ea8d067a9e208</hash>
       </entry>
       <entry>
          <file>..\..\i2c_secure\src\config\pic32cm_ls00_cnano\peripheral\nvmctrl\plib_nvmctrl.c</file>
@@ -3094,7 +3094,7 @@
       </entry>
       <entry>
          <file>..\..\i2c_secure\src\config\pic32cm_ls00_cnano\peripheral\port\plib_port.c</file>
-         <hash>b95e69e7896adc771440358fe2f415c927dc2e026a559d296bea8b7aeb3a59de</hash>
+         <hash>68db243adc6fe86d40501d20ec414d254289afe7419a7ee68799995662914d11</hash>
       </entry>
       <entry>
          <file>..\..\i2c_secure\src\config\pic32cm_ls00_cnano\peripheral\port\plib_port.h</file>
