@@ -31,7 +31,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.2"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.4"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -2599,7 +2599,7 @@
       </entry>
       <entry>
          <file>..\..\spi_eeprom_write_read\src\config\pic32cm_ls00_cnano\definitions.h</file>
-         <hash>e25d5a8966058a9ef19965105398ff5086ed5410d2db09be0ca76d540bc46304</hash>
+         <hash>7cc31b66943fbd4703d8947b454b63d84dfee94c9e7af79044d204ad4f913729</hash>
       </entry>
       <entry>
          <file>..\..\spi_eeprom_write_read\src\config\pic32cm_ls00_cnano\device.h</file>
@@ -2615,11 +2615,11 @@
       </entry>
       <entry>
          <file>..\..\spi_eeprom_write_read\src\config\pic32cm_ls00_cnano\exceptions.c</file>
-         <hash>5efbe5a64a17c496d2f5b177bc9cd66a7f0f80323d9558e220c073a13570a2a7</hash>
+         <hash>42f9da2668e04ccb3473d45b149683a00f80072c6883c7918d6ce93997cd6987</hash>
       </entry>
       <entry>
          <file>..\..\spi_eeprom_write_read\src\config\pic32cm_ls00_cnano\initialization.c</file>
-         <hash>46c8abaf2735422cbc78375aae0f84d38ef063628e383a07ce37493357819c90</hash>
+         <hash>a4c9ebbba2a3b0e7104ae1edd1d26bf2cdf2c0262e8def114f496d040252ce0f</hash>
       </entry>
       <entry>
          <file>..\..\spi_eeprom_write_read\src\config\pic32cm_ls00_cnano\interrupts.c</file>
@@ -2639,7 +2639,7 @@
       </entry>
       <entry>
          <file>..\..\spi_eeprom_write_read\src\config\pic32cm_ls00_cnano\peripheral\nvic\plib_nvic.h</file>
-         <hash>81e813a093101d546799e00723cbf7245e2d18471fa51c8d130c5809cecca03e</hash>
+         <hash>9936ac782115af41003255283fa2f603f4ff2212d16275b7c80ea8d067a9e208</hash>
       </entry>
       <entry>
          <file>..\..\spi_eeprom_write_read\src\config\pic32cm_ls00_cnano\peripheral\port\plib_port.c</file>
@@ -2651,7 +2651,7 @@
       </entry>
       <entry>
          <file>..\..\spi_eeprom_write_read\src\config\pic32cm_ls00_cnano\peripheral\sercom\spi_master\plib_sercom1_spi_master.c</file>
-         <hash>667b37c07470b1cc8688cbdc6e5664c3a0e3acca7e786c1d1a6c86d28cc7f4c3</hash>
+         <hash>1601e4a0248eef41be84a32f01b90a502b21370269db0ac25a335010ade3709d</hash>
       </entry>
       <entry>
          <file>..\..\spi_eeprom_write_read\src\config\pic32cm_ls00_cnano\peripheral\sercom\spi_master\plib_sercom1_spi_master.h</file>
@@ -2659,7 +2659,7 @@
       </entry>
       <entry>
          <file>..\..\spi_eeprom_write_read\src\config\pic32cm_ls00_cnano\peripheral\sercom\spi_master\plib_sercom_spi_master_common.h</file>
-         <hash>f28c2694b21a2c5ebad94edb7de6fac0acb2bd5686d78d08289cd2185cdccfbf</hash>
+         <hash>06e3c7813e1608b5008e3c8955569f9cff04bef321a34c35421f7979368a4ada</hash>
       </entry>
       <entry>
          <file>..\..\spi_eeprom_write_read\src\config\pic32cm_ls00_cnano\pin_configurations.csv</file>
@@ -3079,7 +3079,7 @@
       </entry>
       <entry>
          <file>..\..\spi_eeprom_write_read_secure\src\config\pic32cm_ls00_cnano\peripheral\clock\plib_clock.h</file>
-         <hash>721136c42046a932de696b169a84343465a44ea204bae3fb8c620a7778dcbf57</hash>
+         <hash>48855ddfcdc10b43a141321e043ab6ad2eb994b09fdba511f17f1d93911c536c</hash>
       </entry>
       <entry>
          <file>..\..\spi_eeprom_write_read_secure\src\config\pic32cm_ls00_cnano\peripheral\evsys\plib_evsys.c</file>
@@ -3091,11 +3091,11 @@
       </entry>
       <entry>
          <file>..\..\spi_eeprom_write_read_secure\src\config\pic32cm_ls00_cnano\peripheral\nvic\plib_nvic.c</file>
-         <hash>ef227304603d534776857a6483c5b19843b9418e52fb9f4256185af01e38ddad</hash>
+         <hash>3484f1382bcd6f25ea7289b21d7c7385a43a96b30afa754656857f87e0025e85</hash>
       </entry>
       <entry>
          <file>..\..\spi_eeprom_write_read_secure\src\config\pic32cm_ls00_cnano\peripheral\nvic\plib_nvic.h</file>
-         <hash>81e813a093101d546799e00723cbf7245e2d18471fa51c8d130c5809cecca03e</hash>
+         <hash>9936ac782115af41003255283fa2f603f4ff2212d16275b7c80ea8d067a9e208</hash>
       </entry>
       <entry>
          <file>..\..\spi_eeprom_write_read_secure\src\config\pic32cm_ls00_cnano\peripheral\nvmctrl\plib_nvmctrl.c</file>
@@ -3115,7 +3115,7 @@
       </entry>
       <entry>
          <file>..\..\spi_eeprom_write_read_secure\src\config\pic32cm_ls00_cnano\peripheral\port\plib_port.c</file>
-         <hash>ce348185521240d9aa1c2a04a2fa368f1d95763cbbd155f698f482eb52dacced</hash>
+         <hash>831c6b4cfabf7f185eb4e802ac06884885d8683195e909b9a6e4ca3c0bb48ca5</hash>
       </entry>
       <entry>
          <file>..\..\spi_eeprom_write_read_secure\src\config\pic32cm_ls00_cnano\peripheral\port\plib_port.h</file>
