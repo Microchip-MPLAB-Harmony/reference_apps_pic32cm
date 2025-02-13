@@ -43,7 +43,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.2"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.4"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -8822,7 +8822,7 @@
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\definitions.h</file>
-         <hash>322295a2ee5d0e5d124a4102e102f2b10a9d276ccdb14076608c4289dac370df</hash>
+         <hash>e980b057ba7927594204528e84028063fc7b607007805ab331ba13ed749838d1</hash>
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\device.h</file>
@@ -8838,11 +8838,11 @@
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\exceptions.c</file>
-         <hash>5efbe5a64a17c496d2f5b177bc9cd66a7f0f80323d9558e220c073a13570a2a7</hash>
+         <hash>42f9da2668e04ccb3473d45b149683a00f80072c6883c7918d6ce93997cd6987</hash>
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\initialization.c</file>
-         <hash>146cf4956fae22b8757852029e608f15d0f41a1ff6997a2051fa0e57db36f7d9</hash>
+         <hash>57d7a9baca41946b398d710111a331425710e5bb65212895589e7ac15361ef91</hash>
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\interrupts.c</file>
@@ -8870,7 +8870,7 @@
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\peripheral\nvic\plib_nvic.h</file>
-         <hash>81e813a093101d546799e00723cbf7245e2d18471fa51c8d130c5809cecca03e</hash>
+         <hash>9936ac782115af41003255283fa2f603f4ff2212d16275b7c80ea8d067a9e208</hash>
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\peripheral\port\plib_port.c</file>
@@ -8882,15 +8882,15 @@
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\peripheral\sercom\usart\plib_sercom3_usart.c</file>
-         <hash>7035ba2cba065bc16918ff6fb9d0555015e9c927af0f4a0ad68f8ebf9cef25d2</hash>
+         <hash>d0e083b3bf848dd99471c0f41b8ce2180d51f45cc02b05cbbd8c141008b6844c</hash>
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\peripheral\sercom\usart\plib_sercom3_usart.h</file>
-         <hash>bdb7a2a6a892bbf75e432ff0874a6903193ef29952e3a75570a5c06e10c9b3bd</hash>
+         <hash>22b0b20a392b7b9a0bcc89663853e622c2fcadb751f6b8ded1a4f834614accc8</hash>
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\peripheral\sercom\usart\plib_sercom_usart_common.h</file>
-         <hash>f19dafabe0928d60dd83d7e19f35889f200e3fbadff09e2f42523d320acf780a</hash>
+         <hash>3653b66472c558c50f7037a1dd25d2678e9a13aa718f3c53a2195e6f3919ea48</hash>
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\pin_configurations.csv</file>
@@ -9310,11 +9310,11 @@
       </entry>
       <entry>
          <file>..\..\firmware_secure\src\config\default\peripheral\clock\plib_clock.h</file>
-         <hash>721136c42046a932de696b169a84343465a44ea204bae3fb8c620a7778dcbf57</hash>
+         <hash>48855ddfcdc10b43a141321e043ab6ad2eb994b09fdba511f17f1d93911c536c</hash>
       </entry>
       <entry>
          <file>..\..\firmware_secure\src\config\default\peripheral\eic\plib_eic.c</file>
-         <hash>8386efa466b0ab4a500433f86c02d1a7edcbbc0bc4d4040308e00876f84712eb</hash>
+         <hash>ce1c8c22d3c118e3ddad433627ec4f8948f5aaf0c36d2c04a727854696e7d6b6</hash>
       </entry>
       <entry>
          <file>..\..\firmware_secure\src\config\default\peripheral\eic\plib_eic.h</file>
@@ -9330,11 +9330,11 @@
       </entry>
       <entry>
          <file>..\..\firmware_secure\src\config\default\peripheral\nvic\plib_nvic.c</file>
-         <hash>e445feb4a5a2237d01b000d496eed35051513f96d652804b87f67f359cba02d2</hash>
+         <hash>00109336d4da908737a3e10e4a01144666714b5d6c2c0409e8533ab2296b6cf4</hash>
       </entry>
       <entry>
          <file>..\..\firmware_secure\src\config\default\peripheral\nvic\plib_nvic.h</file>
-         <hash>81e813a093101d546799e00723cbf7245e2d18471fa51c8d130c5809cecca03e</hash>
+         <hash>9936ac782115af41003255283fa2f603f4ff2212d16275b7c80ea8d067a9e208</hash>
       </entry>
       <entry>
          <file>..\..\firmware_secure\src\config\default\peripheral\nvmctrl\plib_nvmctrl.c</file>
@@ -9354,7 +9354,7 @@
       </entry>
       <entry>
          <file>..\..\firmware_secure\src\config\default\peripheral\port\plib_port.c</file>
-         <hash>01a3f54dd3e751b0e1207a638479b8ff24c2f7f042d9fc391514e69469290ed3</hash>
+         <hash>be92785317d0b600df1f2ce6ee79e04f48a782b2d56007bd96191bde1e72f8ed</hash>
       </entry>
       <entry>
          <file>..\..\firmware_secure\src\config\default\peripheral\port\plib_port.h</file>
@@ -9370,11 +9370,11 @@
       </entry>
       <entry>
          <file>..\..\firmware_secure\src\config\default\peripheral\sercom\i2c_master\plib_sercom5_i2c_master.c</file>
-         <hash>c891ac5444ca06707cde1af45d99f34275973d788394155dfdfb4320d1c78405</hash>
+         <hash>46dcf6c981a5bcf44e45682145115e5719be52eec85478bff7e8ada2c5587eb4</hash>
       </entry>
       <entry>
          <file>..\..\firmware_secure\src\config\default\peripheral\sercom\i2c_master\plib_sercom5_i2c_master.h</file>
-         <hash>b3ab85899bf3629905de9f09c49fe8f2bccaf9e9ea6ec4d4edb88e6bf8be2dce</hash>
+         <hash>dbbadebbb8a74c7a0306fba60d09b7eeb6c7a1b4c59f71822d0f0706ce1333df</hash>
       </entry>
       <entry>
          <file>..\..\firmware_secure\src\config\default\peripheral\sercom\i2c_master\plib_sercom_i2c_master_common.h</file>
