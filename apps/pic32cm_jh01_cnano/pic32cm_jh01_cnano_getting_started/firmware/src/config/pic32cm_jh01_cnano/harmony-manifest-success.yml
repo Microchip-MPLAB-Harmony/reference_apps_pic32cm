@@ -4,16 +4,19 @@
 
 
 project: pic32cm_jh01_cnano_getting_started
-creation_date: 2024-03-18T12:13:32.717+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+creation_date: 2025-02-12T14:40:44.490+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
 operating_system: Windows 10
 mcc_mode: IDE            # [IDE|Standalone|Headless]
-mcc_version: v5.5.0
-mcc_core_version: v5.7.0
+mcc_version: v5.5.1
+mcc_core_version: v5.7.1
 mplabx_version: v6.20        # if MPLAB X plugin only
-harmony_version: v1.3.2
-compiler: XC32 4.35
+harmony_version: v1.5.4
+compiler: XC32 4.45
 
 modules:
-    - {name: "csp", version: "v3.18.2"}
-    - {name: "dev_packs", version: "v3.18.1"}
+    - {name: "csp", version: "v3.20.0"}
+    - {name: "CMSIS_5", version: "5.9.0"}
+
+packs:
+    - {name: "PIC32CM-JH_DFP", version: "1.2.208"}
 

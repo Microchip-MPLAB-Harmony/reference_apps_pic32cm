@@ -1,4 +1,4 @@
-<config configName="pic32cm_jh01_cnano" projectName="pic32cm_jh01_cnano_getting_started" configVersion="1.1" device="PIC32CM5164JH01048" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.7.0">
+<config configName="pic32cm_jh01_cnano" projectName="pic32cm_jh01_cnano_getting_started" configVersion="1.1" device="PIC32CM5164JH01048" deviceLibraryClass="com.microchip.mcc.harmony.Harmony3Library" coreVersion="5.7.1">
    <usedPackages class="java.util.ArrayList"/>
    <usedClasses class="java.util.TreeMap">
       <entry>
@@ -35,7 +35,7 @@
       </entry>
    </usedClasses>
    <usedLibraries class="java.util.ArrayList">
-      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.3.2"/>
+      <ILibraryFile class="com.microchip.mcc.core.library.BaseLibraryFile" libraryClass="com.microchip.mcc.harmony.Harmony3Library" version="1.5.4"/>
    </usedLibraries>
    <tokenMap class="java.util.TreeMap">
       <entry>
@@ -47,7 +47,10 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;UserData&gt;
   &lt;UserData dnOrder=&quot;0&quot;&gt;
     &lt;GraphSettings canvasHeight=&quot;310&quot; canvasWidth=&quot;355&quot; dnOrder=&quot;0&quot;/&gt;
-    &lt;ComponentGraph dnOrder=&quot;1&quot; id=&quot;__ROOTVIEW&quot;&gt;
+    &lt;PowerProfiles dnOrder=&quot;1&quot;&gt;
+      &lt;Profile dnOrder=&quot;0&quot; id=&quot;profile0&quot; name=&quot;Main&quot;/&gt;
+    &lt;/PowerProfiles&gt;
+    &lt;ComponentGraph dnOrder=&quot;2&quot; id=&quot;__ROOTVIEW&quot;&gt;
       &lt;ElementPositions dnOrder=&quot;0&quot;&gt;
         &lt;ElementPosition dnOrder=&quot;0&quot; id=&quot;cmsis&quot; x=&quot;30&quot; y=&quot;240&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;1&quot; id=&quot;core&quot; x=&quot;30&quot; y=&quot;200&quot;/&gt;
@@ -4678,7 +4681,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cm_jh01_cnano\definitions.h</file>
-         <hash>f05c9b6ec01b3fd66dc99628b895c3104e02cb1caa34fbfc17d6110cd708f45a</hash>
+         <hash>0d0d126875237e9068beba5c746358762625d7e83cd8e89e1d53a91e198ae924</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cm_jh01_cnano\device.h</file>
@@ -4694,11 +4697,11 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cm_jh01_cnano\exceptions.c</file>
-         <hash>5efbe5a64a17c496d2f5b177bc9cd66a7f0f80323d9558e220c073a13570a2a7</hash>
+         <hash>42f9da2668e04ccb3473d45b149683a00f80072c6883c7918d6ce93997cd6987</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cm_jh01_cnano\initialization.c</file>
-         <hash>b0666638e6783addc294ef725589c78468e96de97755f7d0a5d7dbdafb993c3e</hash>
+         <hash>7fe04a0a3cd150733dcb73372f7e72c2b12aa432ca7c5705bc6f5ae8e7ae929f</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cm_jh01_cnano\interrupts.c</file>
@@ -4714,7 +4717,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cm_jh01_cnano\peripheral\clock\plib_clock.c</file>
-         <hash>0219473c36453b2da0dc22a15fd969514a4e7f28885c758aa5ba5558e3688118</hash>
+         <hash>9909f7108418721a8e9052003f6b9cee34534514786a6b855a4e1fc3e274fe69</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cm_jh01_cnano\peripheral\clock\plib_clock.h</file>
@@ -4746,23 +4749,23 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cm_jh01_cnano\peripheral\nvic\plib_nvic.c</file>
-         <hash>fd53f51dc32713a62dfedd2160a97e84418f1ae209046eb32526bc0e5f4878b0</hash>
+         <hash>29534c9088308d18e5b671485664691096b8327ccb4638407fc9f17076295342</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cm_jh01_cnano\peripheral\nvic\plib_nvic.h</file>
-         <hash>81e813a093101d546799e00723cbf7245e2d18471fa51c8d130c5809cecca03e</hash>
+         <hash>9936ac782115af41003255283fa2f603f4ff2212d16275b7c80ea8d067a9e208</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cm_jh01_cnano\peripheral\nvmctrl\plib_nvmctrl.c</file>
-         <hash>3f7e6763589b923e883d2fd3a1ee406c62b70ef9286b2eb73865819c77143d82</hash>
+         <hash>1b96863f5d0855f89457e09dafbb0b3e5a0750cc38da195ab60b045576dcd2f7</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cm_jh01_cnano\peripheral\nvmctrl\plib_nvmctrl.h</file>
-         <hash>a9b3e9e4a404f03636d3d55f9fb8edb4922bfff93f421494c272ac04e691af49</hash>
+         <hash>37a2fe49c8f5ae3ff7de4dc79dc6742aa04f80f1bbe21c15d8abab57a391c64e</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cm_jh01_cnano\peripheral\port\plib_port.c</file>
-         <hash>040ed316092bbb94e17a3ac20e7d271698b6ab03f68f2c2533805f462dd0e8c4</hash>
+         <hash>b24c864209b13c198f48d85d57ef54df2b2068bf7948049c1732af574a39ebc8</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cm_jh01_cnano\peripheral\port\plib_port.h</file>
@@ -4778,15 +4781,15 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cm_jh01_cnano\peripheral\sercom\usart\plib_sercom1_usart.c</file>
-         <hash>b49941516e9650d203027d6479cd7b9bb9da51244742a71975ff5b34f07f38df</hash>
+         <hash>e9ffed720dcd0b80b9ea73bfd9ff9c731a0235ba5d4ed8bdbd2247a90387b63d</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cm_jh01_cnano\peripheral\sercom\usart\plib_sercom1_usart.h</file>
-         <hash>18d2a47de448f7a8e7a6e3264ccfbd099c19f404fb14789e5e74679305fcbbd0</hash>
+         <hash>0140e5b49dcc2d4d93de923041daca027343fca1941fe5af5deab3da026ba901</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cm_jh01_cnano\peripheral\sercom\usart\plib_sercom_usart_common.h</file>
-         <hash>f19dafabe0928d60dd83d7e19f35889f200e3fbadff09e2f42523d320acf780a</hash>
+         <hash>3653b66472c558c50f7037a1dd25d2678e9a13aa718f3c53a2195e6f3919ea48</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cm_jh01_cnano\pin_configurations.csv</file>
@@ -4794,7 +4797,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cm_jh01_cnano\startup_xc32.c</file>
-         <hash>cd931a942c0eaff927230535a8d22ef5555ace9a661ea99808b7cdcec0c1fc3c</hash>
+         <hash>1e9cb2820f0a9b6a33635fc1fce43d0bcbda67576cfd3cd436eda2c33a6cd44b</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cm_jh01_cnano\stdio\xc32_monitor.c</file>
@@ -4838,7 +4841,7 @@
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_version.h</file>
-         <hash>2de01ae2556a38eb82c389de23c701805ec63308cfbcf3f84cb12141589b0858</hash>
+         <hash>8cda7ac3ff6f0eb5e83c4fe613dd195151b24da54167f5c3c007e599a03f1edc</hash>
       </entry>
       <entry>
          <file>..\src\packs\CMSIS\CMSIS\Core\Include\core_cm0plus.h</file>
@@ -4850,347 +4853,347 @@
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\component\ac.h</file>
-         <hash>3e6d3d166ceacf1a0b9a21d1897a33bf7f7a1f3dd36111689a728e3e38ee3dda</hash>
+         <hash>1917568023bced2cb72d7e5cc481cd7c8b2805470745605ed4856da20727b666</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\component\adc.h</file>
-         <hash>702ce2b49ab681d9b9c1523d05e45c50b54ae05bd215d6ac811c95076da76004</hash>
+         <hash>8089a3f998f9002cd29f84a28e77c9dc56372762c095ae27f86b9633679931b5</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\component\can.h</file>
-         <hash>596f5fbb91e91948407916cdd1e5887b4e65f3294553fb46a4fb3c7d393174a8</hash>
+         <hash>a1d2a79c6b9cbf098cba29e8d946d2e9dd3b8a9243ccab8672ed1832163e0247</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\component\ccl.h</file>
-         <hash>e45d6886b8d296ef45f41ec60793f10ceca205c0650f01c53eed5b7e1b6444aa</hash>
+         <hash>eb54cc170de061c17fad80c7e92075a26be8d2eecd41dbbd0bb45968d6cfcbb7</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\component\dac.h</file>
-         <hash>877f48296e57ca195c6a78b2e26e55a56ff97904d42106c3a9dda66d929218f7</hash>
+         <hash>a7fe7ff83f095c5e185882b9c528ceec11306a32b6ebe83f78dc371e3961442b</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\component\divas.h</file>
-         <hash>866d628afeec47c0474b0a479e16fc27faaec587e312976cc8a78556083225f9</hash>
+         <hash>1dd33b31217b466b2d2e0137b3665eb317de867e0adc52c9241edd5c4b131bf8</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\component\dmac.h</file>
-         <hash>43b350707e7a5d4190dba06c71ce07bf0546ad9162e6c190f1c6ec01e12811ae</hash>
+         <hash>e60601cc8b72b5254ade193d66ebc2a41a08017e14d0d601c14516b97e50f9f1</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\component\dsu.h</file>
-         <hash>159cb9e0e18e3a4ec0741d29adfd73724cb44e7a0d912ecd542b7201a425e031</hash>
+         <hash>d2d36a4b2fa77fd0939495a6d5fedc4b40a766e5b609b785cf767f8d74bd2c21</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\component\eic.h</file>
-         <hash>49a04ee7377d94d2cc8d160c7efd6e230913f74da025254f9e436c7cded99f6c</hash>
+         <hash>6d1b61e06cdce6affdd6da292bca4935695d95da978d076598eb701850f3ffd6</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\component\evsys.h</file>
-         <hash>0bd7d3431330c2a441c6660bfd7a1faa5c68d3df03b5d0f536384e1756d449d1</hash>
+         <hash>481a28f6e093ff76374734503de61867e6375b6a77d4760db54d9535fe33941c</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\component\freqm.h</file>
-         <hash>fb3748faabf94690fd00ac84e729e63cf3a1f8c96eafc18189a7798f01e2545d</hash>
+         <hash>b4af33e7ec4d11dec70c909ffbc618ea17391ec3da2e8b709589fc7744d936b7</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\component\fuses.h</file>
-         <hash>d4aff92bfdcd5bc18e1b77c3f5c3c5f0c28151ec2efe0e257e980285e3b071d3</hash>
+         <hash>69c2c48b00830f658b1993fdff95926e5d575348e5532ce4840b5957a39199b5</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\component\gclk.h</file>
-         <hash>10b167477dfbdec67aa8e0d385ae292c250be56ba78979452b182a45af287ff0</hash>
+         <hash>c0dbe5acb22a8d8d9f7daf96884dda8fc59b3c2de43e99a28f6648937fac630c</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\component\icm.h</file>
-         <hash>ea1a6a80fb354dfc64010710d90cfe2aa0b1bce70abb37b3c1b1582118db72ea</hash>
+         <hash>1cef39dd4ee9bcd59762aea13ae6f13c38c91a0004ccbea1a9b69ce8351dbd2f</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\component\mclk.h</file>
-         <hash>5b3f997b9c23356209df635a355f063a11c78b99a82e1cd17cd51ddd4600bd56</hash>
+         <hash>d32012753cbb103d98e56b1d1521a08c2c805492e8d9a039f05e6fd1b7d7cf65</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\component\mcramc.h</file>
-         <hash>c8ebec5b006b9cab923ecf8b68bf92a6934836e054042421327a778a583f2253</hash>
+         <hash>880c19d342be272a76774a28c9171fd28dc10c9f9486750f3700cbacbc052201</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\component\mtb.h</file>
-         <hash>93c716ebb79b618cb9bb84c897be6c532e0fb7e2374d46e60557731d4794102b</hash>
+         <hash>3b3411aafdb53a73c557a08c288cfd85e4e0d9e871027617ebeef153c1c40ff1</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\component\nvmctrl.h</file>
-         <hash>538cd608c16075899b742b77f5bed9684dfea2de89a9a6496031447e357c2e22</hash>
+         <hash>310c50d2eb30b5087f5c80baace198c70feacbe6cfba64c9cda51681860681cb</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\component\osc32kctrl.h</file>
-         <hash>510e1dfa432c2bbc91dd968e30aabc32ede2a81c9f4ad86799280d2f10d5da67</hash>
+         <hash>f7bfb0f1502bf8e2b7db70d0c818ddfbf6f52d848dd09a0561cb5596d3659e3a</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\component\oscctrl.h</file>
-         <hash>28b9895762f28c6d7a8d486c1e44bd900b8356e7f11018f05d15bb4c1f7017b8</hash>
+         <hash>2770c9fd4ce92effb1574d74201a2b6e7ddeeff0bebac744f256a631d1988163</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\component\pac.h</file>
-         <hash>888c482fc3023f9df53e26913293c6d5b8201c16733fad8f289370c58ca9e411</hash>
+         <hash>eb3544f1373f1ea8badd5bb7756acd79ea4cd6c3c5c218ac2b8952f7ecd6711b</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\component\pdec.h</file>
-         <hash>be141b07f9075bea780a5987cb4081bb7be8cc2fa27426901b9d37dd7c944b3c</hash>
+         <hash>719b5230807024ff06da8cf1e7e68f5651c76aa7798fbfd784ae15454d9f4ace</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\component\pm.h</file>
-         <hash>1b33a81b4b8c9d7491750a3ea02b526e47c614982f1da547dcc9960862747b0f</hash>
+         <hash>06b784770f17631ee3aede60a3f4e2cd1661ba78cb210931a41837eb910f09f8</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\component\port.h</file>
-         <hash>1a4726bc9068001b8ab89bcfbb9673a67e8666adad99f6c54abf9f1904b08888</hash>
+         <hash>9cb06ca43c37d1217686dd1931824e86f1ff5e9bdfa868f5c17764009d8668ba</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\component\ptc.h</file>
-         <hash>4c1b295083a8e273e71e36bd4d03761e31682df7348fc0e56b249e0d36ebdc54</hash>
+         <hash>b28bd2954770d84ddabbb8a0b03587c6bc6072bef79b9f9d56b10ce51a10bd8a</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\component\rstc.h</file>
-         <hash>a31386c06938d74c4cc944d6c9a7f12281c7d7b926b1da38f53e631c677c6320</hash>
+         <hash>71f5e546c646d463f8cfbf35668231c24673d268d80bb588c51bc9b51791391f</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\component\rtc.h</file>
-         <hash>791530dd7f4609b018dbf776b11ff22aba927a63dfff44cc6572d9d1e6b62a69</hash>
+         <hash>5b2d22331e9fe6800704de3f722f2e3634c1c478e62eb921484e9b33bd948ee7</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\component\sercom.h</file>
-         <hash>7ed35a0986742f5c7cb4dad37e3ceb21af9778ae5db196fe9931e9f3fa9164de</hash>
+         <hash>def0f322744dc4f09f9e44479cb1956727543164640a03bd6b6e35e994214a8e</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\component\smbist.h</file>
-         <hash>42981428eefa6810f74b24a0ea835487917b11701d4ab06d2e06ab1209e9d18b</hash>
+         <hash>80fe4f859227c625af1fb7f22a80f2ca467b4faad7f247252ffee783960a3d8f</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\component\supc.h</file>
-         <hash>c5ae79dfddb683c1a097e47395c4578fb43174d48b78fd1377209bf85a94c744</hash>
+         <hash>ff672a111e7823227d57cdd64c7abeccd82a6a3ecc2f68e3c8b76dcd6f04819d</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\component\tc.h</file>
-         <hash>bba15b1fe65654ee30d5bcc0dc1e5956f53be98fddabc63872b11af7e91ddb4f</hash>
+         <hash>f7c268fda9bb401c2e0f12a77d39906815b8f02ecc94fa519f1dc160ea75659c</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\component\tcc.h</file>
-         <hash>28ec9620af5b46dee42db04195e345ff555c3626fa5d68d86f6523f0a9621bc3</hash>
+         <hash>ce98ad54650cc69326860f005ebe9832802397a68b412c0971e35ff5191e9fc4</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\component\wdt.h</file>
-         <hash>589f306236d2202d23be18dcf8b54a28909b3fbea74adc60b1a1299422bd860a</hash>
+         <hash>91ad6c0ab4b555743ebd5cb86e1ba62f22a1fc70ca4c34e1bdbd95525d338605</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\instance\ac.h</file>
-         <hash>374043ceea761bb95734f3cd41bfbfdd1da96feaa4aa2d55c323fc1e45118234</hash>
+         <hash>eb7acf71c1e160180e510a7087038d37a734726310b65fd5f5557e73cca6a7b1</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\instance\adc0.h</file>
-         <hash>98793053c71c4e0644174975cad7a572e645f65f7afeebcee616d736437ca93e</hash>
+         <hash>2a17b0ea5276a3cf151ab64058572a10669089c39dc405a21dee5070212caf59</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\instance\adc1.h</file>
-         <hash>efd013cb7651fb4c02a6748bab25fa71ff77e42e06da7d3e16e781d3b7af43bc</hash>
+         <hash>87eb839f52176dc773d3d3bfae8391aea662189dade5dc87117514a5c3d8e9f2</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\instance\can0.h</file>
-         <hash>818d34caa711a6b1cd13929e64f86763c3cb77ff02fb0d647b0910bc5c14f88e</hash>
+         <hash>d6702ef3dcbe3c4878001e07e84b76a46d1de17e8fa70884b3e3894048e5f922</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\instance\can1.h</file>
-         <hash>294bdb2764c8da28bac39eda205a165dc61756f82a7ccfe430588220900640d4</hash>
+         <hash>38212cbaafe79b93d1a712259802a9373e37d57333cb5a377f4f0bc9c7ca9efa</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\instance\ccl.h</file>
-         <hash>b300106ab2151ce1116d35052838eae9abad334a6b6f519a5331d4e847b2a94c</hash>
+         <hash>6765e82ee0b2a12ded9979c64c3d713e41caab8c045a375bcee362f94e27307e</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\instance\dac.h</file>
-         <hash>4fbced6493a580722083b5d4044fe5f907c35f71432930b22901beb22e762af3</hash>
+         <hash>b8c55df52b536aee2ce650d767252b8a509b2a5dcc5972ebc91f8d8407365df8</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\instance\divas.h</file>
-         <hash>aa743839bf0cad5e2aa6e655d2b7e735002d64d5406e3b7478c49f8777cf1b2e</hash>
+         <hash>730e3faa5abce519f6fcbdd44e0adfdd8b6f6d6bdab5e90b5781b1b1c90a8d6a</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\instance\dmac.h</file>
-         <hash>9f8de9a68c6c04c7912b1f12e09ad550d15c22a0ba904816c012f767e4d87288</hash>
+         <hash>4114b33b2adc172f0300991b1438b2ea74c8f4c9f22ec455eea0539b70c2562e</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\instance\dsu.h</file>
-         <hash>05c2aebb862f0a23403fec6445cf5cacd8da916ce4dd3568969c3fbd9150e4a0</hash>
+         <hash>cf00b942055d253e9ce711595d641f4bd04ed90c20fdbae0d8591d9295e5e611</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\instance\eic.h</file>
-         <hash>a068402e7edd128dd6c13b5ae5ca6d672badbde57ca72c293a62c5e835fdacc0</hash>
+         <hash>1447281b56671c8e5e89aef30fe5de6c435f0ccadc9eff3be25aed245242eeaf</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\instance\evsys.h</file>
-         <hash>ac7c1deaf3e2af9a4482bb4d9bd5c2b86c497eba5884384fd9114519072f6f06</hash>
+         <hash>3e2964d4b94033d2505d6fbc7ec3b5adfee2645c62caca8afdc02f294097319a</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\instance\freqm.h</file>
-         <hash>1ffd8f1f05d0ccbee40fd589bc9f2c851d14f75730d9856963911c69d6cc59d4</hash>
+         <hash>ce2317c5b0efd6cf5f0cd9dfae19f382367c2d3a43665b443e82a43e00965cac</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\instance\fuses.h</file>
-         <hash>6295d9a956c86ce00964cc436af455996154b4ae86cc6e1c0eea22cd52eab4fa</hash>
+         <hash>d894d168d0cddf584036cb7b688c72dc6b99cf9a91da29814ff164e4bdb37967</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\instance\gclk.h</file>
-         <hash>418429d44ad8e4eb6a43a3590de06a06ce0c41bf59e63492adc074dba88d9bff</hash>
+         <hash>eebbea7999f4c724e9064dbb9e58640d24200c04a9719cfd27cae27db3f10fa9</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\instance\icm.h</file>
-         <hash>a0588491fd0dbcb823467662f6d1c2cad1e9d8f6c97d6d4f997f3acd18195a37</hash>
+         <hash>c5f8f602d258c7d45bfe6181128c2c960f1ab21e8eb93ce256cfa6920ac35103</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\instance\mclk.h</file>
-         <hash>4b7df22d654ebb22579014d7704e9e073e3c51ea57b528f110d8ec375487d922</hash>
+         <hash>0094a6534ce0c27c2fc9b1b71ffe5b081551510f2d480e2f3885008f516424ca</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\instance\mcramc.h</file>
-         <hash>5491e94bc63f507330c92b9df47980e419c633a4044e0b91bfb006a24fec619c</hash>
+         <hash>d7480b675d042ce07caec62b768e882315dcf89d8cbb4ca3b7e07cee8fbdbc6c</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\instance\mtb.h</file>
-         <hash>5c005015b0d5fc80480e1ed69beec325acdaa23e75e1982a0696509c7985c261</hash>
+         <hash>da9f280f6a6e60a4d8199c624ab85b2ce9021bd95f4a0a5cc22980282b0b5062</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\instance\nvmctrl.h</file>
-         <hash>3a1adb83c2be80dc2f47301641739dfb455a10373fcd43c52ac3320345a7fd0b</hash>
+         <hash>fe15fc763c28c84700c14cfe315bcd8735519db4646c34046814ba9a70670d4a</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\instance\osc32kctrl.h</file>
-         <hash>6e9fc872a7117779899c778c4489244ea789c6c04f946b52e63c6dd0a5803349</hash>
+         <hash>8cd50acd7d4ea0c3e940fe7d69e4bf7f696148fc1f1404df0a5a0c08c17188f3</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\instance\oscctrl.h</file>
-         <hash>7542d02a1ab3d5760715b10630b41561eed00db2557e779b83dbccda6bc633de</hash>
+         <hash>62330c1ed2dba29f2e20e9b7aaf2430e1328e3e1638a8841e947bec7efc6a072</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\instance\pac.h</file>
-         <hash>868058e8803a1b66050dd34ac46f496ccb0348cb9af0030422d448bdd6cb5127</hash>
+         <hash>5498abb09add522abce37b117f115e3f97c58cc846f3112621f7544183cfaf4a</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\instance\pdec.h</file>
-         <hash>e85912292e668c025bf1e45831497c4c1a2f52c45b241a4b53e25d2782fe6327</hash>
+         <hash>4298de337b407464ee776f373dd1add9c8e75e7fd6d36fb4ba1c094f5c7e4fb1</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\instance\pm.h</file>
-         <hash>45ece341975a4031e00c1058fe5ce3d8a27cdd3d51669ba8be2d490784ae0c7d</hash>
+         <hash>ab3790929298f7ac7e2af46a8554f18bbf8247d06c28b24eda233e9cd0f82fa4</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\instance\port.h</file>
-         <hash>70b298fd93f87a5a078e065d0499460f0c5f8f0dfaf6981d17efc74e355e3409</hash>
+         <hash>6ddaf89f9bf38f73342bc2313fd110db0cf0c325f855949ec36589339ec545f5</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\instance\ptc.h</file>
-         <hash>577646a0e40ac5625b676b8bda705c55eca1ef1d5e45434e83f41af345864e46</hash>
+         <hash>1d13fce95c8c04b9da0704112065b8279a402423333d8bb28c755b29c638a367</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\instance\rstc.h</file>
-         <hash>224089e1c4cc59c8c49581276ba8f86a243c2a73b4f6c6c4596ccade1da53154</hash>
+         <hash>1f3461a14aa2c95ffdca1bae3663ad813c4060d4e11132f93ddc2dd89bc6fc71</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\instance\rtc.h</file>
-         <hash>b529a031864343f49c0d7d8a7bf067258166dfa864a6be2b524af2bd2197fb5f</hash>
+         <hash>64b9310deb37facc3b44cec94ac564653c446d24437927c1a0d1c44da94c6125</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\instance\sercom0.h</file>
-         <hash>5091524e8dad92354fee12b6c44216254bf4393e8d7e79efb885677d15d5e02a</hash>
+         <hash>3621037a7e14d512cc83925c4510b8f98c232da956c90841f0f3dc0c374289ec</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\instance\sercom1.h</file>
-         <hash>7489925a949b0b21edd436493b9d7991c7422d0a705bdaf673d07bab77a4a852</hash>
+         <hash>6fbe931c52c6e23729ea1be42cc75a006c8f164f055dfa0d859e8a80ded5fb9f</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\instance\sercom2.h</file>
-         <hash>0c63b4218a9b53abda690534e68df056564be963b76a785179f9268a99df4141</hash>
+         <hash>24590c6ae455cd31da3606c8ac349b5d043c8ec777bc71d5c37799d4d2e81236</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\instance\sercom3.h</file>
-         <hash>026e8e6d5894a72ed00bdc2dfe6a3b7454ca9f3103dd57901284a28d2863d5a5</hash>
+         <hash>f43d40a147a25742471e1c58dca3bec846c7a48b81404f17b2392157d632daff</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\instance\sercom4.h</file>
-         <hash>d981b87dcaab140da72db07319ae4f7fb6f26ad99172bfc01c08fdb51085a17d</hash>
+         <hash>44e3e8f9a78f5ce53bae2c790c5c869220a0f26d7d92a483300681094490d119</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\instance\sercom5.h</file>
-         <hash>69f948906c374223b89bbc5034df85ae026573f80045bf8fc74fa940e3d79dd4</hash>
+         <hash>a824a79cabf69d649e4d941864513a17682f9482df7cfe8dcf8d31efa2aca4bc</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\instance\sercom6.h</file>
-         <hash>b26d42f624fe782ca22c9257a8e6f51124a770c232da341f4c1fef699c036f79</hash>
+         <hash>a8f3c9e93150090c2b99a7287532778b2211fe04f74ba7990a4ea64d7c1a6132</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\instance\sercom7.h</file>
-         <hash>7e74eab3c3c694e3bdd2dcc3cea0f2853563b0fa74e1cf3754bd375e0530202c</hash>
+         <hash>059a641d09213843ec41c7dfaa7ff33e30aa9029fefc435c2e738b32cedd8d4e</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\instance\smbist.h</file>
-         <hash>df95f9ed08c2d95b5376948582cefe68d564834d496ef42973f0d6b3291b9fa9</hash>
+         <hash>ca17b6a45d61be2129dd487293b331c476003c1eccbc51160cfff830a02758e9</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\instance\supc.h</file>
-         <hash>ffad470dc26c1fc780dd0652d857b9c3893b6416174f8513b1b55315c9ce7386</hash>
+         <hash>e62883db75e7542da848fea95301592226e5a34e554fce586a1baa9245c90d23</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\instance\tc0.h</file>
-         <hash>1a0b3a935eb954949ea8dfa3f4e363332c1bdabe6c3215b587cbb3453ff44ece</hash>
+         <hash>a4b57bf2eeb513490dd0ba3b0b80c0c0a1cf72e82f85cfb41aea46c6519a6504</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\instance\tc1.h</file>
-         <hash>292200d76b88c348719623be2b8e6f9bc0079a98d514b19982a9f8ab16761ab2</hash>
+         <hash>b27282fbb7c8a24a417ed861acb08f42238c3cea943b120f0c07a40a1918fcc7</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\instance\tc2.h</file>
-         <hash>2bee3295695925a03c0f443c993eb1f65f2c2a4c6eeddf1a23580121b2b54992</hash>
+         <hash>f680f4b14e64418b7cdf9a9cb10cd089039428b69738758b3952543259e16a40</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\instance\tc3.h</file>
-         <hash>5e80ab05b64e99a3775a97d7816c12c0721ece31436c581cd4dba9b2445f9bec</hash>
+         <hash>506ab8a8485b23525f4fe06ef60abd2ad0afdf74bedf7a24c5046d0e0993d16d</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\instance\tc4.h</file>
-         <hash>ce83f10d7dfa687932d79d050d7672265542fea1aa87d4c4a559f82effdcb0cc</hash>
+         <hash>b63aba477c53d0b6492bfd6f7b1f6a3029136f4761dda76b2977edfc91c2b4df</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\instance\tc5.h</file>
-         <hash>52158e50952b8596c17dc5802749fe7bc2de510b08200752979f87183052252c</hash>
+         <hash>cd39e1ae1d5ccc59be189f6cecb0e54048d2914f1f5d2527ba5a0f70e385b638</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\instance\tc6.h</file>
-         <hash>d44c723783e276b8e45429f77300eebf533e9029a6525dd0d5cb651eeb08ae32</hash>
+         <hash>1f5a96d852846e55ea9b47adb5d4d312d563ae1195569fb74492c2aee6d8a7bb</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\instance\tc7.h</file>
-         <hash>64b2c11125de39e03e7dd620180a0c62c35e3a08c3acfa97d07d30d80219b9f3</hash>
+         <hash>4a4c7b7f0542b9b62521664b3d3834661a1a8f8f94a1168f458d9aa1ac6fa576</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\instance\tcc0.h</file>
-         <hash>251ab2d1173cd0a914e2d65ef59c1f1fb03aa39749d810590d6d50cdbb6f7a14</hash>
+         <hash>b153c314c25e75cc091226b161c80678e32f27b6fe37ea27f29629fd9d0a0f78</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\instance\tcc1.h</file>
-         <hash>0102684842fed5bc16031f005d2f6a535459b305de525a048f38d4a8184d6fd1</hash>
+         <hash>ec8af8da57cbc78b93bfd7a97c787b409f02e1fd70febc50454ebeb398ac9933</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\instance\tcc2.h</file>
-         <hash>3b1d961b1426dba7dc82844987a5b9c5eefedfb5de21d563cff4eb061e7330c5</hash>
+         <hash>6f47517c8476b662a3837c75877a11ba704a24bfb5d8bbac7d2640085bbc0e02</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\instance\wdt.h</file>
-         <hash>0067e34b50ef7b2f7d9708bc3e83295daae8be4633bf5f56efe7af5b30e5f47b</hash>
+         <hash>d6ef90eb1ba434d21a499bdb16678d8c4751cc4446494f2352c39dd4d6763b3e</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\pic32cm5164jh01048.h</file>
-         <hash>dd2ebb26ec644411dc01341c02af22e232b4c72680d6ddaadba8ed930df71a23</hash>
+         <hash>1625755e432511f67290dd09f32bf7c8c7a79919a90fe7d6a4254cc1c59d8c15</hash>
       </entry>
       <entry>
          <file>..\src\packs\PIC32CM5164JH01048_DFP\pio\pic32cm5164jh01048.h</file>
-         <hash>401ba521717ec9536942dab51741dd3e0929f0a0abde0ffd1325382c5b1863c7</hash>
+         <hash>103954b41f82d5ad0ca6e5a2181a166ebaaacc5a68782c9e7a815b711f3b4aeb</hash>
       </entry>
    </generatedFileHashHistoryMap>
 </config>

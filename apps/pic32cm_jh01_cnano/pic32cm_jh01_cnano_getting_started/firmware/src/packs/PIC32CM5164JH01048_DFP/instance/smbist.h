@@ -20,7 +20,7 @@
  *
  */
 
-/* file generated from device description version 2023-04-26T09:03:33Z */
+/* file generated from device description version 2023-07-04T09:15:55Z */
 #ifndef _PIC32CMJH01_SMBIST_INSTANCE_
 #define _PIC32CMJH01_SMBIST_INSTANCE_
 
