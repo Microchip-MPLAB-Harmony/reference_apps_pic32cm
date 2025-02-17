@@ -49,20 +49,20 @@
 #include <stddef.h>
 #include <stdbool.h>
 #include <stdio.h>
-#include "bsp/bsp.h"
 #include "peripheral/sercom/spi_master/plib_sercom2_spi_master.h"
 #include "peripheral/nvmctrl/plib_nvmctrl.h"
+#include "bsp/bsp.h"
 #include "peripheral/sercom/usart/plib_sercom1_usart.h"
-#include "peripheral/sercom/i2c_master/plib_sercom0_i2c_master.h"
 #include "peripheral/evsys/plib_evsys.h"
+#include "peripheral/sercom/i2c_master/plib_sercom0_i2c_master.h"
 #include "peripheral/port/plib_port.h"
 #include "peripheral/clock/plib_clock.h"
 #include "peripheral/nvic/plib_nvic.h"
 #include "peripheral/systick/plib_systick.h"
 #include "peripheral/sercom/usart/plib_sercom4_usart.h"
-#include "touch/touch.h"
 #include "peripheral/rtc/plib_rtc.h"
 #include "peripheral/tc/plib_tc0.h"
+#include "touch/touch.h"
 #include "system/time/sys_time.h"
 #include "system/int/sys_int.h"
 #include "system/ports/sys_ports.h"
@@ -79,13 +79,13 @@ extern "C" {
 // DOM-IGNORE-END
 
 /* Device Information */
-#define DEVICE_NAME			 "PIC32CM5164JH01048"
-#define DEVICE_ARCH			 "CORTEX-M0PLUS"
-#define DEVICE_FAMILY		 "PIC32CM"
-#define DEVICE_SERIES		 "PIC32CMJH01"
+#define DEVICE_NAME          "PIC32CM5164JH01048"
+#define DEVICE_ARCH          "CORTEX-M0PLUS"
+#define DEVICE_FAMILY        "PIC32CM"
+#define DEVICE_SERIES        "PIC32CMJH01"
 
 /* CPU clock frequency */
-#define CPU_CLOCK_FREQUENCY 48000000
+#define CPU_CLOCK_FREQUENCY 48000000U
 
 // *****************************************************************************
 // *****************************************************************************

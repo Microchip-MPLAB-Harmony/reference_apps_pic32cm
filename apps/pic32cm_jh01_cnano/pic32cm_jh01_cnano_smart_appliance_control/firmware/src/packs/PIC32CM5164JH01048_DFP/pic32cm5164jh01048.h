@@ -20,7 +20,7 @@
  *
  */
 
-/* File generated from device description version 2023-04-26T09:03:27Z */
+/* File generated from device description version 2023-07-04T09:15:45Z */
 #ifndef _PIC32CM5164JH01048_H_
 #define _PIC32CM5164JH01048_H_
 
