@@ -11018,7 +11018,7 @@
       </entry>
       <entry>
          <file>..\..\firmware\src\config\pic32cm_ls00_cnano\peripheral\sercom\spi_master\plib_sercom1_spi_master.c</file>
-         <hash>466acc8218e804082b7bb003fa76deaf280cadfc0f0c724ab38429ff41cca77c</hash>
+         <hash>1601e4a0248eef41be84a32f01b90a502b21370269db0ac25a335010ade3709d</hash>
       </entry>
       <entry>
          <file>..\..\firmware\src\config\pic32cm_ls00_cnano\peripheral\sercom\spi_master\plib_sercom1_spi_master.h</file>
@@ -11030,7 +11030,7 @@
       </entry>
       <entry>
          <file>..\..\firmware\src\config\pic32cm_ls00_cnano\peripheral\sercom\usart\plib_sercom3_usart.c</file>
-         <hash>37d594b7addf2927753b7ccfe5da5d6ba47e7183b534cabb8842027dfc29611f</hash>
+         <hash>812561ce855c8078c10c2614ea9596c615748344380072f8204e106c20b2e690</hash>
       </entry>
       <entry>
          <file>..\..\firmware\src\config\pic32cm_ls00_cnano\peripheral\sercom\usart\plib_sercom3_usart.h</file>
@@ -11042,7 +11042,7 @@
       </entry>
       <entry>
          <file>..\..\firmware\src\config\pic32cm_ls00_cnano\peripheral\systick\plib_systick.c</file>
-         <hash>53c844e97ba2bf0bb896b0a36c729587f39b3d06b048fe665c86385e1e234207</hash>
+         <hash>80d7eda67bd7d82dab7e58b1d60263e5d18604b51ea103d50beeed0bba2137f4</hash>
       </entry>
       <entry>
          <file>..\..\firmware\src\config\pic32cm_ls00_cnano\peripheral\systick\plib_systick.h</file>
