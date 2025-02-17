@@ -53,8 +53,8 @@
 #include "peripheral/port/plib_port.h"
 #include "peripheral/clock/plib_clock.h"
 #include "peripheral/nvic/plib_nvic.h"
-#include "peripheral/sercom/i2c_master/plib_sercom5_i2c_master.h"
 #include "peripheral/pm/plib_pm.h"
+#include "peripheral/sercom/i2c_master/plib_sercom5_i2c_master.h"
 #include "peripheral/eic/plib_eic.h"
 #include "peripheral/rtc/plib_rtc.h"
 // DOM-IGNORE-BEGIN
