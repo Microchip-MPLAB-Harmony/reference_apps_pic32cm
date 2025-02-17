@@ -4,14 +4,14 @@
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
             <name>proximity_pic32cm_ls00_cnano_secure</name>
-            <creation-uuid>87d2370f-3497-49d5-89e0-52d34002c154</creation-uuid>
+            <creation-uuid>c13a2285-1ab6-4755-adee-97014d544343</creation-uuid>
             <make-project-type>0</make-project-type>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <make-dep-projects/>
             <sourceRootList/>
             <confList>
                 <confElem>
-                    <name>default</name>
+                    <name>pic32cm_ls00_cnano</name>
                     <type>2</type>
                 </confElem>
             </confList>

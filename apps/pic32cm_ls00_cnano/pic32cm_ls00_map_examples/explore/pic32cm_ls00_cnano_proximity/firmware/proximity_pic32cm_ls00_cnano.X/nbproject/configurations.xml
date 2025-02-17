@@ -144,6 +144,9 @@
           <itemPath>../src/packs/PIC32CM5164LS00048_DFP/pic32cm5164ls00048.h</itemPath>
         </logicalFolder>
       </logicalFolder>
+      <logicalFolder name="trustZone" displayName="trustZone" projectFiles="true">
+        <itemPath>../src/trustZone/nonsecure_entry.h</itemPath>
+      </logicalFolder>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -229,20 +232,20 @@
         <archiverTool>
         </archiverTool>
         <loading>
-          <makeArtifact PL="..\..\firmware_secure\proximity_pic32cm_ls00_cnano_secure.X"
+          <makeArtifact PL="../../firmware_secure/proximity_pic32cm_ls00_cnano_secure.X"
                         CT="1"
-                        CN="default"
+                        CN="pic32cm_ls00_cnano"
                         AC="true"
                         BL="true"
-                        WD="..\..\firmware_secure\proximity_pic32cm_ls00_cnano_secure.X"
-                        BC="${MAKE}  -f Makefile CONF=default"
-                        DBC="${MAKE}  -f Makefile CONF=default TYPE_IMAGE=DEBUG_RUN"
-                        CC="rm -rf &quot;build/default&quot; &quot;dist/default&quot;"
-                        OP="dist/default/production/proximity_pic32cm_ls00_cnano_secure.X.production.hex"
-                        DOP="dist/default/debug/proximity_pic32cm_ls00_cnano_secure.X.debug.elf"
-                        FL="dist/default/production/proximity_pic32cm_ls00_cnano_secure.X.production.hex"
-                        PD="dist/default/production/proximity_pic32cm_ls00_cnano_secure.X.production.elf"
-                        DD="dist/default/debug/proximity_pic32cm_ls00_cnano_secure.X.debug.elf">
+                        WD="../../firmware_secure/proximity_pic32cm_ls00_cnano_secure.X"
+                        BC="${MAKE}  -f Makefile CONF=pic32cm_ls00_cnano"
+                        DBC="${MAKE}  -f Makefile CONF=pic32cm_ls00_cnano TYPE_IMAGE=DEBUG_RUN"
+                        CC="rm -rf &quot;build/pic32cm_ls00_cnano&quot; &quot;dist/pic32cm_ls00_cnano&quot;"
+                        OP="dist/pic32cm_ls00_cnano/production/proximity_pic32cm_ls00_cnano_secure.X.production.hex"
+                        DOP="dist/pic32cm_ls00_cnano/debug/proximity_pic32cm_ls00_cnano_secure.X.debug.elf"
+                        FL="dist/pic32cm_ls00_cnano/production/proximity_pic32cm_ls00_cnano_secure.X.production.hex"
+                        PD="dist/pic32cm_ls00_cnano/production/proximity_pic32cm_ls00_cnano_secure.X.production.elf"
+                        DD="dist/pic32cm_ls00_cnano/debug/proximity_pic32cm_ls00_cnano_secure.X.debug.elf">
           </makeArtifact>
           <useAlternateLoadableFile>false</useAlternateLoadableFile>
           <parseOnProdLoad>false</parseOnProdLoad>
@@ -256,7 +259,7 @@
         <makeUseCleanTarget>false</makeUseCleanTarget>
         <makeCustomizationPreStep></makeCustomizationPreStep>
         <makeCustomizationPostStepEnabled>true</makeCustomizationPostStepEnabled>
-        <makeCustomizationPostStep>if $(IsDebug) == "false"  ( rm -rf ${ProjectDir}/../../hex &amp;&amp; mkdir ${ProjectDir}/../../hex &amp;&amp; cp ${ProjectDir}/${ImageDir}/*.unified.hex ${ProjectDir}/../../hex)</makeCustomizationPostStep>
+        <makeCustomizationPostStep>rm -rf ${ProjectDir}/../../hex &amp;&amp; mkdir ${ProjectDir}/../../hex &amp;&amp; cp ${ProjectDir}/${ImageDir}/*.unified.hex ${ProjectDir}/../../hex</makeCustomizationPostStep>
         <makeCustomizationPutChecksumInUserID>false</makeCustomizationPutChecksumInUserID>
         <makeCustomizationEnableLongLines>false</makeCustomizationEnableLongLines>
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
@@ -264,6 +267,7 @@
       <C32>
         <property key="additional-warnings" value="true"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="enable-app-io" value="false"/>
         <property key="enable-omit-frame-pointer" value="false"/>
         <property key="enable-symbols" value="true"/>
@@ -320,6 +324,8 @@
         <property key="additional-options-use-response-files" value="false"/>
         <property key="additional-options-write-sla" value="false"/>
         <property key="allocate-dinit" value="false"/>
+        <property key="appendMe"
+                  value="-l:proximity_pic32cm_ls00_cnano_secure_sg_veneer.lib"/>
         <property key="code-dinit" value="false"/>
         <property key="ebase-addr" value=""/>
         <property key="enable-check-sections" value="false"/>
@@ -356,10 +362,12 @@
         <property key="symbol-stripping" value=""/>
         <property key="trace-symbols" value=""/>
         <property key="warn-section-align" value="false"/>
+        <appendMe value="-l:proximity_pic32cm_ls00_cnano_secure_sg_veneer.lib"/>
       </C32-LD>
       <C32CPP>
         <property key="additional-warnings" value="false"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="check-new" value="false"/>
         <property key="eh-specs" value="true"/>
         <property key="enable-app-io" value="false"/>
