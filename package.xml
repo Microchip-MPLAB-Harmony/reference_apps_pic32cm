@@ -4,12 +4,12 @@
         <Dependency name="csp" version="v3.20.0"/>
         <Dependency name="core" version="v3.14.1"/>
         <Dependency name="bsp" version="3.21.1"/>
-        <Dependency name="gfx" version="v3.15.3"/>		
+        <Dependency name="gfx" version="v3.15.3"/>
         <Dependency name="touch" version="3.17.0"/>
         <Dependency name="wireless_wifi" version="v3.12.0"/>
         <Dependency name="bootloader" version="3.7.0"/>
-        <Dependency name="cryptoauthlib" version="20241015"/>
+        <Dependency name="cryptoauthlib" version="v3.7.7"/>
         <Dependency name="wireless_rnbd" version="v2.0.4"/>
-		<Dependency name="wireless_system_rnwf" version="v3.0.0"/>		
+		<Dependency name="wireless_system_rnwf" version="v3.0.0"/>
     </Dependencies>
 </Package>
