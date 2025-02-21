@@ -359,9 +359,9 @@ void SYS_Initialize ( void* data )
 
 
     ADC_Initialize();
-    TC0_TimerInitialize();
-
     RTC_Initialize();
+
+    TC0_TimerInitialize();
 
     SERCOM3_SPI_Initialize();
 

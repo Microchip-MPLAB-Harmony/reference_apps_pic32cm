@@ -2,7 +2,7 @@
 
 manifest_file_version: 1.0.0
 project: smart_smoke_detector_pic32cm_le00_cpro
-creation_date: 2025-02-19T10:49:38.501+05:30[Asia/Calcutta]
+creation_date: 2025-02-21T08:31:07.533+05:30[Asia/Calcutta]
 operating_system: Windows 10
 mcc_mode: IDE
 mcc_mode_version: v6.20
@@ -24,4 +24,4 @@ modules:
 - {name: CMSIS_5, type: HARMONY, version: 5.9.0}
 - {name: littlefs, type: HARMONY, version: v2.10.1}
 - {name: gfx, type: HARMONY, version: v3.15.3}
-- {name: wireless_rnbd, type: HARMONY, version: v2.0.5}
+- {name: wireless_rnbd, type: HARMONY, version: v2.0.4}

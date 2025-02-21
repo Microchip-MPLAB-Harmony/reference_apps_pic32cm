@@ -24926,7 +24926,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cm_le00_cpro\definitions.h</file>
-         <hash>99ccfebf53ceb52ce4dfb67dd2e391e08b208198d96b0a3f2b0fd783c311fdb1</hash>
+         <hash>c96376febcaec4d25b14741eeba998f7ab072be82f40cc4727c39e96c2570d32</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cm_le00_cpro\device.h</file>
@@ -25894,7 +25894,7 @@
       </entry>
       <entry>
          <file>..\src\config\pic32cm_le00_cpro\initialization.c</file>
-         <hash>fe2480552b00c7c12dcc4a82aab6f8982f9a9b86254a88f78841c186a8a9f152</hash>
+         <hash>e48faa88835362ae0f5b4395afea709bf0ab471503cce4d03dfc3fbaa76a72d7</hash>
       </entry>
       <entry>
          <file>..\src\config\pic32cm_le00_cpro\interrupts.c</file>
