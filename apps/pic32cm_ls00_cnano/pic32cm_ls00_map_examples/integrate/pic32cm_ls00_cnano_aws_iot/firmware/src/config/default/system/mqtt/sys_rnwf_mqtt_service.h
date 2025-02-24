@@ -70,17 +70,28 @@ Copyright (C) 2020 released Microchip Technology Inc.  All rights reserved.
 #define SYS_RNWF_MQTT_CMD_DISCONNECT        "AT+MQTTDISCONN=0\r\n"
 
 /* MQTT Subscribe Commands */
-#define SYS_RNWF_MQTT_CMD_SUBSCRIBE_QOS0    "AT+MQTTSUB=\"%s\",0\r\n"
-#define SYS_RNWF_MQTT_CMD_SUBSCRIBE_QOS1    "AT+MQTTSUB=\"%s\",1\r\n"
-#define SYS_RNWF_MQTT_CMD_SUBSCRIBE_QOS2    "AT+MQTTSUB=\"%s\",2\r\n"
+#define SYS_RNWF_MQTT_CMD_SUBSCRIBE_QOS    "AT+MQTTSUB=\"%s\",%d\r\n"
 #define SYS_RNWF_MQTT_CMD_UNSUBSCRIBE       "AT+MQTTUNSUB=%s\r\n"
 
 /* MQTT Publish Commands */
 #define SYS_RNWF_MQTT_CMD_PUBLISH           "AT+MQTTPUB=%d,%d,%d,\"%s\",\"%s\"\r\n"
 
+/* MQTT LWT Commands */
+#define SYS_RNWF_MQTT_LWT_CMD               "AT+MQTTLWT=%d,%d,\"%s\",\"%s\"\r\n"
+
 /* MQTT Transmit Properties  Commands */
-#define SYS_RNWF_MQTT_SET_TX_SESSION_EXPIRY     "AT+MQTTPROPTX=17,%d\r\n"
-#define SYS_RNWF_MQTT_SET_TX_USER_PROP          "AT+MQTTPROPTX=38,%s\r\n"
+#define SYS_RNWF_MQTT_SET_TX_PAYLOD_FORMAT_IND      "AT+MQTTPROPTX=1,%d\r\n"
+#define SYS_RNWF_MQTT_SET_TX_MSG_EXPIRY            "AT+MQTTPROPTX=2,%d\r\n"
+#define SYS_RNWF_MQTT_SET_TX_CONTENT_TYPE           "AT+MQTTPROPTX=3,\"%s\"\r\n"         
+#define SYS_RNWF_MQTT_SET_TX_SESSION_EXPIRY         "AT+MQTTPROPTX=17,%d\r\n"
+#define SYS_RNWF_MQTT_SET_TX_USER_PROP              "AT+MQTTPROPTX=38,\"%s\",\"%s\"\r\n"
+
+/* MQTT Transmit Properties Select Commands */
+#define SYS_RNWF_MQTT_SET_TX_PAYLOD_FORMAT_IND_SEC      "AT+MQTTPROPTXS=1,1\r\n"
+#define SYS_RNWF_MQTT_SET_TX_MSG_EXPIRY_SEC             "AT+MQTTPROPTXS=2,1\r\n"
+#define SYS_RNWF_MQTT_SET_TX_CONTENT_TYPE_SEC           "AT+MQTTPROPTXS=3,1\r\n"         
+#define SYS_RNWF_MQTT_SET_TX_SESSION_EXPIRY_SEC         "AT+MQTTPROPTXS=17,1\r\n"
+#define SYS_RNWF_MQTT_SET_TX_USER_PROP_SEC              "AT+MQTTPROPTXS=38,1\r\n"
 
 /* MQTT Receive Properties  Commands */
 #define SYS_RNWF_MQTT_SET_RX_SESSION_EXPIRY     "AT+MQTTPROPRX=17,%d\r\n"
@@ -99,8 +110,10 @@ Copyright (C) 2020 released Microchip Technology Inc.  All rights reserved.
 /*MQTT Service max callback service*/
 #define SYS_RNWF_MQTT_SERVICE_CB_MAX        2
 
-//#define SYS_RNWF_MQTT_DPS_SUBSCRIBE_TOPIC    "$MCHP/Sample"
-#define SYS_RNWF_MQTT_DPS_SUBSCRIBE_TOPIC    "$dps/registrations/res/#"
+
+/* Handle for MQTT Configurations */
+typedef void* SYS_RNWF_MQTT_HANDLE_t;
+
 /**
  @defgroup MQTT_GRP MQTT Cloud API
  @{
@@ -114,7 +127,13 @@ typedef enum
 {
     /**<Configure the MQTT Broker parameters*/
     SYS_RNWF_MQTT_CONFIG,               
-            
+
+    /**<Configure the MQTT transmit parameters*/        
+    SYS_RNWF_MQTT_TX_CONFIG,
+
+    /**<Configure the MQTT LWT parameters*/
+    SYS_RNWF_MQTT_LWT_CONFIG,
+
     /**<Connect to the MQTT Broker */        
     SYS_RNWF_MQTT_CONNECT,              
             
@@ -123,15 +142,9 @@ typedef enum
             
     /**<Trigger Disconnect from MQTT Broker*/        
     SYS_RNWF_MQTT_DISCONNECT,      
-            
-    /**<Subscribe to QoS0 Topics */        
-    SYS_RNWF_MQTT_SUBSCRIBE_QOS0,  
-            
-    /**<Subscribe to QoS1 Topics */        
-    SYS_RNWF_MQTT_SUBSCRIBE_QOS1,      
-            
-    /**<Subscribe to QoS2 Topics */        
-    SYS_RNWF_MQTT_SUBSCRIBE_QOS2,       
+
+    /**<Subscribe to QoS Topics */        
+    SYS_RNWF_MQTT_SUBSCRIBE_QOS,
             
     /**<Publis to MQTT Broker*/
     SYS_RNWF_MQTT_PUBLISH,              
@@ -213,6 +226,83 @@ typedef struct
 
 }SYS_RNWF_MQTT_CFG_t;
 
+
+/**
+ @brief MQTT Payload Format Indicator
+ 
+ */
+typedef enum
+{
+    /**<unspecified byte stream*/          
+    unspecified,
+            
+    /**<UTF-8 encoded payload*/
+    UTF8_encoded,
+
+}SYS_RNWF_MQTT_PAYLOD_FORMAT_INDI;
+
+
+/**
+ @brief MQTT User property Structure
+ 
+ */
+typedef struct
+{
+    uint8_t *key;
+    
+    uint8_t *value;
+    
+}SYS_RNWF_MQTT_USER_PROP;
+
+
+/**
+ @brief MQTT Configuration parameters
+ 
+ */
+typedef struct 
+{   
+    /**<MQTT Payload format indicati */    
+    SYS_RNWF_MQTT_PAYLOD_FORMAT_INDI paylod;
+    
+    /**<MQTT Service message expiry interval time*/
+    uint16_t    msgExpInt;
+    
+    /**<MQTT content type */
+    const char *contentType;       
+    
+    /**<MQTT response Topic */ 
+    const char *responseTopic;       
+
+    /**<MQTT correlation data */ 
+    const char *correlationData;
+    
+    /**<MQTT subscription ID */
+    uint32_t    subscriptionId;          
+    
+    /*MQTT session expiry interval time*/
+    uint32_t     sessionExpInt;
+    
+    /*MQTT Will Delay Interval*/
+    uint16_t     willDelayInt;
+    
+    /*TLS Configuration*/
+    uint8_t     *tlsConf;    
+
+    /*MQTT  Receive Maximum*/
+    uint32_t     receiveMax;
+
+    /*MQTT topic alias max */
+    uint32_t     tpoicAliasMax;
+
+    /*MQTT topic alias */
+    uint32_t     tpoicAlias;
+    
+    /*MQTT user property */
+    SYS_RNWF_MQTT_USER_PROP userProp;
+    
+}SYS_RNWF_MQTT_TX_CFG_t;
+
+
 /**
  @brief Network and Socket service List
  
@@ -282,10 +372,46 @@ typedef struct
 
 
 /**
+ @brief MQTT Subscribe Frame format
+ 
+ */
+typedef struct
+{
+    /**<QoS type for the message ::SYS_RNWF_MQTT_QOS_t */
+    SYS_RNWF_MQTT_QOS_t qos;         
+    
+    /**<Publish topic for the message */
+    const char *topic;           
+                       
+}SYS_RNWF_MQTT_SUB_FRAME_t;
+
+/**
+ @brief MQTT LWT config format
+
+ */
+typedef struct
+{
+    /**<QoS type for the LWT message ::SYS_RNWF_MQTT_QOS_t */
+    SYS_RNWF_MQTT_QOS_t qos;
+    
+    /**<Retain flag for the LWT message */
+    SYS_RNWF_MQTT_RETAIN_t isRetain; 
+    
+    /**<Topic name of the LWT message */
+    const char *topic_name; 
+    
+    /**<LWT message */
+    const char *message;
+    
+}SYS_RNWF_MQTT_LWT_CFG_t;
+
+
+
+/**
  @brief MQTT Callback Function definition
  
  */
-typedef SYS_RNWF_RESULT_t (*SYS_RNWF_MQTT_CALLBACK_t)(SYS_RNWF_MQTT_EVENT_t, uint8_t *);
+typedef SYS_RNWF_RESULT_t (*SYS_RNWF_MQTT_CALLBACK_t)(SYS_RNWF_MQTT_EVENT_t, SYS_RNWF_MQTT_HANDLE_t);
 
 
 /**
@@ -298,7 +424,7 @@ typedef SYS_RNWF_RESULT_t (*SYS_RNWF_MQTT_CALLBACK_t)(SYS_RNWF_MQTT_EVENT_t, uin
  * @return SYS_RNWF_PASS Requested service is handled successfully
  * @return SYS_RNWF_PASS Requested service has failed
  */
-SYS_RNWF_RESULT_t SYS_RNWF_MQTT_SrvCtrl( SYS_RNWF_MQTT_SERVICE_t request, void *input);
+SYS_RNWF_RESULT_t SYS_RNWF_MQTT_SrvCtrl( SYS_RNWF_MQTT_SERVICE_t request, SYS_RNWF_MQTT_HANDLE_t );
 
 #endif	/* XC_HEADER_TEMPLATE_H */
 

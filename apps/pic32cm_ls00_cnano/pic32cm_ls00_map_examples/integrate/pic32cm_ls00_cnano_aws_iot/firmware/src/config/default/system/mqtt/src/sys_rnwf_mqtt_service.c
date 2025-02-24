@@ -64,9 +64,6 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 #define SYS_RNWF_MQTT_DPS_TOP_DPS_GET_STAT   "$dps/registrations/GET/iotdps-get-operationstatus/?$rid=2&operationId=%s"
 #define SYS_RNWF_MQTT_DPS_MSG_DPS_GET_STAT   ""
 
-//#define SYS_RNWF_MQTT_DPS_SUBSCRIBE_TOPIC    "$dps/registrations/res/#"
-
-
 #define SYS_RNWF_MQTT_DPS_HUB_ID_STR         "\\\"assignedHub\\\":\\"""
 #define SYS_RNWF_MQTT_DPS_DEV_ID_STR         "\\\"deviceId\\\":\\"""        
 #define SYS_RNWF_MQTT_DPS_OP_ID_STR          "\\\"operationId\\\":\\"""
@@ -101,10 +98,13 @@ SYS_RNWF_RESULT_t SYS_RNWF_MQTT_SrvcCallback(SYS_RNWF_MQTT_EVENT_t event, uint8_
         /**<Connected to MQTT broker event */
         case SYS_RNWF_MQTT_CONNECTED:
         {
-            const char sub_topic[] = SYS_RNWF_MQTT_DPS_SUBSCRIBE_TOPIC;
+            SYS_RNWF_MQTT_SUB_FRAME_t sub_cfg ={ 
+                .topic = SYS_RNWF_MQTT_SUB_TOPIC_0,
+                .qos = SYS_RNWF_MQTT_QOS0,
+            };
             SYS_RNWF_MQTT_DBG_MSG("Azure Central Connection Successful!\r\n");
             SYS_RNWF_MQTT_DBG_MSG("Performing Device Provisioning Service(DPS)...\r\n");
-            SYS_RNWF_MQTT_SrvCtrl(SYS_RNWF_MQTT_SUBSCRIBE_QOS0, (void *)sub_topic);             
+            SYS_RNWF_MQTT_SrvCtrl(SYS_RNWF_MQTT_SUBSCRIBE_QOS, (SYS_RNWF_MQTT_HANDLE_t)&sub_cfg);             
         }
         break;
 	
@@ -117,7 +117,7 @@ SYS_RNWF_RESULT_t SYS_RNWF_MQTT_SrvcCallback(SYS_RNWF_MQTT_EVENT_t event, uint8_
             mqtt_pub.isRetain = SYS_RNWF_NO_RETAIN;
             mqtt_pub.topic = SYS_RNWF_MQTT_DPS_TOP_SET_REG;
             mqtt_pub.message = SYS_RNWF_MQTT_DPS_MSG_SET_REQ;        
-            SYS_RNWF_MQTT_SrvCtrl(SYS_RNWF_MQTT_PUBLISH, (void *)&mqtt_pub);
+            SYS_RNWF_MQTT_SrvCtrl(SYS_RNWF_MQTT_PUBLISH, (SYS_RNWF_MQTT_HANDLE_t)&mqtt_pub);
         }
         break;
 	
@@ -140,7 +140,7 @@ SYS_RNWF_RESULT_t SYS_RNWF_MQTT_SrvcCallback(SYS_RNWF_MQTT_EVENT_t event, uint8_
                             
                             SYS_RNWF_CMD_SEND_OK_WAIT(NULL, NULL, SYS_RNWF_MQTT_SET_USERNAME, tmpBuf);
                             SYS_RNWF_CMD_SEND_OK_WAIT(NULL, NULL, SYS_RNWF_MQTT_SET_BROKER_URL, pIotId+strlen(SYS_RNWF_MQTT_DPS_HUB_ID_STR)+1);                             
-                            SYS_RNWF_MQTT_SrvCtrl(SYS_RNWF_MQTT_DISCONNECT, (void *)NULL);
+                            SYS_RNWF_MQTT_SrvCtrl(SYS_RNWF_MQTT_DISCONNECT, (SYS_RNWF_MQTT_HANDLE_t)NULL);
                             dps_result = 1;
                         }                                                
                     }
@@ -159,7 +159,7 @@ SYS_RNWF_RESULT_t SYS_RNWF_MQTT_SrvcCallback(SYS_RNWF_MQTT_EVENT_t event, uint8_
                     mqtt_pub.isRetain = SYS_RNWF_NO_RETAIN;
                     mqtt_pub.topic = (const char *)tmpBuf;                
                     mqtt_pub.message = "";        
-                    SYS_RNWF_MQTT_SrvCtrl(SYS_RNWF_MQTT_PUBLISH, (void *)&mqtt_pub);
+                    SYS_RNWF_MQTT_SrvCtrl(SYS_RNWF_MQTT_PUBLISH, (SYS_RNWF_MQTT_HANDLE_t)&mqtt_pub);
                 }
             }            
         }
@@ -168,7 +168,7 @@ SYS_RNWF_RESULT_t SYS_RNWF_MQTT_SrvcCallback(SYS_RNWF_MQTT_EVENT_t event, uint8_
         /**<Disconnected from MQTT broker event*/ 
         case SYS_RNWF_MQTT_DISCONNECTED:
         {   
-            SYS_RNWF_MQTT_SrvCtrl(SYS_RNWF_MQTT_SET_SRVC_CALLBACK, (void *)NULL);            
+            SYS_RNWF_MQTT_SrvCtrl(SYS_RNWF_MQTT_SET_SRVC_CALLBACK, (SYS_RNWF_MQTT_HANDLE_t)NULL);            
             if(g_MqttCallBackHandler[1] != NULL)
             {                            
                 g_MqttCallBackHandler[1](SYS_RNWF_MQTT_DPS_STATUS, &dps_result);
@@ -184,7 +184,7 @@ SYS_RNWF_RESULT_t SYS_RNWF_MQTT_SrvcCallback(SYS_RNWF_MQTT_EVENT_t event, uint8_
 }
 
 /*MQTT Service control function*/
-SYS_RNWF_RESULT_t SYS_RNWF_MQTT_SrvCtrl( SYS_RNWF_MQTT_SERVICE_t request, void *input)  
+SYS_RNWF_RESULT_t SYS_RNWF_MQTT_SrvCtrl( SYS_RNWF_MQTT_SERVICE_t request, SYS_RNWF_MQTT_HANDLE_t mqttHandle)  
 {
     SYS_RNWF_RESULT_t result = SYS_RNWF_FAIL;
 
@@ -193,7 +193,7 @@ SYS_RNWF_RESULT_t SYS_RNWF_MQTT_SrvCtrl( SYS_RNWF_MQTT_SERVICE_t request, void *
         /**<Configure the MQTT Broker parameters*/
         case SYS_RNWF_MQTT_CONFIG:
         {
-            SYS_RNWF_MQTT_CFG_t *mqtt_cfg = (SYS_RNWF_MQTT_CFG_t *)input;  
+            SYS_RNWF_MQTT_CFG_t *mqtt_cfg = (SYS_RNWF_MQTT_CFG_t *)mqttHandle;  
             result = SYS_RNWF_CMD_SEND_OK_WAIT(NULL, NULL, SYS_RNWF_MQTT_SET_PROTO_VER, mqtt_cfg->protoVer);
 
             if(mqtt_cfg->tls_idx != 0)
@@ -211,16 +211,53 @@ SYS_RNWF_RESULT_t SYS_RNWF_MQTT_SrvCtrl( SYS_RNWF_MQTT_SERVICE_t request, void *
             
             if(mqtt_cfg->azure_dps)
             {
-                SYS_RNWF_MQTT_SrvCtrl(SYS_RNWF_MQTT_SET_SRVC_CALLBACK, (void *)SYS_RNWF_MQTT_SrvcCallback);
+                SYS_RNWF_MQTT_SrvCtrl(SYS_RNWF_MQTT_SET_SRVC_CALLBACK, (SYS_RNWF_MQTT_HANDLE_t)SYS_RNWF_MQTT_SrvcCallback);
             }
             break;
         }    
 
+        /**<Configure the MQTT transmit parameters*/
+        case SYS_RNWF_MQTT_TX_CONFIG:
+        {
+            SYS_RNWF_MQTT_TX_CFG_t *mqtt_tx_cfg = (SYS_RNWF_MQTT_TX_CFG_t *)mqttHandle;
+            if( mqtt_tx_cfg->paylod != 0)
+            {
+                result = SYS_RNWF_CMD_SEND_OK_WAIT(NULL, NULL, SYS_RNWF_MQTT_SET_TX_PAYLOD_FORMAT_IND_SEC);
+                result = SYS_RNWF_CMD_SEND_OK_WAIT(NULL, NULL, SYS_RNWF_MQTT_SET_TX_PAYLOD_FORMAT_IND, mqtt_tx_cfg->paylod);
+            }
+            if(mqtt_tx_cfg->msgExpInt != 0)
+            {
+                result = SYS_RNWF_CMD_SEND_OK_WAIT(NULL, NULL, SYS_RNWF_MQTT_SET_TX_MSG_EXPIRY_SEC);
+                result = SYS_RNWF_CMD_SEND_OK_WAIT(NULL, NULL, SYS_RNWF_MQTT_SET_TX_MSG_EXPIRY, mqtt_tx_cfg->msgExpInt);
+            }
+            if(mqtt_tx_cfg->contentType != NULL)
+            {
+                result = SYS_RNWF_CMD_SEND_OK_WAIT(NULL, NULL, SYS_RNWF_MQTT_SET_TX_CONTENT_TYPE_SEC);
+                result = SYS_RNWF_CMD_SEND_OK_WAIT(NULL, NULL, SYS_RNWF_MQTT_SET_TX_CONTENT_TYPE, mqtt_tx_cfg->contentType);
+            }
+            if(mqtt_tx_cfg->sessionExpInt != 0)
+            {
+                result = SYS_RNWF_CMD_SEND_OK_WAIT(NULL, NULL, SYS_RNWF_MQTT_SET_TX_SESSION_EXPIRY_SEC);
+                result = SYS_RNWF_CMD_SEND_OK_WAIT(NULL, NULL, SYS_RNWF_MQTT_SET_TX_SESSION_EXPIRY, mqtt_tx_cfg->sessionExpInt);
+            }
+//            result = SYS_RNWF_CMD_SEND_OK_WAIT(NULL, NULL, SYS_RNWF_MQTT_SET_TX_USER_PROP, mqtt_tx_cfg->url);
+        
+        }
+        break;
+        
         /**<Connect to the MQTT Broker */  
         case SYS_RNWF_MQTT_CONNECT:
         {
             result = SYS_RNWF_CMD_SEND_OK_WAIT(NULL, NULL, SYS_RNWF_MQTT_CMD_DISCONNECT);
             result = SYS_RNWF_CMD_SEND_OK_WAIT(NULL, NULL, SYS_RNWF_MQTT_CMD_CONNECT);     
+        }
+        break;
+
+        /* Last Will and Testament (LWT) Config */
+        case SYS_RNWF_MQTT_LWT_CONFIG:
+        {
+            SYS_RNWF_MQTT_LWT_CFG_t *mqtt_lwt_cfg = (SYS_RNWF_MQTT_LWT_CFG_t *)mqttHandle;
+            result = SYS_RNWF_CMD_SEND_OK_WAIT(NULL, NULL, SYS_RNWF_MQTT_LWT_CMD,mqtt_lwt_cfg->qos,mqtt_lwt_cfg->isRetain,mqtt_lwt_cfg->topic_name,mqtt_lwt_cfg->message);   
         }
         break;
 
@@ -241,36 +278,23 @@ SYS_RNWF_RESULT_t SYS_RNWF_MQTT_SrvCtrl( SYS_RNWF_MQTT_SERVICE_t request, void *
         /**<Publis to MQTT Broker*/
         case SYS_RNWF_MQTT_PUBLISH:
         {
-            SYS_RNWF_MQTT_FRAME_t *mqtt_frame = (SYS_RNWF_MQTT_FRAME_t *)input;
+            SYS_RNWF_MQTT_FRAME_t *mqtt_frame = (SYS_RNWF_MQTT_FRAME_t *)mqttHandle;
             result = SYS_RNWF_CMD_SEND_OK_WAIT(NULL, NULL, SYS_RNWF_MQTT_CMD_PUBLISH, mqtt_frame->isNew, mqtt_frame->qos, mqtt_frame->isRetain, mqtt_frame->topic, mqtt_frame->message);     
         }
         break;            
-        
-        /**<Subscribe to QoS0 Topics */
-        case SYS_RNWF_MQTT_SUBSCRIBE_QOS0:
+
+        /**<Subscribe to QoS Topics */
+        case SYS_RNWF_MQTT_SUBSCRIBE_QOS:
         {
-            result = SYS_RNWF_CMD_SEND_OK_WAIT(NULL, NULL, SYS_RNWF_MQTT_CMD_SUBSCRIBE_QOS0, (const char *)input);
+            SYS_RNWF_MQTT_SUB_FRAME_t *sub_cfg = (SYS_RNWF_MQTT_SUB_FRAME_t *)mqttHandle;
+            result = SYS_RNWF_CMD_SEND_OK_WAIT(NULL, NULL, SYS_RNWF_MQTT_CMD_SUBSCRIBE_QOS,(const char *)sub_cfg->topic,sub_cfg->qos);
         }
         break;
-	
-        /**<Subscribe to QoS1 Topics */
-        case SYS_RNWF_MQTT_SUBSCRIBE_QOS1:
-        {
-            result = SYS_RNWF_CMD_SEND_OK_WAIT(NULL, NULL, SYS_RNWF_MQTT_CMD_SUBSCRIBE_QOS1, (const char *)input);
-        }
-        break;
-	
-        /**<Subscribe to QoS2 Topics */
-        case SYS_RNWF_MQTT_SUBSCRIBE_QOS2:
-        {            
-            result = SYS_RNWF_CMD_SEND_OK_WAIT(NULL, NULL, SYS_RNWF_MQTT_CMD_SUBSCRIBE_QOS2, (const char *)input);     
-        }        
-        break;            
         
         /**<Configure the MQTT Application Callback*/ 
         case SYS_RNWF_MQTT_SET_CALLBACK:
         {
-            g_MqttCallBackHandler[1] = (SYS_RNWF_MQTT_CALLBACK_t)(input);
+            g_MqttCallBackHandler[1] = (SYS_RNWF_MQTT_CALLBACK_t)(mqttHandle);
             result = SYS_RNWF_PASS;
         }
         break;
@@ -278,7 +302,7 @@ SYS_RNWF_RESULT_t SYS_RNWF_MQTT_SrvCtrl( SYS_RNWF_MQTT_SERVICE_t request, void *
         /**<Configure the MQTT Application Callback*/     
         case SYS_RNWF_MQTT_SET_SRVC_CALLBACK:        
         {
-            g_MqttCallBackHandler[0] = (SYS_RNWF_MQTT_CALLBACK_t)(input);            
+            g_MqttCallBackHandler[0] = (SYS_RNWF_MQTT_CALLBACK_t)(mqttHandle);            
             result = SYS_RNWF_PASS;
         }
         break;
@@ -286,7 +310,7 @@ SYS_RNWF_RESULT_t SYS_RNWF_MQTT_SrvCtrl( SYS_RNWF_MQTT_SERVICE_t request, void *
         case SYS_RNWF_MQTT_GET_CALLBACK:
         {
             SYS_RNWF_MQTT_CALLBACK_t *mqttCallBackHandler;
-            mqttCallBackHandler = (SYS_RNWF_MQTT_CALLBACK_t *)input;
+            mqttCallBackHandler = (SYS_RNWF_MQTT_CALLBACK_t *)mqttHandle;
             
             mqttCallBackHandler[0] = g_MqttCallBackHandler[0];
             mqttCallBackHandler[1] = g_MqttCallBackHandler[1];

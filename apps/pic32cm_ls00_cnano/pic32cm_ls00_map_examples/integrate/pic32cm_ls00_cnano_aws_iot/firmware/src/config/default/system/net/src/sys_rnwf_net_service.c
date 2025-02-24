@@ -69,7 +69,7 @@ SYS_RNWF_NET_SOCK_CALLBACK_t g_SocketCallBackHandler[SYS_RNWF_NET_SOCK_SERVICE_C
 /* ************************************************************************** */
 
 /* This function is used for Network and Socket service Control*/
-SYS_RNWF_RESULT_t SYS_RNWF_NET_SockSrvCtrl( SYS_RNWF_NET_SOCK_SERVICE_t request, void *input)
+SYS_RNWF_RESULT_t SYS_RNWF_NET_SockSrvCtrl( SYS_RNWF_NET_SOCK_SERVICE_t request, SYS_RNWF_NET_HANDLE_t netHandle)
 {
     SYS_RNWF_RESULT_t result = SYS_RNWF_PASS; 
 
@@ -78,11 +78,11 @@ SYS_RNWF_RESULT_t SYS_RNWF_NET_SockSrvCtrl( SYS_RNWF_NET_SOCK_SERVICE_t request,
         /**<Enable the DHCP server */
         case SYS_RNWF_NET_DHCP_SERVER_ENABLE:
         {
-            if(input == NULL)
+            if(netHandle == NULL)
                 break;
             
             result = SYS_RNWF_CMD_SEND_OK_WAIT(NULL, NULL, SYS_RNWF_DHCPS_DISABLE);
-            const char **dhcps_cfg_list = input;                        
+            const char **dhcps_cfg_list = netHandle;                        
             
             if(dhcps_cfg_list[0] != NULL)
                 result = SYS_RNWF_CMD_SEND_OK_WAIT(NULL, NULL, SYS_RNWF_NETIF_SET_IP, dhcps_cfg_list[0]);            
@@ -105,17 +105,17 @@ SYS_RNWF_RESULT_t SYS_RNWF_NET_SockSrvCtrl( SYS_RNWF_NET_SOCK_SERVICE_t request,
         /**<Open TCP Socket*/ 
         case SYS_RNWF_NET_SOCK_TCP_OPEN: 
         {   
-            SYS_RNWF_NET_SOCKET_t *socket = (SYS_RNWF_NET_SOCKET_t*)(input); 
+            SYS_RNWF_NET_SOCKET_t *socket = (SYS_RNWF_NET_SOCKET_t*)(netHandle); 
             uint8_t socket_id[32];
             
-            if(SYS_RNWF_CMD_SEND_OK_WAIT(SYS_RNWF_SOCK_OPEN_RESP, (uint8_t *)socket_id, SYS_RNWF_SOCK_OPEN_TCP,socket->IP) == SYS_RNWF_PASS)
+            if(SYS_RNWF_CMD_SEND_OK_WAIT(SYS_RNWF_SOCK_OPEN_RESP, (uint8_t *)socket_id, SYS_RNWF_SOCK_OPEN_TCP,socket->ip_type) == SYS_RNWF_PASS)
             {
                 socket->sock_master = atoi((char *)socket_id);
                 switch(socket->bind_type)
                 {
                     case SYS_RNWF_BIND_LOCAL:
                     {
-                        result = SYS_RNWF_CMD_SEND_OK_WAIT(NULL, NULL, SYS_RNWF_SOCK_BIND_LOCAL, socket->sock_master, socket->sock_port);                        
+                        result = SYS_RNWF_CMD_SEND_OK_WAIT(NULL, NULL, SYS_RNWF_SOCK_BIND_LOCAL, socket->sock_master, socket->sock_port, socket->noOfClients);                        
                         break;
                     }
 
@@ -146,7 +146,7 @@ SYS_RNWF_RESULT_t SYS_RNWF_NET_SockSrvCtrl( SYS_RNWF_NET_SOCK_SERVICE_t request,
         /**<Open UDP Socket*/  
         case SYS_RNWF_NET_SOCK_UDP_OPEN:   
         {
-            SYS_RNWF_NET_SOCKET_t *socket = (SYS_RNWF_NET_SOCKET_t*)(input);
+            SYS_RNWF_NET_SOCKET_t *socket = (SYS_RNWF_NET_SOCKET_t*)(netHandle);
             int8_t socket_id[32];
             
             if(SYS_RNWF_CMD_SEND_OK_WAIT(SYS_RNWF_SOCK_OPEN_RESP, (uint8_t *)socket_id, SYS_RNWF_SOCK_OPEN_UDP) == SYS_RNWF_PASS)
@@ -156,7 +156,7 @@ SYS_RNWF_RESULT_t SYS_RNWF_NET_SockSrvCtrl( SYS_RNWF_NET_SOCK_SERVICE_t request,
                 {
                     case SYS_RNWF_BIND_LOCAL:
                     {
-                        result = SYS_RNWF_CMD_SEND_OK_WAIT(NULL, NULL, SYS_RNWF_SOCK_BIND_LOCAL, socket->sock_master, socket->sock_port);                        
+                        result = SYS_RNWF_CMD_SEND_OK_WAIT(NULL, NULL, SYS_RNWF_SOCK_BIND_LOCAL, socket->sock_master, socket->sock_port, socket->noOfClients);                       
                         break;
                     }
 
@@ -184,7 +184,7 @@ SYS_RNWF_RESULT_t SYS_RNWF_NET_SockSrvCtrl( SYS_RNWF_NET_SOCK_SERVICE_t request,
         /**<Close the socket*/    
         case SYS_RNWF_NET_SOCK_CLOSE:
         {
-            uint32_t socket = *((uint32_t *)input);
+            uint32_t socket = *((uint32_t *)netHandle);
             if(socket)
             {
                 result = SYS_RNWF_CMD_SEND_OK_WAIT(NULL, NULL, SYS_RNWF_SOCK_CLOSE, socket); 
@@ -196,7 +196,7 @@ SYS_RNWF_RESULT_t SYS_RNWF_NET_SockSrvCtrl( SYS_RNWF_NET_SOCK_SERVICE_t request,
         /**<Configure the socket settings*/
         case SYS_RNWF_NET_SOCK_CONFIG:
         {
-            SYS_RNWF_NET_SOCKET_CONFIG_t *sock_cfg = (SYS_RNWF_NET_SOCKET_CONFIG_t *)input;
+            SYS_RNWF_NET_SOCKET_CONFIG_t *sock_cfg = (SYS_RNWF_NET_SOCKET_CONFIG_t *)netHandle;
             result = SYS_RNWF_CMD_SEND_OK_WAIT(NULL, NULL, SYS_RNWF_SOCK_CONFIG_NODELAY, sock_cfg->sock_id, sock_cfg->sock_nodelay);            
             result = SYS_RNWF_CMD_SEND_OK_WAIT(NULL, NULL, SYS_RNWF_SOCK_CONFIG_KEEPALIVE, sock_cfg->sock_id, sock_cfg->sock_keepalive);              
             
@@ -207,7 +207,7 @@ SYS_RNWF_RESULT_t SYS_RNWF_NET_SockSrvCtrl( SYS_RNWF_NET_SOCK_SERVICE_t request,
         case SYS_RNWF_NET_TLS_CONFIG_1:
         case SYS_RNWF_NET_TLS_CONFIG_2:
         {
-            const char **tls_cfg_list = input;            
+            const char **tls_cfg_list = netHandle;            
             
             if(tls_cfg_list[SYS_RNWF_NET_PEER_AUTH] != NULL)
             {
@@ -251,14 +251,14 @@ SYS_RNWF_RESULT_t SYS_RNWF_NET_SockSrvCtrl( SYS_RNWF_NET_SOCK_SERVICE_t request,
         /**<Register application callback for sockets*/
         case SYS_RNWF_NET_SOCK_SET_CALLBACK:
 	    {
-            g_SocketCallBackHandler[1] = (SYS_RNWF_NET_SOCK_CALLBACK_t)(input);                        
+            g_SocketCallBackHandler[1] = (SYS_RNWF_NET_SOCK_CALLBACK_t)(netHandle);                        
             break;
 	    }    
         
         /**<Register application callback for sockets*/
         case SYS_RNWF_NET_SOCK_SET_SRVC_CALLBACK:
 	    {
-            g_SocketCallBackHandler[0] = (SYS_RNWF_NET_SOCK_CALLBACK_t)(input);                        
+            g_SocketCallBackHandler[0] = (SYS_RNWF_NET_SOCK_CALLBACK_t)(netHandle);                        
             break;
 	    }   
 	    
@@ -266,7 +266,7 @@ SYS_RNWF_RESULT_t SYS_RNWF_NET_SockSrvCtrl( SYS_RNWF_NET_SOCK_SERVICE_t request,
         case SYS_RNWF_NET_SOCK_GET_CALLBACK:
         {
             SYS_RNWF_NET_SOCK_CALLBACK_t *socketCallBackHandler;
-            socketCallBackHandler = (SYS_RNWF_NET_SOCK_CALLBACK_t *) input;
+            socketCallBackHandler = (SYS_RNWF_NET_SOCK_CALLBACK_t *) netHandle;
             
             socketCallBackHandler[0] = g_SocketCallBackHandler[0];
             socketCallBackHandler[1] = g_SocketCallBackHandler[1];

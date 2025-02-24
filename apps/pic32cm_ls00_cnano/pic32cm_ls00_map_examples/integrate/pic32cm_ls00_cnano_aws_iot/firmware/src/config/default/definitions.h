@@ -57,8 +57,8 @@
 #include "peripheral/dmac/plib_dmac.h"
 #include "peripheral/rtc/plib_rtc.h"
 #include "touch/touch.h"
-#include "system/time/sys_time.h"
 #include "driver/i2c/drv_i2c.h"
+#include "system/time/sys_time.h"
 #include "system/console/sys_console.h"
 #include "system/console/src/sys_console_uart_definitions.h"
 #include "system/int/sys_int.h"
@@ -84,13 +84,13 @@ extern "C" {
 // DOM-IGNORE-END
 
 /* Device Information */
-#define DEVICE_NAME			 "PIC32CM5164LS00048"
-#define DEVICE_ARCH			 "CORTEX-M23"
-#define DEVICE_FAMILY		 "PIC32CM"
-#define DEVICE_SERIES		 "PIC32CMLS00"
+#define DEVICE_NAME          "PIC32CM5164LS00048"
+#define DEVICE_ARCH          "CORTEX-M23"
+#define DEVICE_FAMILY        "PIC32CM"
+#define DEVICE_SERIES        "PIC32CMLS00"
 
 /* CPU clock frequency */
-#define CPU_CLOCK_FREQUENCY 12000000
+#define CPU_CLOCK_FREQUENCY 12000000U
 
 // *****************************************************************************
 // *****************************************************************************
@@ -205,9 +205,9 @@ typedef struct
     /* I2C0 Driver Object */
     SYS_MODULE_OBJ drvI2C0;
 
-    SYS_MODULE_OBJ  sysTime;
     SYS_MODULE_OBJ  sysDebug;
 
+    SYS_MODULE_OBJ  sysTime;
     SYS_MODULE_OBJ  sysConsole0;
 
 

@@ -77,6 +77,8 @@ Copyright (C) 2020 released Microchip Technology Inc.  All rights reserved.
 
 #define SYS_RNWF_GET_MQTT_IFNO     "AT+MQTTC\r\n"
 
+/* Handle for System Configurations */
+typedef void * SYS_RNWF_SYSTEM_HANDLE_t;
 
 /**
  @brief System Service List
@@ -113,12 +115,7 @@ typedef enum
             
      /**<Get the system time */
     SYS_RNWF_SYSTEM_GET_TIME,          
-            
-    /**<Get the available certificate list */
-    SYS_RNWF_SYSTEM_GET_CERT_LIST,     
-            
-    /**<Get the available private key list */
-    SYS_RNWF_SYSTEM_GET_KEY_LIST,      
+
             
     /**<Get the Wifi Info */
     SYS_RWWF_SYSTEM_GET_WIFI_INFO,
@@ -139,7 +136,7 @@ typedef enum
  * @return ::SYS_RNWF_PASS Requested service is handled successfully
  * @return ::SYS_RNWF_FAIL Requested service has failed
  */
-SYS_RNWF_RESULT_t SYS_RNWF_SYSTEM_SrvCtrl(SYS_RNWF_SYSTEM_SERVICE_t request, void *input);
+SYS_RNWF_RESULT_t SYS_RNWF_SYSTEM_SrvCtrl(SYS_RNWF_SYSTEM_SERVICE_t request, SYS_RNWF_SYSTEM_HANDLE_t sysHandle);
 
 #endif	/* SYS_RNWF_SYSTEM_SERVICE_H */
 

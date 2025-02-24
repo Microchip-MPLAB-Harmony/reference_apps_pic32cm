@@ -72,7 +72,7 @@ Copyright (C) 2020 released Microchip Technology Inc.  All rights reserved.
 #define SYS_RNWF_WIFI_SET_REG_DONAIN    "AT+WIFIC=10,\"%s\"\r\n"
 #define SYS_RNWF_WIFI_PSV_SCAN      "AT+WSCN=0\r\n"
 #define SYS_RNWF_WIFI_ACT_SCAN      "AT+WSCN=1\r\n"
-#define SYS_RNWF_WIFI_DNS_CMD       "AT+DNSC=1,\"%s\"\r\n"
+#define SYS_RNWF_WIFI_DNS_CMD       "AT+DNSRESOLV=1,\"%s\"\r\n"
 #define SYS_RNWF_WIFI_PING_CMD      "AT+PING=\"%s\"\r\n"
 #define SYS_RNWF_WIFI_CONF_INFO     "AT+WIFIC\r\n"
 #define SYS_RNWF_SSID_LEN_MAX       33
@@ -85,11 +85,13 @@ Copyright (C) 2020 released Microchip Technology Inc.  All rights reserved.
 #define SYS_RNWF_WIFI_BT_INF_TYPE       "AT+WIFIC=31,%d\r\n"
 #define SYS_RNWF_WIFI_BT_RX_PRIO        "AT+WIFIC=32,%d\r\n"
 #define SYS_RNWF_WIFI_BT_TX_PRIO        "AT+WIFIC=33,%d\r\n"
-#define SYS_RNWF_WIFI_BT_ANTENNA_MODE   "AT+WIFIC=43,%d\r\n"
+#define SYS_RNWF_WIFI_BT_ANTENNA_MODE   "AT+WIFIC=34,%d\r\n"
 
 /*Wi-Fi max Callback service*/
 #define SYS_RNWF_WIFI_SERVICE_CB_MAX     2
 
+/* Handle for WIFI Configurations */
+typedef void * SYS_RNWF_WIFI_HANDLE_t;
 
 
 /**
@@ -99,13 +101,13 @@ Copyright (C) 2020 released Microchip Technology Inc.  All rights reserved.
 typedef enum 
 {
     /**<Request/Trigger Wi-Fi connect */
-    SYS_RNWF_STA_CONNECT,
+    SYS_RNWF_WIFI_STA_CONNECT,
             
     /**<Request/Trigger Wi-Fi disconnect */         
-    SYS_RNWF_STA_DISCONNECT,       
+    SYS_RNWF_WIFI_STA_DISCONNECT,       
             
     /**<Request/Trigger SoftAP disable */        
-    SYS_RNWF_AP_DISABLE,           
+    SYS_RNWF_WIFI_AP_DISABLE,           
             
     /**<Configure the Wi-Fi parameters */          
     SYS_RNWF_SET_WIFI_PARAMS,          
@@ -120,7 +122,7 @@ typedef enum
     SYS_RNWF_WIFI_BT_COEX_ENABLE,
 
     /**<Configure the Wi-Fi channel */        
-    SYS_RNWF_SET_WIFI_AP_CHANNEL,
+    SYS_RNWF_WIFI_SET_WIFI_AP_CHANNEL,
             
     /**<Configure the Access point's BSSID */        
     SYS_RNWF_SET_WIFI_BSSID,
@@ -163,20 +165,23 @@ typedef enum
 typedef enum 
 {
     /**<Wi-Fi connected event code*/
-    SYS_RNWF_CONNECTED,
+    SYS_RNWF_WIFI_CONNECTED,
             
     /**<Wi-Fi disconnected event code*/
-    SYS_RNWF_DISCONNECTED,          
+    SYS_RNWF_WIFI_DISCONNECTED,          
             
     /**<Wi-Fi connection failure event code*/       
-    SYS_RNWF_CONNECT_FAILED,        
+    SYS_RNWF_WIFI_CONNECT_FAILED,        
      
     /**<Wi-Fi IPv4 DHCP complete event code*/
-    SYS_RNWF_IPv4_DHCP_DONE, 
+    SYS_RNWF_WIFI_DHCP_IPV4_COMPLETE, 
     
-    /**<Wi-Fi IPv6 DHCP complete event code*/
-    SYS_RNWF_IPv6_DHCP_DONE,   
+    /**<Wi-Fi IPv6 Local DHCP complete event code*/
+    SYS_RNWF_WIFI_DHCP_IPV6_LOCAL_COMPLETE,   
 
+    /**<Wi-Fi IPv6 Global DHCP complete event code*/
+    SYS_RNWF_WIFI_DHCP_IPV6_GLOBAL_COMPLETE,
+    
     /**<Wi-Fi DNS complete event code*/
     SYS_RNWF_WIFI_DNS_RESP,
 
@@ -184,13 +189,13 @@ typedef enum
     SYS_RNWF_WIFI_PING_RESP,
     
     /**<Scan indication event to report each scan list */
-    SYS_RNWF_SCAN_INDICATION, 
+    SYS_RNWF_WIFI_SCAN_INDICATION, 
             
     /**<Scan complete event code*/
-    SYS_RNWF_SCAN_DONE,      
+    SYS_RNWF_WIFI_SCAN_DONE,      
     
     /**<SNTP up event*/
-    SYS_RNWF_SNTP_UP,
+    SYS_RNWF_WIFI_SNTP_UP,
 
 }SYS_RNWF_WIFI_EVENT_t;
 
@@ -201,22 +206,22 @@ typedef enum
 typedef enum 
 {
     /**<OPEN mode, no security*/
-    SYS_RNWF_OPEN,              
+    SYS_RNWF_WIFI_SECURITY_OPEN,              
            
     /**<RSVD mode*/
-    SYS_RNWF_RSVD,                  
+    SYS_RNWF_WIFI_RSVD,                  
             
     /**<WPA2 Mixed mode TKIP/CCMP*/
-    SYS_RNWF_WPA2_MIXED,            
+    SYS_RNWF_WIFI_SECURITY_WPA2_MIXED,            
             
     /**<WPA2 CCMP*/
-    SYS_RNWF_WPA2,                  
+    SYS_RNWF_WIFI_SECURITY_WPA2,                  
             
     /**<WPA3 Transition Mode*/
-    SYS_RNWF_WPA3_TRANS,            
+    SYS_RNWF_WIFI_SECURITY_WPA3_TRANS,            
             
     /**<WPA3 mode*/
-    SYS_RNWF_WPA3,   
+    SYS_RNWF_WIFI_SECURITY_WPA3,   
 
 }SYS_RNWF_WIFI_SECURITY_t;
 
@@ -280,6 +285,9 @@ typedef struct
 
     /**<Wi-Fi Channel number */
     uint8_t channel;  
+
+    /**<Wi-Fi SSID Visibility*/
+    bool ssidVisibility;
 }SYS_RNWF_WIFI_PARAM_t;
 
 
@@ -291,23 +299,23 @@ typedef struct
 typedef struct
 {
     /**<BT/Wi-Fi coexistence arbiter 0-Disable, 1-Enable*/
-    uint8_t     wifi_bt_coex_enable;   
+    uint8_t     wifiBtCoexEnable;   
     
     /**<BT/Wi-Fi coexistence arbiter interface type */
-    SYS_RNWF_WIFI_BT_INF_TYP     inf_type;
+    SYS_RNWF_WIFI_BT_INF_TYP     infType;
 
     /**<BT/Wi-Fi coexistence arbiter WLAN Rx priority over BT Low Priority */
     /**<0- WLAN Rx priority lower than BT Low Priority*/
     /**<1- WLAN Rx priority higher than BT Low Priority*/
-    uint8_t wlan_rx_priority; 
+    uint8_t wlanRxPriority; 
 
     /**<BT/Wi-Fi coexistence arbiter WLAN Tx priority over BT Low Priority */
     /**<0- WLAN Tx priority lower than BT Low Priority*/
     /**<1- WLAN Tx priority higher than BT Low Priority*/
-    uint8_t wlan_tx_priority; 
+    uint8_t wlanTxPriority; 
     
     /**<BT/Wi-Fi coexistence arbiter antenna mode*/
-    ANTENNA_MODE   antenna_mode;
+    ANTENNA_MODE   antennaMode;
 }SYS_RNWF_WIFI_CONFIG_t;
 
 
@@ -318,7 +326,7 @@ typedef struct
  * @param[out]  msg Received data related to the passed event   
  * 
  */
-typedef void (*SYS_RNWF_WIFI_CALLBACK_t)(SYS_RNWF_WIFI_EVENT_t event, uint8_t *msg);
+typedef void (*SYS_RNWF_WIFI_CALLBACK_t)(SYS_RNWF_WIFI_EVENT_t event, SYS_RNWF_WIFI_HANDLE_t *wifiHandle);
 
 /**
  * @brief Wi-Fi Service Layer API to handle STA and SoftAP mode operations.
@@ -333,7 +341,7 @@ typedef void (*SYS_RNWF_WIFI_CALLBACK_t)(SYS_RNWF_WIFI_EVENT_t event, uint8_t *m
  * @return ::SYS_RNWF_PASS Requested service is handled successfully
  * @return ::SYS_RNWF_FAIL Requested service has failed
  */
-SYS_RNWF_RESULT_t SYS_RNWF_WIFI_SrvCtrl( SYS_RNWF_WIFI_SERVICE_t request, void *input);
+SYS_RNWF_RESULT_t SYS_RNWF_WIFI_SrvCtrl( SYS_RNWF_WIFI_SERVICE_t request, SYS_RNWF_WIFI_HANDLE_t);
 
 #endif	/* RNWF_WIFI_SERVICE_H */
 

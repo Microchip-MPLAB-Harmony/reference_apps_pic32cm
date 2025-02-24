@@ -304,50 +304,61 @@ static SYS_RNWF_RESULT_t SYS_RNWF_IF_AsyncHandler(uint8_t * p_msg)
                     IPv4_address = SYS_RNWF_IpAddress(p_msg);
                     if(IPv4_address == true)
                     {
-                        wifi_cb_func(SYS_RNWF_IPv4_DHCP_DONE, p_arg);
+                        wifi_cb_func(SYS_RNWF_WIFI_DHCP_IPV4_COMPLETE, (SYS_RNWF_WIFI_HANDLE_t)p_arg);
                     }
                     else
                     {
-                        wifi_cb_func(SYS_RNWF_IPv6_DHCP_DONE, p_arg);
+                        if(strstr((char * ) p_msg, SYS_RNWF_WIFI_IPv6_LOCAL_PREFIX) != NULL)
+                        {
+                            wifi_cb_func(SYS_RNWF_WIFI_DHCP_IPV6_LOCAL_COMPLETE, (SYS_RNWF_WIFI_HANDLE_t)p_arg);
+                        }
+                        else
+                        {
+                            wifi_cb_func(SYS_RNWF_WIFI_DHCP_IPV6_GLOBAL_COMPLETE, (SYS_RNWF_WIFI_HANDLE_t)p_arg);
+                        }
                     }
                 }
 
                 else if ((strstr((char * ) p_msg, SYS_RNWF_EVENT_LINK_LOSS) != NULL) || (strstr((char * ) p_msg, SYS_RNWF_EVENT_ERROR) != NULL))
                 {
-                    wifi_cb_func(SYS_RNWF_DISCONNECTED, p_arg);
+                    wifi_cb_func(SYS_RNWF_WIFI_DISCONNECTED, (SYS_RNWF_WIFI_HANDLE_t)p_arg);
                 } 
 
                 else if (strstr((char * ) p_msg, SYS_RNWF_EVENT_LINK_UP)) 
                 {
-                    wifi_cb_func(SYS_RNWF_CONNECTED, p_arg);
+                    wifi_cb_func(SYS_RNWF_WIFI_CONNECTED, (SYS_RNWF_WIFI_HANDLE_t)p_arg);
                 }
 
                 else if (strstr((char * ) p_msg, SYS_RNWF_EVENT_ERROR)) 
                 {
-                    wifi_cb_func(SYS_RNWF_CONNECT_FAILED, p_arg);
+                    wifi_cb_func(SYS_RNWF_WIFI_CONNECT_FAILED, (SYS_RNWF_WIFI_HANDLE_t)p_arg);
                 }
 
                 if (strstr((char * ) p_msg, SYS_RNWF_EVENT_SCAN_IND)) 
                 {
-                    wifi_cb_func(SYS_RNWF_SCAN_INDICATION, p_arg);
+                    wifi_cb_func(SYS_RNWF_WIFI_SCAN_INDICATION, (SYS_RNWF_WIFI_HANDLE_t)p_arg);
                 }
 
                 if (strstr((char * ) p_msg, SYS_RNWF_EVENT_SCAN_DONE)) 
                 {
-                    wifi_cb_func(SYS_RNWF_SCAN_DONE, p_arg);
+                    wifi_cb_func(SYS_RNWF_WIFI_SCAN_DONE, (SYS_RNWF_WIFI_HANDLE_t)p_arg);
                     result = SYS_RNWF_PASS;
                 }
                 
                 if(strstr((char *)p_msg, SYS_RNWF_EVENT_TIME))
                 {
-                    wifi_cb_func(SYS_RNWF_SNTP_UP, p_arg);   
+                    wifi_cb_func(SYS_RNWF_WIFI_SNTP_UP, (SYS_RNWF_WIFI_HANDLE_t)p_arg);   
                 }
 
                 if(strstr((char *)p_msg, SYS_RNWF_EVENT_PING))
                 {
-                    wifi_cb_func(SYS_RNWF_WIFI_PING_RESP, p_arg);   
+                    wifi_cb_func(SYS_RNWF_WIFI_PING_RESP, (SYS_RNWF_WIFI_HANDLE_t)p_arg);   
                 }
 
+                if (strstr((char * ) p_msg, SYS_RNWF_EVENT_DNS_RES)) 
+                {
+                    wifi_cb_func(SYS_RNWF_WIFI_DNS_RESP, (SYS_RNWF_WIFI_HANDLE_t)p_arg);
+                }
             }
         }
         break;
@@ -391,10 +402,9 @@ static SYS_RNWF_RESULT_t SYS_RNWF_IF_AsyncHandler(uint8_t * p_msg)
                 
                 else if (strstr((char * ) p_msg, SYS_RNWF_EVENT_SOCK_TCP_RECV)) 
                 {
-                    uint16_t rx_len = 0;
-                    rx_len= atoi(strstr((char * ) p_arg," "));
-                    p_arg = (uint8_t * ) & rx_len;
-					SYS_CONSOLE_PRINT(" ");
+                    arg_len = 0;
+                    arg_len= atoi(strstr((char * ) p_arg," "));
+                    p_arg = (uint8_t * ) & arg_len;
                     event = SYS_RNWF_NET_SOCK_EVENT_READ;
                 }
                 
@@ -403,7 +413,7 @@ static SYS_RNWF_RESULT_t SYS_RNWF_IF_AsyncHandler(uint8_t * p_msg)
                     event = SYS_RNWF_NET_SOCK_EVENT_ERROR;
                 }
                 
-                netSock_cb_func(socket_id, event, p_arg);
+                netSock_cb_func(socket_id, event, (SYS_RNWF_NET_HANDLE_t)p_arg);
             }
         }
         break;
@@ -426,19 +436,19 @@ static SYS_RNWF_RESULT_t SYS_RNWF_IF_AsyncHandler(uint8_t * p_msg)
                 {                
                     status = atoi((const char *)p_arg);
                     if(status)
-                        result = mqtt_cb_func(SYS_RNWF_MQTT_CONNECTED, p_arg);
+                        result = mqtt_cb_func(SYS_RNWF_MQTT_CONNECTED, (SYS_RNWF_MQTT_HANDLE_t)p_arg);
                     else
-                        result = mqtt_cb_func(SYS_RNWF_MQTT_DISCONNECTED, p_arg);                
+                        result = mqtt_cb_func(SYS_RNWF_MQTT_DISCONNECTED, (SYS_RNWF_MQTT_HANDLE_t)p_arg);                
                 }   
                 
                 if(strstr((char *)p_msg, SYS_RNWF_EVENT_MQTT_SUB_RESP))
                 {
-                    result = mqtt_cb_func(SYS_RNWF_MQTT_SUBCRIBE_ACK, p_arg);
+                    result = mqtt_cb_func(SYS_RNWF_MQTT_SUBCRIBE_ACK, (SYS_RNWF_MQTT_HANDLE_t)p_arg);
                 }
                 
                 if(strstr((char *)p_msg, SYS_RNWF_EVENT_MQTT_SUB_MSG))
                 {
-                    result = mqtt_cb_func(SYS_RNWF_MQTT_SUBCRIBE_MSG, p_arg);
+                    result = mqtt_cb_func(SYS_RNWF_MQTT_SUBCRIBE_MSG, (SYS_RNWF_MQTT_HANDLE_t)p_arg);
                 }
                 
                 if(result == SYS_RNWF_COTN)

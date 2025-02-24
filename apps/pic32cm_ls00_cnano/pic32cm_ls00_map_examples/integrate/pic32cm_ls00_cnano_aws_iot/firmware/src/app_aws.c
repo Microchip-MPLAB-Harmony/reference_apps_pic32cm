@@ -119,13 +119,13 @@ static uint8_t subCnt;
 /**TLS Configuration for the aws */
 const char *tlsCfgAws[] = 
                         {
-                            SYS_MQTT_AZURE_ENABLE_PEER_AUTH,
+                            SYS_MQTT_ENABLE_PEER_AUTH,
                             SYS_RNWF_MQTT_SERVER_CERT, 
                             SYS_RNWF_MQTT_DEVICE_CERT, 
                             SYS_RNWF_MQTT_DEVICE_KEY,                                     
                             NULL,                                    
                             SYS_RNWF_MQTT_TLS_SERVER_NAME,
-                            SYS_MQTT_AZURE_DOMAIN_NAME_VERIFY,
+                            SYS_MQTT_DOMAIN_NAME_VERIFY,
                             NULL
                         };
    
@@ -158,7 +158,7 @@ static void APP_RNWF_AWS_SubackHandler()
     {
         sprintf((char *)appBuf, "%s", subscribeList[subCnt++]);
         
-        SYS_RNWF_MQTT_SrvCtrl(SYS_RNWF_MQTT_SUBSCRIBE_QOS0, appBuf);            
+        SYS_RNWF_MQTT_SrvCtrl(SYS_RNWF_MQTT_SUBSCRIBE_QOS, appBuf);            
     }   
 }
 
@@ -244,7 +244,7 @@ void APP_WIFI_Callback(SYS_RNWF_WIFI_EVENT_t event, uint8_t *p_str)
     switch(event)
     {
         /* SNTP UP event code*/
-        case SYS_RNWF_SNTP_UP:
+        case SYS_RNWF_WIFI_SNTP_UP:
         {       
             
             if(isMqttConnected < MQTT_CONNECTING)
@@ -262,24 +262,24 @@ void APP_WIFI_Callback(SYS_RNWF_WIFI_EVENT_t event, uint8_t *p_str)
         }
         
         /* Wi-Fi connected event code*/
-        case SYS_RNWF_CONNECTED:
+        case SYS_RNWF_WIFI_CONNECTED:
         {
             SYS_CONSOLE_PRINT("\n\r APP_AWS_TASK: Wi-Fi Connected");
             break;
         }
         
         /* Wi-Fi disconnected event code*/
-        case SYS_RNWF_DISCONNECTED:
+        case SYS_RNWF_WIFI_DISCONNECTED:
         {
             SYS_CONSOLE_PRINT("\n\r APP_AWS_TASK: Wi-Fi Disconnected "
                     "\n\r APP_AWS_TASK: Reconnecting... ");
             
-            SYS_RNWF_WIFI_SrvCtrl(SYS_RNWF_STA_CONNECT, NULL);
+            SYS_RNWF_WIFI_SrvCtrl(SYS_RNWF_WIFI_STA_CONNECT, NULL);
             break;
         }
         
         /* Wi-Fi DHCP complete event code*/
-        case SYS_RNWF_IPv4_DHCP_DONE:
+        case SYS_RNWF_WIFI_DHCP_IPV4_COMPLETE:
         {
             SYS_CONSOLE_PRINT("\n\r APP_AWS_TASK: DHCP IP:%s", &p_str[2]);
             
@@ -290,13 +290,13 @@ void APP_WIFI_Callback(SYS_RNWF_WIFI_EVENT_t event, uint8_t *p_str)
         }
         
         /* Wi-Fi scan indication event code*/
-        case SYS_RNWF_SCAN_INDICATION:
+        case SYS_RNWF_WIFI_SCAN_INDICATION:
         {
             break;
         }
         
         /* Wi-Fi scan complete event code*/
-        case SYS_RNWF_SCAN_DONE:
+        case SYS_RNWF_WIFI_SCAN_DONE:
         {
             break;
         }
@@ -369,7 +369,7 @@ static void APP_RNWF_AWS_Telemetry(int16_t sensorInput1, uint16_t sensorInput2,
                                 sensorInput1, sensorInput2, sensorInput3, 
                                 sensorInput4, sensorInput5, sensorInput6);
     
-    APP_RNWF_mqttPublish((const char *)SYS_RNWF_MQTT_TOPIC_NAME,(const char *) appBuf);
+    APP_RNWF_mqttPublish((const char *)SYS_RNWF_MQTT_PUB_TOPIC_NAME,(const char *) appBuf);
 }
 
 
@@ -419,9 +419,6 @@ void APP_AWS_Tasks ( void )
             
             char sntp_url[] =  "0.in.pool.ntp.org";    
             SYS_RNWF_SYSTEM_SrvCtrl(SYS_RNWF_SYSTEM_SET_SNTP,sntp_url);
-
-            SYS_RNWF_SYSTEM_SrvCtrl(SYS_RNWF_SYSTEM_GET_CERT_LIST, appBuf);  
-            SYS_CONSOLE_PRINT("\n\r APP_AWS_TASK: %s", appBuf);
                           
             /* RNWF Application Callback register */
             SYS_RNWF_WIFI_SrvCtrl(SYS_RNWF_WIFI_SET_CALLBACK, APP_WIFI_Callback);

@@ -44,6 +44,8 @@ Copyright (C) 2020 released Microchip Technology Inc.  All rights reserved.
 
 #include <xc.h> // include processor files - each processor file is guarded.  
 
+/* Number of clients connecting to the server socket, with the maximum value being 5.*/
+#define SYS_RNWF_NET_NO_OF_CLIENT_SOCKETS       4
 
 /*RNWF Network Socket max callback service */
 #define SYS_RNWF_NET_SOCK_SERVICE_CB_MAX    2
@@ -67,7 +69,7 @@ Copyright (C) 2020 released Microchip Technology Inc.  All rights reserved.
 #define SYS_RNWF_SOCK_OPEN_TCP              "AT+SOCKO=2,%d\r\n"
 #define SYS_RNWF_SOCK_OPEN_RESP             "+SOCKO:"
 
-#define SYS_RNWF_SOCK_BIND_LOCAL            "AT+SOCKBL=%lu,%d\r\n"
+#define SYS_RNWF_SOCK_BIND_LOCAL            "AT+SOCKBL=%lu,%d,%d\r\n"
 #define SYS_RNWF_SOCK_BIND_REMOTE           "AT+SOCKBR=%lu,\"%s\",%d\r\n"
 #define SYS_RNWF_SOCK_BIND_MCAST            "AT+SOCKBM=%lu,%s,%d\r\n"
 
@@ -76,7 +78,7 @@ Copyright (C) 2020 released Microchip Technology Inc.  All rights reserved.
 #define SYS_RNWF_SOCK_BINARY_WRITE_UDP      "AT+SOCKWRTO=%lu,%s,%d,%d\r\n"
 
 #define SYS_RNWF_SOCK_ASCII_WRITE_TCP       "AT+SOCKWR=%d,%d,\"%.*s\"\r\n"
-#define SYS_RNWF_SOCK_ASCII_WRITE_UDP       "AT+SOCKWRTO=%d,%s,%d,%d,\"%.*s\"\r\n"
+#define SYS_RNWF_SOCK_ASCII_WRITE_UDP       "AT+SOCKWRTO=%d,\"%s\",%d,%d,\"%s\"\r\n"
 
 #define SYS_RNWF_SOCK_READ_BUF              "AT+SOCKRDBUF=%lu,%d,%d\r\n"
 #define SYS_RNWF_SOCK_READ                  "AT+SOCKRD=%lu,%d,%d\r\n"
@@ -99,7 +101,8 @@ Copyright (C) 2020 released Microchip Technology Inc.  All rights reserved.
 #define SYS_RNWF_NET_PEER_AUTHENTICATION    "AT+TLSC=%d,40,%d\r\n"
 #define SYS_RNWF_SOCK_TLS_DOMAIN_NAME_VERIFY  "AT+TLSC=%d,41,%d\r\n"
 
-
+/* Handle for Net Configurations */
+typedef void * SYS_RNWF_NET_HANDLE_t;
 
 /**
  @brief Network Interfaces List
@@ -305,7 +308,10 @@ typedef struct
     uint8_t             tls_conf; 
 
     /**<Open socket with IPv4/IPv6 address */
-    SYS_RNWF_NET_IP_TYPE_t  IP;
+    SYS_RNWF_NET_IP_TYPE_t  ip_type;
+
+    /* Number of clients connecting to the server socket, with the maximum value being 5. */
+    uint8_t             noOfClients;
 
 }SYS_RNWF_NET_SOCKET_t;
 
@@ -331,7 +337,7 @@ typedef struct
 /**
  @brief Network socket events callback function type 
  */
-typedef SYS_RNWF_RESULT_t (*SYS_RNWF_NET_SOCK_CALLBACK_t)(uint32_t sock, SYS_RNWF_NET_SOCK_EVENT_t, uint8_t *);
+typedef SYS_RNWF_RESULT_t (*SYS_RNWF_NET_SOCK_CALLBACK_t)(uint32_t sock, SYS_RNWF_NET_SOCK_EVENT_t, SYS_RNWF_NET_HANDLE_t netHandle);
 
 /**
  * @brief NET Sock Service Layer API to handle system operations.
@@ -343,7 +349,7 @@ typedef SYS_RNWF_RESULT_t (*SYS_RNWF_NET_SOCK_CALLBACK_t)(uint32_t sock, SYS_RNW
  * @return ::SYS_RNWF_PASS Requested service is handled successfully
  * @return ::SYS_RNWF_FAIL Requested service has failed
  */
-SYS_RNWF_RESULT_t SYS_RNWF_NET_SockSrvCtrl( SYS_RNWF_NET_SOCK_SERVICE_t request, void *input);
+SYS_RNWF_RESULT_t SYS_RNWF_NET_SockSrvCtrl( SYS_RNWF_NET_SOCK_SERVICE_t request, SYS_RNWF_NET_HANDLE_t);
 
 
 /**

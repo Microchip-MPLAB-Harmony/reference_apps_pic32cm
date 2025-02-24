@@ -98,11 +98,14 @@ Copyright (C) 2020 released Microchip Technology Inc.  All rights reserved.
 #define SYS_RNWF_EVENT_PING           "PING:"
 
 /*IPv6 local link IP prefix*/
-#define SYS_RNWF_LOCAL_IP_PREFIX      "FE80"
+#define SYS_RNWF_WIFI_IPv6_LOCAL_PREFIX      "FE80"
 
 #define SYS_RNWF_EVENT_LINK_UP        "WSTALU:"
 #define SYS_RNWF_EVENT_LINK_LOSS      "WSTALD:"
 #define SYS_RNWF_EVENT_ERROR          "WSTAERR:"
+
+/*DNS Resolve Event Code*/
+#define SYS_RNWF_EVENT_DNS_RES       "DNSRESOLV"
 
 /*  SCAN Event Code*/
 #define SYS_RNWF_EVENT_SCAN_IND       "WSCNIND:"

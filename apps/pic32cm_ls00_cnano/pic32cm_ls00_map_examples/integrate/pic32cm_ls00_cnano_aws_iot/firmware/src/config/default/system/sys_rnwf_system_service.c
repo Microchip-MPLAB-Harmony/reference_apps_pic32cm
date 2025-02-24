@@ -104,22 +104,7 @@ SYS_RNWF_RESULT_t SYS_RNWF_SYSTEM_SrvCtrl(SYS_RNWF_SYSTEM_SERVICE_t request, voi
             break;
         }
         
-        /* RNWF Get Certificates List */
-        case SYS_RNWF_SYSTEM_GET_CERT_LIST:
-        {
-            *(uint8_t*)input = '\0';
-            result = SYS_RNWF_CMD_SEND_OK_WAIT("+FS:2,1,", input, SYS_RNWF_GET_CERT_LIST);
-            break;
-        }
-        
-        /* RNWF Get Key List*/
-        case SYS_RNWF_SYSTEM_GET_KEY_LIST:
-        {
-            *(uint8_t*)input = '\0';
-            result = SYS_RNWF_CMD_SEND_OK_WAIT("+FS:2,2,", input, SYS_RNWF_GET_KEY_LIST);
-            break;
-        }
-        
+
         /* RNWF Get Time */
         case SYS_RNWF_SYSTEM_GET_TIME:
         {

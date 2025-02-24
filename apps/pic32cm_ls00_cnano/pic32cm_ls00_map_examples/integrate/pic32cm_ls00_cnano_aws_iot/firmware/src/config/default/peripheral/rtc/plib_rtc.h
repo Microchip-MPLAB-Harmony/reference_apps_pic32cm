@@ -88,10 +88,6 @@ typedef uint32_t RTC_TIMER32_INT_MASK;
  #define   TAMPER_CHANNEL_1  (1U)
  #define   TAMPER_CHANNEL_2  (2U)
  #define   TAMPER_CHANNEL_3  (3U)
- #define   TAMPER_CHANNEL_4  (4U)
- #define   TAMPER_CHANNEL_5  (5U)
- #define   TAMPER_CHANNEL_6  (6U)
- #define   TAMPER_CHANNEL_7  (7U)
 typedef uint32_t TAMPER_CHANNEL;
 typedef void (*RTC_TIMER32_CALLBACK)( RTC_TIMER32_INT_MASK intCause, uintptr_t context );
 

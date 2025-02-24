@@ -3208,7 +3208,7 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="!@#harmonyUserData"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;UserData&gt;
   &lt;UserData dnOrder=&quot;0&quot;&gt;
-    &lt;GraphSettings canvasHeight=&quot;653&quot; canvasWidth=&quot;761&quot; dnOrder=&quot;0&quot;/&gt;
+    &lt;GraphSettings canvasHeight=&quot;654&quot; canvasWidth=&quot;761&quot; dnOrder=&quot;0&quot;/&gt;
     &lt;PowerProfiles dnOrder=&quot;1&quot;&gt;
       &lt;Profile dnOrder=&quot;0&quot; id=&quot;profile0&quot; name=&quot;Main&quot;/&gt;
     &lt;/PowerProfiles&gt;
@@ -48272,114 +48272,6 @@
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="rtc" name="TAMP_CHANNEL4_ACTION"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;rtc&gt;
-  &lt;rtc dnOrder=&quot;0&quot; id=&quot;TAMP_CHANNEL4_ACTION&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/rtc&gt;
-&lt;/rtc&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="rtc" name="TAMP_CHANNEL4_DEBNC"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;rtc&gt;
-  &lt;rtc dnOrder=&quot;0&quot; id=&quot;TAMP_CHANNEL4_DEBNC&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/rtc&gt;
-&lt;/rtc&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="rtc" name="TAMP_CHANNEL4_LEVEL"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;rtc&gt;
-  &lt;rtc dnOrder=&quot;0&quot; id=&quot;TAMP_CHANNEL4_LEVEL&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/rtc&gt;
-&lt;/rtc&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="rtc" name="TAMP_CHANNEL5_ACTION"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;rtc&gt;
-  &lt;rtc dnOrder=&quot;0&quot; id=&quot;TAMP_CHANNEL5_ACTION&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/rtc&gt;
-&lt;/rtc&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="rtc" name="TAMP_CHANNEL5_DEBNC"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;rtc&gt;
-  &lt;rtc dnOrder=&quot;0&quot; id=&quot;TAMP_CHANNEL5_DEBNC&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/rtc&gt;
-&lt;/rtc&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="rtc" name="TAMP_CHANNEL5_LEVEL"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;rtc&gt;
-  &lt;rtc dnOrder=&quot;0&quot; id=&quot;TAMP_CHANNEL5_LEVEL&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/rtc&gt;
-&lt;/rtc&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="rtc" name="TAMP_CHANNEL6_ACTION"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;rtc&gt;
-  &lt;rtc dnOrder=&quot;0&quot; id=&quot;TAMP_CHANNEL6_ACTION&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/rtc&gt;
-&lt;/rtc&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="rtc" name="TAMP_CHANNEL6_DEBNC"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;rtc&gt;
-  &lt;rtc dnOrder=&quot;0&quot; id=&quot;TAMP_CHANNEL6_DEBNC&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/rtc&gt;
-&lt;/rtc&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="rtc" name="TAMP_CHANNEL6_LEVEL"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;rtc&gt;
-  &lt;rtc dnOrder=&quot;0&quot; id=&quot;TAMP_CHANNEL6_LEVEL&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/rtc&gt;
-&lt;/rtc&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="rtc" name="TAMP_CHANNEL7_ACTION"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;rtc&gt;
-  &lt;rtc dnOrder=&quot;0&quot; id=&quot;TAMP_CHANNEL7_ACTION&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/rtc&gt;
-&lt;/rtc&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="rtc" name="TAMP_CHANNEL7_DEBNC"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;rtc&gt;
-  &lt;rtc dnOrder=&quot;0&quot; id=&quot;TAMP_CHANNEL7_DEBNC&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/rtc&gt;
-&lt;/rtc&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="rtc" name="TAMP_CHANNEL7_LEVEL"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;rtc&gt;
-  &lt;rtc dnOrder=&quot;0&quot; id=&quot;TAMP_CHANNEL7_LEVEL&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/rtc&gt;
-&lt;/rtc&gt;
-</value>
-      </entry>
-      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="rtc" name="TAMP_DEBOUNCE_ASYNCH"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;rtc&gt;
   &lt;rtc dnOrder=&quot;0&quot; id=&quot;TAMP_DEBOUNCE_ASYNCH&quot;&gt;
@@ -52263,18 +52155,9 @@
          <value>__ROOTVIEW</value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sysMqttRNWF" name="SYS_MQTT_AZURE_DOMAIN_NAME_VERIFY"/>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sysMqttRNWF" name="SYS_MQTT_ENABLE_PEER_AUTH"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sysMqttRNWF&gt;
-  &lt;sysMqttRNWF dnOrder=&quot;0&quot; id=&quot;SYS_MQTT_AZURE_DOMAIN_NAME_VERIFY&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/sysMqttRNWF&gt;
-&lt;/sysMqttRNWF&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sysMqttRNWF" name="SYS_MQTT_AZURE_ENABLE_PEER_AUTH"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sysMqttRNWF&gt;
-  &lt;sysMqttRNWF dnOrder=&quot;0&quot; id=&quot;SYS_MQTT_AZURE_ENABLE_PEER_AUTH&quot;&gt;
+  &lt;sysMqttRNWF dnOrder=&quot;0&quot; id=&quot;SYS_MQTT_ENABLE_PEER_AUTH&quot;&gt;
     &lt;Attributes dnOrder=&quot;0&quot;&gt;
       &lt;Boolean dnOrder=&quot;0&quot; id=&quot;visible&quot;&gt;
         &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
@@ -52288,9 +52171,9 @@
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sysMqttRNWF" name="SYS_MQTT_AZURE_ENABLE_TLS"/>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sysMqttRNWF" name="SYS_MQTT_ENABLE_TLS"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sysMqttRNWF&gt;
-  &lt;sysMqttRNWF dnOrder=&quot;0&quot; id=&quot;SYS_MQTT_AZURE_ENABLE_TLS&quot;&gt;
+  &lt;sysMqttRNWF dnOrder=&quot;0&quot; id=&quot;SYS_MQTT_ENABLE_TLS&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
       &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
     &lt;/Values&gt;
@@ -52303,48 +52186,6 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sysMqttRNWF&gt;
   &lt;sysMqttRNWF dnOrder=&quot;0&quot; id=&quot;SYS_RNWF_MQTT_AZURE_DPS_ENABLE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/sysMqttRNWF&gt;
-&lt;/sysMqttRNWF&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sysMqttRNWF" name="SYS_RNWF_MQTT_AZURE_KEEP_ALIVE"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sysMqttRNWF&gt;
-  &lt;sysMqttRNWF dnOrder=&quot;0&quot; id=&quot;SYS_RNWF_MQTT_AZURE_KEEP_ALIVE&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
-    &lt;/Values&gt;
-  &lt;/sysMqttRNWF&gt;
-&lt;/sysMqttRNWF&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sysMqttRNWF" name="SYS_RNWF_MQTT_AZURE_PUBLISH"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sysMqttRNWF&gt;
-  &lt;sysMqttRNWF dnOrder=&quot;0&quot; id=&quot;SYS_RNWF_MQTT_AZURE_PUBLISH&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
-    &lt;/Values&gt;
-  &lt;/sysMqttRNWF&gt;
-&lt;/sysMqttRNWF&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sysMqttRNWF" name="SYS_RNWF_MQTT_AZURE_RETAIN_FLAG"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sysMqttRNWF&gt;
-  &lt;sysMqttRNWF dnOrder=&quot;0&quot; id=&quot;SYS_RNWF_MQTT_AZURE_RETAIN_FLAG&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/sysMqttRNWF&gt;
-&lt;/sysMqttRNWF&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sysMqttRNWF" name="SYS_RNWF_MQTT_AZURE_SUBSCRIBE"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sysMqttRNWF&gt;
-  &lt;sysMqttRNWF dnOrder=&quot;0&quot; id=&quot;SYS_RNWF_MQTT_AZURE_SUBSCRIBE&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
-    &lt;/Values&gt;
   &lt;/sysMqttRNWF&gt;
 &lt;/sysMqttRNWF&gt;
 </value>
@@ -52373,7 +52214,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sysMqttRNWF" name="SYS_RNWF_MQTT_CLOUD_PORT"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sysMqttRNWF&gt;
   &lt;sysMqttRNWF dnOrder=&quot;0&quot; id=&quot;SYS_RNWF_MQTT_CLOUD_PORT&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;8883&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/sysMqttRNWF&gt;
 &lt;/sysMqttRNWF&gt;
 </value>
@@ -52460,6 +52303,17 @@
 </value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sysMqttRNWF" name="SYS_RNWF_MQTT_KEEP_ALIVE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sysMqttRNWF&gt;
+  &lt;sysMqttRNWF dnOrder=&quot;0&quot; id=&quot;SYS_RNWF_MQTT_KEEP_ALIVE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/sysMqttRNWF&gt;
+&lt;/sysMqttRNWF&gt;
+</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sysMqttRNWF" name="SYS_RNWF_MQTT_KEEP_ALIVE_INT"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sysMqttRNWF&gt;
   &lt;sysMqttRNWF dnOrder=&quot;0&quot; id=&quot;SYS_RNWF_MQTT_KEEP_ALIVE_INT&quot;&gt;
@@ -52496,6 +52350,31 @@
 </value>
       </entry>
       <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sysMqttRNWF" name="SYS_RNWF_MQTT_PUBLISH"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sysMqttRNWF&gt;
+  &lt;sysMqttRNWF dnOrder=&quot;0&quot; id=&quot;SYS_RNWF_MQTT_PUBLISH&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/sysMqttRNWF&gt;
+&lt;/sysMqttRNWF&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sysMqttRNWF" name="SYS_RNWF_MQTT_PUB_MSG"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sysMqttRNWF&gt;
+  &lt;sysMqttRNWF dnOrder=&quot;0&quot; id=&quot;SYS_RNWF_MQTT_PUB_MSG&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;visible&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;/&gt;
+  &lt;/sysMqttRNWF&gt;
+&lt;/sysMqttRNWF&gt;
+</value>
+      </entry>
+      <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sysMqttRNWF" name="SYS_RNWF_MQTT_PUB_TOPIC_NAME"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sysMqttRNWF&gt;
   &lt;sysMqttRNWF dnOrder=&quot;0&quot; id=&quot;SYS_RNWF_MQTT_PUB_TOPIC_NAME&quot;&gt;
@@ -52512,10 +52391,17 @@
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sysMqttRNWF" name="SYS_RNWF_MQTT_QOS_TYPE"/>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sysMqttRNWF" name="SYS_RNWF_MQTT_RETAIN_FLAG"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sysMqttRNWF&gt;
-  &lt;sysMqttRNWF dnOrder=&quot;0&quot; id=&quot;SYS_RNWF_MQTT_QOS_TYPE&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;sysMqttRNWF dnOrder=&quot;0&quot; id=&quot;SYS_RNWF_MQTT_RETAIN_FLAG&quot;&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;visible&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;false&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/sysMqttRNWF&gt;
 &lt;/sysMqttRNWF&gt;
 </value>
@@ -52546,10 +52432,12 @@
 </value>
       </entry>
       <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sysMqttRNWF" name="SYS_RNWF_MQTT_SUB_QOS_TYPE"/>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sysMqttRNWF" name="SYS_RNWF_MQTT_SUBSCRIBE"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sysMqttRNWF&gt;
-  &lt;sysMqttRNWF dnOrder=&quot;0&quot; id=&quot;SYS_RNWF_MQTT_SUB_QOS_TYPE&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;sysMqttRNWF dnOrder=&quot;0&quot; id=&quot;SYS_RNWF_MQTT_SUBSCRIBE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/sysMqttRNWF&gt;
 &lt;/sysMqttRNWF&gt;
 </value>
@@ -52660,24 +52548,6 @@
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sysNetRNWF" name="#&amp;__MCC_Group_Parrent_id"/>
          <value>__ROOTVIEW</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sysNetRNWF" name="SYS_RNWD_NET_DEVICE_KEY_PWD0"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sysNetRNWF&gt;
-  &lt;sysNetRNWF dnOrder=&quot;0&quot; id=&quot;SYS_RNWD_NET_DEVICE_KEY_PWD0&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/sysNetRNWF&gt;
-&lt;/sysNetRNWF&gt;
-</value>
-      </entry>
-      <entry>
-         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sysNetRNWF" name="SYS_RNWD_NET_DEVICE_KEY_PWD1"/>
-         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sysNetRNWF&gt;
-  &lt;sysNetRNWF dnOrder=&quot;0&quot; id=&quot;SYS_RNWD_NET_DEVICE_KEY_PWD1&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
-  &lt;/sysNetRNWF&gt;
-&lt;/sysNetRNWF&gt;
-</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="sysNetRNWF" name="SYS_RNWF_NET_DEBUG_LOGS"/>
@@ -54036,11 +53906,11 @@
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\configuration.h</file>
-         <hash>fddc813863bbdfe4f367fa290a060e53fb44ec850731a0ca04953ddb66c6f7ca</hash>
+         <hash>9db74ecb9336bd9ffea45e567178618f0175af6c07637be10672b478946e8e38</hash>
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\definitions.h</file>
-         <hash>9991d17f278e5e439705dbb37039c037927dfa6cf0df0cc05477cf2c1b605e05</hash>
+         <hash>0d80c9e0e1d16e2884ed97e160a59d57526fccb10232c4d242c5a4aec151c230</hash>
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\device.h</file>
@@ -54080,11 +53950,11 @@
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\exceptions.c</file>
-         <hash>3d788ce1bd25caaaf6b533ec5b06e4b1e753044c1a217dd5cdf8629628ae85a9</hash>
+         <hash>b0b65c30aa1f7a01ef7be6c1628c331a5ca3eae7dc3bd76ebe647703b76f432d</hash>
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\initialization.c</file>
-         <hash>ab6b32e8f749eb8c618c084a600a601937470034b4dad0158946e71e264b8df4</hash>
+         <hash>be849637c9c892b11ce966a576d82e880447065d6726abfad96dcfc0b63edf2e</hash>
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\interrupts.c</file>
@@ -54100,7 +53970,7 @@
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\osal\osal.h</file>
-         <hash>8404fbe44807fa0484ffb38843a72cb9af8e31c9c30bd1b2594e609b8ea317d9</hash>
+         <hash>1cfe3b61d9693b2369922041eef33fe16b3c1ccd9c85d4ded808b805f90a869c</hash>
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\osal\osal_definitions.h</file>
@@ -54108,7 +53978,7 @@
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\osal\osal_impl_basic.h</file>
-         <hash>67ce72d34fd1e4dee0b6937fa026ab2c7bd285f82a24da09742c68333adaf0fc</hash>
+         <hash>65e68edbc0320d0407399f65e6d06ff7e6d3d7697231cf1fe0a1fdf1d65f0463</hash>
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\peripheral\dmac\plib_dmac.c</file>
@@ -54136,7 +54006,7 @@
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\peripheral\rtc\plib_rtc.h</file>
-         <hash>fa7385b5930ea5b0775de954391d0a2cd7c49b1949c66106177e085342dbeb3a</hash>
+         <hash>86a57416099d16db539eb418d49cf5bf88346dddd2e2a4a9f244b71eb028b3ab</hash>
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\peripheral\rtc\plib_rtc_timer.c</file>
@@ -54144,11 +54014,11 @@
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\peripheral\sercom\i2c_master\plib_sercom2_i2c_master.c</file>
-         <hash>78d82dec632814efe3a8a79f0306fbb3d81020ab0a4015592ee553031ae96242</hash>
+         <hash>c9ce5f853b15effea4d1f91da057d508bffe9bd017d851b7312ccf6e8d46cf0f</hash>
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\peripheral\sercom\i2c_master\plib_sercom2_i2c_master.h</file>
-         <hash>3cb19d0a127d35f4200481e1b1e15356f5d46c98174a15297e8ffef2665d3fb6</hash>
+         <hash>5c38db7cf8afbf7ea812c743ac5469b709ce601038509cf3298c500011585f91</hash>
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\peripheral\sercom\i2c_master\plib_sercom_i2c_master_common.h</file>
@@ -54156,7 +54026,7 @@
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\peripheral\sercom\usart\plib_sercom0_usart.c</file>
-         <hash>1e480c18c1e39456f109d6abc54cef2e7f0e2c9de7746d69f0acd88b00a35d22</hash>
+         <hash>0202a61fce913cd72f51c080da712e91aad05101119da27dbecf3a42467fc7a3</hash>
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\peripheral\sercom\usart\plib_sercom0_usart.h</file>
@@ -54164,7 +54034,7 @@
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\peripheral\sercom\usart\plib_sercom3_usart.c</file>
-         <hash>19b8a18807f6186e9da31ad5ef8eb6079829bb30c587177427cf5daf3f2ad1be</hash>
+         <hash>282e7df5d46c95435d5591810943cb899b408d1db53753b61b71efc0b1a9eefe</hash>
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\peripheral\sercom\usart\plib_sercom3_usart.h</file>
@@ -54172,7 +54042,7 @@
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\peripheral\sercom\usart\plib_sercom_usart_common.h</file>
-         <hash>f19dafabe0928d60dd83d7e19f35889f200e3fbadff09e2f42523d320acf780a</hash>
+         <hash>3653b66472c558c50f7037a1dd25d2678e9a13aa718f3c53a2195e6f3919ea48</hash>
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\peripheral\systick\plib_systick.c</file>
@@ -54236,11 +54106,11 @@
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\system\inf\src\sys_rnwf_interface.c</file>
-         <hash>eefc6be0b035d21652516427e3cd178057ae9675199e1bbe21918de642c873e2</hash>
+         <hash>8767e34be3ce48e1e6e9137d22cff589c3898a6434ebefb4d1f43efa7dec7c7a</hash>
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\system\inf\sys_rnwf_interface.h</file>
-         <hash>cd9313eb88c700d6710fce52f502cc7154e95c05510d43d9bfd0ff1119488d0c</hash>
+         <hash>4c3192d4801f49998cba273df19ba7f7b46ce22715a0edc04307a1705d453dc3</hash>
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\system\int\src\sys_int.c</file>
@@ -54256,19 +54126,19 @@
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\system\mqtt\src\sys_rnwf_mqtt_service.c</file>
-         <hash>8df47fddd4b8a1c965a9f4b5e8cc56c6b031101b58900c0e9fc8204dd0c4e26a</hash>
+         <hash>6a912270951b4987dc32bcd8c1366eb508077460eac733d9961cd2b3f714ddc2</hash>
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\system\mqtt\sys_rnwf_mqtt_service.h</file>
-         <hash>fe5c8af1ac29954fa9833fec12f389c60da081e46b892c0cc1ed57a55ceb3fa9</hash>
+         <hash>b72f5b0556074abee5581852144e0afc30906f0c970db6f9734f8eeab2b15907</hash>
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\system\net\src\sys_rnwf_net_service.c</file>
-         <hash>55a0bc739dfdf74027c4fcbf794b96d185b52edffa6279d9c2958d2e8b31c05a</hash>
+         <hash>7992347244b335f0aaee9816632ed99ab66061a8bc399f42e14a482970922542</hash>
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\system\net\sys_rnwf_net_service.h</file>
-         <hash>e7ef746ea0b50d460a05a2c1724c1738872da5ef7152bcf5808a0f8dfc26cc13</hash>
+         <hash>3255b7158defc46124f9c06456a716efb512fd349861e41200da07879434a3e7</hash>
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\system\ports\sys_ports.h</file>
@@ -54288,11 +54158,11 @@
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\system\sys_rnwf_system_service.c</file>
-         <hash>bf4c61b78dc7bd33737085324057080115fc9adbde1445ce059a66083c4f9787</hash>
+         <hash>5942fd83e9e5861a3c38f1268748e2980d8b5d6f9b1b6a755bb1e24f0be51e2e</hash>
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\system\sys_rnwf_system_service.h</file>
-         <hash>e53fb286878d09f70de0e496376431e2d6da9bed3819e5d2fddbcf6a03b1874d</hash>
+         <hash>cd87e39d4efa38654db5a5b527dcce30f519116ef91c0d286ca2b2609d71fe3e</hash>
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\system\system.h</file>
@@ -54324,11 +54194,11 @@
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\system\wifi\src\sys_rnwf_wifi_service.c</file>
-         <hash>ec5490773b3c8789f871531cd5c263f4d1ea20129dc16ddc151e1b9001b649aa</hash>
+         <hash>78dcf607c6015e4e90c677f2a370ba31afcf62aff105dd3916fbad5c11a4be4d</hash>
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\system\wifi\sys_rnwf_wifi_service.h</file>
-         <hash>28c694ad599fa8b74bb02d4b7c01e9c34f944a0ac5d635d9d950b050727d87f5</hash>
+         <hash>6ff226f42cb95dd9eb16ef3b6e0fa6733d82e74a6fdb800995c81334f109fb19</hash>
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\tasks.c</file>
@@ -54360,23 +54230,23 @@
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\touch\touch.c</file>
-         <hash>7c229736432ffdf9ea2591e993748821e4b50bd116dad9ae0a260161d65e4fa3</hash>
+         <hash>d64d01e9df418d0a6b82d031406dd3e0caca95d114866a74ad32faf42b597341</hash>
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\touch\touch.h</file>
-         <hash>3678b91ec2d9b98072fa16be25e3ecfb0c7d1d07768f817492807d618f9f0ecd</hash>
+         <hash>dbc3ebed68db847c38ea4aa7fcb553dd2311c7f8670b1186ef3ac35e8cbd8bf5</hash>
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\touch\touch_api_ptc.h</file>
-         <hash>17e7431a121de79479bc3cc616daf8debe5e08048f08c8a37a1d4429d070f99d</hash>
+         <hash>e143a8ab8ebe43bc5e6f0b7c7d8ae87d957cf99b898bf24848f7f0b8efdeb0db</hash>
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\touch\touch_example.c</file>
-         <hash>80e7faf567d51c011885568486f9bdec340493408f1501cefd40d79fefd5c59f</hash>
+         <hash>21dc8f7337f1f35d74fedd6e76b7525834c2aa35f9c320161c3d69d2f9246f16</hash>
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\touch\touch_example.h</file>
-         <hash>df2125cb61002463e573369c2a6f73ee4e62d15f351fed0030188ab1cdb10e96</hash>
+         <hash>980902d4d62897275a09cbec843d1fbde53bb26085fb3fa1adf53edf42f72ce1</hash>
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\user.h</file>
@@ -54780,7 +54650,7 @@
       </entry>
       <entry>
          <file>..\..\firmware_secure\src\config\default\peripheral\clock\plib_clock.h</file>
-         <hash>721136c42046a932de696b169a84343465a44ea204bae3fb8c620a7778dcbf57</hash>
+         <hash>48855ddfcdc10b43a141321e043ab6ad2eb994b09fdba511f17f1d93911c536c</hash>
       </entry>
       <entry>
          <file>..\..\firmware_secure\src\config\default\peripheral\evsys\plib_evsys.c</file>
@@ -54816,7 +54686,7 @@
       </entry>
       <entry>
          <file>..\..\firmware_secure\src\config\default\peripheral\port\plib_port.c</file>
-         <hash>44115042a92bc0c580b239c440419b882c5d45c06c721525f120c5a2ea24d69b</hash>
+         <hash>7c0034a4365cf9a3df1f8b6603a9b1987ea44a526e1ca1667ac56e10de66d671</hash>
       </entry>
       <entry>
          <file>..\..\firmware_secure\src\config\default\peripheral\port\plib_port.h</file>
