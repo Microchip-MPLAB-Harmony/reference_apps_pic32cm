@@ -4139,7 +4139,7 @@
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
   &lt;core dnOrder=&quot;0&quot; id=&quot;FUSE_SYMBOL_VALUE16&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;0&quot;/&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;16&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -4515,7 +4515,6 @@
   &lt;core dnOrder=&quot;0&quot; id=&quot;IDAU_ANSC_SIZE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
       &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;core&quot; value=&quot;16&quot;/&gt;
-      &lt;User dnOrder=&quot;1&quot; value=&quot;0&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -4538,7 +4537,7 @@
   &lt;core dnOrder=&quot;0&quot; id=&quot;NONSECURE_ENTRY_C&quot;&gt;
     &lt;Attributes dnOrder=&quot;0&quot;&gt;
       &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
     &lt;/Attributes&gt;
   &lt;/core&gt;
@@ -4551,7 +4550,7 @@
   &lt;core dnOrder=&quot;0&quot; id=&quot;NONSECURE_ENTRY_H&quot;&gt;
     &lt;Attributes dnOrder=&quot;0&quot;&gt;
       &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
     &lt;/Attributes&gt;
   &lt;/core&gt;
@@ -7017,7 +7016,7 @@
   &lt;core dnOrder=&quot;0&quot; id=&quot;SEC_XC32_LINKER_CMSE_FLAG&quot;&gt;
     &lt;Attributes dnOrder=&quot;0&quot;&gt;
       &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
     &lt;/Attributes&gt;
   &lt;/core&gt;
@@ -8229,7 +8228,7 @@
   &lt;core dnOrder=&quot;0&quot; id=&quot;XC32_LINKER_LIBRARY_&quot;&gt;
     &lt;Attributes dnOrder=&quot;0&quot;&gt;
       &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
     &lt;/Attributes&gt;
   &lt;/core&gt;
@@ -53910,7 +53909,7 @@
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\definitions.h</file>
-         <hash>0d80c9e0e1d16e2884ed97e160a59d57526fccb10232c4d242c5a4aec151c230</hash>
+         <hash>f577926372ac4165f246ba1180c0b4889de6934b739530869a88079849c74966</hash>
       </entry>
       <entry>
          <file>..\..\firmware\src\config\default\device.h</file>
@@ -54605,6 +54604,10 @@
          <hash>c1cdff26e2eb749cb83c11735fb9eafba15b1f27a75c008c41f0920d1d5954d7</hash>
       </entry>
       <entry>
+         <file>..\..\firmware\src\trustZone\nonsecure_entry.h</file>
+         <hash>9e0dffed059e825cb174ea36db2db88b0ae63e786e393d9fcbe8a20c4078e598</hash>
+      </entry>
+      <entry>
          <file>..\..\firmware_secure\src\config\default\PIC32CM5164LS00048.ld</file>
          <hash>30191e9762084f61078552f0f3c0c72f9ae205f659a0b5c8a39366bd0f159676</hash>
       </entry>
@@ -54630,7 +54633,7 @@
       </entry>
       <entry>
          <file>..\..\firmware_secure\src\config\default\initialization.c</file>
-         <hash>44ad3f1b513c110e5fe78a9191734858ec93589a9c3d3bf8c232dae64cdb65ad</hash>
+         <hash>eb994a9523e2db7239e00d77ce67f0bf212e1faecfdc5a71da29db6879f85854</hash>
       </entry>
       <entry>
          <file>..\..\firmware_secure\src\config\default\interrupts.c</file>
@@ -55055,6 +55058,10 @@
       <entry>
          <file>..\..\firmware_secure\src\packs\PIC32CM5164LS00048_DFP\pio\pic32cm5164ls00048.h</file>
          <hash>c1cdff26e2eb749cb83c11735fb9eafba15b1f27a75c008c41f0920d1d5954d7</hash>
+      </entry>
+      <entry>
+         <file>..\..\firmware_secure\src\trustZone\nonsecure_entry.c</file>
+         <hash>60217d96bd5dc9dc5567affd81197c8ae35e604fd864453cc25414d8b5a0fdd5</hash>
       </entry>
    </generatedFileHashHistoryMap>
 </config>
