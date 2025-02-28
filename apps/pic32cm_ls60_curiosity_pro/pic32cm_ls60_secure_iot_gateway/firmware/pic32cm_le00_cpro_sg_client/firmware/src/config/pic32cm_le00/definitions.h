@@ -55,7 +55,6 @@
 #include "peripheral/evsys/plib_evsys.h"
 #include "gfx/legato/generated/le_gen_harmony.h"
 #include "peripheral/sercom/i2c_master/plib_sercom5_i2c_master.h"
-#include "peripheral/pm/plib_pm.h"
 #include "peripheral/port/plib_port.h"
 #include "peripheral/clock/plib_clock.h"
 #include "peripheral/nvic/plib_nvic.h"
@@ -72,8 +71,6 @@
 #include "osal/osal.h"
 #include "system/debug/sys_debug.h"
 #include "app.h"
-#include "app_sec.h"
-#include "app_transfer.h"
 
 
 
@@ -85,8 +82,14 @@ extern "C" {
 #endif
 // DOM-IGNORE-END
 
+/* Device Information */
+#define DEVICE_NAME          "PIC32CM5164LE00100"
+#define DEVICE_ARCH          "CORTEX-M23"
+#define DEVICE_FAMILY        "PIC32CM"
+#define DEVICE_SERIES        "PIC32CMLE00"
+
 /* CPU clock frequency */
-#define CPU_CLOCK_FREQUENCY 48000000
+#define CPU_CLOCK_FREQUENCY 48000000U
 
 // *****************************************************************************
 // *****************************************************************************

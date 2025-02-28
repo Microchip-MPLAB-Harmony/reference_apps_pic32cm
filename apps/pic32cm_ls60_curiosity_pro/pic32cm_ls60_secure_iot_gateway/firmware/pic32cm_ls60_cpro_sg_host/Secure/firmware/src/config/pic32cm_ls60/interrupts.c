@@ -89,6 +89,9 @@ extern void EIC_OTHER_Handler          ( void ) __attribute__((weak, alias("Dumm
 extern void FREQM_Handler              ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void NVMCTRL_Handler            ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void PORT_Handler               ( void ) __attribute__((weak, alias("Dummy_Handler")));
+extern void DMAC_2_Handler             ( void ) __attribute__((weak, alias("Dummy_Handler")));
+extern void DMAC_3_Handler             ( void ) __attribute__((weak, alias("Dummy_Handler")));
+extern void DMAC_OTHER_Handler         ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void USB_Handler                ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void EVSYS_0_Handler            ( void ) __attribute__((weak, alias("Dummy_Handler")));
 extern void EVSYS_1_Handler            ( void ) __attribute__((weak, alias("Dummy_Handler")));
@@ -151,6 +154,9 @@ const H3DeviceVectors exception_table=
     .pfnFREQM_Handler              = FREQM_Handler,
     .pfnNVMCTRL_Handler            = NVMCTRL_Handler,
     .pfnPORT_Handler               = PORT_Handler,
+    .pfnDMAC_2_Handler             = DMAC_2_Handler,
+    .pfnDMAC_3_Handler             = DMAC_3_Handler,
+    .pfnDMAC_OTHER_Handler         = DMAC_OTHER_Handler,
     .pfnUSB_Handler                = USB_Handler,
     .pfnEVSYS_0_Handler            = EVSYS_0_Handler,
     .pfnEVSYS_1_Handler            = EVSYS_1_Handler,

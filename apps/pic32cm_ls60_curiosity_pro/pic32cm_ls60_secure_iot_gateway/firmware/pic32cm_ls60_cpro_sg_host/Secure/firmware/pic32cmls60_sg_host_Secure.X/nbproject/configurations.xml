@@ -148,6 +148,49 @@
       </logicalFolder>
       <itemPath>../src/config/pic32cm_ls60/device.h</itemPath>
     </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="true">
+      <logicalFolder name="f1" displayName="pic32cm_ls60.mhc" projectFiles="true">
+        <logicalFolder name="f1" displayName="Group0" projectFiles="true">
+          <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/Group0/drvWifiWinc.yml</itemPath>
+          <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/Group0/drv_spi.yml</itemPath>
+          <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/Group0/gfx_legato.yml</itemPath>
+          <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/Group0/Group0.yml</itemPath>
+          <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/Group0/le_gfx_driver_external.yml</itemPath>
+          <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/Group0/le_gfx_intf_spi4.yml</itemPath>
+          <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/Group0/sercom0.yml</itemPath>
+          <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/Group0/sercom3.yml</itemPath>
+        </logicalFolder>
+        <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/atecc608.yml</itemPath>
+        <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/BSP_PIC32CM_LS60_Curiosity_Pro.yml</itemPath>
+        <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/cmsis.yml</itemPath>
+        <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/core.yml</itemPath>
+        <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/cryptoauthlib.yml</itemPath>
+        <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/cryptoauthlib_tng.yml</itemPath>
+        <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/dfp.yml</itemPath>
+        <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/eic.yml</itemPath>
+        <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/evsys.yml</itemPath>
+        <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/gfx_hal_le.yml</itemPath>
+        <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/GraphSettings.yml</itemPath>
+        <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/HarmonyCore.yml</itemPath>
+        <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/nvmctrl.yml</itemPath>
+        <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/pm.yml</itemPath>
+        <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/project.yml</itemPath>
+        <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/rtc.yml</itemPath>
+        <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/sercom1.yml</itemPath>
+        <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/sercom2.yml</itemPath>
+        <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/sercom5.yml</itemPath>
+        <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/settings.yml</itemPath>
+        <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/sys_console.yml</itemPath>
+        <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/sys_input.yml</itemPath>
+        <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/sys_time.yml</itemPath>
+        <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/tc2.yml</itemPath>
+      </logicalFolder>
+      <itemPath>Makefile</itemPath>
+      <itemPath>../src/config/pic32cm_ls60/harmony-manifest-success.yml</itemPath>
+      <itemPath>../../../NonSecure/firmware/pic32cmls60_sg_host_NonSecure.X/pic32cmls60_sg_host_NonSecure.mc3</itemPath>
+    </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
                    projectFiles="true">
@@ -202,49 +245,6 @@
         <itemPath>../src/trustZone/nonsecure_entry.c</itemPath>
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
-    </logicalFolder>
-    <logicalFolder name="ExternalFiles"
-                   displayName="Important Files"
-                   projectFiles="false">
-      <logicalFolder name="f1" displayName="pic32cm_ls60.mhc" projectFiles="true">
-        <logicalFolder name="f1" displayName="Group0" projectFiles="true">
-          <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/Group0/drvWifiWinc.yml</itemPath>
-          <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/Group0/drv_spi.yml</itemPath>
-          <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/Group0/gfx_legato.yml</itemPath>
-          <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/Group0/Group0.yml</itemPath>
-          <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/Group0/le_gfx_driver_external.yml</itemPath>
-          <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/Group0/le_gfx_intf_spi4.yml</itemPath>
-          <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/Group0/sercom0.yml</itemPath>
-          <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/Group0/sercom3.yml</itemPath>
-        </logicalFolder>
-        <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/atecc608.yml</itemPath>
-        <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/BSP_PIC32CM_LS60_Curiosity_Pro.yml</itemPath>
-        <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/cmsis.yml</itemPath>
-        <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/core.yml</itemPath>
-        <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/cryptoauthlib.yml</itemPath>
-        <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/cryptoauthlib_tng.yml</itemPath>
-        <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/dfp.yml</itemPath>
-        <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/eic.yml</itemPath>
-        <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/evsys.yml</itemPath>
-        <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/gfx_hal_le.yml</itemPath>
-        <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/GraphSettings.yml</itemPath>
-        <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/HarmonyCore.yml</itemPath>
-        <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/nvmctrl.yml</itemPath>
-        <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/pm.yml</itemPath>
-        <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/project.yml</itemPath>
-        <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/rtc.yml</itemPath>
-        <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/sercom1.yml</itemPath>
-        <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/sercom2.yml</itemPath>
-        <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/sercom5.yml</itemPath>
-        <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/settings.yml</itemPath>
-        <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/sys_console.yml</itemPath>
-        <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/sys_input.yml</itemPath>
-        <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/sys_time.yml</itemPath>
-        <itemPath>../src/config/pic32cm_ls60/pic32cm_ls60.mhc/tc2.yml</itemPath>
-      </logicalFolder>
-      <itemPath>Makefile</itemPath>
-      <itemPath>../src/config/pic32cm_ls60/harmony-manifest-success.yml</itemPath>
-      <itemPath>../../../NonSecure/firmware/pic32cmls60_sg_host_NonSecure.X/pic32cmls60_sg_host_NonSecure.mc3</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>

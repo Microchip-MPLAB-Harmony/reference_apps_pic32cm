@@ -70,8 +70,8 @@
 #include "peripheral/systick/plib_systick.h"
 #include "peripheral/dmac/plib_dmac.h"
 #include "peripheral/sercom/usart/plib_sercom5_usart.h"
-#include "peripheral/eic/plib_eic.h"
 #include "bsp/bsp.h"
+#include "peripheral/eic/plib_eic.h"
 #include "system/input/sys_input.h"
 #include "gfx/driver/controller/external_controller/drv_gfx_external_controller.h"
 #include "system/console/sys_console.h"
@@ -91,13 +91,13 @@ extern "C" {
 // DOM-IGNORE-END
 
 /* Device Information */
-#define DEVICE_NAME			 "PIC32CM5164LS60100"
-#define DEVICE_ARCH			 "CORTEX-M23"
-#define DEVICE_FAMILY		 "PIC32CM"
-#define DEVICE_SERIES		 "PIC32CMLS60"
+#define DEVICE_NAME          "PIC32CM5164LS60100"
+#define DEVICE_ARCH          "CORTEX-M23"
+#define DEVICE_FAMILY        "PIC32CM"
+#define DEVICE_SERIES        "PIC32CMLS60"
 
 /* CPU clock frequency */
-#define CPU_CLOCK_FREQUENCY 48000000
+#define CPU_CLOCK_FREQUENCY 48000000U
 
 // *****************************************************************************
 // *****************************************************************************
