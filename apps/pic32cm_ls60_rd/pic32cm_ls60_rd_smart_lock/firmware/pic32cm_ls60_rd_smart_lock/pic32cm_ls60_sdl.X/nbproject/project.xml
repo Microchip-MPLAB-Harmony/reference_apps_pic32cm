@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://www.netbeans.org/ns/project/1">
+    <type>com.microchip.mplab.nbide.embedded.makeproject</type>
+    <configuration>
+        <data xmlns="http://www.netbeans.org/ns/make-project/1">
+            <name>pic32cm_ls60_sdl</name>
+            <creation-uuid>a9726957-ccf1-49f3-825d-50a8e3cb4088</creation-uuid>
+            <make-project-type>0</make-project-type>
+            <sourceEncoding>ISO-8859-1</sourceEncoding>
+            <make-dep-projects>
+                <make-dep-project>../../pic32cm_ls60_rd_smart_lock_secure/pic32cm_ls60_sdl_secure.X</make-dep-project>
+            </make-dep-projects>
+            <sourceRootList/>
+            <confList>
+                <confElem>
+                    <name>pic32cm_ls60</name>
+                    <type>2</type>
+                </confElem>
+            </confList>
+            <formatting>
+                <project-formatting-style>false</project-formatting-style>
+            </formatting>
+        </data>
+    </configuration>
+</project>
