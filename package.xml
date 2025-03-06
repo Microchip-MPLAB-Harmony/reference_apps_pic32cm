@@ -8,7 +8,7 @@
         <Dependency name="touch" version="3.17.0"/>
         <Dependency name="wireless_wifi" version="v3.12.0"/>
         <Dependency name="bootloader" version="3.7.0"/>
-        <Dependency name="cryptoauthlib" version="v3.7.7"/>
+        <Dependency name="cryptoauthlib" version="v3.5.1"/>
         <Dependency name="wireless_rnbd" version="v2.0.4"/>
 		<Dependency name="wireless_system_rnwf" version="v3.0.0"/>
     </Dependencies>

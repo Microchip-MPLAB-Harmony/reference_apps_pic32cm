@@ -30,7 +30,7 @@ package:
       version: "v3.7.0"
     - name: "cryptoauthlib"
       type: "package"
-      version: "v3.7.7"
+      version: "v3.5.1"
     - name: "wireless_rnbd"
       type: "package"
       version: "v2.0.4"
