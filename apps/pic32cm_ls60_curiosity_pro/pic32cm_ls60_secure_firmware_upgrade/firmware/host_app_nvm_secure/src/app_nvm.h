@@ -1,14 +1,16 @@
 /*******************************************************************************
-  Bootloader Common Source File
+  Application NVM Header File
 
   File Name:
-    bootloader_common.c
+    app_nvm.h
 
   Summary:
-    This file contains common definitions and functions.
+    This file contains definitions and functions necessary to execute UART bootloader.
 
   Description:
-    This file contains common definitions and functions.
+    This file contains common definitions and functions necessary to execute UART bootloader.
+    It implements bootloader protocol which uses UART peripheral to download
+    application firmware into internal flash from HOST-PC.
  *******************************************************************************/
 
 // DOM-IGNORE-BEGIN
