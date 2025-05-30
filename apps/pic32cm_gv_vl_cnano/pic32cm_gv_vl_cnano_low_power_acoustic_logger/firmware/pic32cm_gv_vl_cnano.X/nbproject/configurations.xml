@@ -43,6 +43,9 @@
                 <itemPath>../src/config/pic32cm_gv_vl_cnano/peripheral/sercom/usart/plib_sercom2_usart.h</itemPath>
               </logicalFolder>
             </logicalFolder>
+            <logicalFolder name="systick" displayName="systick" projectFiles="true">
+              <itemPath>../src/config/pic32cm_gv_vl_cnano/peripheral/systick/plib_systick.h</itemPath>
+            </logicalFolder>
             <logicalFolder name="tc" displayName="tc" projectFiles="true">
               <itemPath>../src/config/pic32cm_gv_vl_cnano/peripheral/tc/plib_tc0.h</itemPath>
               <itemPath>../src/config/pic32cm_gv_vl_cnano/peripheral/tc/plib_tc_common.h</itemPath>
@@ -196,6 +199,9 @@
                 <itemPath>../src/config/pic32cm_gv_vl_cnano/peripheral/sercom/usart/plib_sercom2_usart.c</itemPath>
               </logicalFolder>
             </logicalFolder>
+            <logicalFolder name="systick" displayName="systick" projectFiles="true">
+              <itemPath>../src/config/pic32cm_gv_vl_cnano/peripheral/systick/plib_systick.c</itemPath>
+            </logicalFolder>
             <logicalFolder name="tc" displayName="tc" projectFiles="true">
               <itemPath>../src/config/pic32cm_gv_vl_cnano/peripheral/tc/plib_tc0.c</itemPath>
             </logicalFolder>
@@ -214,9 +220,6 @@
       <itemPath>../src/main.c</itemPath>
     </logicalFolder>
   </logicalFolder>
-  <sourceRootList>
-    <Elem>../src</Elem>
-  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="pic32cm_gv_vl_cnano" type="2">
@@ -529,8 +532,6 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-7fff"/>
         <property key="poweroptions.powerenable" value="false"/>
-        <property key="programmerToGoFilePath"
-                  value="D:/pic32cm_gv_vl_cnano_low_power_acoustic_logger/firmware/pic32cm_gv_vl_cnano.X/debug/pic32cm_gv_vl_cnano/pic32cm_gv_vl_cnano_ptg"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.preservedataflash" value="false"/>
         <property key="programoptions.preservedataflash.ranges"

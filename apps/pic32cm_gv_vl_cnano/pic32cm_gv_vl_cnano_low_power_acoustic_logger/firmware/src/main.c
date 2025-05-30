@@ -59,13 +59,14 @@
 // *****************************************************************************
 // *****************************************************************************
 
-// EEPROM Commands
-#define EEPROM_CMD_WREN                     0x06  // Write Enable
-#define EEPROM_CMD_WRITE                    0x02  // Write Data
-#define EEPROM_CMD_WRBP                     0x08  // Write status Register
-#define EEPROM_CMD_READ                     0x03  // Read Data
+/* EEPROM Commands */
+#define EEPROM_CMD_WREN                     0x06    // Write Enable
+#define EEPROM_CMD_WRITE                    0x02    // Write Data
+#define EEPROM_CMD_WRBP                     0x08    // Write status Register
+#define EEPROM_CMD_READ                     0x03    // Read Data
 
-#define EEPROM_DATA_LEN                     32
+#define EEPROM_ADDRESS                      0x00000000
+#define EEPROM_DATA_LEN                     16
 #define MAX_LOGS                            16
 #define SWITCH_STATE_PRESSED                0
 
@@ -75,10 +76,13 @@ uint8_t  txData[(4 + EEPROM_DATA_LEN)];
 uint8_t  rxData[(4 + EEPROM_DATA_LEN)];
 volatile bool isTransferDone = false;
 volatile bool change_detect = false;
+volatile bool ac_comparison_done = false;
+volatile uint8_t logCount = 0;
 volatile uint8_t logIndex = 0;
 struct tm sys_time;
 
-// Check the comparator output state 
+
+/* Checking the comparator output state */
 void AC_CallBack(uint8_t int_flag, uintptr_t ac_context)
 {    
     if(int_flag & AC_STATUSA_STATE0_Msk)
@@ -87,7 +91,7 @@ void AC_CallBack(uint8_t int_flag, uintptr_t ac_context)
     }
 }
 
-// This function will be called by SPI PLIB when transfer is completed 
+/* This function will be called by SPI PLIB when transfer is completed */
 void SPIEventHandler(uintptr_t context)
 {
     EEPROM_CS_Set();
@@ -162,6 +166,7 @@ void EEPROM_Read(uint32_t eepromAddr, size_t len)
     EEPROM_CS_Clear();
     SERCOM5_SPI_WriteRead(txData, 4, rxData, (4 + len));
     RTC_RTCCTimeGet(&sys_time);
+    LED_Toggle();
     
     printf("  Date = %02d.%02d.%02d, Time = %02d:%02d:%02d,",
         sys_time.tm_mday,
@@ -189,21 +194,20 @@ void Data_Log_Callback()
     if (change_detect && logIndex < MAX_LOGS)
     {
         change_detect = false;
-        
+
         memcpy(EEPROM_DATA, "Noise detected", strlen("Noise detected"));
 
         //Write and read EEPROM
         uint32_t address = logIndex * EEPROM_DATA_LEN;
-        EEPROM_Write(address, EEPROM_DATA, EEPROM_DATA_LEN);
-        
+        EEPROM_Write(address, EEPROM_DATA, EEPROM_DATA_LEN); 
         logIndex++;
         
         if (logIndex >= MAX_LOGS)
         {
-            // Read and print all logs
+            // Read and print the 16 log of Acoustic Data
             for (uint8_t i = 0; i < MAX_LOGS; i++)
             {
-                  
+ 
                 uint32_t readAddr = i * EEPROM_DATA_LEN;
                 EEPROM_Read(readAddr, EEPROM_DATA_LEN); 
             }
@@ -226,9 +230,10 @@ int main ( void )
     printf("\n\n\r       PIC32CM GV VL Curiosity Nano + Touch Evaluation Kit      ");
     printf("\n\n\r----------------------------------------------------------------");
 
-    printf("\n\n\r  Hold SWITCH after Reset to Data Log \n\n\r");    
+    printf("\n\n\r  Hold SWITCH after Reset to Data Log \n\n\r");
     
-    /* Set Time and Date: DD-MM-YYYY 30-04-2025 Wednesday */
+    /* Set Time and Date: DD-MM-YYYY 31-03-2025 Wednesday */
+
     sys_time.tm_hour    = 11;   /* hour [0,23] */
     sys_time.tm_min     = 00;   /* minutes [0,59] */
     sys_time.tm_sec     = 00;   /* seconds [0,61] */
@@ -238,21 +243,26 @@ int main ( void )
     
     RTC_RTCCTimeSet(&sys_time);
     AC_CallbackRegister(AC_CallBack, 0);
-    SERCOM5_SPI_CallbackRegister(SPIEventHandler, (uintptr_t)0);
     EEPROM_Initialize();
-    
-    while(true)
+    SERCOM5_SPI_CallbackRegister(SPIEventHandler, (uintptr_t)0);
+
+    while (true)
     {
-        if (SW_Get() == SWITCH_STATE_PRESSED)
+        SYS_Tasks();
+        
+        if(SW_Get() == SWITCH_STATE_PRESSED)
         {
             Data_Log_Callback();
         }
-        PM_StandbyModeEnter(); 
+        PM_StandbyModeEnter();
     }
-    
     return ( EXIT_FAILURE );
 }
+
+
 /*******************************************************************************
  End of File
 */
+
+
 
