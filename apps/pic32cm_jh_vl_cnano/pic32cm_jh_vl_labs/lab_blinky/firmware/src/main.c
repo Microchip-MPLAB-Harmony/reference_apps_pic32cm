@@ -42,7 +42,7 @@ int main ( void )
     while ( true )
     {
         LED_Toggle();
-        SYSTICK_DelayMs(800);
+        SYSTICK_DelayMs(500);
     }
 
     /* Execution should not come here during normal operation */
