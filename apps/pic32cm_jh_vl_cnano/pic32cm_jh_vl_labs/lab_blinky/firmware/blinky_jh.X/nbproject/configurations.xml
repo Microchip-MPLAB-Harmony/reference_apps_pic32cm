@@ -219,7 +219,6 @@
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="CMSIS" vendor="ARM" version="6.1.0"/>
         <pack name="PIC32CM-JH_DFP" vendor="Microchip" version="1.4.224"/>
       </packs>
       <ScriptingSettings>
