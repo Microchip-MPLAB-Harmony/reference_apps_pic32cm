@@ -60,24 +60,6 @@
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="packs" displayName="packs" projectFiles="true">
-        <logicalFolder name="CMSIS" displayName="CMSIS" projectFiles="true">
-          <logicalFolder name="CMSIS" displayName="CMSIS" projectFiles="true">
-            <logicalFolder name="Core" displayName="Core" projectFiles="true">
-              <logicalFolder name="Include" displayName="Include" projectFiles="true">
-                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_armclang_ltm.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_armcc.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_version.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_iccarm.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_gcc.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_armclang.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_compiler.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cachel1_armv7.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/mpu_armv7.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/core_cm0plus.h</itemPath>
-              </logicalFolder>
-            </logicalFolder>
-          </logicalFolder>
-        </logicalFolder>
         <logicalFolder name="PIC32CM3204GV00064_DFP"
                        displayName="PIC32CM3204GV00064_DFP"
                        projectFiles="true">
@@ -145,8 +127,30 @@
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
                    projectFiles="true">
+      <logicalFolder name="low_power_acoustic_logger_pic32cm_gv_vl_cnano"
+                     displayName="low_power_acoustic_logger_pic32cm_gv_vl_cnano"
+                     projectFiles="true">
+        <logicalFolder name="components" displayName="components" projectFiles="true">
+          <itemPath>low_power_acoustic_logger_pic32cm_gv_vl_cnano/components/ac.yml</itemPath>
+          <itemPath>low_power_acoustic_logger_pic32cm_gv_vl_cnano/components/stdio.yml</itemPath>
+          <itemPath>low_power_acoustic_logger_pic32cm_gv_vl_cnano/components/sercom5.yml</itemPath>
+          <itemPath>low_power_acoustic_logger_pic32cm_gv_vl_cnano/components/pm.yml</itemPath>
+          <itemPath>low_power_acoustic_logger_pic32cm_gv_vl_cnano/components/tc0.yml</itemPath>
+          <itemPath>low_power_acoustic_logger_pic32cm_gv_vl_cnano/components/cmsis.yml</itemPath>
+          <itemPath>low_power_acoustic_logger_pic32cm_gv_vl_cnano/components/rtc.yml</itemPath>
+          <itemPath>low_power_acoustic_logger_pic32cm_gv_vl_cnano/components/nvmctrl.yml</itemPath>
+          <itemPath>low_power_acoustic_logger_pic32cm_gv_vl_cnano/components/evsys.yml</itemPath>
+          <itemPath>low_power_acoustic_logger_pic32cm_gv_vl_cnano/components/dfp.yml</itemPath>
+          <itemPath>low_power_acoustic_logger_pic32cm_gv_vl_cnano/components/core.yml</itemPath>
+          <itemPath>low_power_acoustic_logger_pic32cm_gv_vl_cnano/components/sercom2.yml</itemPath>
+        </logicalFolder>
+        <itemPath>low_power_acoustic_logger_pic32cm_gv_vl_cnano/mcc-config.mc4</itemPath>
+      </logicalFolder>
       <itemPath>Makefile</itemPath>
-      <itemPath>low_power_acoustic_logger.mc3</itemPath>
+    </logicalFolder>
+    <logicalFolder name="LibraryFiles"
+                   displayName="LibraryFiles"
+                   projectFiles="true">
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -234,8 +238,8 @@
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="CMSIS" vendor="ARM" version="6.1.0"/>
         <pack name="PIC32CM-GV_DFP" vendor="Microchip" version="1.1.14"/>
+        <pack name="CMSIS" vendor="ARM" version="6.1.0"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
