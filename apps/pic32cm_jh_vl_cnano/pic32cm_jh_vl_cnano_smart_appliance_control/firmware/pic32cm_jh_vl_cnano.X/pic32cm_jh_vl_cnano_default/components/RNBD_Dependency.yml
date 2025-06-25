@@ -1,0 +1,64 @@
+configVersion: 1.0.0
+componentName: RNBD_Dependency
+coreVersion: 5.8.2
+device: PIC32CM6408JH00064
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: RNBD_Dependency
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: wireless_rnbd
+  type: package
+  version: v2.0.4
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: RNBD_Dependency
+          x: '396'
+          y: '298'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    BLE_RST_PIN_SELECTED:
+      attributes:
+        id: BLE_RST_PIN_SELECTED
+      children:
+      - children:
+        - attributes:
+            id: RNBD_Dependency
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    BLE_RST_PIN_UPDATE:
+      attributes:
+        id: BLE_RST_PIN_UPDATE
+      children:
+      - children:
+        - attributes:
+            id: RNBD_Dependency
+            value: PB15
+          type: Dynamic
+        type: Values
+      type: String
+    RN_HOST_SELECT_BLE_MODULE_TYPE_CHOICE:
+      attributes:
+        id: RN_HOST_SELECT_BLE_MODULE_TYPE_CHOICE
+      children:
+      - children:
+        - attributes:
+            id: RNBD_Dependency
+            value: RNBD
+          type: Dynamic
+        type: Values
+      type: Combo
+  userData: {}
