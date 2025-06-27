@@ -6,57 +6,73 @@ deviceLibrary:
   className: com.microchip.mcc.harmony.Harmony3Library
 groupModules: []
 modules:
+- HarmonyCore
 - ac
 - cmsis
 - core
 - dfp
 - evsys
+- lib_qtouch
 - nvmctrl
 - pm
+- ptc
 - rtc
 - sercom2
 - sercom5
 - stdio
+- sys_time
 - tc0
 generatedFileHashHistoryMap:
 - file: ..\src\config\pic32cm_gv_vl_cnano\PIC32CM3204GV00064.ld
   hash: 97a08b8e5970f9fcdfbe425b6296b4d18c6c2d5684ee93a3e5c0a64f4e17f507
+- file: ..\src\config\pic32cm_gv_vl_cnano\configuration.h
+  hash: ad07aa84145794be7986923cd90ecda1dc8832a9fdfc77b614e5535cbd7394bc
 - file: ..\src\config\pic32cm_gv_vl_cnano\definitions.h
-  hash: 74188b43744d22ab7fea2040f64ba89259d6fdc472805db10b4c7856c175e27d
+  hash: 9eb5ba5fb1ba54c42f661e0285c48c0e0686521bb6b664d60ec1cea9e2b67be2
 - file: ..\src\config\pic32cm_gv_vl_cnano\device.h
   hash: 0646c4898d4228be017060c9b2d06d435dcadfc3e140a4ead235ba8c11d2ef34
 - file: ..\src\config\pic32cm_gv_vl_cnano\device_cache.h
   hash: e2914501b361bbc93a56d6915b1bf4fac00277e61f31fdee87a587bc15dea5b6
 - file: ..\src\config\pic32cm_gv_vl_cnano\device_vectors.h
   hash: cde0a99a6aa326911ee9d936ce8b766d77080107accf2c405a4749eb1d77e5cb
+- file: ..\src\config\pic32cm_gv_vl_cnano\driver\driver.h
+  hash: 042fdd289460dbddb8e805850af7e3ac9aea95468e37414959781ebc5b2f454d
+- file: ..\src\config\pic32cm_gv_vl_cnano\driver\driver_common.h
+  hash: 5217965f6720b4fdf717e99ce9df4f2c9fbd82bbbc9655847166d1eefa806fee
 - file: ..\src\config\pic32cm_gv_vl_cnano\exceptions.c
-  hash: 42f9da2668e04ccb3473d45b149683a00f80072c6883c7918d6ce93997cd6987
+  hash: b0b65c30aa1f7a01ef7be6c1628c331a5ca3eae7dc3bd76ebe647703b76f432d
 - file: ..\src\config\pic32cm_gv_vl_cnano\initialization.c
-  hash: b5ade986a50ee61fc1318fb28dae2dd2c2c6399c0039e53ba5df09106952ebd9
+  hash: b7849178494ea976e37468b5b9df3f24886dc8ead1fce90e565abe899b71d3d2
 - file: ..\src\config\pic32cm_gv_vl_cnano\interrupts.c
-  hash: ee590a917bf8daae93df8622a419f11493b1b683f2ed64f5fe22ee744dd49ab9
+  hash: bedd92ebf66c04af918e5796319770c51d0f8b9aec14670d291f155044d9da67
 - file: ..\src\config\pic32cm_gv_vl_cnano\interrupts.h
-  hash: 7626ecf6fc1900ab3efac86b2bc3bf7e883bbe0ca8d19bb7b097d315d1f8616a
+  hash: c933708095fd09069bc613abdc79102eceb4cf681bc30ea9d26aeea785274c50
 - file: ..\src\config\pic32cm_gv_vl_cnano\libc_syscalls.c
   hash: 88bb2e34c939601b5b7ad076556e3ee0fcedf388436b8cddb6d6fd3e9d07472f
+- file: ..\src\config\pic32cm_gv_vl_cnano\osal\osal.h
+  hash: 1cfe3b61d9693b2369922041eef33fe16b3c1ccd9c85d4ded808b805f90a869c
+- file: ..\src\config\pic32cm_gv_vl_cnano\osal\osal_definitions.h
+  hash: 5f0a2513a093b6d228e2b50646b204923a82047335a47f3d35a2938309ab6f37
+- file: ..\src\config\pic32cm_gv_vl_cnano\osal\osal_impl_basic.h
+  hash: 65e68edbc0320d0407399f65e6d06ff7e6d3d7697231cf1fe0a1fdf1d65f0463
 - file: ..\src\config\pic32cm_gv_vl_cnano\peripheral\ac\plib_ac.c
   hash: 1955e3715cedadeea9390364fe29fea247bad43ebb30c09e987012fe0c45d242
 - file: ..\src\config\pic32cm_gv_vl_cnano\peripheral\ac\plib_ac.h
   hash: db0f863b2dbb0142e4d89e32900e9c39a385bc8e08a4d0ea13618247dfaefa0e
 - file: ..\src\config\pic32cm_gv_vl_cnano\peripheral\clock\plib_clock.c
-  hash: b300e9c6969afd6cda53196807485b084750f8c60c7dbb9c687e0058efca710a
+  hash: c60d16079ab738b80f8b249e2c2d4c2756473f5d879554a116bd2dc12a8f613d
 - file: ..\src\config\pic32cm_gv_vl_cnano\peripheral\clock\plib_clock.h
   hash: 99bff84fe4a99e6423e2d28f881600300ece34a505bb89f3b4eb61154dbeeb10
 - file: ..\src\config\pic32cm_gv_vl_cnano\peripheral\evsys\plib_evsys.c
-  hash: 6cb8fe868eb8f47e27fc9c47eeab5b7a4398249445ae73dac8ca5f058789379e
+  hash: 9b69faf1ac0402d0783545f6191848870028f2c39eea1db3aa435591489e79cf
 - file: ..\src\config\pic32cm_gv_vl_cnano\peripheral\evsys\plib_evsys.h
   hash: 49852fa7ccb3dd52f06b6b2409fb8d197758703eeefc250fe86e13942e0626b4
 - file: ..\src\config\pic32cm_gv_vl_cnano\peripheral\nvic\plib_nvic.c
-  hash: 93cbec612dc10e6fefefbb91d5c0c9091a0aced90be3db16f237659c4cf0cba2
+  hash: e35c71c21aad7c9617798a4e3a7b35be4c1024bb878362792c351ec630b46c35
 - file: ..\src\config\pic32cm_gv_vl_cnano\peripheral\nvic\plib_nvic.h
   hash: 9936ac782115af41003255283fa2f603f4ff2212d16275b7c80ea8d067a9e208
 - file: ..\src\config\pic32cm_gv_vl_cnano\peripheral\nvmctrl\plib_nvmctrl.c
-  hash: bdcdd09324aabfee99d83053fce34298dc5705207e02afee581b952bf60ffe6e
+  hash: a60a295e52a6fb6bfef1a44af41b7f39ff9deeea67620027e0f94d0ce7a00151
 - file: ..\src\config\pic32cm_gv_vl_cnano\peripheral\nvmctrl\plib_nvmctrl.h
   hash: a18766bacaca0a67eb50a5094326c8ede8ada23cc844584dc0647bc66950bcf7
 - file: ..\src\config\pic32cm_gv_vl_cnano\peripheral\pm\plib_pm.c
@@ -64,7 +80,7 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\pic32cm_gv_vl_cnano\peripheral\pm\plib_pm.h
   hash: 2d49a34898e5d66af982f093b06b4fbd1a9b042e4ea367b81b5050725d2bb5a5
 - file: ..\src\config\pic32cm_gv_vl_cnano\peripheral\port\plib_port.c
-  hash: a37a7259d252acec0d1e2eded954a408cf1841dac0233746bd64a4188bf044e2
+  hash: b413aeed9ccc93afcade829aaa28af2991bdbd50df21668e80957000e99b197e
 - file: ..\src\config\pic32cm_gv_vl_cnano\peripheral\port\plib_port.h
   hash: f92df53195778c1505170b56eb309457fd957e26e7669a94510ad793d1eb5483
 - file: ..\src\config\pic32cm_gv_vl_cnano\peripheral\rtc\plib_rtc.h
@@ -84,23 +100,85 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\pic32cm_gv_vl_cnano\peripheral\sercom\usart\plib_sercom_usart_common.h
   hash: 9f02e811b95f0470ca23f3546f3ddf4ccccb385b4d8b8c091899d0d20b0c56e1
 - file: ..\src\config\pic32cm_gv_vl_cnano\peripheral\systick\plib_systick.c
-  hash: 01cf78f106f7ebe7e2a937f5c020bb1e9ddada786704d40c255eb683cd00d9bf
+  hash: 53c844e97ba2bf0bb896b0a36c729587f39b3d06b048fe665c86385e1e234207
 - file: ..\src\config\pic32cm_gv_vl_cnano\peripheral\systick\plib_systick.h
-  hash: d99a435b80e1d880406ba399afefaf3feb5bad36118ff568739ed761a4523fce
+  hash: 906fdb57ea1eab89769cc59ac156b2a153176ee216eff61a5aea93df34ca4101
 - file: ..\src\config\pic32cm_gv_vl_cnano\peripheral\tc\plib_tc0.c
-  hash: ed663fb78ffe4be2229d13c3360161e5968053e9968673f03a1c4fbfcd14473c
+  hash: ba7e6c9336a3aaf9bb51365ae8cd65c7be2e9576bd8d0ec1e6825da233265e74
 - file: ..\src\config\pic32cm_gv_vl_cnano\peripheral\tc\plib_tc0.h
   hash: 80f5f12e6bd2d74cb475d898d9874cd2361a3bdea3828b4719d6eeb0e5c05028
 - file: ..\src\config\pic32cm_gv_vl_cnano\peripheral\tc\plib_tc_common.h
   hash: dfcd44628e6df3f21f95c3b998065c4c795e9ff87b67e9eb805a7eab4810f971
 - file: ..\src\config\pic32cm_gv_vl_cnano\pin_configurations.csv
-  hash: 9b02c5031b35908773b666cc1def9e7c382ced8e2b05ff0e2597192554865a19
+  hash: cbd76afc45cb7d6e2c6d64927fd3ccc2861aed82413b367aedd37d5cf685fc9b
 - file: ..\src\config\pic32cm_gv_vl_cnano\startup_xc32.c
   hash: e6227d89e36b74af1bc21e00e80b390502c97aaaa65796291f63b2d96cf0678e
 - file: ..\src\config\pic32cm_gv_vl_cnano\stdio\xc32_monitor.c
   hash: 1395dbc052b1c3c61d798c93f81efa8bc498027c4f6de749df5e4c06dbee4d31
+- file: ..\src\config\pic32cm_gv_vl_cnano\sys_tasks.h
+  hash: 21f254f497a18a024cd00128d06c4776c2643f867a460c1ba9880a7dd41a8d56
+- file: ..\src\config\pic32cm_gv_vl_cnano\system\debug\sys_debug.h
+  hash: 4162d9e1fab93b8b33f6c8a24726f5dc287ea05c31e3ab984c3c920c725d0882
+- file: ..\src\config\pic32cm_gv_vl_cnano\system\int\src\sys_int.c
+  hash: 4281667cc2b84c9e4be1f0dfb3f7d42b77d36c5dcf6513d29ff40262f746cfc6
+- file: ..\src\config\pic32cm_gv_vl_cnano\system\int\sys_int.h
+  hash: dc104ae181fd5309e1bb42896246644fae95915a8e639b23ecfccc8840850274
+- file: ..\src\config\pic32cm_gv_vl_cnano\system\int\sys_int_mapping.h
+  hash: 5abf8528dabc1b17378f5d137870597037214fddf33880fa40e9263352da3008
+- file: ..\src\config\pic32cm_gv_vl_cnano\system\ports\sys_ports.h
+  hash: e888fa10a98b2cc5b578fa791508ac7734fd79726201895e94c1302d5685aa80
+- file: ..\src\config\pic32cm_gv_vl_cnano\system\ports\sys_ports_mapping.h
+  hash: 8a3e7ed01aa847c87f76796b56665f7f91f591fddfe6cf2e4161a03332608c3e
+- file: ..\src\config\pic32cm_gv_vl_cnano\system\system.h
+  hash: 2b75f8e370e5cb2c54f70da7351ee149f0d5a7673e700f39b373099716b31b55
+- file: ..\src\config\pic32cm_gv_vl_cnano\system\system_common.h
+  hash: c9f34bd226f8efab12f5766e77f8355996cd0430b50e0f6ee30258664c494984
+- file: ..\src\config\pic32cm_gv_vl_cnano\system\system_module.h
+  hash: 96c74368801b0a7aaa25aec3ec2cb0d483250385f103ffc1ff64089b4ca2c6d9
+- file: ..\src\config\pic32cm_gv_vl_cnano\system\time\src\sys_time.c
+  hash: 1c9a9a245a9bb59bc036d0e1789149da6c2129a974418436dfca6832d80afc92
+- file: ..\src\config\pic32cm_gv_vl_cnano\system\time\src\sys_time_local.h
+  hash: b5911e9527666f333c003f69b86f92b9b88712a365d0d5f92c6e816e9f43b4c6
+- file: ..\src\config\pic32cm_gv_vl_cnano\system\time\sys_time.h
+  hash: 6357468f7670698b16bfb6439d9919ed38eba99d4f03277a8b43ac34586fa1b3
+- file: ..\src\config\pic32cm_gv_vl_cnano\system\time\sys_time_definitions.h
+  hash: bff2d3a629283b03b410a8e7cc15085267a8553202fac75c76a9aa3f61c57d78
+- file: ..\src\config\pic32cm_gv_vl_cnano\tasks.c
+  hash: 695106b1396a936c57f645037bf92faefefcc82d1502928b878b3dbad0fcdbd9
 - file: ..\src\config\pic32cm_gv_vl_cnano\toolchain_specifics.h
   hash: a4f1774c6f1f8c6cd522567536c9e9d75ca63259b868015ac9b0fb0aeeffe1f4
+- file: ..\src\config\pic32cm_gv_vl_cnano\touch\lib\qtm_acq_pic32cmgv_0x000e.X.a
+  hash: 9d9de009cec2308023df45465b7f0683389000e3f8d84e3ffc4c653b008f6820
+- file: ..\src\config\pic32cm_gv_vl_cnano\touch\lib\qtm_freq_hop_auto_cm0p_0x0004.X.a
+  hash: 0cc61b670ccb0ebd7693034a5745421fee4bdf43b6d3e6a708a40e9140ad4551
+- file: ..\src\config\pic32cm_gv_vl_cnano\touch\lib\qtm_freq_hop_cm0p_0x0006.X.a
+  hash: cee4068df9fa1c713dacf6b7ac164de83642186c50fe82f70470d25a2689d328
+- file: ..\src\config\pic32cm_gv_vl_cnano\touch\lib\qtm_touch_key_cm0p_0x0002.X.a
+  hash: ffa2f4c39c786edd62ed89e458a1a1bd65e083947c42c1abe48432f589497045
+- file: ..\src\config\pic32cm_gv_vl_cnano\touch\qtm_acq_pic32cmgv_0x0020_api.h
+  hash: 63998a74035790125eb2677412dc6df7ee69aba636acad1e9a8a9114109c86b2
+- file: ..\src\config\pic32cm_gv_vl_cnano\touch\qtm_acq_samd20_0x000e_api.h
+  hash: a955e152222b32a7679699ffb2c9e25a980031c5b9a71e8d6e4d8c9fcc5cb72f
+- file: ..\src\config\pic32cm_gv_vl_cnano\touch\qtm_common_components_api.h
+  hash: 89a9473fc856d26a78ead0854377a7f61ebc20315a7a72bcc84f05ff1477816e
+- file: ..\src\config\pic32cm_gv_vl_cnano\touch\qtm_freq_hop_0x0006_api.h
+  hash: 24ed3242e37471cbe9dd2507e931e88e843c683c9750d30e08f91a9d62a8e7e5
+- file: ..\src\config\pic32cm_gv_vl_cnano\touch\qtm_freq_hop_auto_0x0004_api.h
+  hash: a0e06e45e438b797edcb61796bc74da1b1e488b45ee5263f2a638acdbffe35c9
+- file: ..\src\config\pic32cm_gv_vl_cnano\touch\qtm_touch_key_0x0002_api.h
+  hash: 4840f9cd8def73a029c2090d101548329c92bdf13bd19410029aab45234b42e2
+- file: ..\src\config\pic32cm_gv_vl_cnano\touch\touch.c
+  hash: 17a6baddf59d847f68beb48114f7f52a4f116bc4b3544405dc7a8961b776b1c0
+- file: ..\src\config\pic32cm_gv_vl_cnano\touch\touch.h
+  hash: 800e21ebc4787ec4804187c94c1fc373eee8792bed8db6f6d9bb84266743e03c
+- file: ..\src\config\pic32cm_gv_vl_cnano\touch\touch_api_ptc.h
+  hash: 206ff0f7ce22dbe839c1de3132c29162486fa18b239489a941191c81551e9b02
+- file: ..\src\config\pic32cm_gv_vl_cnano\touch\touch_example.c
+  hash: 21b88a5d3be3b8cfc1bf85d1587813d4b3d4efbf6a99aa24d985a9f94e34ea89
+- file: ..\src\config\pic32cm_gv_vl_cnano\touch\touch_example.h
+  hash: acf3592a052fa3e243dc2965b70e2d66762cb51f84c551ff58120a68d5b06454
+- file: ..\src\config\pic32cm_gv_vl_cnano\user.h
+  hash: 451e0878e9fcf6cf9fab046c1452ea662757988346c7f39e6bc98478ca25f995
 - file: ..\src\main.c
   hash: d3c233d419e6304bfacbafc18cc68c0f5c26e365f23b20ea40ccfac458f664c5
 - file: ..\src\packs\PIC32CM3204GV00064_DFP\component\ac.h

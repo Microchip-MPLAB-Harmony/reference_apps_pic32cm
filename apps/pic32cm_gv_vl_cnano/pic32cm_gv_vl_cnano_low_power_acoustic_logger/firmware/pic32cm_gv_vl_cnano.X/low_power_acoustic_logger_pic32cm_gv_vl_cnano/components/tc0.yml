@@ -9,10 +9,6 @@ dependency:
   type: module
   version: ''
 - dependencyPackage: ''
-  name: CMSIS_5
-  type: package
-  version: 5.9.0
-- dependencyPackage: ''
   name: csp
   type: package
   version: v3.22.2
@@ -26,8 +22,8 @@ data:
     - children:
       - attributes:
           id: tc0
-          x: '442'
-          y: '309'
+          x: '620'
+          y: '408'
         type: ElementPosition
       type: ElementPositions
     type: ComponentGraph
@@ -59,7 +55,7 @@ data:
       - children:
         - attributes:
             id: tc0
-            value: '1'
+            value: '2'
           type: Dynamic
         type: Values
       type: Integer
@@ -98,7 +94,7 @@ data:
       - children:
         - attributes:
             id: tc0
-            value: '1'
+            value: '3'
           type: Dynamic
         type: Values
       type: Long
@@ -111,7 +107,7 @@ data:
             id: max
           children:
           - type: Value
-            value: '6.5536E7'
+            value: '3.2768E7'
           type: Float
         type: Attributes
       - children:

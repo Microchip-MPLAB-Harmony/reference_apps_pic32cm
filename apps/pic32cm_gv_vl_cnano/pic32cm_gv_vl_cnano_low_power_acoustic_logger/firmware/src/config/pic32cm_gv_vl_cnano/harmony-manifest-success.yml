@@ -4,7 +4,7 @@
 
 
 project: low_power_acoustic_logger
-creation_date: 2025-06-10T14:26:17.920+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+creation_date: 2025-06-27T15:34:58.466+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
 operating_system: Windows 11
 mcc_mode: IDE            # [IDE|Standalone|Headless]
 mcc_version: v5.6.2
@@ -15,7 +15,9 @@ compiler: XC32 4.60
 
 modules:
     - {name: "csp", version: "v3.22.2"}
+    - {name: "core", version: "v3.15.2"}
     - {name: "CMSIS_5", version: "5.9.0"}
+    - {name: "touch", version: "v3.18.1"}
 
 packs:
     - {name: "PIC32CM-GV_DFP", version: "1.0.7"}

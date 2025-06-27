@@ -9,10 +9,6 @@ dependency:
   type: module
   version: ''
 - dependencyPackage: ''
-  name: CMSIS_5
-  type: package
-  version: 5.9.0
-- dependencyPackage: ''
   name: csp
   type: package
   version: v3.22.2
@@ -26,8 +22,8 @@ data:
     - children:
       - attributes:
           id: sercom5
-          x: '28'
-          y: '261'
+          x: '35'
+          y: '373'
         type: ElementPosition
       type: ElementPositions
     type: ComponentGraph

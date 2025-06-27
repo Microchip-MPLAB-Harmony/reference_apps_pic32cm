@@ -62,6 +62,7 @@ void HardFault_Handler (void);
 void SysTick_Handler (void);
 void SERCOM5_SPI_InterruptHandler (void);
 void AC_InterruptHandler (void);
+void PTC_Handler (void);
 
 
 

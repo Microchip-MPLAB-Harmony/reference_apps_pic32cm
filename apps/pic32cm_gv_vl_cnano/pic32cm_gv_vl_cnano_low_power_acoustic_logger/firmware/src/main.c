@@ -77,10 +77,12 @@ uint8_t  rxData[(4 + EEPROM_DATA_LEN)];
 volatile bool isTransferDone = false;
 volatile bool change_detect = false;
 volatile bool ac_comparison_done = false;
+volatile bool prev_touch = false;
+volatile bool standbyEntered = false;
 volatile uint8_t logCount = 0;
 volatile uint8_t logIndex = 0;
+volatile uint8_t mode = 0;
 struct tm sys_time;
-
 
 /* Checking the comparator output state */
 void AC_CallBack(uint8_t int_flag, uintptr_t ac_context)
@@ -166,7 +168,6 @@ void EEPROM_Read(uint32_t eepromAddr, size_t len)
     EEPROM_CS_Clear();
     SERCOM5_SPI_WriteRead(txData, 4, rxData, (4 + len));
     RTC_RTCCTimeGet(&sys_time);
-    LED_Toggle();
     
     printf("  Date = %02d.%02d.%02d, Time = %02d:%02d:%02d,",
         sys_time.tm_mday,
@@ -191,10 +192,8 @@ void EEPROM_Read(uint32_t eepromAddr, size_t len)
  ***************************************************************************/
 void Data_Log_Callback()
 {
-    if (change_detect && logIndex < MAX_LOGS)
+    if (logIndex < MAX_LOGS)
     {
-        change_detect = false;
-
         memcpy(EEPROM_DATA, "Noise detected", strlen("Noise detected"));
 
         //Write and read EEPROM
@@ -215,6 +214,36 @@ void Data_Log_Callback()
     }
 }
 
+/****************************************************************************
+  Function:
+   Touch_Status()
+
+  Summary:
+    Detects a touch event to trigger the appropriate mode of operation.
+ 
+
+  Remarks:
+    perform the Data log and low power mode operations
+ ***************************************************************************/
+bool Touch_Status(void)
+{
+    touch_process();  
+    bool touched = (0u != (get_sensor_state(0) & 0x80));
+
+    if (touched && !prev_touch)
+    {
+        prev_touch = true;
+        SYSTICK_DelayMs(150);  
+        return true;  
+    }
+    else if (!touched)
+    {
+        prev_touch = false;
+    }
+
+    return false;  
+}
+
 // *****************************************************************************
 // *****************************************************************************
 // Section: Main Entry Point
@@ -230,7 +259,7 @@ int main ( void )
     printf("\n\n\r       PIC32CM GV VL Curiosity Nano + Touch Evaluation Kit      ");
     printf("\n\n\r----------------------------------------------------------------");
 
-    printf("\n\n\r  Hold SWITCH after Reset to Data Log \n\n\r");
+    printf("\n\n\r  Press Touch Button after Reset to Data Log \n\n\r");
     
     /* Set Time and Date: DD-MM-YYYY 31-03-2025 Wednesday */
 
@@ -245,16 +274,59 @@ int main ( void )
     AC_CallbackRegister(AC_CallBack, 0);
     EEPROM_Initialize();
     SERCOM5_SPI_CallbackRegister(SPIEventHandler, (uintptr_t)0);
-
+    
     while (true)
     {
         SYS_Tasks();
-        
-        if(SW_Get() == SWITCH_STATE_PRESSED)
+
+        if (Touch_Status())
         {
-            Data_Log_Callback();
+            mode++; 
         }
-        PM_StandbyModeEnter();
+
+        switch (mode)
+        {
+            case 1:
+                // Enter Acoustic data Logging
+                LED_Set();
+                Data_Log_Callback();
+                break;
+
+            case 2:
+                // Enter low power mode
+                if(!standbyEntered)
+                {
+ 
+                    standbyEntered = true;
+                    printf("\n\n\r  Entering Low Power Standby Mode...\n");
+                    
+                    SYSTICK_DelayUs(1000);
+                    SYSTICK_TimerStop(); 
+                    
+                    LED_Clear();
+                    
+                    PM_StandbyModeEnter();
+                    
+                    SYSTICK_DelayUs(500);
+                    SYSTICK_TimerStart();
+                    
+                    break;
+                }
+
+                
+            default:
+                if(change_detect)
+                {
+                    SYSTICK_DelayUs(1000);
+                    SYSTICK_TimerStop();
+                    
+                    PM_StandbyModeEnter();
+                    
+                    SYSTICK_DelayUs(500);
+                    SYSTICK_TimerStart();
+                }
+                break;
+        }  
     }
     return ( EXIT_FAILURE );
 }

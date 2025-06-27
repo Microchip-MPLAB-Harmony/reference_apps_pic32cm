@@ -44,6 +44,8 @@
 
 void EVSYS_Initialize( void )
 {
+    EVSYS_REGS->EVSYS_CTRL = EVSYS_CTRL_GCLKREQ_Msk;
+
     /*Event Channel User Configuration*/
     EVSYS_REGS->EVSYS_USER = EVSYS_USER_CHANNEL(0x1U) | EVSYS_USER_USER(10U);
 

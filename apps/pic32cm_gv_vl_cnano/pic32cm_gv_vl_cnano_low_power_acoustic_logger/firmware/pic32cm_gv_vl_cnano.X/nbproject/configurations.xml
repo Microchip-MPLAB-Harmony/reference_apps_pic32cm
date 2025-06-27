@@ -8,6 +8,15 @@
         <logicalFolder name="pic32cm_gv_vl_cnano"
                        displayName="pic32cm_gv_vl_cnano"
                        projectFiles="true">
+          <logicalFolder name="driver" displayName="driver" projectFiles="true">
+            <itemPath>../src/config/pic32cm_gv_vl_cnano/driver/driver.h</itemPath>
+            <itemPath>../src/config/pic32cm_gv_vl_cnano/driver/driver_common.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="osal" displayName="osal" projectFiles="true">
+            <itemPath>../src/config/pic32cm_gv_vl_cnano/osal/osal.h</itemPath>
+            <itemPath>../src/config/pic32cm_gv_vl_cnano/osal/osal_definitions.h</itemPath>
+            <itemPath>../src/config/pic32cm_gv_vl_cnano/osal/osal_impl_basic.h</itemPath>
+          </logicalFolder>
           <logicalFolder name="peripheral" displayName="peripheral" projectFiles="true">
             <logicalFolder name="ac" displayName="ac" projectFiles="true">
               <itemPath>../src/config/pic32cm_gv_vl_cnano/peripheral/ac/plib_ac.h</itemPath>
@@ -51,12 +60,47 @@
               <itemPath>../src/config/pic32cm_gv_vl_cnano/peripheral/tc/plib_tc_common.h</itemPath>
             </logicalFolder>
           </logicalFolder>
+          <logicalFolder name="system" displayName="system" projectFiles="true">
+            <logicalFolder name="debug" displayName="debug" projectFiles="true">
+              <itemPath>../src/config/pic32cm_gv_vl_cnano/system/debug/sys_debug.h</itemPath>
+            </logicalFolder>
+            <logicalFolder name="int" displayName="int" projectFiles="true">
+              <itemPath>../src/config/pic32cm_gv_vl_cnano/system/int/sys_int.h</itemPath>
+              <itemPath>../src/config/pic32cm_gv_vl_cnano/system/int/sys_int_mapping.h</itemPath>
+            </logicalFolder>
+            <logicalFolder name="ports" displayName="ports" projectFiles="true">
+              <itemPath>../src/config/pic32cm_gv_vl_cnano/system/ports/sys_ports.h</itemPath>
+              <itemPath>../src/config/pic32cm_gv_vl_cnano/system/ports/sys_ports_mapping.h</itemPath>
+            </logicalFolder>
+            <logicalFolder name="time" displayName="time" projectFiles="true">
+              <itemPath>../src/config/pic32cm_gv_vl_cnano/system/time/sys_time.h</itemPath>
+              <itemPath>../src/config/pic32cm_gv_vl_cnano/system/time/sys_time_definitions.h</itemPath>
+              <itemPath>../src/config/pic32cm_gv_vl_cnano/system/time/src/sys_time_local.h</itemPath>
+            </logicalFolder>
+            <itemPath>../src/config/pic32cm_gv_vl_cnano/system/system.h</itemPath>
+            <itemPath>../src/config/pic32cm_gv_vl_cnano/system/system_common.h</itemPath>
+            <itemPath>../src/config/pic32cm_gv_vl_cnano/system/system_module.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="touch" displayName="touch" projectFiles="true">
+            <itemPath>../src/config/pic32cm_gv_vl_cnano/touch/qtm_acq_pic32cmgv_0x0020_api.h</itemPath>
+            <itemPath>../src/config/pic32cm_gv_vl_cnano/touch/qtm_acq_samd20_0x000e_api.h</itemPath>
+            <itemPath>../src/config/pic32cm_gv_vl_cnano/touch/qtm_common_components_api.h</itemPath>
+            <itemPath>../src/config/pic32cm_gv_vl_cnano/touch/qtm_touch_key_0x0002_api.h</itemPath>
+            <itemPath>../src/config/pic32cm_gv_vl_cnano/touch/qtm_freq_hop_0x0006_api.h</itemPath>
+            <itemPath>../src/config/pic32cm_gv_vl_cnano/touch/qtm_freq_hop_auto_0x0004_api.h</itemPath>
+            <itemPath>../src/config/pic32cm_gv_vl_cnano/touch/touch.h</itemPath>
+            <itemPath>../src/config/pic32cm_gv_vl_cnano/touch/touch_api_ptc.h</itemPath>
+            <itemPath>../src/config/pic32cm_gv_vl_cnano/touch/touch_example.h</itemPath>
+          </logicalFolder>
           <itemPath>../src/config/pic32cm_gv_vl_cnano/device.h</itemPath>
           <itemPath>../src/config/pic32cm_gv_vl_cnano/device_vectors.h</itemPath>
           <itemPath>../src/config/pic32cm_gv_vl_cnano/toolchain_specifics.h</itemPath>
           <itemPath>../src/config/pic32cm_gv_vl_cnano/device_cache.h</itemPath>
           <itemPath>../src/config/pic32cm_gv_vl_cnano/interrupts.h</itemPath>
           <itemPath>../src/config/pic32cm_gv_vl_cnano/definitions.h</itemPath>
+          <itemPath>../src/config/pic32cm_gv_vl_cnano/user.h</itemPath>
+          <itemPath>../src/config/pic32cm_gv_vl_cnano/configuration.h</itemPath>
+          <itemPath>../src/config/pic32cm_gv_vl_cnano/sys_tasks.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="packs" displayName="packs" projectFiles="true">
@@ -131,18 +175,22 @@
                      displayName="low_power_acoustic_logger_pic32cm_gv_vl_cnano"
                      projectFiles="true">
         <logicalFolder name="components" displayName="components" projectFiles="true">
+          <itemPath>low_power_acoustic_logger_pic32cm_gv_vl_cnano/components/evsys.yml</itemPath>
+          <itemPath>low_power_acoustic_logger_pic32cm_gv_vl_cnano/components/pm.yml</itemPath>
+          <itemPath>low_power_acoustic_logger_pic32cm_gv_vl_cnano/components/lib_qtouch.yml</itemPath>
+          <itemPath>low_power_acoustic_logger_pic32cm_gv_vl_cnano/components/nvmctrl.yml</itemPath>
+          <itemPath>low_power_acoustic_logger_pic32cm_gv_vl_cnano/components/core.yml</itemPath>
+          <itemPath>low_power_acoustic_logger_pic32cm_gv_vl_cnano/components/cmsis.yml</itemPath>
+          <itemPath>low_power_acoustic_logger_pic32cm_gv_vl_cnano/components/sercom2.yml</itemPath>
+          <itemPath>low_power_acoustic_logger_pic32cm_gv_vl_cnano/components/tc0.yml</itemPath>
+          <itemPath>low_power_acoustic_logger_pic32cm_gv_vl_cnano/components/rtc.yml</itemPath>
+          <itemPath>low_power_acoustic_logger_pic32cm_gv_vl_cnano/components/sys_time.yml</itemPath>
+          <itemPath>low_power_acoustic_logger_pic32cm_gv_vl_cnano/components/ptc.yml</itemPath>
+          <itemPath>low_power_acoustic_logger_pic32cm_gv_vl_cnano/components/sercom5.yml</itemPath>
           <itemPath>low_power_acoustic_logger_pic32cm_gv_vl_cnano/components/ac.yml</itemPath>
           <itemPath>low_power_acoustic_logger_pic32cm_gv_vl_cnano/components/stdio.yml</itemPath>
-          <itemPath>low_power_acoustic_logger_pic32cm_gv_vl_cnano/components/sercom5.yml</itemPath>
-          <itemPath>low_power_acoustic_logger_pic32cm_gv_vl_cnano/components/pm.yml</itemPath>
-          <itemPath>low_power_acoustic_logger_pic32cm_gv_vl_cnano/components/tc0.yml</itemPath>
-          <itemPath>low_power_acoustic_logger_pic32cm_gv_vl_cnano/components/cmsis.yml</itemPath>
-          <itemPath>low_power_acoustic_logger_pic32cm_gv_vl_cnano/components/rtc.yml</itemPath>
-          <itemPath>low_power_acoustic_logger_pic32cm_gv_vl_cnano/components/nvmctrl.yml</itemPath>
-          <itemPath>low_power_acoustic_logger_pic32cm_gv_vl_cnano/components/evsys.yml</itemPath>
           <itemPath>low_power_acoustic_logger_pic32cm_gv_vl_cnano/components/dfp.yml</itemPath>
-          <itemPath>low_power_acoustic_logger_pic32cm_gv_vl_cnano/components/core.yml</itemPath>
-          <itemPath>low_power_acoustic_logger_pic32cm_gv_vl_cnano/components/sercom2.yml</itemPath>
+          <itemPath>low_power_acoustic_logger_pic32cm_gv_vl_cnano/components/HarmonyCore.yml</itemPath>
         </logicalFolder>
         <itemPath>low_power_acoustic_logger_pic32cm_gv_vl_cnano/mcc-config.mc4</itemPath>
       </logicalFolder>
@@ -213,11 +261,24 @@
           <logicalFolder name="stdio" displayName="stdio" projectFiles="true">
             <itemPath>../src/config/pic32cm_gv_vl_cnano/stdio/xc32_monitor.c</itemPath>
           </logicalFolder>
+          <logicalFolder name="system" displayName="system" projectFiles="true">
+            <logicalFolder name="int" displayName="int" projectFiles="true">
+              <itemPath>../src/config/pic32cm_gv_vl_cnano/system/int/src/sys_int.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="time" displayName="time" projectFiles="true">
+              <itemPath>../src/config/pic32cm_gv_vl_cnano/system/time/src/sys_time.c</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="touch" displayName="touch" projectFiles="true">
+            <itemPath>../src/config/pic32cm_gv_vl_cnano/touch/touch.c</itemPath>
+            <itemPath>../src/config/pic32cm_gv_vl_cnano/touch/touch_example.c</itemPath>
+          </logicalFolder>
           <itemPath>../src/config/pic32cm_gv_vl_cnano/libc_syscalls.c</itemPath>
           <itemPath>../src/config/pic32cm_gv_vl_cnano/startup_xc32.c</itemPath>
           <itemPath>../src/config/pic32cm_gv_vl_cnano/exceptions.c</itemPath>
           <itemPath>../src/config/pic32cm_gv_vl_cnano/interrupts.c</itemPath>
           <itemPath>../src/config/pic32cm_gv_vl_cnano/initialization.c</itemPath>
+          <itemPath>../src/config/pic32cm_gv_vl_cnano/tasks.c</itemPath>
         </logicalFolder>
       </logicalFolder>
       <itemPath>../src/config/pic32cm_gv_vl_cnano/pin_configurations.csv</itemPath>
@@ -238,14 +299,18 @@
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="PIC32CM-GV_DFP" vendor="Microchip" version="1.1.14"/>
         <pack name="CMSIS" vendor="ARM" version="6.1.0"/>
+        <pack name="PIC32CM-GV_DFP" vendor="Microchip" version="1.1.14"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
       <compileType>
         <linkerTool>
           <linkerLibItems>
+            <linkerLibFileItem>../src/config/pic32cm_gv_vl_cnano/touch/lib/qtm_acq_pic32cmgv_0x000e.X.a</linkerLibFileItem>
+            <linkerLibFileItem>../src/config/pic32cm_gv_vl_cnano/touch/lib/qtm_touch_key_cm0p_0x0002.X.a</linkerLibFileItem>
+            <linkerLibFileItem>../src/config/pic32cm_gv_vl_cnano/touch/lib/qtm_freq_hop_cm0p_0x0006.X.a</linkerLibFileItem>
+            <linkerLibFileItem>../src/config/pic32cm_gv_vl_cnano/touch/lib/qtm_freq_hop_auto_cm0p_0x0004.X.a</linkerLibFileItem>
           </linkerLibItems>
         </linkerTool>
         <archiverTool>
@@ -536,6 +601,8 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-7fff"/>
         <property key="poweroptions.powerenable" value="false"/>
+        <property key="programmerToGoFilePath"
+                  value="D:/pic32cm_gv_vl_cnano_low_power_acoustic_logger/firmware/pic32cm_gv_vl_cnano.X/debug/pic32cm_gv_vl_cnano/pic32cm_gv_vl_cnano_ptg"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.preservedataflash" value="false"/>
         <property key="programoptions.preservedataflash.ranges"

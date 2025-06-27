@@ -86,7 +86,7 @@ void TC0_TimerInitialize( void )
     TC0_REGS->COUNT16.TC_CTRLA = TC_CTRLA_MODE_COUNT16 | TC_CTRLA_PRESCALER_DIV1024 | TC_CTRLA_WAVEGEN_MPWM | TC_CTRLA_RUNSTDBY_Msk;
 
     /* Configure timer period */
-    TC0_REGS->COUNT16.TC_CC[0U] = 1U;
+    TC0_REGS->COUNT16.TC_CC[0U] = 3U;
 
     /* Clear all interrupt flags */
     TC0_REGS->COUNT16.TC_INTFLAG = TC_INTFLAG_Msk;
@@ -122,7 +122,7 @@ void TC0_TimerStop( void )
 
 uint32_t TC0_TimerFrequencyGet( void )
 {
-    return (uint32_t)(1UL);
+    return (uint32_t)(2UL);
 }
 
 void TC0_TimerCommandSet(TC_COMMAND command)

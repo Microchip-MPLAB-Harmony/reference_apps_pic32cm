@@ -9,10 +9,6 @@ dependency:
   type: module
   version: ''
 - dependencyPackage: ''
-  name: CMSIS_5
-  type: package
-  version: 5.9.0
-- dependencyPackage: ''
   name: csp
   type: package
   version: v3.22.2
@@ -26,8 +22,8 @@ data:
     - children:
       - attributes:
           id: rtc
-          x: '227'
-          y: '311'
+          x: '40'
+          y: '260'
         type: ElementPosition
       type: ElementPositions
     type: ComponentGraph
@@ -114,6 +110,10 @@ data:
       children:
       - children:
         - attributes:
+            id: lib_qtouch
+            value: '0'
+          type: Dynamic
+        - attributes:
             value: '2'
           type: User
         type: Values
@@ -162,4 +162,105 @@ data:
           type: Dynamic
         type: Values
       type: Integer
+    RTC_MODE0_MATCHCLR:
+      attributes:
+        id: RTC_MODE0_MATCHCLR
+      children:
+      - children:
+        - attributes:
+            id: lib_qtouch
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    RTC_MODE0_INTENSET:
+      attributes:
+        id: RTC_MODE0_INTENSET
+      children:
+      - children:
+        - attributes:
+            id: rtc
+            value: '1'
+          type: Dynamic
+        type: Values
+      type: Hex
+    RTC_MODE0_INTENSET_CMP0_ENABLE:
+      attributes:
+        id: RTC_MODE0_INTENSET_CMP0_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: lib_qtouch
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    RTC_CLOCK_SOURCE:
+      attributes:
+        id: RTC_CLOCK_SOURCE
+      children:
+      - children:
+        - attributes:
+            id: enabled
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      type: File
+    RTC_TIMER_SOURCE:
+      attributes:
+        id: RTC_TIMER_SOURCE
+      children:
+      - children:
+        - attributes:
+            id: enabled
+          children:
+          - type: Value
+            value: 'false'
+          type: Boolean
+        type: Attributes
+      type: File
+    RTC_MODE0_TIMER_COMPARE:
+      attributes:
+        id: RTC_MODE0_TIMER_COMPARE
+      children:
+      - children:
+        - attributes:
+            id: lib_qtouch
+            value: '1'
+          type: Dynamic
+        type: Values
+      type: Hex
+    RTC_MODE0_PRESCALER:
+      attributes:
+        id: RTC_MODE0_PRESCALER
+      children:
+      - children:
+        - attributes:
+            value: '1'
+          type: User
+        type: Values
+      type: KeyValueSet
+    RTC_MODE0_EVCTRL:
+      attributes:
+        id: RTC_MODE0_EVCTRL
+      children:
+      - children:
+        - attributes:
+            id: rtc
+            value: '1'
+          type: Dynamic
+        type: Values
+      type: Hex
+    RTC_MODE0_EVCTRL_PEREO0_ENABLE:
+      attributes:
+        id: RTC_MODE0_EVCTRL_PEREO0_ENABLE
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
   userData: {}

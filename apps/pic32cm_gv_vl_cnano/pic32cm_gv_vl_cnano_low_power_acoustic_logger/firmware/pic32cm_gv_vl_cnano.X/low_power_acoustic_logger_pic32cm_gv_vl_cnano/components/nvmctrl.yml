@@ -9,10 +9,6 @@ dependency:
   type: module
   version: ''
 - dependencyPackage: ''
-  name: CMSIS_5
-  type: package
-  version: 5.9.0
-- dependencyPackage: ''
   name: csp
   type: package
   version: v3.22.2
@@ -26,8 +22,8 @@ data:
     - children:
       - attributes:
           id: nvmctrl
-          x: '20'
-          y: '20'
+          x: '32'
+          y: '43'
         type: ElementPosition
       type: ElementPositions
     type: ComponentGraph
@@ -41,6 +37,9 @@ data:
             id: nvmctrl
             value: '1'
           type: Dynamic
+        - attributes:
+            value: '3'
+          type: User
         type: Values
       type: Integer
   userData: {}
