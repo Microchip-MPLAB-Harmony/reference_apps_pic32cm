@@ -13,8 +13,8 @@ Pin Number,Pin ID,Custom Name,Function,Mode, Direction,Latch,Pull Up,Pull Down,D
 14,PA05,,AC_AIN1,Analog,High Impedance,n/a,,,NORMAL
 15,PA06,,Available,,,,,,NORMAL
 16,PA07,,PTC_Y5,Analog,High Impedance,n/a,,,NORMAL
-17,PA08,,Available,,,,,,NORMAL
-18,PA09,,Available,,,,,,NORMAL
+17,PA08,,SERCOM2_PAD0,Digital,High Impedance,n/a,No,No,NORMAL
+18,PA09,,SERCOM2_PAD1,Digital,High Impedance,n/a,No,No,NORMAL
 19,PA10,,Available,,,,,,NORMAL
 20,PA11,EEPROM_HOLD,GPIO,Digital,Out,High,,,NORMAL
 23,PB10,,Available,,,,,,NORMAL
@@ -23,8 +23,8 @@ Pin Number,Pin ID,Custom Name,Function,Mode, Direction,Latch,Pull Up,Pull Down,D
 26,PB13,,Available,,,,,,NORMAL
 27,PB14,,Available,,,,,,NORMAL
 28,PB15,,Available,,,,,,NORMAL
-29,PA12,,SERCOM2_PAD0,Digital,High Impedance,n/a,No,No,NORMAL
-30,PA13,,SERCOM2_PAD1,Digital,High Impedance,n/a,No,No,NORMAL
+29,PA12,,Available,,,,,,NORMAL
+30,PA13,,Available,,,,,,NORMAL
 31,PA14,,Available,,,,,,NORMAL
 32,PA15,,Available,,,,,,NORMAL
 35,PA16,,Available,,,,,,NORMAL
@@ -37,7 +37,7 @@ Pin Number,Pin ID,Custom Name,Function,Mode, Direction,Latch,Pull Up,Pull Down,D
 42,PA21,,Available,,,,,,NORMAL
 43,PA22,,Available,,,,,,NORMAL
 44,PA23,,Available,,,,,,NORMAL
-45,PA24,LED,GPIO,Digital,Out,High,,,NORMAL
+45,PA24,LED,GPIO,Digital,Out,Low,,,NORMAL
 46,PA25,,Available,,,,,,NORMAL
 49,PB22,,Available,,,,,,NORMAL
 50,PB23,,Available,,,,,,NORMAL

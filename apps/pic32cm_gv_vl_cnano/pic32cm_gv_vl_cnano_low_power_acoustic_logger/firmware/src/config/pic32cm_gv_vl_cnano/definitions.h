@@ -49,8 +49,8 @@
 #include <stddef.h>
 #include <stdbool.h>
 #include <stdio.h>
-#include "peripheral/nvmctrl/plib_nvmctrl.h"
 #include "peripheral/sercom/usart/plib_sercom2_usart.h"
+#include "peripheral/nvmctrl/plib_nvmctrl.h"
 #include "peripheral/evsys/plib_evsys.h"
 #include "peripheral/port/plib_port.h"
 #include "peripheral/clock/plib_clock.h"
@@ -58,10 +58,10 @@
 #include "peripheral/systick/plib_systick.h"
 #include "peripheral/pm/plib_pm.h"
 #include "peripheral/sercom/spi_master/plib_sercom5_spi_master.h"
+#include "peripheral/rtc/plib_rtc.h"
 #include "touch/touch.h"
 #include "peripheral/tc/plib_tc0.h"
 #include "peripheral/ac/plib_ac.h"
-#include "peripheral/rtc/plib_rtc.h"
 #include "system/time/sys_time.h"
 #include "system/int/sys_int.h"
 #include "system/ports/sys_ports.h"

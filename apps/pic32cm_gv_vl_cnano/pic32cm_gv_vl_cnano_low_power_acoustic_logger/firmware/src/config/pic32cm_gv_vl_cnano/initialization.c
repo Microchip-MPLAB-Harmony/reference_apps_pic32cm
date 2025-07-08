@@ -189,20 +189,20 @@ void SYS_Initialize ( void* data )
 
 
 
-    NVMCTRL_Initialize( );
-
     SERCOM2_USART_Initialize();
+
+    NVMCTRL_Initialize( );
 
     EVSYS_Initialize();
 
 	SYSTICK_TimerInitialize();
     SERCOM5_SPI_Initialize();
 
+    RTC_Initialize();
+
     TC0_TimerInitialize();
 
     AC_Initialize();
-    RTC_Initialize();
-
 
     /* MISRAC 2012 deviation block start */
     /* Following MISRA-C rules deviated in this block  */

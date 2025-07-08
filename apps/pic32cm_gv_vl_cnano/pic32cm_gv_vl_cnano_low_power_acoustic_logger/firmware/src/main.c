@@ -66,9 +66,10 @@
 #define EEPROM_CMD_READ                     0x03    // Read Data
 
 #define EEPROM_ADDRESS                      0x00000000
-#define EEPROM_DATA_LEN                     16
+#define EEPROM_DATA_LEN                     64
 #define MAX_LOGS                            16
 #define SWITCH_STATE_PRESSED                0
+#define UART_BUFFER_SIZE                    64
 
 /* Global variables */
 char EEPROM_DATA[EEPROM_DATA_LEN];
@@ -84,7 +85,7 @@ volatile uint8_t logIndex = 0;
 volatile uint8_t mode = 0;
 struct tm sys_time;
 
-/* Checking the comparator output state */
+// Checks the output state of the comparator.
 void AC_CallBack(uint8_t int_flag, uintptr_t ac_context)
 {    
     if(int_flag & AC_STATUSA_STATE0_Msk)
@@ -93,14 +94,14 @@ void AC_CallBack(uint8_t int_flag, uintptr_t ac_context)
     }
 }
 
-/* This function will be called by SPI PLIB when transfer is completed */
+ // Callback function invoked by the SPI PLIB upon transfer completion.
 void SPIEventHandler(uintptr_t context)
 {
     EEPROM_CS_Set();
     isTransferDone = true;
 }
 
-// Initializes EEPROM control lines
+// Initializes the control lines for EEPROM operation.
 void EEPROM_Initialize (void)
 {
     EEPROM_HOLD_Set();
@@ -113,10 +114,10 @@ void EEPROM_Initialize (void)
     EEPROM_Write(uint32_t eepromAddr, const char* data, size_t len)
 
   Summary:
-    Write the observed acoustic data into EEPROM storage
+    Writes data to EEPROM storage.
 
-  Remarks:
-    Handles write enable, data write, and polling for write completion.
+  Description:
+    Enables write, writes data to EEPROM via SPI, and waits for completion.
  ***************************************************************************/
 void EEPROM_Write(uint32_t eepromAddr, const char* data, size_t len)
 {
@@ -153,10 +154,11 @@ void EEPROM_Write(uint32_t eepromAddr, const char* data, size_t len)
     EEPROM_Read(uint32_t eepromAddr, size_t len)
 
   Summary:
-    Read the stored acoustic data from the EEPROM storage
+    Reads data from EEPROM and prints it to the terminal.
 
-  Remarks:
-   Reads data from EEPROM and prints it with timestamp.
+  Description:
+    Retrieves data from EEPROM via SPI and displays it with a timestamp on the
+    terminal.
  ***************************************************************************/
 void EEPROM_Read(uint32_t eepromAddr, size_t len)
 {
@@ -166,50 +168,52 @@ void EEPROM_Read(uint32_t eepromAddr, size_t len)
     txData[3] = (uint8_t)(eepromAddr);
     
     EEPROM_CS_Clear();
-    SERCOM5_SPI_WriteRead(txData, 4, rxData, (4 + len));
-    RTC_RTCCTimeGet(&sys_time);
+    isTransferDone = false;
+    SERCOM5_SPI_WriteRead(txData, 4, rxData, (4 + EEPROM_DATA_LEN));
+    while (!isTransferDone);
     
-    printf("  Date = %02d.%02d.%02d, Time = %02d:%02d:%02d,",
-        sys_time.tm_mday,
-        (sys_time.tm_mon)+1,
-        (sys_time.tm_year)+1900,
-        sys_time.tm_hour,
-        sys_time.tm_min,
-        sys_time.tm_sec);
+    printf("  %s\r\n", (char*)&rxData[4]);  
     
-    printf(" %.*s\r\n",(int)len,&rxData[4]);  
 }
 
 /****************************************************************************
   Function:
-   Data_Log_Callback()
+    Data_Log_Callback()
 
   Summary:
-    Write and Read in the EEPROM and the obtained data prints on terminal 
+    Writes data to EEPROM and prints it to the terminal.
 
-  Remarks:
-    prints the observed 16 logs of acoustic Data
+  Description:
+    Logs acoustic data in EEPROM and displays the stored data on the terminal.
  ***************************************************************************/
 void Data_Log_Callback()
 {
-    if (logIndex < MAX_LOGS)
+    if ((logIndex < MAX_LOGS) &&(change_detect))
+        
     {
-        memcpy(EEPROM_DATA, "Noise detected", strlen("Noise detected"));
+        change_detect = false;
 
+        RTC_RTCCTimeGet(&sys_time);
+    
+        snprintf(EEPROM_DATA, EEPROM_DATA_LEN, "Date=%02d-%02d-%04d, Time=%02d:%02d:%02d, Noise Detected",
+        sys_time.tm_mday,
+        sys_time.tm_mon + 1,
+        (sys_time.tm_year & 0x3F) + 2000,  // Limits from 2000 to 2063 year 
+        sys_time.tm_hour,
+        sys_time.tm_min,
+        sys_time.tm_sec);
+        
+        SYSTICK_DelayUs(500); 
+        
         //Write and read EEPROM
         uint32_t address = logIndex * EEPROM_DATA_LEN;
         EEPROM_Write(address, EEPROM_DATA, EEPROM_DATA_LEN); 
+        EEPROM_Read(address, EEPROM_DATA_LEN);
         logIndex++;
         
-        if (logIndex >= MAX_LOGS)
+        if(logIndex >= MAX_LOGS)
         {
-            // Read and print the 16 log of Acoustic Data
-            for (uint8_t i = 0; i < MAX_LOGS; i++)
-            {
- 
-                uint32_t readAddr = i * EEPROM_DATA_LEN;
-                EEPROM_Read(readAddr, EEPROM_DATA_LEN); 
-            }
+            logIndex = 0; // Resets the log index
         }
     }
 }
@@ -220,9 +224,8 @@ void Data_Log_Callback()
 
   Summary:
     Detects a touch event to trigger the appropriate mode of operation.
- 
 
-  Remarks:
+  Description:
     perform the Data log and low power mode operations
  ***************************************************************************/
 bool Touch_Status(void)
@@ -233,7 +236,7 @@ bool Touch_Status(void)
     if (touched && !prev_touch)
     {
         prev_touch = true;
-        SYSTICK_DelayMs(150);  
+        SYSTICK_DelayMs(150);   
         return true;  
     }
     else if (!touched)
@@ -243,6 +246,107 @@ bool Touch_Status(void)
 
     return false;  
 }
+
+/****************************************************************************
+  Function:
+    UART_RTC_Read()
+
+  Summary:
+    View and set the RTC date and time via the serial terminal.
+
+  Description:
+    Displays the current RTC date and time, and echoes back the user?s input 
+    for RTC update.
+ ***************************************************************************/
+
+void UART_RTC_Read(char *buffer, size_t maxlen)
+{
+    size_t index = 0;
+    char c = 0;
+
+    while (index < maxlen - 1)
+    {
+        while (!SERCOM2_USART_ReceiverIsReady()); // Wait for data
+        SERCOM2_USART_Read(&c, 1);
+
+        // Echo back to terminal
+        SERCOM2_USART_Write(&c, 1);
+
+        if (c == '\r' || c == '\n')
+        {
+            buffer[index] = '\0';
+            // Send newline for terminal formatting
+            char nl[2] = "\r\n";
+            SERCOM2_USART_Write(nl, 2);
+            break;
+        }
+        else
+        {
+            buffer[index++] = c;
+        }
+    }
+    buffer[index] = '\0';
+}
+
+/****************************************************************************
+  Function:
+    Set_RTC_Date_Time()
+
+  Summary:
+    Reads and sets the RTC date and time via the terminal.
+
+  Description:
+    Shows the current RTC date and time, prompts for new values, and updates 
+    the RTC.
+ ***************************************************************************/
+void Set_RTC_Date_Time(void)
+{
+    char input[UART_BUFFER_SIZE];
+    int year, month, day, hour, min, sec;
+
+    const char *prompt = "\r\n\nEnter date and time in the format: DD-MM-YYYY HH:MM:SS\r\nExample: 07-07-2025 11:00:00\r\nInput: ";
+    SERCOM2_USART_Write((void*)prompt, strlen(prompt));
+
+    UART_RTC_Read(input, sizeof(input)); 
+
+    // Parse input
+    if (sscanf(input, "%d-%d-%d %d:%d:%d",&day, &month, &year, &hour, &min, &sec) == 6)
+    {    
+        if (year < 2000 || year > 2063 ||
+            month < 1 || month > 12 ||
+            day < 1 || day > 31 ||
+            hour < 0 || hour > 23 ||
+            min < 0 || min > 59 ||
+            sec < 0 || sec > 59)
+        {
+            const char *err = "\r\n  Invalid date or time value. Please try again.\r\n";
+            SERCOM2_USART_Write((void*)err, strlen(err));
+            Set_RTC_Date_Time();
+            return; // <-- Prevents setting RTC with invalid values
+        }
+        
+        sys_time.tm_mday = day;
+        sys_time.tm_mon  = month - 1;
+        sys_time.tm_year = year - 2000; // from 2000 to 2063 year 
+        sys_time.tm_hour = hour;
+        sys_time.tm_min  = min;
+        sys_time.tm_sec  = sec;
+
+        RTC_RTCCTimeSet(&sys_time);
+
+        char confirm[80];
+        snprintf(confirm, sizeof(confirm), "\r\n  RTC updated to: %02d-%02d-%04d %02d:%02d:%02d\r\n",
+                 day, month, year, hour, min, sec);
+        SERCOM2_USART_Write((void*)confirm, strlen(confirm));
+    }
+    else
+    {
+        const char *err = "\r\n  Invalid format. Please try again.\r\n";
+        SERCOM2_USART_Write((void*)err, strlen(err));
+        Set_RTC_Date_Time();
+    }
+}
+
 
 // *****************************************************************************
 // *****************************************************************************
@@ -258,23 +362,14 @@ int main ( void )
     printf("\n\n\r----------------------------------------------------------------");
     printf("\n\n\r       PIC32CM GV VL Curiosity Nano + Touch Evaluation Kit      ");
     printf("\n\n\r----------------------------------------------------------------");
-
-    printf("\n\n\r  Press Touch Button after Reset to Data Log \n\n\r");
     
-    /* Set Time and Date: DD-MM-YYYY 31-03-2025 Wednesday */
-
-    sys_time.tm_hour    = 11;   /* hour [0,23] */
-    sys_time.tm_min     = 00;   /* minutes [0,59] */
-    sys_time.tm_sec     = 00;   /* seconds [0,61] */
-    sys_time.tm_mday    = 31;   /* day of month [1,31] */
-    sys_time.tm_mon     = 2;   /* month of year [0,11] */
-    sys_time.tm_year    = 125;  /* years since 1900 */
-    
-    RTC_RTCCTimeSet(&sys_time);
+    Set_RTC_Date_Time();
     AC_CallbackRegister(AC_CallBack, 0);
     EEPROM_Initialize();
     SERCOM5_SPI_CallbackRegister(SPIEventHandler, (uintptr_t)0);
     
+    printf("\n\n\r  Mode 1: Press the Touch Button to start Data Log \n\n\r");
+
     while (true)
     {
         SYS_Tasks();
@@ -298,16 +393,16 @@ int main ( void )
                 {
  
                     standbyEntered = true;
-                    printf("\n\n\r  Entering Low Power Standby Mode...\n");
+                    printf("\n\n\r  Mode 2: Entering Low Power Standby Mode...\n");
                     
-                    SYSTICK_DelayUs(1000);
-                    SYSTICK_TimerStop(); 
+                    SYSTICK_DelayUs(1000); 
+                    SYSTICK_TimerStop();  
                     
                     LED_Clear();
                     
                     PM_StandbyModeEnter();
                     
-                    SYSTICK_DelayUs(500);
+                    SYSTICK_DelayUs(500); 
                     SYSTICK_TimerStart();
                     
                     break;
@@ -317,13 +412,13 @@ int main ( void )
             default:
                 if(change_detect)
                 {
-                    SYSTICK_DelayUs(1000);
-                    SYSTICK_TimerStop();
+                    SYSTICK_DelayUs(1000); 
+                    SYSTICK_TimerStop(); 
                     
                     PM_StandbyModeEnter();
                     
-                    SYSTICK_DelayUs(500);
-                    SYSTICK_TimerStart();
+                    SYSTICK_DelayUs(500); 
+                    SYSTICK_TimerStart(); 
                 }
                 break;
         }  

@@ -4,7 +4,7 @@
 
 
 project: low_power_acoustic_logger
-creation_date: 2025-06-27T15:34:58.466+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+creation_date: 2025-07-08T10:37:04.829+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
 operating_system: Windows 11
 mcc_mode: IDE            # [IDE|Standalone|Headless]
 mcc_version: v5.6.2

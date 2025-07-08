@@ -23,7 +23,7 @@ data:
       - attributes:
           id: core
           x: '602'
-          y: '47'
+          y: '50'
         type: ElementPosition
       type: ElementPositions
     type: ComponentGraph
@@ -46,7 +46,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '2048'
+            value: '1024'
           type: Dynamic
         type: Values
       type: Integer
@@ -68,7 +68,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '2048'
+            value: '1024'
           type: Dynamic
         type: Values
       type: Integer
@@ -174,7 +174,7 @@ data:
             value: 'true'
           type: Dynamic
         - attributes:
-            value: 'true'
+            value: 'false'
           type: User
         type: Values
       type: Boolean
@@ -238,7 +238,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '2048'
+            value: '1024'
           type: Dynamic
         type: Values
       type: Integer
@@ -277,7 +277,7 @@ data:
             value: '250'
           type: Dynamic
         - attributes:
-            value: '16'
+            value: '32'
           type: User
         type: Values
       type: Integer
@@ -288,7 +288,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '16'
+            value: '32'
           type: Dynamic
         type: Values
       type: Integer
@@ -299,7 +299,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '2048'
+            value: '1024'
           type: Dynamic
         type: Values
       type: Integer
@@ -334,7 +334,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '4000000'
+            value: '32768'
           type: Dynamic
         type: Values
       type: Integer
@@ -354,7 +354,7 @@ data:
       children:
       - children:
         - attributes:
-            value: '6'
+            value: '5'
           type: User
         type: Values
       type: KeyValueSet
@@ -445,7 +445,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '2048'
+            value: '1024'
           type: Dynamic
         type: Values
       type: Integer
@@ -525,7 +525,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '2048'
+            value: '1024'
           type: Dynamic
         type: Values
       type: Integer
@@ -557,7 +557,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '2048'
+            value: '1024'
           type: Dynamic
         type: Values
       type: Integer
@@ -589,7 +589,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '2048'
+            value: '1024'
           type: Dynamic
         type: Values
       type: Integer
@@ -621,7 +621,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '2048'
+            value: '1024'
           type: Dynamic
         type: Values
       type: Integer
@@ -653,7 +653,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '2048'
+            value: '1024'
           type: Dynamic
         type: Values
       type: Integer
@@ -980,7 +980,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '4000000'
+            value: '0'
           type: Dynamic
         type: Values
       type: Integer
@@ -1092,49 +1092,9 @@ data:
           type: User
         type: Values
       type: String
-    PIN_29_FUNCTION_TYPE:
-      attributes:
-        id: PIN_29_FUNCTION_TYPE
-      children:
-      - children:
-        - attributes:
-            value: SERCOM2_PAD0
-          type: User
-        type: Values
-      type: String
-    PIN_29_MODE:
-      attributes:
-        id: PIN_29_MODE
-      children:
-      - children:
-        - attributes:
-            value: ''
-          type: User
-        type: Values
-      type: String
     PIN_29_PERIPHERAL_FUNCTION:
       attributes:
         id: PIN_29_PERIPHERAL_FUNCTION
-      children:
-      - children:
-        - attributes:
-            value: C
-          type: User
-        type: Values
-      type: String
-    PIN_30_FUNCTION_TYPE:
-      attributes:
-        id: PIN_30_FUNCTION_TYPE
-      children:
-      - children:
-        - attributes:
-            value: SERCOM2_PAD1
-          type: User
-        type: Values
-      type: String
-    PIN_30_MODE:
-      attributes:
-        id: PIN_30_MODE
       children:
       - children:
         - attributes:
@@ -1148,7 +1108,7 @@ data:
       children:
       - children:
         - attributes:
-            value: C
+            value: ''
           type: User
         type: Values
       type: String
@@ -1508,7 +1468,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '0x1000804'
+            value: '0x804'
           type: Dynamic
         type: Values
       type: String
@@ -1596,7 +1556,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '0x1'
+            value: '0x0'
           type: Dynamic
         type: Values
       type: String
@@ -1607,7 +1567,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '0x1'
+            value: '0x0'
           type: Dynamic
         type: Values
       type: String
@@ -1662,7 +1622,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: 'true'
+            value: 'false'
           type: Dynamic
         type: Values
       type: Boolean
@@ -1673,7 +1633,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: 'true'
+            value: 'false'
           type: Dynamic
         type: Values
       type: Boolean
@@ -1761,7 +1721,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '0x22'
+            value: '0x0'
           type: Dynamic
         type: Values
       type: String
@@ -2003,7 +1963,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '2048'
+            value: '1024'
           type: Dynamic
         type: Values
       type: Integer
@@ -2259,7 +2219,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '2048'
+            value: '1024'
           type: Dynamic
         type: Values
       type: Integer
@@ -2438,7 +2398,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '4000000'
+            value: '32768'
           type: Dynamic
         type: Values
       type: Integer
@@ -2449,7 +2409,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '4000000'
+            value: '32768'
           type: Dynamic
         type: Values
       type: Integer
@@ -2549,28 +2509,6 @@ data:
           type: Dynamic
         type: Values
       type: Long
-    SysTick_INTERRUPT_ENABLE:
-      attributes:
-        id: SysTick_INTERRUPT_ENABLE
-      children:
-      - children:
-        - attributes:
-            id: core
-            value: 'true'
-          type: Dynamic
-        type: Values
-      type: Boolean
-    SysTick_INTERRUPT_HANDLER_LOCK:
-      attributes:
-        id: SysTick_INTERRUPT_HANDLER_LOCK
-      children:
-      - children:
-        - attributes:
-            id: core
-            value: 'true'
-          type: Dynamic
-        type: Values
-      type: Boolean
     SYSTICK_USED_BY_SYS_TIME:
       attributes:
         id: SYSTICK_USED_BY_SYS_TIME
@@ -2621,7 +2559,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '4000000'
+            value: '1024'
           type: Dynamic
         type: Values
       type: Integer
@@ -2705,7 +2643,7 @@ data:
       children:
       - children:
         - attributes:
-            value: '2'
+            value: '1'
           type: User
         type: Values
       type: KeyValueSet
@@ -2793,7 +2731,7 @@ data:
       children:
       - children:
         - attributes:
-            value: High
+            value: ''
           type: User
         type: Values
       type: String
@@ -2916,6 +2854,9 @@ data:
             id: lib_qtouch
             value: ''
           type: Dynamic
+        - attributes:
+            value: SERCOM2_PAD0
+          type: User
         type: Values
       type: String
     PIN_10_FUNCTION_TYPE:
@@ -2960,6 +2901,9 @@ data:
             id: lib_qtouch
             value: ''
           type: Dynamic
+        - attributes:
+            value: SERCOM2_PAD1
+          type: User
         type: Values
       type: String
     PIN_11_FUNCTION_TYPE:
@@ -3070,6 +3014,176 @@ data:
             id: lib_qtouch
             value: ''
           type: Dynamic
+        type: Values
+      type: String
+    GCLK_2_DIVIDER_VALUE:
+      attributes:
+        id: GCLK_2_DIVIDER_VALUE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '1'
+          type: Dynamic
+        type: Values
+      type: Integer
+    GCLK_2_DIV:
+      attributes:
+        id: GCLK_2_DIV
+      children:
+      - children:
+        - attributes:
+            value: '1'
+          type: User
+        type: Values
+      type: Integer
+    GCLK_0_RUNSTDBY:
+      attributes:
+        id: GCLK_0_RUNSTDBY
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    SysTick_INTERRUPT_ENABLE:
+      attributes:
+        id: SysTick_INTERRUPT_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    SysTick_INTERRUPT_HANDLER_LOCK:
+      attributes:
+        id: SysTick_INTERRUPT_HANDLER_LOCK
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    PIN_17_MODE:
+      attributes:
+        id: PIN_17_MODE
+      children:
+      - children:
+        - attributes:
+            value: ''
+          type: User
+        type: Values
+      type: String
+    PORT_GROUP_0_PMUX4:
+      attributes:
+        id: PORT_GROUP_0_PMUX4
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x33'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_GROUP_0_PAD_8:
+      attributes:
+        id: PORT_GROUP_0_PAD_8
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: PA08
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_GROUP_0_PINCFG8:
+      attributes:
+        id: PORT_GROUP_0_PINCFG8
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x1'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_GROUP_0_PIN_8_USED:
+      attributes:
+        id: PORT_GROUP_0_PIN_8_USED
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    PIN_17_PERIPHERAL_FUNCTION:
+      attributes:
+        id: PIN_17_PERIPHERAL_FUNCTION
+      children:
+      - children:
+        - attributes:
+            value: D
+          type: User
+        type: Values
+      type: String
+    PIN_18_MODE:
+      attributes:
+        id: PIN_18_MODE
+      children:
+      - children:
+        - attributes:
+            value: ''
+          type: User
+        type: Values
+      type: String
+    PORT_GROUP_0_PAD_9:
+      attributes:
+        id: PORT_GROUP_0_PAD_9
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: PA09
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_GROUP_0_PINCFG9:
+      attributes:
+        id: PORT_GROUP_0_PINCFG9
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x1'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_GROUP_0_PIN_9_USED:
+      attributes:
+        id: PORT_GROUP_0_PIN_9_USED
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    PIN_18_PERIPHERAL_FUNCTION:
+      attributes:
+        id: PIN_18_PERIPHERAL_FUNCTION
+      children:
+      - children:
+        - attributes:
+            value: D
+          type: User
         type: Values
       type: String
   userData:

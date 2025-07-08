@@ -55,7 +55,7 @@ data:
       - children:
         - attributes:
             id: tc0
-            value: '2'
+            value: '1'
           type: Dynamic
         type: Values
       type: Integer
@@ -94,7 +94,7 @@ data:
       - children:
         - attributes:
             id: tc0
-            value: '3'
+            value: '1'
           type: Dynamic
         type: Values
       type: Long
@@ -107,7 +107,7 @@ data:
             id: max
           children:
           - type: Value
-            value: '3.2768E7'
+            value: '6.5536E7'
           type: Float
         type: Attributes
       - children:
