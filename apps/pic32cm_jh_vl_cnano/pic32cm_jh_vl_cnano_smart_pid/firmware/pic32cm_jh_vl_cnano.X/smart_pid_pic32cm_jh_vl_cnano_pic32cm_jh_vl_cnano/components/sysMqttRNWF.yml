@@ -1,0 +1,229 @@
+configVersion: 1.0.0
+componentName: sysMqttRNWF
+coreVersion: 5.8.2
+device: PIC32CM6408JH00064
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: sysMqttRNWF
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: wireless_system_rnwf
+  type: package
+  version: v3.0.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: sysMqttRNWF
+          x: '188'
+          y: '106'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    SYS_MQTT_ENABLE_PEER_AUTH:
+      attributes:
+        id: SYS_MQTT_ENABLE_PEER_AUTH
+      children:
+      - children:
+        - attributes:
+            id: visible
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    SYS_MQTT_ENABLE_TLS:
+      attributes:
+        id: SYS_MQTT_ENABLE_TLS
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    SYS_RNWF_MQTT_CLIENT_ID:
+      attributes:
+        id: SYS_RNWF_MQTT_CLIENT_ID
+      children:
+      - children:
+        - attributes:
+            value: smart_pid_aws
+          type: User
+        type: Values
+      type: String
+    SYS_RNWF_MQTT_CLOUD_PORT:
+      attributes:
+        id: SYS_RNWF_MQTT_CLOUD_PORT
+      children:
+      - children:
+        - attributes:
+            value: '8883'
+          type: User
+        type: Values
+      type: Integer
+    SYS_RNWF_MQTT_CLOUD_URL:
+      attributes:
+        id: SYS_RNWF_MQTT_CLOUD_URL
+      children:
+      - children:
+        - attributes:
+            value: a1iq91fd6ih7tv-ats.iot.us-east-2.amazonaws.com
+          type: User
+        type: Values
+      type: String
+    SYS_RNWF_MQTT_CLOUD_USER_NAME:
+      attributes:
+        id: SYS_RNWF_MQTT_CLOUD_USER_NAME
+      children:
+      - children:
+        - attributes:
+            value: arn:aws:iot:us-east-2:964716481709:thing/smart_pid_aws
+          type: User
+        type: Values
+      type: String
+    SYS_RNWF_MQTT_DEVICE_CERT:
+      attributes:
+        id: SYS_RNWF_MQTT_DEVICE_CERT
+      children:
+      - children:
+        - attributes:
+            id: visible
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            value: smart_pid_aws_certificate
+          type: User
+        type: Values
+      type: String
+    SYS_RNWF_MQTT_DEVICE_KEY:
+      attributes:
+        id: SYS_RNWF_MQTT_DEVICE_KEY
+      children:
+      - children:
+        - attributes:
+            id: visible
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            value: smart_pid_aws_private
+          type: User
+        type: Values
+      type: String
+    SYS_RNWF_MQTT_KEEP_ALIVE:
+      attributes:
+        id: SYS_RNWF_MQTT_KEEP_ALIVE
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    SYS_RNWF_MQTT_PUBLISH:
+      attributes:
+        id: SYS_RNWF_MQTT_PUBLISH
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    SYS_RNWF_MQTT_PUB_TOPIC_NAME:
+      attributes:
+        id: SYS_RNWF_MQTT_PUB_TOPIC_NAME
+      children:
+      - children:
+        - attributes:
+            id: visible
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            value: /smart_pid_aws/
+          type: User
+        type: Values
+      type: String
+    SYS_RNWF_MQTT_SERVER_CERT:
+      attributes:
+        id: SYS_RNWF_MQTT_SERVER_CERT
+      children:
+      - children:
+        - attributes:
+            id: visible
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            value: AmazonRootCA1
+          type: User
+        type: Values
+      type: String
+    SYS_RNWF_MQTT_SUBSCRIBE:
+      attributes:
+        id: SYS_RNWF_MQTT_SUBSCRIBE
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    SYS_RNWF_MQTT_SUB_TOPIC0:
+      attributes:
+        id: SYS_RNWF_MQTT_SUB_TOPIC0
+      children:
+      - children:
+        - attributes:
+            value: /smart_pid_aws/
+          type: User
+        type: Values
+      type: String
+    SYS_RNWF_MQTT_TLS_SERVER_NAME:
+      attributes:
+        id: SYS_RNWF_MQTT_TLS_SERVER_NAME
+      children:
+      - children:
+        - attributes:
+            id: visible
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            value: a1iq91fd6ih7tv-ats.iot.us-east-2.amazonaws.com
+          type: User
+        type: Values
+      type: String
+  userData: {}

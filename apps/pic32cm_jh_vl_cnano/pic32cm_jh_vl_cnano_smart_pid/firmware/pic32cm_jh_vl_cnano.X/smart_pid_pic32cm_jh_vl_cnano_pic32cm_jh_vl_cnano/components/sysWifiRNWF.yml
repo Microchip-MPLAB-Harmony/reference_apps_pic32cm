@@ -1,0 +1,201 @@
+configVersion: 1.0.0
+componentName: sysWifiRNWF
+coreVersion: 5.8.2
+device: PIC32CM6408JH00064
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: sysWifiRNWF
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: wireless_system_rnwf
+  type: package
+  version: v3.0.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: sysWifiRNWF
+          x: '183'
+          y: '69'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    SYS_RNWF_COUNTRYCODE:
+      attributes:
+        id: SYS_RNWF_COUNTRYCODE
+      children:
+      - children:
+        - attributes:
+            id: visible
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            value: USA
+          type: User
+        type: Values
+      type: Combo
+    SYS_RNWF_HOST:
+      attributes:
+        id: SYS_RNWF_HOST
+      children:
+      - children:
+        - attributes:
+            value: SAME54X-pro
+          type: User
+        type: Values
+      type: Combo
+    SYS_RNWF_INF_SYSTEM_HEADER:
+      attributes:
+        id: SYS_RNWF_INF_SYSTEM_HEADER
+      children:
+      - children:
+        - attributes:
+            id: enabled
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      type: File
+    SYS_RNWF_INF_SYSTEM_SOURCE:
+      attributes:
+        id: SYS_RNWF_INF_SYSTEM_SOURCE
+      children:
+      - children:
+        - attributes:
+            id: enabled
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      type: File
+    SYS_RNWF_INTERFACE_HEADER:
+      attributes:
+        id: SYS_RNWF_INTERFACE_HEADER
+      children:
+      - children:
+        - attributes:
+            id: enabled
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      type: File
+    SYS_RNWF_INTERFACE_MODE:
+      attributes:
+        id: SYS_RNWF_INTERFACE_MODE
+      children:
+      - children:
+        - attributes:
+            id: visible
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            id: sysWifiRNWF
+            value: UART
+          type: Dynamic
+        type: Values
+      type: Combo
+    SYS_RNWF_INTERFACE_SOURCE:
+      attributes:
+        id: SYS_RNWF_INTERFACE_SOURCE
+      children:
+      - children:
+        - attributes:
+            id: enabled
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      type: File
+    SYS_RNWF_MQTT_ENABLE:
+      attributes:
+        id: SYS_RNWF_MQTT_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: sysMqttRNWF
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    SYS_RNWF_NET_SER_ENABLE:
+      attributes:
+        id: SYS_RNWF_NET_SER_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: sysNetRNWF
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    SYS_RNWF_WIFI_CONFIGURATION_H:
+      attributes:
+        id: SYS_RNWF_WIFI_CONFIGURATION_H
+      children:
+      - children:
+        - attributes:
+            id: enabled
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      type: File
+    SYS_RNWF_WIFI_DEVICE:
+      attributes:
+        id: SYS_RNWF_WIFI_DEVICE
+      children:
+      - children:
+        - attributes:
+            value: RNWF02
+          type: User
+        type: Values
+      type: Combo
+    SYS_RNWF_WIFI_HEADER:
+      attributes:
+        id: SYS_RNWF_WIFI_HEADER
+      children:
+      - children:
+        - attributes:
+            id: enabled
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      type: File
+    SYS_RNWF_WIFI_SOURCE:
+      attributes:
+        id: SYS_RNWF_WIFI_SOURCE
+      children:
+      - children:
+        - attributes:
+            id: enabled
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      type: File
+  userData: {}
