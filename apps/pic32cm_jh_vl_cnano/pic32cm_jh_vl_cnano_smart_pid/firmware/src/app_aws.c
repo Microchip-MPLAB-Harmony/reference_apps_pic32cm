@@ -53,14 +53,12 @@
 // *****************************************************************************
 
 #include "app_aws.h"
-#include "app_pid.h" //remove and check once
 #include <stdio.h>
 #include "system/wifi/sys_rnwf_wifi_service.h"
 #include "system/inf/sys_rnwf_interface.h"
 #include "system/net/sys_rnwf_net_service.h"
 #include "system/sys_rnwf_system_service.h"
 #include "system/mqtt/sys_rnwf_mqtt_service.h"
-#include "device.h" // remove and check once
 
 // *****************************************************************************
 // *****************************************************************************
@@ -491,7 +489,6 @@ void APP_AWS_Tasks ( void )
         /* The default state should never be executed. */
         default:
         {
-            /* TODO: Handle error in application's state machine. */
             break;
         }
     }

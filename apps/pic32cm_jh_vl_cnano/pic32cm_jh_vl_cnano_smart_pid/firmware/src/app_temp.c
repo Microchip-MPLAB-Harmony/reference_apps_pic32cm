@@ -83,9 +83,6 @@ APP_TEMP_DATA app_tempData;
 // *****************************************************************************
 // *****************************************************************************
 
-/* TODO:  Add any necessary callback functions.
-*/
-
 static void APP_TEMP_I2C_Event_Handler ( 
                                         DRV_I2C_TRANSFER_EVENT event,
                                         DRV_I2C_TRANSFER_HANDLE transferHandle,
@@ -120,10 +117,6 @@ static void APP_TEMP_HTU21D_TimerCallback()
 // Section: Application Local Functions
 // *****************************************************************************
 // *****************************************************************************
-
-
-/* TODO:  Add any necessary local functions.
-*/
 
 static void APP_TEMP_DelayMS (int ms)
 {

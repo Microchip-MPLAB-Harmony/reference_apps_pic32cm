@@ -92,7 +92,6 @@ typedef enum
     APP_PID_STATE_INIT=0,
     APP_PID_STATE_STATUS,        
     APP_PID_STATE_SERVICE_TASKS,
-    /* TODO: Define states used by the application state machine. */
 
 } APP_PID_STATES;
 
