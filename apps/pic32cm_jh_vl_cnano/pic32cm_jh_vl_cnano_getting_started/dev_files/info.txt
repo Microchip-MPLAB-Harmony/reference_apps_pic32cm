@@ -1,0 +1,2 @@
+1. The source files in this (dev_files) folder are provided for creating the demo application from scratch using the training module "Getting Started with Harmony v3 Peripheral Libraries on PIC32CM JH (Cortex®-M0+) MCUs" on Microchip Developer Help ( https://developerhelp.microchip.com/xwiki/bin/view/Development/software-tools/harmony/ ).
+2. These are not needed while building or running the demo application out of box.
