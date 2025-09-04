@@ -16,7 +16,7 @@
     machines of all modules in the system
  *******************************************************************************/
 /*******************************************************************************
-* Copyright (C) 2024 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2025 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -51,108 +51,17 @@
 #include <string.h>
 #include "definitions.h"                // SYS function prototypes
 
-/* RTC Time period match values for input clock of 1 KHz */
-#define PERIOD_500MS                            512
-#define PERIOD_1S                               1024
-#define PERIOD_2S                               2048
-#define PERIOD_4S                               4096
 
-typedef enum
-{
-    LED_SAMPLING_RATE_500MS = 0,
-    LED_SAMPLING_RATE_1S = 1,
-    LED_SAMPLING_RATE_2S = 2,
-    LED_SAMPLING_RATE_4S = 3,
-} LED_SAMPLING_RATE;
-static LED_SAMPLING_RATE ledSampleRate = LED_SAMPLING_RATE_500MS;
-static const char timeouts[4][20] = {"500 milliSeconds", "1 Second",  "2 Seconds",  "4 Seconds"};
 
-static volatile bool isRTCExpired = false;
-static volatile bool changeLedSamplingRate = false;
-static volatile bool isUSARTTxComplete = true;
-static uint8_t uartTxBuffer[100] = {0};
-
-static void EIC_User_Handler(uintptr_t context)
-{
-    changeLedSamplingRate = true;
-}
-
-static void rtcEventHandler (RTC_TIMER32_INT_MASK intCause, uintptr_t context)
-{
-    if (intCause & RTC_MODE0_INTENSET_CMP0_Msk)
-    {
-        isRTCExpired    = true;
-    }
-}
-
-static void usartDmaChannelHandler(DMAC_TRANSFER_EVENT event, uintptr_t contextHandle)
-{
-    if (event == DMAC_TRANSFER_EVENT_COMPLETE)
-    {
-        isUSARTTxComplete = true;
-    }
-}
 
 int main ( void )
 {
-    uint8_t uartLocalTxBuffer[100] = {0};
+
 
     /* Initialize all modules */
     SYS_Initialize ( NULL );
-    DMAC_ChannelCallbackRegister(DMAC_CHANNEL_0, usartDmaChannelHandler, 0);
-    EIC_CallbackRegister(EIC_PIN_0, EIC_User_Handler, 0);
-    RTC_Timer32CallbackRegister(rtcEventHandler, 0);
+    
 
-    sprintf((char*)uartTxBuffer, "Toggling LED at 500 milliseconds rate \r\n");
-    RTC_Timer32Start();
-
-    while ( true )
-    {
-        if ((isRTCExpired == true) && (true == isUSARTTxComplete))
-        {
-            isRTCExpired = false;
-            isUSARTTxComplete = false;
-            LED_Toggle();
-            DMAC_ChannelTransfer(DMAC_CHANNEL_0, uartTxBuffer, \
-                    (const void *)&(SERCOM1_REGS->USART_INT.SERCOM_DATA), \
-                    strlen((const char*)uartTxBuffer));
-        }
-        /* Maintain state machines of all polled MPLAB Harmony modules. */
-        if(changeLedSamplingRate == true)
-        {
-            changeLedSamplingRate = false;
-            if(ledSampleRate == LED_SAMPLING_RATE_500MS)
-            {
-                ledSampleRate = LED_SAMPLING_RATE_1S;
-                RTC_Timer32CompareSet(PERIOD_1S);
-            }
-            else if(ledSampleRate == LED_SAMPLING_RATE_1S)
-            {
-                ledSampleRate = LED_SAMPLING_RATE_2S;
-                RTC_Timer32CompareSet(PERIOD_2S);
-            }
-            else if(ledSampleRate == LED_SAMPLING_RATE_2S)
-            {
-                ledSampleRate = LED_SAMPLING_RATE_4S;
-                RTC_Timer32CompareSet(PERIOD_4S);
-            }
-            else if(ledSampleRate == LED_SAMPLING_RATE_4S)
-            {
-               ledSampleRate = LED_SAMPLING_RATE_500MS;
-               RTC_Timer32CompareSet(PERIOD_500MS);
-            }
-            else
-            {
-                ;
-            }
-            RTC_Timer32CounterSet(0);
-            sprintf((char*)uartLocalTxBuffer, "LED Toggling rate is changed to %s\r\n", &timeouts[(uint8_t)ledSampleRate][0]);
-            DMAC_ChannelTransfer(DMAC_CHANNEL_0, uartLocalTxBuffer, \
-                    (const void *)&(SERCOM1_REGS->USART_INT.SERCOM_DATA), \
-                    strlen((const char*)uartLocalTxBuffer));
-            sprintf((char*)uartTxBuffer, "Toggling LED at %s rate \r\n", &timeouts[(uint8_t)ledSampleRate][0]);
-        }
-    }
 
     /* Execution should not come here during normal operation */
 
