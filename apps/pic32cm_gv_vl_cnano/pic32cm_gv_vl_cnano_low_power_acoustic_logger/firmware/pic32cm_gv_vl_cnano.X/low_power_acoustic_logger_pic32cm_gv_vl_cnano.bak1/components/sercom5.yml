@@ -1,0 +1,136 @@
+configVersion: 1.0.0
+componentName: sercom5
+coreVersion: 5.8.2
+device: PIC32CM3204GV00064
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: sercom5
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.22.2
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: sercom5
+          x: '35'
+          y: '373'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    I2CM_BAUD:
+      attributes:
+        id: I2CM_BAUD
+      children:
+      - children:
+        - attributes:
+            id: sercom5
+            value: '232'
+          type: Dynamic
+        type: Values
+      type: Hex
+    RECEIVE_DATA_REGISTER:
+      attributes:
+        id: RECEIVE_DATA_REGISTER
+      children:
+      - children:
+        - attributes:
+            id: sercom5
+            value: '&(SERCOM5_REGS->SPIM.SERCOM_DATA)'
+          type: Dynamic
+        type: Values
+      type: String
+    SERCOM_MODE:
+      attributes:
+        id: SERCOM_MODE
+      children:
+      - children:
+        - attributes:
+            value: '1'
+          type: User
+        type: Values
+      type: KeyValueSet
+    SPI_BAUD_REG_VALUE:
+      attributes:
+        id: SPI_BAUD_REG_VALUE
+      children:
+      - children:
+        - attributes:
+            id: sercom5
+            value: '23'
+          type: Dynamic
+        type: Values
+      type: Integer
+    SPI_DIPO:
+      attributes:
+        id: SPI_DIPO
+      children:
+      - children:
+        - attributes:
+            id: visible
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            value: '2'
+          type: User
+        type: Values
+      type: KeyValueSet
+    TRANSMIT_DATA_REGISTER:
+      attributes:
+        id: TRANSMIT_DATA_REGISTER
+      children:
+      - children:
+        - attributes:
+            id: sercom5
+            value: '&(SERCOM5_REGS->SPIM.SERCOM_DATA)'
+          type: Dynamic
+        type: Values
+      type: String
+    USART_BAUD_VALUE:
+      attributes:
+        id: USART_BAUD_VALUE
+      children:
+      - children:
+        - attributes:
+            id: sercom5
+            value: '63019'
+          type: Dynamic
+        type: Values
+      type: Integer
+    USART_LIN_MASTER_SUPPORTED:
+      attributes:
+        id: USART_LIN_MASTER_SUPPORTED
+      children:
+      - children:
+        - attributes:
+            id: sercom5
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    USART_USE_FRACTIONAL_BAUD:
+      attributes:
+        id: USART_USE_FRACTIONAL_BAUD
+      children:
+      - children:
+        - attributes:
+            id: sercom5
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+  userData: {}

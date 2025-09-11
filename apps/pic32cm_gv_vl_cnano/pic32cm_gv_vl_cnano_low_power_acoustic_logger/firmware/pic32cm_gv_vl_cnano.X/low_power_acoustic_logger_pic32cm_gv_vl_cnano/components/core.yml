@@ -11,7 +11,7 @@ dependency:
 - dependencyPackage: ''
   name: csp
   type: package
-  version: v3.22.2
+  version: v3.22.7
 customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
 data:
   attachments: {}
@@ -173,9 +173,6 @@ data:
             id: core
             value: 'true'
           type: Dynamic
-        - attributes:
-            value: 'false'
-          type: User
         type: Values
       type: Boolean
     CONF_CLOCK_OSC32K_ENABLE:
@@ -323,7 +320,7 @@ data:
             value: '5'
           type: Dynamic
         - attributes:
-            value: '2'
+            value: '4'
           type: User
         type: Values
       type: KeyValueSet
@@ -354,7 +351,7 @@ data:
       children:
       - children:
         - attributes:
-            value: '5'
+            value: '3'
           type: User
         type: Values
       type: KeyValueSet
@@ -434,7 +431,7 @@ data:
             value: 'true'
           type: Dynamic
         - attributes:
-            value: 'true'
+            value: 'false'
           type: User
         type: Values
       type: Boolean
@@ -445,7 +442,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '1024'
+            value: '0'
           type: Dynamic
         type: Values
       type: Integer
@@ -980,7 +977,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '0'
+            value: '8000000'
           type: Dynamic
         type: Values
       type: Integer
@@ -2559,7 +2556,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '1024'
+            value: '0'
           type: Dynamic
         type: Values
       type: Integer
@@ -2597,43 +2594,13 @@ data:
           type: User
         type: Values
       type: Integer
-    CONFIG_CLOCK_OSC8M_PRES:
-      attributes:
-        id: CONFIG_CLOCK_OSC8M_PRES
-      children:
-      - children:
-        - attributes:
-            value: '1'
-          type: User
-        type: Values
-      type: KeyValueSet
-    CONFIG_CLOCK_OSC8M_ONDEMAND:
-      attributes:
-        id: CONFIG_CLOCK_OSC8M_ONDEMAND
-      children:
-      - children:
-        - attributes:
-            value: '1'
-          type: User
-        type: Values
-      type: KeyValueSet
-    CONFIG_CLOCK_OSC8M_RUNSTDY:
-      attributes:
-        id: CONFIG_CLOCK_OSC8M_RUNSTDY
-      children:
-      - children:
-        - attributes:
-            value: 'true'
-          type: User
-        type: Values
-      type: Boolean
     GCLK_ID_7_CHEN:
       attributes:
         id: GCLK_ID_7_CHEN
       children:
       - children:
         - attributes:
-            value: 'true'
+            value: 'false'
           type: User
         type: Values
       type: Boolean
@@ -3043,30 +3010,8 @@ data:
       children:
       - children:
         - attributes:
-            value: 'true'
+            value: 'false'
           type: User
-        type: Values
-      type: Boolean
-    SysTick_INTERRUPT_ENABLE:
-      attributes:
-        id: SysTick_INTERRUPT_ENABLE
-      children:
-      - children:
-        - attributes:
-            id: core
-            value: 'true'
-          type: Dynamic
-        type: Values
-      type: Boolean
-    SysTick_INTERRUPT_HANDLER_LOCK:
-      attributes:
-        id: SysTick_INTERRUPT_HANDLER_LOCK
-      children:
-      - children:
-        - attributes:
-            id: core
-            value: 'true'
-          type: Dynamic
         type: Values
       type: Boolean
     PIN_17_MODE:
@@ -3186,6 +3131,82 @@ data:
           type: User
         type: Values
       type: String
+    PORT_GROUP_0_PINCFG4:
+      attributes:
+        id: PORT_GROUP_0_PINCFG4
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0x0'
+          type: Dynamic
+        type: Values
+      type: String
+    PORT_GROUP_0_PIN_4_USED:
+      attributes:
+        id: PORT_GROUP_0_PIN_4_USED
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    PORT_GROUP_0_PAD_4:
+      attributes:
+        id: PORT_GROUP_0_PAD_4
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: PA04
+          type: Dynamic
+        type: Values
+      type: String
+    PIN_13_PERIPHERAL_FUNCTION:
+      attributes:
+        id: PIN_13_PERIPHERAL_FUNCTION
+      children:
+      - children:
+        - attributes:
+            value: ''
+          type: User
+        type: Values
+      type: String
+    XOSC_FREQ:
+      attributes:
+        id: XOSC_FREQ
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    SysTick_INTERRUPT_ENABLE:
+      attributes:
+        id: SysTick_INTERRUPT_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    SysTick_INTERRUPT_HANDLER_LOCK:
+      attributes:
+        id: SysTick_INTERRUPT_HANDLER_LOCK
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
   userData:
     children:
     - attributes:

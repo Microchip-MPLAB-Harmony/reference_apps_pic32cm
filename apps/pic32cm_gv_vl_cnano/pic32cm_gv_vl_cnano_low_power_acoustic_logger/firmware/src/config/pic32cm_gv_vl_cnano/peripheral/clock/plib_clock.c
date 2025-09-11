@@ -45,6 +45,13 @@
 static void SYSCTRL_Initialize(void)
 {
 
+    /* Configure 8MHz Oscillator */
+    SYSCTRL_REGS->SYSCTRL_OSC8M = (SYSCTRL_REGS->SYSCTRL_OSC8M & (SYSCTRL_OSC8M_CALIB_Msk | SYSCTRL_OSC8M_FRANGE_Msk)) | SYSCTRL_OSC8M_ENABLE_Msk | SYSCTRL_OSC8M_PRESC(0x0U) ;
+
+    while((SYSCTRL_REGS->SYSCTRL_PCLKSR & SYSCTRL_PCLKSR_OSC8MRDY_Msk) != SYSCTRL_PCLKSR_OSC8MRDY_Msk)
+    {
+        /* Waiting for the OSC8M Ready state */
+    }
 
     /****************** XOSC32K initialization  ******************************/
 
@@ -92,7 +99,7 @@ static void DFLL_Initialize(void)
 static void GCLK0_Initialize(void)
 {
 
-    GCLK_REGS->GCLK_GENCTRL = GCLK_GENCTRL_SRC(7U) | GCLK_GENCTRL_RUNSTDBY_Msk | GCLK_GENCTRL_GENEN_Msk | GCLK_GENCTRL_ID(0U);
+    GCLK_REGS->GCLK_GENCTRL = GCLK_GENCTRL_SRC(7U) | GCLK_GENCTRL_GENEN_Msk | GCLK_GENCTRL_ID(0U);
 
     while((GCLK_REGS->GCLK_STATUS & GCLK_STATUS_SYNCBUSY_Msk) == GCLK_STATUS_SYNCBUSY_Msk)
     {
@@ -103,7 +110,7 @@ static void GCLK0_Initialize(void)
 
 static void GCLK1_Initialize(void)
 {
-    GCLK_REGS->GCLK_GENCTRL = GCLK_GENCTRL_SRC(3U) | GCLK_GENCTRL_RUNSTDBY_Msk | GCLK_GENCTRL_GENEN_Msk | GCLK_GENCTRL_ID(1U);
+    GCLK_REGS->GCLK_GENCTRL = GCLK_GENCTRL_SRC(5U) | GCLK_GENCTRL_RUNSTDBY_Msk | GCLK_GENCTRL_GENEN_Msk | GCLK_GENCTRL_ID(1U);
 
     GCLK_REGS->GCLK_GENDIV = GCLK_GENDIV_DIV(32U) | GCLK_GENDIV_ID(1U);
     while((GCLK_REGS->GCLK_STATUS & GCLK_STATUS_SYNCBUSY_Msk) == GCLK_STATUS_SYNCBUSY_Msk)
@@ -115,7 +122,7 @@ static void GCLK1_Initialize(void)
 
 static void GCLK2_Initialize(void)
 {
-    GCLK_REGS->GCLK_GENCTRL = GCLK_GENCTRL_SRC(5U) | GCLK_GENCTRL_RUNSTDBY_Msk | GCLK_GENCTRL_GENEN_Msk | GCLK_GENCTRL_ID(2U);
+    GCLK_REGS->GCLK_GENCTRL = GCLK_GENCTRL_SRC(3U) | GCLK_GENCTRL_RUNSTDBY_Msk | GCLK_GENCTRL_GENEN_Msk | GCLK_GENCTRL_ID(2U);
 
     while((GCLK_REGS->GCLK_STATUS & GCLK_STATUS_SYNCBUSY_Msk) == GCLK_STATUS_SYNCBUSY_Msk)
     {
@@ -141,8 +148,6 @@ void CLOCK_Initialize (void)
     GCLK_REGS->GCLK_CLKCTRL = GCLK_CLKCTRL_ID(2U) | GCLK_CLKCTRL_GEN(0x1U)  | GCLK_CLKCTRL_CLKEN_Msk;
     /* Selection of the Generator and write Lock for EVSYS_0 */
     GCLK_REGS->GCLK_CLKCTRL = GCLK_CLKCTRL_ID(4U) | GCLK_CLKCTRL_GEN(0x1U)  | GCLK_CLKCTRL_CLKEN_Msk;
-    /* Selection of the Generator and write Lock for EVSYS_3 */
-    GCLK_REGS->GCLK_CLKCTRL = GCLK_CLKCTRL_ID(7U) | GCLK_CLKCTRL_GEN(0x1U)  | GCLK_CLKCTRL_CLKEN_Msk;
     /* Selection of the Generator and write Lock for SERCOM2_CORE */
     GCLK_REGS->GCLK_CLKCTRL = GCLK_CLKCTRL_ID(15U) | GCLK_CLKCTRL_GEN(0x0U)  | GCLK_CLKCTRL_CLKEN_Msk;
     /* Selection of the Generator and write Lock for SERCOM5_CORE */
@@ -167,8 +172,6 @@ void CLOCK_Initialize (void)
     /* Configure the APBC Bridge Clocks */
     PM_REGS->PM_APBCMASK = 0xb0192U;
 
-    /*Disable RC oscillator*/
-    SYSCTRL_REGS->SYSCTRL_OSC8M = 0x0U;
 
 
 }

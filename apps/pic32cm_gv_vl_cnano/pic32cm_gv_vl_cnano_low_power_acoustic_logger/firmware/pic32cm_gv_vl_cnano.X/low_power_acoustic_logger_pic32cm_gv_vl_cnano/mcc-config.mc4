@@ -28,7 +28,7 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\pic32cm_gv_vl_cnano\configuration.h
   hash: ad07aa84145794be7986923cd90ecda1dc8832a9fdfc77b614e5535cbd7394bc
 - file: ..\src\config\pic32cm_gv_vl_cnano\definitions.h
-  hash: 2aee30f1c8dc8621af89ab5db023b5686319987060f14df4f7d26fb2c6bb0b8b
+  hash: 9f36c40c48a65bc2923a07d12066abc482330d8483dbb6dd72b5c4c97bba1ff4
 - file: ..\src\config\pic32cm_gv_vl_cnano\device.h
   hash: 0646c4898d4228be017060c9b2d06d435dcadfc3e140a4ead235ba8c11d2ef34
 - file: ..\src\config\pic32cm_gv_vl_cnano\device_cache.h
@@ -42,9 +42,9 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\pic32cm_gv_vl_cnano\exceptions.c
   hash: b0b65c30aa1f7a01ef7be6c1628c331a5ca3eae7dc3bd76ebe647703b76f432d
 - file: ..\src\config\pic32cm_gv_vl_cnano\initialization.c
-  hash: 9f21ab32298d70e329dd97154d119ab39aa457977e913dfbff02d942e40d58ee
+  hash: f688b7d7c559187a0307dbbc47882f0231337391afb7401658b470f8b761dde9
 - file: ..\src\config\pic32cm_gv_vl_cnano\interrupts.c
-  hash: bedd92ebf66c04af918e5796319770c51d0f8b9aec14670d291f155044d9da67
+  hash: 4c7c135585a4ea82ff229857786ad765d20e922d4c723e4e71633cb488464755
 - file: ..\src\config\pic32cm_gv_vl_cnano\interrupts.h
   hash: c933708095fd09069bc613abdc79102eceb4cf681bc30ea9d26aeea785274c50
 - file: ..\src\config\pic32cm_gv_vl_cnano\libc_syscalls.c
@@ -60,7 +60,7 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\pic32cm_gv_vl_cnano\peripheral\ac\plib_ac.h
   hash: db0f863b2dbb0142e4d89e32900e9c39a385bc8e08a4d0ea13618247dfaefa0e
 - file: ..\src\config\pic32cm_gv_vl_cnano\peripheral\clock\plib_clock.c
-  hash: 61b3261ef448ce4d664113c7874548fb94c78077d94594a53c16aa50334247de
+  hash: 8243e9c439ab725da9c1301b6bbd41ba9dc0c95f5d1aa74f33e9cb6deca88052
 - file: ..\src\config\pic32cm_gv_vl_cnano\peripheral\clock\plib_clock.h
   hash: 99bff84fe4a99e6423e2d28f881600300ece34a505bb89f3b4eb61154dbeeb10
 - file: ..\src\config\pic32cm_gv_vl_cnano\peripheral\evsys\plib_evsys.c
@@ -168,19 +168,39 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\pic32cm_gv_vl_cnano\touch\qtm_touch_key_0x0002_api.h
   hash: 4840f9cd8def73a029c2090d101548329c92bdf13bd19410029aab45234b42e2
 - file: ..\src\config\pic32cm_gv_vl_cnano\touch\touch.c
-  hash: 17a6baddf59d847f68beb48114f7f52a4f116bc4b3544405dc7a8961b776b1c0
+  hash: a3cd009a1a7c0607da70aa5794ae4ba556976c46ed52e7a8cd7a9a1008f381cc
 - file: ..\src\config\pic32cm_gv_vl_cnano\touch\touch.h
-  hash: 800e21ebc4787ec4804187c94c1fc373eee8792bed8db6f6d9bb84266743e03c
+  hash: 428b25083f295c3c12e501cf13ddee08b22094ff2a1352677bd95828d3214929
 - file: ..\src\config\pic32cm_gv_vl_cnano\touch\touch_api_ptc.h
-  hash: 206ff0f7ce22dbe839c1de3132c29162486fa18b239489a941191c81551e9b02
+  hash: 090c3a9431d874b23ad3168e2c642dff87ecf676f623483c71d3af35a5bb8aec
 - file: ..\src\config\pic32cm_gv_vl_cnano\touch\touch_example.c
-  hash: 21b88a5d3be3b8cfc1bf85d1587813d4b3d4efbf6a99aa24d985a9f94e34ea89
+  hash: 663f6a2b9a49549e69052242b7dade8214ad5e70c8b89b9a540ddf0655a1ad37
 - file: ..\src\config\pic32cm_gv_vl_cnano\touch\touch_example.h
-  hash: acf3592a052fa3e243dc2965b70e2d66762cb51f84c551ff58120a68d5b06454
+  hash: 59989902d4630e2ddf0822607a5c4485d4a31fbfa1ff2bc4a2b7aaa6656f58bb
 - file: ..\src\config\pic32cm_gv_vl_cnano\user.h
   hash: 451e0878e9fcf6cf9fab046c1452ea662757988346c7f39e6bc98478ca25f995
 - file: ..\src\main.c
   hash: d3c233d419e6304bfacbafc18cc68c0f5c26e365f23b20ea40ccfac458f664c5
+- file: ..\src\packs\CMSIS\CMSIS\Core\Include\cachel1_armv7.h
+  hash: 6cdb5b324f2fd1bb5b2f47298ba6e6777e735d7cad3bb8d942cd36e2c6e65328
+- file: ..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_armcc.h
+  hash: d074534d7106cec83474b3b0a897bd2553e1a8895ecbd54f4f4fb25928066eee
+- file: ..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_armclang.h
+  hash: 11b39b96ddc1125124762b3423a77b90dd40ea5b4582a3513830245046b24311
+- file: ..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_armclang_ltm.h
+  hash: 8621969ea669a1b230ff2125a760ef66d575c48cb45e9e457f768909abcbda46
+- file: ..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_compiler.h
+  hash: 869640702d811c4c63abb52206715c891a93fd03be954df5ad40d378355af3d6
+- file: ..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_gcc.h
+  hash: 3d4e265d0aa42f888385ccf073666e6ebb5ec9f834760b9da27c474e177f708d
+- file: ..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_iccarm.h
+  hash: f28119adbc81fb0e3c957c9aebe8fb423ad93634e76ead3caa2b0818d2e123ae
+- file: ..\src\packs\CMSIS\CMSIS\Core\Include\cmsis_version.h
+  hash: 8cda7ac3ff6f0eb5e83c4fe613dd195151b24da54167f5c3c007e599a03f1edc
+- file: ..\src\packs\CMSIS\CMSIS\Core\Include\core_cm0plus.h
+  hash: a19e24c136145b4c72630d0ab7c83a7aef010f3ba165e34c56a05057a2d9fed5
+- file: ..\src\packs\CMSIS\CMSIS\Core\Include\mpu_armv7.h
+  hash: de1b5eb9ed566527b66dc06f4ecb6a43ab6800f7dac47e87c9cb42984dca41bb
 - file: ..\src\packs\PIC32CM3204GV00064_DFP\component\ac.h
   hash: 17a9ea5ab64d01363f08265b5b2f0f21fcafccaa834b5f13a58345e5821f4e72
 - file: ..\src\packs\PIC32CM3204GV00064_DFP\component\adc.h
