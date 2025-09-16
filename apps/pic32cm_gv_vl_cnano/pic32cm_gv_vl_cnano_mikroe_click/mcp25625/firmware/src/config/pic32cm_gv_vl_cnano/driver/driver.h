@@ -1,20 +1,28 @@
 /*******************************************************************************
-  System Exceptions File
+  Driver Layer Interface Header
+
+  Company:
+    Microchip Technology Inc.
 
   File Name:
-    exceptions.c
+    driver.h
 
   Summary:
-    This file contains a function which overrides the default _weak_ exception
-    handlers provided by the interrupt.c file.
+    Driver layer data types and definitions.
 
   Description:
-    This file redefines the default _weak_  exception handler with a more debug
-    friendly one. If an unexpected exception occurs the code will stop in a
-    while(1) loop.
- *******************************************************************************/
+    This file defines the common macros and definitions for the driver layer
+    modules.
 
-// DOM-IGNORE-BEGIN
+  Remarks:
+    The parent directory to the "driver" directory should be added to the
+    compiler's search path for header files such that the following include
+    statement will successfully include this file.
+
+    #include "driver/driver.h"
+  *************************************************************************/
+
+//DOM-IGNORE-BEGIN
 /*******************************************************************************
 * Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
 *
@@ -36,55 +44,24 @@
 * FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
-*******************************************************************************/
-// DOM-IGNORE-END
+ *******************************************************************************/
+//DOM-IGNORE-END
+
+#ifndef DRIVER_H
+#define DRIVER_H
+
 
 // *****************************************************************************
 // *****************************************************************************
 // Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
-    #include "configuration.h"
-#include "interrupts.h"
-#include "definitions.h"
 
- 
-
-// *****************************************************************************
-// *****************************************************************************
-// Section: Exception Handling Routine
-// *****************************************************************************
-// *****************************************************************************
-/* MISRAC 2012 deviation block start */
-/* MISRA C-2012 Rule 8.6 might be violated here if the users provide a strong
-   implementations to these weak handler functions. Deviation record ID -  H3_MISRAC_2012_R_8_6_DR_1
-*/
+#include "driver/driver_common.h"
 
 
-/* Brief default interrupt handlers for core IRQs.*/
-void __attribute__((noreturn, weak)) NonMaskableInt_Handler(void)
-{
-#if defined(__DEBUG) || defined(__DEBUG_D) && defined(__XC32)
-    __builtin_software_breakpoint();
-#endif
-    while (true)
-    {
-    }
-}
- 
-void __attribute__((noreturn, weak)) HardFault_Handler(void)
-{
-#if defined(__DEBUG) || defined(__DEBUG_D) && defined(__XC32)
-   __builtin_software_breakpoint();
-#endif
-   while (true)
-   {
-   }
-}
-
- 
-/* MISRAC 2012 deviation block end for rule 8.6 */
-
+#endif // DRIVER_H
 /*******************************************************************************
  End of File
- */
+*/
+

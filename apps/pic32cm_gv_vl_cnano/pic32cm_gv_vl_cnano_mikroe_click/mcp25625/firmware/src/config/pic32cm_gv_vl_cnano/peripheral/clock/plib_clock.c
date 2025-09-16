@@ -44,13 +44,6 @@
 
 static void SYSCTRL_Initialize(void)
 {
-    /* Configure External Oscillator */
-    SYSCTRL_REGS->SYSCTRL_XOSC = SYSCTRL_XOSC_STARTUP(0U) | SYSCTRL_XOSC_GAIN(2U) | SYSCTRL_XOSC_XTALEN_Msk | SYSCTRL_XOSC_ENABLE_Msk;
-    while((SYSCTRL_REGS->SYSCTRL_PCLKSR & SYSCTRL_PCLKSR_XOSCRDY_Msk) != SYSCTRL_PCLKSR_XOSCRDY_Msk)
-    {
-        /* Waiting for the XOSC Ready state */
-    }
-
 
     /* Configure 8MHz Oscillator */
     SYSCTRL_REGS->SYSCTRL_OSC8M = (SYSCTRL_REGS->SYSCTRL_OSC8M & (SYSCTRL_OSC8M_CALIB_Msk | SYSCTRL_OSC8M_FRANGE_Msk)) | SYSCTRL_OSC8M_ENABLE_Msk | SYSCTRL_OSC8M_PRESC(0x0U) ;
@@ -125,17 +118,6 @@ static void GCLK1_Initialize(void)
 }
 
 
-static void GCLK2_Initialize(void)
-{
-    GCLK_REGS->GCLK_GENCTRL = GCLK_GENCTRL_SRC(3U) | GCLK_GENCTRL_GENEN_Msk | GCLK_GENCTRL_ID(2U);
-
-    while((GCLK_REGS->GCLK_STATUS & GCLK_STATUS_SYNCBUSY_Msk) == GCLK_STATUS_SYNCBUSY_Msk)
-    {
-        /* wait for the Generator 2 synchronization */
-    }
-}
-
-
 
 
 void CLOCK_Initialize (void)
@@ -144,7 +126,6 @@ void CLOCK_Initialize (void)
     SYSCTRL_Initialize();
 
     GCLK1_Initialize();
-    GCLK2_Initialize();
     DFLL_Initialize();
     GCLK0_Initialize();
 

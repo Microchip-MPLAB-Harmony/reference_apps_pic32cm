@@ -11,7 +11,7 @@ dependency:
 - dependencyPackage: ''
   name: csp
   type: package
-  version: v3.22.6
+  version: v3.23.0
 customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
 data:
   attachments: {}
@@ -22,8 +22,8 @@ data:
     - children:
       - attributes:
           id: sercom5
-          x: '465'
-          y: '265'
+          x: '445'
+          y: '241'
         type: ElementPosition
       type: ElementPositions
     type: ComponentGraph

@@ -76,7 +76,7 @@ void MCP25625_example(void)
 
     /* Display example title */
     printf ("\n\n\r-----------------------------------------------------------");
-    printf ("\n\r         MCP25625 Click Application on PIC32CM GV VL CNano         ");
+    printf ("\n\r     MCP25625 Click Application on PIC32CM GV VL CNano          ");
     printf ("\n\r-----------------------------------------------------------");
 
     SYSTICK_TimerStart();

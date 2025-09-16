@@ -1,21 +1,23 @@
 /*******************************************************************************
-  System Exceptions File
+  Ports System Service Mapping File
+
+  Company:
+    Microchip Technology Inc.
 
   File Name:
-    exceptions.c
+    sys_ports_mapping.h
 
   Summary:
-    This file contains a function which overrides the default _weak_ exception
-    handlers provided by the interrupt.c file.
+    Ports System Service mapping file.
 
   Description:
-    This file redefines the default _weak_  exception handler with a more debug
-    friendly one. If an unexpected exception occurs the code will stop in a
-    while(1) loop.
- *******************************************************************************/
+    This header file contains the mapping of the APIs defined in the API header
+    to either the function implementations or macro implementation or the
+    specific variant implementation.
+*******************************************************************************/
 
-// DOM-IGNORE-BEGIN
-/*******************************************************************************
+//DOM-IGNORE-BEGIN
+/******************************************************************************
 * Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
@@ -37,54 +39,64 @@
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
-// DOM-IGNORE-END
+//DOM-IGNORE-END
+
+#ifndef SYS_PORTS_MAPPING_H
+#define SYS_PORTS_MAPPING_H
+
+
+
+#include "peripheral/port/plib_port.h"
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: Included Files
+// Section: PORTS System Service Mapping
 // *****************************************************************************
 // *****************************************************************************
-    #include "configuration.h"
-#include "interrupts.h"
-#include "definitions.h"
-
- 
-
-// *****************************************************************************
-// *****************************************************************************
-// Section: Exception Handling Routine
-// *****************************************************************************
-// *****************************************************************************
-/* MISRAC 2012 deviation block start */
-/* MISRA C-2012 Rule 8.6 might be violated here if the users provide a strong
-   implementations to these weak handler functions. Deviation record ID -  H3_MISRAC_2012_R_8_6_DR_1
-*/
 
 
-/* Brief default interrupt handlers for core IRQs.*/
-void __attribute__((noreturn, weak)) NonMaskableInt_Handler(void)
+static inline void SYS_PORT_PinWrite(SYS_PORT_PIN pin, bool value)
 {
-#if defined(__DEBUG) || defined(__DEBUG_D) && defined(__XC32)
-    __builtin_software_breakpoint();
-#endif
-    while (true)
-    {
-    }
-}
- 
-void __attribute__((noreturn, weak)) HardFault_Handler(void)
-{
-#if defined(__DEBUG) || defined(__DEBUG_D) && defined(__XC32)
-   __builtin_software_breakpoint();
-#endif
-   while (true)
-   {
-   }
+    PORT_PinWrite((PORT_PIN)pin, value);
 }
 
- 
-/* MISRAC 2012 deviation block end for rule 8.6 */
+static inline bool SYS_PORT_PinRead(SYS_PORT_PIN pin)
+{
+    return(PORT_PinRead((PORT_PIN)pin));
+}
+
+static inline bool SYS_PORT_PinLatchRead(SYS_PORT_PIN pin)
+{
+    return(PORT_PinLatchRead((PORT_PIN)pin));
+}
+
+static inline void SYS_PORT_PinToggle(SYS_PORT_PIN pin)
+{
+    PORT_PinToggle((PORT_PIN)pin);
+}
+
+static inline void SYS_PORT_PinSet(SYS_PORT_PIN pin)
+{
+    PORT_PinSet((PORT_PIN)pin);
+}
+
+static inline void SYS_PORT_PinClear(SYS_PORT_PIN pin)
+{
+    PORT_PinClear((PORT_PIN)pin);
+}
+
+static inline void SYS_PORT_PinInputEnable(SYS_PORT_PIN pin)
+{
+    PORT_PinInputEnable((PORT_PIN)pin);
+}
+
+static inline void SYS_PORT_PinOutputEnable(SYS_PORT_PIN pin)
+{
+    PORT_PinOutputEnable((PORT_PIN)pin);
+}
+
+#endif // SYS_PORTS_MAPPING_H
 
 /*******************************************************************************
  End of File
- */
+*/

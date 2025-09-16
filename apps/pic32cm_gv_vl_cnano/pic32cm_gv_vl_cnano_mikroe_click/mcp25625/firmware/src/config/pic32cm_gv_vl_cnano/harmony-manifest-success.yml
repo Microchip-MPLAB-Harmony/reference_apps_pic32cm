@@ -4,7 +4,7 @@
 
 
 project: mcp25625_click_pic32cm_gv_vl_cnano
-creation_date: 2025-08-19T14:46:41.265+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+creation_date: 2025-09-16T10:45:18.044+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
 operating_system: Windows 11
 mcc_mode: IDE            # [IDE|Standalone|Headless]
 mcc_version: v5.6.2
@@ -14,9 +14,10 @@ harmony_version: v5.6.2
 compiler: XC32 4.60
 
 modules:
-    - {name: "csp", version: "v3.22.6"}
-    - {name: "CMSIS_5", version: "5.9.1-dev"}
-    - {name: "shd", version: "v1.2.0"}
+    - {name: "csp", version: "v3.23.0"}
+    - {name: "core", version: "v3.15.5"}
+    - {name: "CMSIS_5", version: "5.9.0"}
+    - {name: "shd", version: "v1.2.1"}
 
 packs:
     - {name: "PIC32CM-GV_DFP", version: "1.0.7"}

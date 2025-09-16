@@ -11,7 +11,7 @@ dependency:
 - dependencyPackage: ''
   name: csp
   type: package
-  version: v3.22.6
+  version: v3.23.0
 customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
 data:
   attachments: {}
@@ -22,22 +22,12 @@ data:
     - children:
       - attributes:
           id: core
-          x: '160'
-          y: '21'
+          x: '199'
+          y: '26'
         type: ElementPosition
       type: ElementPositions
     type: ComponentGraph
   symbols:
-    CONFIG_CLOCK_XOSC_ENABLE:
-      attributes:
-        id: CONFIG_CLOCK_XOSC_ENABLE
-      children:
-      - children:
-        - attributes:
-            value: 'true'
-          type: User
-        type: Values
-      type: Boolean
     CPU_CLOCK_FREQUENCY:
       attributes:
         id: CPU_CLOCK_FREQUENCY
@@ -137,16 +127,6 @@ data:
           type: Dynamic
         type: Values
       type: KeyValueSet
-    GCLK_2_DIV:
-      attributes:
-        id: GCLK_2_DIV
-      children:
-      - children:
-        - attributes:
-            value: '1'
-          type: User
-        type: Values
-      type: Integer
     GCLK_2_DIVIDER_VALUE:
       attributes:
         id: GCLK_2_DIVIDER_VALUE
@@ -165,20 +145,10 @@ data:
       - children:
         - attributes:
             id: core
-            value: '32768'
+            value: '0'
           type: Dynamic
         type: Values
       type: Integer
-    GCLK_2_SRC:
-      attributes:
-        id: GCLK_2_SRC
-      children:
-      - children:
-        - attributes:
-            value: '3'
-          type: User
-        type: Values
-      type: KeyValueSet
     GCLK_3_FREQ:
       attributes:
         id: GCLK_3_FREQ
@@ -388,16 +358,6 @@ data:
           type: Dynamic
         type: Values
       type: Integer
-    GCLK_INST_NUM2:
-      attributes:
-        id: GCLK_INST_NUM2
-      children:
-      - children:
-        - attributes:
-            value: 'true'
-          type: User
-        type: Values
-      type: Boolean
     GCLK_IO_0_FREQ:
       attributes:
         id: GCLK_IO_0_FREQ
@@ -2295,17 +2255,6 @@ data:
           type: Dynamic
         type: Values
       type: Integer
-    SysTick_INTERRUPT_ENABLE:
-      attributes:
-        id: SysTick_INTERRUPT_ENABLE
-      children:
-      - children:
-        - attributes:
-            id: core
-            value: 'true'
-          type: Dynamic
-        type: Values
-      type: Boolean
     SysTick_INTERRUPT_ENABLE_UPDATE:
       attributes:
         id: SysTick_INTERRUPT_ENABLE_UPDATE
@@ -2314,17 +2263,6 @@ data:
         - attributes:
             id: core
             value: 'false'
-          type: Dynamic
-        type: Values
-      type: Boolean
-    SysTick_INTERRUPT_HANDLER_LOCK:
-      attributes:
-        id: SysTick_INTERRUPT_HANDLER_LOCK
-      children:
-      - children:
-        - attributes:
-            id: core
-            value: 'true'
           type: Dynamic
         type: Values
       type: Boolean
@@ -2367,6 +2305,10 @@ data:
       children:
       - children:
         - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        - attributes:
             value: 'true'
           type: User
         type: Values
@@ -2389,25 +2331,19 @@ data:
       - children:
         - attributes:
             id: core
-            value: '8000000'
+            value: '0'
           type: Dynamic
         type: Values
       type: Integer
-    XOSC_OSCILLATOR_MODE:
-      attributes:
-        id: XOSC_OSCILLATOR_MODE
-      children:
-      - children:
-        - attributes:
-            value: '1'
-          type: User
-        type: Values
-      type: KeyValueSet
     systickEnable:
       attributes:
         id: systickEnable
       children:
       - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
         - attributes:
             value: 'true'
           type: User
@@ -2426,6 +2362,28 @@ data:
           type: Boolean
         type: Attributes
       type: File
+    SysTick_INTERRUPT_ENABLE:
+      attributes:
+        id: SysTick_INTERRUPT_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    SysTick_INTERRUPT_HANDLER_LOCK:
+      attributes:
+        id: SysTick_INTERRUPT_HANDLER_LOCK
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
     PIN_9_LAT:
       attributes:
         id: PIN_9_LAT

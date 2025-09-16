@@ -11,7 +11,7 @@ dependency:
 - dependencyPackage: ''
   name: csp
   type: package
-  version: v3.22.6
+  version: v3.23.0
 customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
 data:
   attachments: {}
@@ -22,8 +22,8 @@ data:
     - children:
       - attributes:
           id: dfp
-          x: '253'
-          y: '19'
+          x: '332'
+          y: '24'
         type: ElementPosition
       type: ElementPositions
     type: ComponentGraph
