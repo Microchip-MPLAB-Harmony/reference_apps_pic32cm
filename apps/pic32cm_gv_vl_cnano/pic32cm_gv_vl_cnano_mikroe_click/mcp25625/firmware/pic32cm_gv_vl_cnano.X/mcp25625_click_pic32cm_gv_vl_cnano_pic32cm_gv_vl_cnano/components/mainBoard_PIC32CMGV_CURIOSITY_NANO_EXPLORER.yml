@@ -22,8 +22,8 @@ data:
     - children:
       - attributes:
           id: mainBoard_PIC32CMGV_CURIOSITY_NANO_EXPLORER
-          x: '37'
-          y: '188'
+          x: '72'
+          y: '212'
         type: ElementPosition
       type: ElementPositions
     type: ComponentGraph

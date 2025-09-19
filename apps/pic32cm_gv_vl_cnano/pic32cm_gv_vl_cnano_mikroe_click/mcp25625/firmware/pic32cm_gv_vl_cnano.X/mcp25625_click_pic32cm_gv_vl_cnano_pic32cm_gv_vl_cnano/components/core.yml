@@ -22,8 +22,8 @@ data:
     - children:
       - attributes:
           id: core
-          x: '199'
-          y: '26'
+          x: '321'
+          y: '30'
         type: ElementPosition
       type: ElementPositions
     type: ComponentGraph
