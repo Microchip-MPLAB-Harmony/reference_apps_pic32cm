@@ -1,0 +1,53 @@
+configVersion: 1.0.0
+componentName: RNBD_Dependency_0
+coreVersion: 5.8.2
+device: PIC32CM5164LS00048
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: RNBD_Dependency_0
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: wireless_rnbd
+  type: package
+  version: v2.0.4
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments:
+    children:
+    - children:
+      - attributes:
+          id: RNBD_USART_Dependency
+        children:
+        - children:
+          - attributes:
+              id: targetComponentID
+            children:
+            - type: Value
+              value: sercom1
+            type: String
+          - attributes:
+              id: targetAttachmentID
+            children:
+            - type: Value
+              value: SERCOM1_UART
+            type: String
+          type: Attributes
+        type: DirectDependency
+      type: Attachments
+    type: RNBD_Dependency_0
+  elementPosition: {}
+  symbols:
+    RN_HOST_UART_INST_USED:
+      attributes:
+        id: RN_HOST_UART_INST_USED
+      children:
+      - children:
+        - attributes:
+            id: RNBD_Dependency_0
+            value: SERCOM1
+          type: Dynamic
+        type: Values
+      type: String
+  userData: {}
