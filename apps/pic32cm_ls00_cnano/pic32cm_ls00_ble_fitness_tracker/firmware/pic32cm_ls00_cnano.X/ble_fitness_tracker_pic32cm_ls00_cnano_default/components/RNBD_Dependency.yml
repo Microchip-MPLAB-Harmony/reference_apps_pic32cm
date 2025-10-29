@@ -1,0 +1,726 @@
+configVersion: 1.0.0
+componentName: RNBD_Dependency
+coreVersion: 5.8.2
+device: PIC32CM5164LS00048
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: RNBD_Dependency
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: wireless_rnbd
+  type: package
+  version: v2.0.6
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: RNBD_Dependency
+          x: '432'
+          y: '149'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    BLE_RST_PIN_SELECTED:
+      attributes:
+        id: BLE_RST_PIN_SELECTED
+      children:
+      - children:
+        - attributes:
+            id: RNBD_Dependency
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    BLE_RST_PIN_UPDATE:
+      attributes:
+        id: BLE_RST_PIN_UPDATE
+      children:
+      - children:
+        - attributes:
+            id: RNBD_Dependency
+            value: PA7
+          type: Dynamic
+        type: Values
+      type: String
+    NON_SECURE_ENTRY_HEADER:
+      attributes:
+        id: NON_SECURE_ENTRY_HEADER
+      children:
+      - children:
+        - attributes:
+            id: dest
+          children:
+          - type: Value
+            value: ../../trustZone/rnbd/
+          type: String
+        - attributes:
+            id: markupVars
+          children:
+          - children:
+            - attributes:
+                key: RNBD_NON_SECURE
+                type: boolean
+              type: Value
+              value: 'true'
+            - attributes:
+                key: SERCOM_INTERFACE_NON_SECURE
+                type: boolean
+              type: Value
+              value: 'true'
+            - attributes:
+                key: RNBD_NON_SECURE_ENTRY
+                type: boolean
+              type: Value
+              value: 'false'
+            - attributes:
+                key: RNBD_MODULE_SELECTION
+                type: string
+              type: Value
+              value: RN487x
+            - attributes:
+                key: SERCOM_CONSOLE_NON_SECURE
+                type: boolean
+              type: Value
+              value: 'false'
+            - attributes:
+                key: SERCOM_INST
+                type: string
+              type: Value
+              value: SERCOM1
+            type: Values
+          type: KeyObjectMap
+        - attributes:
+            id: project
+          children:
+          - type: Value
+            value: trustZone/rnbd/
+          type: String
+        type: Attributes
+      type: File
+    NON_SECURE_ENTRY_SOURCE:
+      attributes:
+        id: NON_SECURE_ENTRY_SOURCE
+      children:
+      - children:
+        - attributes:
+            id: dest
+          children:
+          - type: Value
+            value: ../../trustZone/rnbd/
+          type: String
+        - attributes:
+            id: markupVars
+          children:
+          - children:
+            - attributes:
+                key: RNBD_NON_SECURE
+                type: boolean
+              type: Value
+              value: 'true'
+            - attributes:
+                key: SERCOM_INTERFACE_NON_SECURE
+                type: boolean
+              type: Value
+              value: 'true'
+            - attributes:
+                key: RNBD_NON_SECURE_ENTRY
+                type: boolean
+              type: Value
+              value: 'false'
+            - attributes:
+                key: RNBD_MODULE_SELECTION
+                type: string
+              type: Value
+              value: RN487x
+            - attributes:
+                key: SERCOM_CONSOLE_NON_SECURE
+                type: boolean
+              type: Value
+              value: 'false'
+            - attributes:
+                key: SERCOM_INST
+                type: string
+              type: Value
+              value: SERCOM1
+            type: Values
+          type: KeyObjectMap
+        - attributes:
+            id: project
+          children:
+          - type: Value
+            value: trustZone/rnbd/
+          type: String
+        type: Attributes
+      type: File
+    RN_HOST_SELECT_BLE_MODULE_TYPE_CHOICE:
+      attributes:
+        id: RN_HOST_SELECT_BLE_MODULE_TYPE_CHOICE
+      children:
+      - children:
+        - attributes:
+            id: RNBD_Dependency
+            value: RNBD
+          type: Dynamic
+        type: Values
+      type: Combo
+    RN487X_H:
+      attributes:
+        id: RN487X_H
+      children:
+      - children:
+        - attributes:
+            id: enabled
+          children:
+          - type: Value
+            value: 'false'
+          type: Boolean
+        - attributes:
+            id: markupVars
+          children:
+          - children:
+            - attributes:
+                key: RNBD_NON_SECURE
+                type: boolean
+              type: Value
+              value: 'true'
+            - attributes:
+                key: BT_RST_Pin_Selected
+                type: boolean
+              type: Value
+              value: 'true'
+            - attributes:
+                key: SERCOM_INTERFACE_NON_SECURE
+                type: boolean
+              type: Value
+              value: 'true'
+            - attributes:
+                key: RNBD_NON_SECURE_ENTRY
+                type: boolean
+              type: Value
+              value: 'false'
+            - attributes:
+                key: TRUST_ZONE_ENABLED
+                type: boolean
+              type: Value
+              value: 'true'
+            - attributes:
+                key: BT_STATUS_PIN_CHECK_ENABLE
+                type: boolean
+              type: Value
+              value: 'false'
+            - attributes:
+                key: BT_RX_IND_PIN_CHECK_ENABLE
+                type: boolean
+              type: Value
+              value: 'false'
+            - attributes:
+                key: BT_SYS_MODE_PIN_CHECK_ENABLE
+                type: boolean
+              type: Value
+              value: 'false'
+            - attributes:
+                key: SERCOM_CONSOLE_NON_SECURE
+                type: boolean
+              type: Value
+              value: 'false'
+            - attributes:
+                key: SERCOM_INST
+                type: string
+              type: Value
+              value: SERCOM1
+            type: Values
+          type: KeyObjectMap
+        type: Attributes
+      type: File
+    RN487X_INTERFACE_H:
+      attributes:
+        id: RN487X_INTERFACE_H
+      children:
+      - children:
+        - attributes:
+            id: enabled
+          children:
+          - type: Value
+            value: 'false'
+          type: Boolean
+        - attributes:
+            id: markupVars
+          children:
+          - children:
+            - attributes:
+                key: RNBD_NON_SECURE
+                type: boolean
+              type: Value
+              value: 'true'
+            - attributes:
+                key: BT_RST_Pin_Selected
+                type: boolean
+              type: Value
+              value: 'true'
+            - attributes:
+                key: SERCOM_INTERFACE_NON_SECURE
+                type: boolean
+              type: Value
+              value: 'true'
+            - attributes:
+                key: RNBD_NON_SECURE_ENTRY
+                type: boolean
+              type: Value
+              value: 'false'
+            - attributes:
+                key: TRUST_ZONE_ENABLED
+                type: boolean
+              type: Value
+              value: 'true'
+            - attributes:
+                key: BT_STATUS_PIN_CHECK_ENABLE
+                type: boolean
+              type: Value
+              value: 'false'
+            - attributes:
+                key: BT_RX_IND_PIN_CHECK_ENABLE
+                type: boolean
+              type: Value
+              value: 'false'
+            - attributes:
+                key: BT_SYS_MODE_PIN_CHECK_ENABLE
+                type: boolean
+              type: Value
+              value: 'false'
+            - attributes:
+                key: SERCOM_CONSOLE_NON_SECURE
+                type: boolean
+              type: Value
+              value: 'false'
+            - attributes:
+                key: SERCOM_INST
+                type: string
+              type: Value
+              value: SERCOM1
+            type: Values
+          type: KeyObjectMap
+        type: Attributes
+      type: File
+    RN487X_C:
+      attributes:
+        id: RN487X_C
+      children:
+      - children:
+        - attributes:
+            id: enabled
+          children:
+          - type: Value
+            value: 'false'
+          type: Boolean
+        - attributes:
+            id: markupVars
+          children:
+          - children:
+            - attributes:
+                key: RNBD_NON_SECURE
+                type: boolean
+              type: Value
+              value: 'true'
+            - attributes:
+                key: BT_RST_Pin_Selected
+                type: boolean
+              type: Value
+              value: 'true'
+            - attributes:
+                key: SERCOM_INTERFACE_NON_SECURE
+                type: boolean
+              type: Value
+              value: 'true'
+            - attributes:
+                key: RNBD_NON_SECURE_ENTRY
+                type: boolean
+              type: Value
+              value: 'false'
+            - attributes:
+                key: TRUST_ZONE_ENABLED
+                type: boolean
+              type: Value
+              value: 'true'
+            - attributes:
+                key: BT_STATUS_PIN_CHECK_ENABLE
+                type: boolean
+              type: Value
+              value: 'false'
+            - attributes:
+                key: BT_RX_IND_PIN_CHECK_ENABLE
+                type: boolean
+              type: Value
+              value: 'false'
+            - attributes:
+                key: BT_SYS_MODE_PIN_CHECK_ENABLE
+                type: boolean
+              type: Value
+              value: 'false'
+            - attributes:
+                key: SERCOM_CONSOLE_NON_SECURE
+                type: boolean
+              type: Value
+              value: 'false'
+            - attributes:
+                key: SERCOM_INST
+                type: string
+              type: Value
+              value: SERCOM1
+            type: Values
+          type: KeyObjectMap
+        type: Attributes
+      type: File
+    RN487X_INTERFACE_C:
+      attributes:
+        id: RN487X_INTERFACE_C
+      children:
+      - children:
+        - attributes:
+            id: enabled
+          children:
+          - type: Value
+            value: 'false'
+          type: Boolean
+        - attributes:
+            id: markupVars
+          children:
+          - children:
+            - attributes:
+                key: RNBD_NON_SECURE
+                type: boolean
+              type: Value
+              value: 'true'
+            - attributes:
+                key: BT_RST_Pin_Selected
+                type: boolean
+              type: Value
+              value: 'true'
+            - attributes:
+                key: SERCOM_INTERFACE_NON_SECURE
+                type: boolean
+              type: Value
+              value: 'true'
+            - attributes:
+                key: RNBD_NON_SECURE_ENTRY
+                type: boolean
+              type: Value
+              value: 'false'
+            - attributes:
+                key: TRUST_ZONE_ENABLED
+                type: boolean
+              type: Value
+              value: 'true'
+            - attributes:
+                key: BT_STATUS_PIN_CHECK_ENABLE
+                type: boolean
+              type: Value
+              value: 'false'
+            - attributes:
+                key: BT_RX_IND_PIN_CHECK_ENABLE
+                type: boolean
+              type: Value
+              value: 'false'
+            - attributes:
+                key: BT_SYS_MODE_PIN_CHECK_ENABLE
+                type: boolean
+              type: Value
+              value: 'false'
+            - attributes:
+                key: SERCOM_CONSOLE_NON_SECURE
+                type: boolean
+              type: Value
+              value: 'false'
+            - attributes:
+                key: SERCOM_INST
+                type: string
+              type: Value
+              value: SERCOM1
+            type: Values
+          type: KeyObjectMap
+        type: Attributes
+      type: File
+    RNBD_C:
+      attributes:
+        id: RNBD_C
+      children:
+      - children:
+        - attributes:
+            id: enabled
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        - attributes:
+            id: markupVars
+          children:
+          - children:
+            - attributes:
+                key: RNBD_NON_SECURE
+                type: boolean
+              type: Value
+              value: 'true'
+            - attributes:
+                key: BT_RST_Pin_Selected
+                type: boolean
+              type: Value
+              value: 'true'
+            - attributes:
+                key: SERCOM_INTERFACE_NON_SECURE
+                type: boolean
+              type: Value
+              value: 'true'
+            - attributes:
+                key: RNBD_NON_SECURE_ENTRY
+                type: boolean
+              type: Value
+              value: 'false'
+            - attributes:
+                key: TRUST_ZONE_ENABLED
+                type: boolean
+              type: Value
+              value: 'true'
+            - attributes:
+                key: BT_STATUS_PIN_CHECK_ENABLE
+                type: boolean
+              type: Value
+              value: 'false'
+            - attributes:
+                key: BT_RX_IND_PIN_CHECK_ENABLE
+                type: boolean
+              type: Value
+              value: 'false'
+            - attributes:
+                key: BT_SYS_MODE_PIN_CHECK_ENABLE
+                type: boolean
+              type: Value
+              value: 'false'
+            - attributes:
+                key: SERCOM_CONSOLE_NON_SECURE
+                type: boolean
+              type: Value
+              value: 'false'
+            - attributes:
+                key: SERCOM_INST
+                type: string
+              type: Value
+              value: SERCOM1
+            type: Values
+          type: KeyObjectMap
+        type: Attributes
+      type: File
+    RNBD_INTERFACE_C:
+      attributes:
+        id: RNBD_INTERFACE_C
+      children:
+      - children:
+        - attributes:
+            id: enabled
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        - attributes:
+            id: markupVars
+          children:
+          - children:
+            - attributes:
+                key: RNBD_NON_SECURE
+                type: boolean
+              type: Value
+              value: 'true'
+            - attributes:
+                key: BT_RST_Pin_Selected
+                type: boolean
+              type: Value
+              value: 'true'
+            - attributes:
+                key: SERCOM_INTERFACE_NON_SECURE
+                type: boolean
+              type: Value
+              value: 'true'
+            - attributes:
+                key: RNBD_NON_SECURE_ENTRY
+                type: boolean
+              type: Value
+              value: 'false'
+            - attributes:
+                key: TRUST_ZONE_ENABLED
+                type: boolean
+              type: Value
+              value: 'true'
+            - attributes:
+                key: BT_STATUS_PIN_CHECK_ENABLE
+                type: boolean
+              type: Value
+              value: 'false'
+            - attributes:
+                key: BT_RX_IND_PIN_CHECK_ENABLE
+                type: boolean
+              type: Value
+              value: 'false'
+            - attributes:
+                key: BT_SYS_MODE_PIN_CHECK_ENABLE
+                type: boolean
+              type: Value
+              value: 'false'
+            - attributes:
+                key: SERCOM_CONSOLE_NON_SECURE
+                type: boolean
+              type: Value
+              value: 'false'
+            - attributes:
+                key: SERCOM_INST
+                type: string
+              type: Value
+              value: SERCOM1
+            type: Values
+          type: KeyObjectMap
+        type: Attributes
+      type: File
+    RNBD_H:
+      attributes:
+        id: RNBD_H
+      children:
+      - children:
+        - attributes:
+            id: enabled
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        - attributes:
+            id: markupVars
+          children:
+          - children:
+            - attributes:
+                key: RNBD_NON_SECURE
+                type: boolean
+              type: Value
+              value: 'true'
+            - attributes:
+                key: BT_RST_Pin_Selected
+                type: boolean
+              type: Value
+              value: 'true'
+            - attributes:
+                key: SERCOM_INTERFACE_NON_SECURE
+                type: boolean
+              type: Value
+              value: 'true'
+            - attributes:
+                key: RNBD_NON_SECURE_ENTRY
+                type: boolean
+              type: Value
+              value: 'false'
+            - attributes:
+                key: TRUST_ZONE_ENABLED
+                type: boolean
+              type: Value
+              value: 'true'
+            - attributes:
+                key: BT_STATUS_PIN_CHECK_ENABLE
+                type: boolean
+              type: Value
+              value: 'false'
+            - attributes:
+                key: BT_RX_IND_PIN_CHECK_ENABLE
+                type: boolean
+              type: Value
+              value: 'false'
+            - attributes:
+                key: BT_SYS_MODE_PIN_CHECK_ENABLE
+                type: boolean
+              type: Value
+              value: 'false'
+            - attributes:
+                key: SERCOM_CONSOLE_NON_SECURE
+                type: boolean
+              type: Value
+              value: 'false'
+            - attributes:
+                key: SERCOM_INST
+                type: string
+              type: Value
+              value: SERCOM1
+            type: Values
+          type: KeyObjectMap
+        type: Attributes
+      type: File
+    RNBD_INTERFACE_H:
+      attributes:
+        id: RNBD_INTERFACE_H
+      children:
+      - children:
+        - attributes:
+            id: enabled
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        - attributes:
+            id: markupVars
+          children:
+          - children:
+            - attributes:
+                key: RNBD_NON_SECURE
+                type: boolean
+              type: Value
+              value: 'true'
+            - attributes:
+                key: BT_RST_Pin_Selected
+                type: boolean
+              type: Value
+              value: 'true'
+            - attributes:
+                key: SERCOM_INTERFACE_NON_SECURE
+                type: boolean
+              type: Value
+              value: 'true'
+            - attributes:
+                key: RNBD_NON_SECURE_ENTRY
+                type: boolean
+              type: Value
+              value: 'false'
+            - attributes:
+                key: TRUST_ZONE_ENABLED
+                type: boolean
+              type: Value
+              value: 'true'
+            - attributes:
+                key: BT_STATUS_PIN_CHECK_ENABLE
+                type: boolean
+              type: Value
+              value: 'false'
+            - attributes:
+                key: BT_RX_IND_PIN_CHECK_ENABLE
+                type: boolean
+              type: Value
+              value: 'false'
+            - attributes:
+                key: BT_SYS_MODE_PIN_CHECK_ENABLE
+                type: boolean
+              type: Value
+              value: 'false'
+            - attributes:
+                key: SERCOM_CONSOLE_NON_SECURE
+                type: boolean
+              type: Value
+              value: 'false'
+            - attributes:
+                key: SERCOM_INST
+                type: string
+              type: Value
+              value: SERCOM1
+            type: Values
+          type: KeyObjectMap
+        type: Attributes
+      type: File
+  userData: {}
