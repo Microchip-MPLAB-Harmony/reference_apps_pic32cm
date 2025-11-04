@@ -79,14 +79,10 @@ void __attribute__((optimize("-O1"), long_call, noreturn, used))Dummy_Handler(vo
 }
 
 /* MISRAC 2012 deviation block start */
-/* MISRA C-2012 Rule 8.6 deviated 6 times.  Deviation record ID -  H3_MISRAC_2012_R_8_6_DR_1 */
+/* MISRA C-2012 Rule 8.6 deviated 2 times.  Deviation record ID -  H3_MISRAC_2012_R_8_6_DR_1 */
 /* Device vectors list dummy definition*/
 extern void SVCall_Handler             ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
 extern void PendSV_Handler             ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
-extern void SERCOM3_0_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
-extern void SERCOM3_1_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
-extern void SERCOM3_2_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
-extern void SERCOM3_OTHER_Handler      ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
 
 
 /* MISRAC 2012 deviation block end */
@@ -107,24 +103,10 @@ const H3DeviceVectors exception_table=
     .pfnSVCall_Handler             = SVCall_Handler,
     .pfnPendSV_Handler             = PendSV_Handler,
     .pfnSysTick_Handler            = SysTick_Handler,
-    .pfnEIC_EXTINT_2_Handler       = EIC_EXTINT_2_InterruptHandler,
-    .pfnSERCOM0_0_Handler          = SERCOM0_USART_InterruptHandler,
-    .pfnSERCOM0_1_Handler          = SERCOM0_USART_InterruptHandler,
-    .pfnSERCOM0_2_Handler          = SERCOM0_USART_InterruptHandler,
-    .pfnSERCOM0_OTHER_Handler      = SERCOM0_USART_InterruptHandler,
-    .pfnSERCOM1_0_Handler          = SERCOM1_USART_InterruptHandler,
-    .pfnSERCOM1_1_Handler          = SERCOM1_USART_InterruptHandler,
-    .pfnSERCOM1_2_Handler          = SERCOM1_USART_InterruptHandler,
-    .pfnSERCOM1_OTHER_Handler      = SERCOM1_USART_InterruptHandler,
     .pfnSERCOM2_0_Handler          = SERCOM2_SPI_InterruptHandler,
     .pfnSERCOM2_1_Handler          = SERCOM2_SPI_InterruptHandler,
     .pfnSERCOM2_2_Handler          = SERCOM2_SPI_InterruptHandler,
     .pfnSERCOM2_OTHER_Handler      = SERCOM2_SPI_InterruptHandler,
-    .pfnSERCOM3_0_Handler          = SERCOM3_0_Handler,
-    .pfnSERCOM3_1_Handler          = SERCOM3_1_Handler,
-    .pfnSERCOM3_2_Handler          = SERCOM3_2_Handler,
-    .pfnSERCOM3_OTHER_Handler      = SERCOM3_OTHER_Handler,
-    .pfnTC0_Handler                = TC0_TimerInterruptHandler,
 
 
 };

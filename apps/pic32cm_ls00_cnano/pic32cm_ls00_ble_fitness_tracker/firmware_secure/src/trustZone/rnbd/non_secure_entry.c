@@ -1,30 +1,24 @@
+
 /*******************************************************************************
-  Driver Layer Interface Header
+ Non-secure entry source file for secure project
 
   Company:
     Microchip Technology Inc.
 
   File Name:
-    driver.h
+    nonsecure_entry.c
 
   Summary:
-    Driver layer data types and definitions.
+    Implements hooks for Non-secure application
 
   Description:
-    This file defines the common macros and definitions for the driver layer
-    modules.
+    This file is used to call specific API's in the secure world from the Non-Secure world.
 
-  Remarks:
-    The parent directory to the "system" directory should be added to the
-    compiler's search path for header files such that the following include
-    statement will successfully include this file.
-
-    #include "system/system.h"
  *******************************************************************************/
 
-//DOM-IGNORE-BEGIN
+// DOM-IGNORE-BEGIN
 /*******************************************************************************
-* Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2023 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -45,24 +39,15 @@
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
  *******************************************************************************/
-//DOM-IGNORE-END
-
-#ifndef SYSTEM_H
-#define SYSTEM_H
+#include "stdint.h"
+#include "definitions.h"
 
 
-// *****************************************************************************
-// *****************************************************************************
-// Section: Included Files
-// *****************************************************************************
-// *****************************************************************************
-
-#include "system/system_common.h"
-#include "system/system_module.h"
 
 
-#endif // SYSTEM_H
-/*******************************************************************************
- End of File
-*/
+
+
+
+
+
 

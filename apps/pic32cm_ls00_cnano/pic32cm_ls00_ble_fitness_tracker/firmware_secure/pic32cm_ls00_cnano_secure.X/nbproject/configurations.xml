@@ -4,6 +4,17 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <logicalFolder name="click_routines"
+                     displayName="click_routines"
+                     projectFiles="true">
+        <logicalFolder name="heartrate9" displayName="heartrate9" projectFiles="true">
+          <itemPath>../src/click_routines/heartrate9/heartrate9.h</itemPath>
+        </logicalFolder>
+        <logicalFolder name="rnbd451" displayName="rnbd451" projectFiles="true">
+          <itemPath>../src/click_routines/rnbd451/rnbd451.h</itemPath>
+        </logicalFolder>
+        <itemPath>../src/click_routines/click_interface.h</itemPath>
+      </logicalFolder>
       <logicalFolder name="config" displayName="config" projectFiles="true">
         <logicalFolder name="default" displayName="default" projectFiles="true">
           <logicalFolder name="peripheral" displayName="peripheral" projectFiles="true">
@@ -28,6 +39,20 @@
             <logicalFolder name="port" displayName="port" projectFiles="true">
               <itemPath>../src/config/default/peripheral/port/plib_port.h</itemPath>
             </logicalFolder>
+            <logicalFolder name="sercom" displayName="sercom" projectFiles="true">
+              <logicalFolder name="usart" displayName="usart" projectFiles="true">
+                <itemPath>../src/config/default/peripheral/sercom/usart/plib_sercom3_usart.h</itemPath>
+                <itemPath>../src/config/default/peripheral/sercom/usart/plib_sercom_usart_common.h</itemPath>
+                <itemPath>../src/config/default/peripheral/sercom/usart/plib_sercom1_usart.h</itemPath>
+                <itemPath>../src/config/default/peripheral/sercom/usart/plib_sercom0_usart.h</itemPath>
+              </logicalFolder>
+            </logicalFolder>
+            <logicalFolder name="systick" displayName="systick" projectFiles="true">
+              <itemPath>../src/config/default/peripheral/systick/plib_systick.h</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="rnbd" displayName="rnbd" projectFiles="true">
+            <itemPath>../src/config/default/rnbd/rnbd_interface.h</itemPath>
           </logicalFolder>
           <itemPath>../src/config/default/definitions.h</itemPath>
           <itemPath>../src/config/default/device_cache.h</itemPath>
@@ -143,7 +168,11 @@
           <itemPath>../src/packs/PIC32CM5164LS00048_DFP/pic32cm5164ls00048.h</itemPath>
         </logicalFolder>
       </logicalFolder>
+      <logicalFolder name="rnbd" displayName="rnbd" projectFiles="true">
+        <itemPath>../src/rnbd/rnbd.h</itemPath>
+      </logicalFolder>
       <itemPath>../src/config/default/device.h</itemPath>
+      <itemPath>../src/app_sec.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -163,6 +192,16 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <logicalFolder name="click_routines"
+                     displayName="click_routines"
+                     projectFiles="true">
+        <logicalFolder name="heartrate9" displayName="heartrate9" projectFiles="true">
+          <itemPath>../src/click_routines/heartrate9/heartrate9.c</itemPath>
+        </logicalFolder>
+        <logicalFolder name="rnbd451" displayName="rnbd451" projectFiles="true">
+          <itemPath>../src/click_routines/rnbd451/rnbd451.c</itemPath>
+        </logicalFolder>
+      </logicalFolder>
       <logicalFolder name="config" displayName="config" projectFiles="true">
         <logicalFolder name="default" displayName="default" projectFiles="true">
           <logicalFolder name="peripheral" displayName="peripheral" projectFiles="true">
@@ -187,6 +226,19 @@
             <logicalFolder name="port" displayName="port" projectFiles="true">
               <itemPath>../src/config/default/peripheral/port/plib_port.c</itemPath>
             </logicalFolder>
+            <logicalFolder name="sercom" displayName="sercom" projectFiles="true">
+              <logicalFolder name="usart" displayName="usart" projectFiles="true">
+                <itemPath>../src/config/default/peripheral/sercom/usart/plib_sercom3_usart.c</itemPath>
+                <itemPath>../src/config/default/peripheral/sercom/usart/plib_sercom1_usart.c</itemPath>
+                <itemPath>../src/config/default/peripheral/sercom/usart/plib_sercom0_usart.c</itemPath>
+              </logicalFolder>
+            </logicalFolder>
+            <logicalFolder name="systick" displayName="systick" projectFiles="true">
+              <itemPath>../src/config/default/peripheral/systick/plib_systick.c</itemPath>
+            </logicalFolder>
+          </logicalFolder>
+          <logicalFolder name="rnbd" displayName="rnbd" projectFiles="true">
+            <itemPath>../src/config/default/rnbd/rnbd_interface.c</itemPath>
           </logicalFolder>
           <logicalFolder name="stdio" displayName="stdio" projectFiles="true">
             <itemPath>../src/config/default/stdio/xc32_monitor.c</itemPath>
@@ -198,12 +250,22 @@
           <itemPath>../src/config/default/libc_syscalls.c</itemPath>
         </logicalFolder>
       </logicalFolder>
+      <logicalFolder name="rnbd" displayName="rnbd" projectFiles="true">
+        <itemPath>../src/rnbd/rnbd.c</itemPath>
+      </logicalFolder>
       <logicalFolder name="trustZone" displayName="trustZone" projectFiles="true">
+        <logicalFolder name="rnbd" displayName="rnbd" projectFiles="true">
+          <itemPath>../src/trustZone/rnbd/non_secure_entry.c</itemPath>
+        </logicalFolder>
         <itemPath>../src/trustZone/nonsecure_entry.c</itemPath>
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
+      <itemPath>../src/app_sec.c</itemPath>
     </logicalFolder>
   </logicalFolder>
+  <sourceRootList>
+    <Elem>../src</Elem>
+  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="default" type="2">
@@ -251,6 +313,7 @@
       <C32>
         <property key="additional-warnings" value="true"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value="-mcmse"/>
         <property key="cast-align" value="false"/>
         <property key="code-model" value="default"/>
         <property key="const-model" value="default"/>
@@ -330,6 +393,8 @@
         <property key="additional-options-use-response-files" value="false"/>
         <property key="additional-options-write-sla" value="false"/>
         <property key="allocate-dinit" value="false"/>
+        <property key="appendMe"
+                  value=",--cmse-implib --out-implib=../../firmware/pic32cm_ls00_cnano.X/pic32cm_ls00_cnano_secure_sg_veneer.lib"/>
         <property key="code-dinit" value="false"/>
         <property key="ebase-addr" value=""/>
         <property key="enable-check-sections" value="false"/>
@@ -354,7 +419,7 @@
         <property key="kseg-origin" value=""/>
         <property key="linker-symbols" value=""/>
         <property key="map-file" value="${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map"/>
-        <property key="no-device-startup-code" value="false"/>
+        <property key="no-device-startup-code" value="false;true"/>
         <property key="no-ivt" value="false"/>
         <property key="no-startup-files" value="false"/>
         <property key="oXC16ld-force-link" value="false"/>
@@ -377,6 +442,7 @@
       <C32CPP>
         <property key="additional-warnings" value="false"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value="-mcmse"/>
         <property key="check-new" value="false"/>
         <property key="eh-specs" value="true"/>
         <property key="enable-app-io" value="false"/>

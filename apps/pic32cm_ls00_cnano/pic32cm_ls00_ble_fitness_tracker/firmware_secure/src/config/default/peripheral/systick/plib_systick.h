@@ -1,23 +1,20 @@
 /*******************************************************************************
-  Interrupt System Service Mapping File
+  Interface definition of SYSTICK PLIB.
 
   Company:
     Microchip Technology Inc.
 
   File Name:
-    sys_int_mapping.h
+    plib_systick.h
 
   Summary:
-    Interrupt System Service mapping file.
+    Interface definition of the System Timer Plib (SYSTICK).
 
   Description:
-    This header file contains the mapping of the APIs defined in the API header
-    to either the function implementations or macro implementation or the
-    specific variant implementation.
+    This file defines the interface for the SYSTICK Plib.
 *******************************************************************************/
 
-//DOM-IGNORE-BEGIN
-/******************************************************************************
+/*******************************************************************************
 * Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
@@ -39,26 +36,61 @@
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
-//DOM-IGNORE-END
 
-#ifndef SYS_INT_MAPPING_H
-#define SYS_INT_MAPPING_H
+#ifndef PLIB_SYSTICK_H    // Guards against multiple inclusion
+#define PLIB_SYSTICK_H
+
+#include <stdint.h>
+#include <stdbool.h>
+#include <stddef.h>
+
+#ifdef __cplusplus // Provide C++ Compatibility
+    extern "C" {
+#endif
+
 
 // *****************************************************************************
 // *****************************************************************************
-// Section: Interrupt System Service Mapping
+// Section: Interface
 // *****************************************************************************
 // *****************************************************************************
 
-/* MISRA C-2012 Rule 5.8 deviated:6 Deviation record ID -  H3_MISRAC_2012_R_5_8_DR_1 */
+#define SYSTICK_FREQ   48000000U
 
-#define SYS_INT_IsEnabled()                 ( __get_PRIMASK() == 0 )
-#define SYS_INT_SourceEnable( source )      NVIC_EnableIRQ( source )
-#define SYS_INT_SourceIsEnabled( source )   NVIC_GetEnableIRQ( source )
-#define SYS_INT_SourceStatusGet( source )   NVIC_GetPendingIRQ( source )
-#define SYS_INT_SourceStatusSet( source )   NVIC_SetPendingIRQ( source )
-#define SYS_INT_SourceStatusClear( source ) NVIC_ClearPendingIRQ( source )
+#define SYSTICK_INTERRUPT_PERIOD_IN_US  (1000U)
 
-/* MISRAC 2012 deviation block end */
+typedef void (*SYSTICK_CALLBACK)(uintptr_t context);
 
-#endif // SYS_INT_MAPPING_H
+typedef struct
+{ 
+    uint32_t start; 
+    uint32_t count; 
+}SYSTICK_TIMEOUT;
+typedef struct
+{
+   SYSTICK_CALLBACK          callback;
+   uintptr_t                 context;
+   volatile uint32_t         tickCounter;
+} SYSTICK_OBJECT ;
+/***************************** SYSTICK API *******************************/
+void SYSTICK_TimerInitialize ( void );
+void SYSTICK_TimerRestart ( void );
+void SYSTICK_TimerStart ( void );
+void SYSTICK_TimerStop ( void );
+void SYSTICK_TimerPeriodSet ( uint32_t period );
+uint32_t SYSTICK_TimerPeriodGet ( void );
+uint32_t SYSTICK_TimerCounterGet ( void );
+uint32_t SYSTICK_TimerFrequencyGet ( void );
+void SYSTICK_DelayMs ( uint32_t delay_ms );
+void SYSTICK_DelayUs ( uint32_t delay_us );
+
+void SYSTICK_TimerCallbackSet ( SYSTICK_CALLBACK callback, uintptr_t context );
+uint32_t SYSTICK_GetTickCounter(void);
+void SYSTICK_StartTimeOut (SYSTICK_TIMEOUT* timeout, uint32_t delay_ms);
+void SYSTICK_ResetTimeOut (SYSTICK_TIMEOUT* timeout);
+bool SYSTICK_IsTimeoutReached (SYSTICK_TIMEOUT* timeout);
+#ifdef __cplusplus // Provide C++ Compatibility
+ }
+#endif
+
+#endif

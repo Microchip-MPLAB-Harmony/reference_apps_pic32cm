@@ -39,9 +39,31 @@
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
  *******************************************************************************/
 // DOM-IGNORE-END
+#include <stdint.h>
+#include <stdio.h>
+#include <stddef.h>                     // Defines NULL
+#include <stdbool.h>                    // Defines true
+#include <stdlib.h>                     // Defines EXIT_FAILURE
+#include <string.h>
+
+extern char    sec_lcl_buffer[10];
+extern volatile bool readHeartRateStatus;
+extern void secureApp(void);
 
 /* Non-secure callable (entry) function */
-int __attribute__((cmse_nonsecure_entry)) secure_add(int x, int y)
+bool __attribute__((cmse_nonsecure_entry)) readHeartRateData(char *lclSecHrBuffer)
 {
-    return (x + y);
+    bool localSecureHrReadStatus = readHeartRateStatus;
+    if(localSecureHrReadStatus == true)
+    {
+        memset((char*)lclSecHrBuffer, 0x00, 10);
+        memcpy(lclSecHrBuffer, sec_lcl_buffer, strlen((const char *)&sec_lcl_buffer[0]));
+        readHeartRateStatus   = false;
+    }
+    return (localSecureHrReadStatus);
+}
+
+void __attribute__((cmse_nonsecure_entry)) secureAppEntry(void)
+{
+    secureApp();
 }

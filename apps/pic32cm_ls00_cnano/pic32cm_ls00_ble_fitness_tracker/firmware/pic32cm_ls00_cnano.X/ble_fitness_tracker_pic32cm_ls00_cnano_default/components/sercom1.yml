@@ -140,7 +140,7 @@ data:
             id: security
           children:
           - type: Value
-            value: NON_SECURE
+            value: SECURE
           type: String
         type: Attributes
       type: File
@@ -153,7 +153,7 @@ data:
             id: security
           children:
           - type: Value
-            value: NON_SECURE
+            value: SECURE
           type: String
         type: Attributes
       type: File
@@ -166,7 +166,7 @@ data:
             id: security
           children:
           - type: Value
-            value: NON_SECURE
+            value: SECURE
           type: String
         type: Attributes
       type: File
@@ -179,7 +179,7 @@ data:
             id: security
           children:
           - type: Value
-            value: NON_SECURE
+            value: SECURE
           type: String
         type: Attributes
       type: File
@@ -192,7 +192,7 @@ data:
             id: security
           children:
           - type: Value
-            value: NON_SECURE
+            value: SECURE
           type: String
         type: Attributes
       type: File
@@ -205,7 +205,7 @@ data:
             id: security
           children:
           - type: Value
-            value: NON_SECURE
+            value: SECURE
           type: String
         type: Attributes
       type: File
@@ -237,7 +237,7 @@ data:
             id: security
           children:
           - type: Value
-            value: NON_SECURE
+            value: SECURE
           type: String
         type: Attributes
       type: File
@@ -250,7 +250,7 @@ data:
             id: security
           children:
           - type: Value
-            value: NON_SECURE
+            value: SECURE
           type: String
         type: Attributes
       type: File
@@ -263,7 +263,7 @@ data:
             id: security
           children:
           - type: Value
-            value: NON_SECURE
+            value: SECURE
           type: String
         type: Attributes
       type: File
@@ -276,7 +276,7 @@ data:
             id: security
           children:
           - type: Value
-            value: NON_SECURE
+            value: SECURE
           type: String
         type: Attributes
       type: File
@@ -289,7 +289,7 @@ data:
             id: security
           children:
           - type: Value
-            value: NON_SECURE
+            value: SECURE
           type: String
         type: Attributes
       type: File
@@ -302,7 +302,7 @@ data:
             id: security
           children:
           - type: Value
-            value: NON_SECURE
+            value: SECURE
           type: String
         type: Attributes
       type: File
@@ -315,7 +315,7 @@ data:
             id: name
           children:
           - type: Value
-            value: core.LIST_SYSTEM_DEFINITIONS_H_INCLUDES
+            value: core.LIST_SYSTEM_DEFINITIONS_SECURE_H_INCLUDES
           type: String
         type: Attributes
       type: File
@@ -328,7 +328,7 @@ data:
             id: name
           children:
           - type: Value
-            value: core.LIST_SYSTEM_INIT_C_SYS_INITIALIZE_PERIPHERALS
+            value: core.LIST_SYSTEM_SECURE_INIT_C_SYS_INITIALIZE_PERIPHERALS
           type: String
         type: Attributes
       type: File
@@ -341,7 +341,7 @@ data:
             id: security
           children:
           - type: Value
-            value: NON_SECURE
+            value: SECURE
           type: String
         type: Attributes
       type: File
@@ -354,7 +354,7 @@ data:
             id: security
           children:
           - type: Value
-            value: NON_SECURE
+            value: SECURE
           type: String
         type: Attributes
       type: File
@@ -373,7 +373,7 @@ data:
             id: security
           children:
           - type: Value
-            value: NON_SECURE
+            value: SECURE
           type: String
         type: Attributes
       type: File
@@ -392,7 +392,7 @@ data:
             id: security
           children:
           - type: Value
-            value: NON_SECURE
+            value: SECURE
           type: String
         - attributes:
             id: source
@@ -417,7 +417,7 @@ data:
             id: security
           children:
           - type: Value
-            value: NON_SECURE
+            value: SECURE
           type: String
         - attributes:
             id: source

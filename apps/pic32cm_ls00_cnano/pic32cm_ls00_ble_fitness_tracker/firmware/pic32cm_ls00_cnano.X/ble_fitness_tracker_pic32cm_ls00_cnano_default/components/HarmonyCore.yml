@@ -22,7 +22,7 @@ data:
     - children:
       - attributes:
           id: HarmonyCore
-          x: '438'
+          x: '413'
           y: '11'
         type: ElementPosition
       type: ElementPositions
@@ -74,7 +74,7 @@ data:
       - children:
         - attributes:
             id: HarmonyCore
-            value: 'true'
+            value: 'false'
           type: Dynamic
         - attributes:
             value: 'true'
@@ -151,7 +151,7 @@ data:
       - children:
         - attributes:
             id: HarmonyCore
-            value: 'true'
+            value: 'false'
           type: Dynamic
         type: Values
       type: Boolean
@@ -173,7 +173,7 @@ data:
       - children:
         - attributes:
             id: HarmonyCore
-            value: 'true'
+            value: 'false'
           type: Dynamic
         type: Values
       type: Boolean
@@ -186,13 +186,13 @@ data:
             id: readOnly
           children:
           - type: Value
-            value: 'true'
+            value: 'false'
           type: Boolean
         type: Attributes
       - children:
         - attributes:
             id: HarmonyCore
-            value: 'true'
+            value: 'false'
           type: Dynamic
         type: Values
       type: Boolean
@@ -205,7 +205,7 @@ data:
             id: enabled
           children:
           - type: Value
-            value: 'true'
+            value: 'false'
           type: Boolean
         type: Attributes
       type: File
@@ -218,7 +218,7 @@ data:
             id: enabled
           children:
           - type: Value
-            value: 'true'
+            value: 'false'
           type: Boolean
         type: Attributes
       type: File
@@ -231,7 +231,7 @@ data:
             id: enabled
           children:
           - type: Value
-            value: 'true'
+            value: 'false'
           type: Boolean
         type: Attributes
       type: File
@@ -244,7 +244,7 @@ data:
             id: enabled
           children:
           - type: Value
-            value: 'true'
+            value: 'false'
           type: Boolean
         type: Attributes
       type: File
@@ -257,7 +257,7 @@ data:
             id: enabled
           children:
           - type: Value
-            value: 'true'
+            value: 'false'
           type: Boolean
         type: Attributes
       type: File
@@ -270,7 +270,7 @@ data:
             id: enabled
           children:
           - type: Value
-            value: 'true'
+            value: 'false'
           type: Boolean
         type: Attributes
       type: File
@@ -283,7 +283,7 @@ data:
             id: enabled
           children:
           - type: Value
-            value: 'true'
+            value: 'false'
           type: Boolean
         type: Attributes
       type: File
@@ -296,7 +296,7 @@ data:
             id: enabled
           children:
           - type: Value
-            value: 'true'
+            value: 'false'
           type: Boolean
         type: Attributes
       type: File
@@ -309,7 +309,7 @@ data:
             id: enabled
           children:
           - type: Value
-            value: 'true'
+            value: 'false'
           type: Boolean
         type: Attributes
       type: File
@@ -322,7 +322,7 @@ data:
             id: enabled
           children:
           - type: Value
-            value: 'true'
+            value: 'false'
           type: Boolean
         type: Attributes
       type: File
@@ -335,7 +335,7 @@ data:
             id: enabled
           children:
           - type: Value
-            value: 'true'
+            value: 'false'
           type: Boolean
         type: Attributes
       type: File
@@ -348,7 +348,7 @@ data:
             id: enabled
           children:
           - type: Value
-            value: 'true'
+            value: 'false'
           type: Boolean
         type: Attributes
       type: File
@@ -361,8 +361,19 @@ data:
             id: enabled
           children:
           - type: Value
-            value: 'true'
+            value: 'false'
           type: Boolean
         type: Attributes
       type: File
+    OSAL_TIMEOUT_PERIPHERAL:
+      attributes:
+        id: OSAL_TIMEOUT_PERIPHERAL
+      children:
+      - children:
+        - attributes:
+            id: HarmonyCore
+            value: ''
+          type: Dynamic
+        type: Values
+      type: String
   userData: {}

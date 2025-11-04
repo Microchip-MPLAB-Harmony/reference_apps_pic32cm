@@ -75,7 +75,6 @@ void __attribute__((optimize("-O1"),section(".text.Dummy_Handler"),long_call, no
 /* Device vectors list dummy definition*/
 extern void SVCall_Handler             ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
 extern void PendSV_Handler             ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
-extern void SysTick_Handler            ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
 extern void SYSTEM_Handler             ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
 extern void WDT_Handler                ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
 extern void RTC_Handler                ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
@@ -106,6 +105,10 @@ extern void EVSYS_6_Handler            ( void ) __attribute__((weak, alias("Dumm
 extern void EVSYS_7_Handler            ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
 extern void EVSYS_NSCHK_Handler        ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
 extern void PAC_Handler                ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
+extern void SERCOM3_0_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
+extern void SERCOM3_1_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
+extern void SERCOM3_2_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
+extern void SERCOM3_OTHER_Handler      ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
 extern void SERCOM4_0_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
 extern void SERCOM4_1_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
 extern void SERCOM4_2_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
@@ -114,6 +117,7 @@ extern void SERCOM5_0_Handler          ( void ) __attribute__((weak, alias("Dumm
 extern void SERCOM5_1_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
 extern void SERCOM5_2_Handler          ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
 extern void SERCOM5_OTHER_Handler      ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
+extern void TC0_Handler                ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
 extern void TC1_Handler                ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
 extern void TC2_Handler                ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
 extern void TCC0_Handler               ( void ) __attribute__((weak, alias("Dummy_Handler"),noreturn));
@@ -153,6 +157,7 @@ const H3DeviceVectors exception_table=
     .pfnRTC_Handler                = RTC_Handler,
     .pfnEIC_EXTINT_0_Handler       = EIC_EXTINT_0_Handler,
     .pfnEIC_EXTINT_1_Handler       = EIC_EXTINT_1_Handler,
+    .pfnEIC_EXTINT_2_Handler       = EIC_EXTINT_2_InterruptHandler,
     .pfnEIC_EXTINT_3_Handler       = EIC_EXTINT_3_Handler,
     .pfnEIC_EXTINT_4_Handler       = EIC_EXTINT_4_Handler,
     .pfnEIC_EXTINT_5_Handler       = EIC_EXTINT_5_Handler,
@@ -178,6 +183,18 @@ const H3DeviceVectors exception_table=
     .pfnEVSYS_7_Handler            = EVSYS_7_Handler,
     .pfnEVSYS_NSCHK_Handler        = EVSYS_NSCHK_Handler,
     .pfnPAC_Handler                = PAC_Handler,
+    .pfnSERCOM0_0_Handler          = SERCOM0_USART_InterruptHandler,
+    .pfnSERCOM0_1_Handler          = SERCOM0_USART_InterruptHandler,
+    .pfnSERCOM0_2_Handler          = SERCOM0_USART_InterruptHandler,
+    .pfnSERCOM0_OTHER_Handler      = SERCOM0_USART_InterruptHandler,
+    .pfnSERCOM1_0_Handler          = SERCOM1_USART_InterruptHandler,
+    .pfnSERCOM1_1_Handler          = SERCOM1_USART_InterruptHandler,
+    .pfnSERCOM1_2_Handler          = SERCOM1_USART_InterruptHandler,
+    .pfnSERCOM1_OTHER_Handler      = SERCOM1_USART_InterruptHandler,
+    .pfnSERCOM3_0_Handler          = SERCOM3_0_Handler,
+    .pfnSERCOM3_1_Handler          = SERCOM3_1_Handler,
+    .pfnSERCOM3_2_Handler          = SERCOM3_2_Handler,
+    .pfnSERCOM3_OTHER_Handler      = SERCOM3_OTHER_Handler,
     .pfnSERCOM4_0_Handler          = SERCOM4_0_Handler,
     .pfnSERCOM4_1_Handler          = SERCOM4_1_Handler,
     .pfnSERCOM4_2_Handler          = SERCOM4_2_Handler,
@@ -186,6 +203,7 @@ const H3DeviceVectors exception_table=
     .pfnSERCOM5_1_Handler          = SERCOM5_1_Handler,
     .pfnSERCOM5_2_Handler          = SERCOM5_2_Handler,
     .pfnSERCOM5_OTHER_Handler      = SERCOM5_OTHER_Handler,
+    .pfnTC0_Handler                = TC0_Handler,
     .pfnTC1_Handler                = TC1_Handler,
     .pfnTC2_Handler                = TC2_Handler,
     .pfnTCC0_Handler               = TCC0_Handler,

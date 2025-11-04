@@ -46,8 +46,6 @@
 
 #include <xc.h>
 #include <stdint.h>
-#include <rnbd/rnbd.h>
-#include "rnbd/rnbd_interface.h"
 #include "../config/default/definitions.h"
 
 /** Click routine interfaces/resources Macro Declarations
@@ -82,43 +80,5 @@
 // Timer Definitions
 #define EPAPER_2_9_296_128_TimerStart                SYSTICK_TimerStart
 #define EPAPER_2_9_296_128_DelayMs                   SYSTICK_DelayMs
-/** Click routine interfaces/resources Macro Declarations
- *
- *  1. USART
- *  The heartrate9 click example on SAM E51 Curiosity Nano uses
- *  mikroBUS socket #3 on the Curiosity Nano Base for Click boards
- *  to mount heartrate9 click board. The USART lines from MCU coming to
- *  this socket are from SERCOM4 peripheral on the MCU.
- *
- * 2. Timer
- *  The heartrate9 click example on SAM E51 Curiosity Nano uses
- *  Systick timer module on the MCU to implement the time
- *  requirement of heartrate9 click routines.
- *
- */
-
-// SERCOM USART Definitions
-#define CLICK_HEARTRATE9_USART_Read                          SERCOM0_USART_Read
-#define CLICK_HEARTRATE9_USART_ReadThresholdSet              SERCOM0_USART_ReadThresholdSet
-#define CLICK_HEARTRATE9_USART_ReadNotificationEnable        SERCOM0_USART_ReadNotificationEnable
-#define CLICK_HEARTRATE9_USART_ReadCallbackRegister          SERCOM0_USART_ReadCallbackRegister
-#define CLICK_HEARTRATE9_USART_ReadCountGet                  SERCOM0_USART_ReadCountGet
-#define CLICK_HEARTRATE9_USART_EVENT_READ_THRESHOLD_REACHED  SERCOM_USART_EVENT_READ_THRESHOLD_REACHED
-#define CLICK_HEARTRATE9_USART_READ_BUFFER_SIZE              128                 //Define value same as SERCOM4_USART_READ_BUFFER_SIZE defined in the respective USART PLIB '.c' file
-
-// Timer Definitions
-#define CLICK_HEARTRATE9_TimerStart                         SYSTICK_TimerStart
-#define CLICK_HEARTRATE9_DelayMs                            SYSTICK_DelayMs
-
-#define CLICK_RNBD451_Init                                  RNBD_Init
-#define CLICK_RNBD_EnterCmdMode                             RNBD_EnterCmdMode
-#define CLICK_RNBD_FactoryReset                             RNBD_FactoryReset
-#define CLICK_RNBD_SetName                                  RNBD_SetName
-#define CLICK_RNBD_SetServiceBitmap                         RNBD_SetServiceBitmap
-#define CLICK_RNBD_SetAppearance                            RNBD_SetAppearance
-#define CLICK_RNBD_RebootCmd                                RNBD_RebootCmd
-#define CLICK_RNBD_SetServiceUUID                           RNBD_SetServiceUUID
-#define CLICK_RNBD_SetServiceCharacteristic                 RNBD_SetServiceCharacteristic
-#define CLICK_RNBD_WriteLocalCharacteristic                 RNBD_WriteLocalCharacteristic
 
 #endif // CLICK_INTERFACES_H

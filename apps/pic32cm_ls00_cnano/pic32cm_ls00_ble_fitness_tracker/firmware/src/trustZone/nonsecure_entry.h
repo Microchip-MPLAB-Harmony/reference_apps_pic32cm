@@ -50,6 +50,9 @@
 #define NONSECURE_ENTRY_H_
 
 /* Non-secure callable functions */
-extern int secure_add(int x, int y);
+extern bool readHeartRateData(char *lclSecHrBuffer);
+extern void readEEPROMTemperatureDataReq(uint8_t *temperatureBuf);
+extern bool getEEPROMTemperatureDataReadStatus(uint8_t *LclWrIndex);
+extern void secureAppEntry(void);
 
 #endif /* NONSECURE_ENTRY_H_ */

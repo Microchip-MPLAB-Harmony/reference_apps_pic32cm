@@ -126,7 +126,7 @@ data:
             id: enabled
           children:
           - type: Value
-            value: 'true'
+            value: 'false'
           type: Boolean
         type: Attributes
       type: File
@@ -158,20 +158,10 @@ data:
       - children:
         - attributes:
             id: eic
-            value: '4'
+            value: '0'
           type: Dynamic
         type: Values
       type: Hex
-    EIC_NONSEC_2:
-      attributes:
-        id: EIC_NONSEC_2
-      children:
-      - children:
-        - attributes:
-            value: '1'
-          type: User
-        type: Values
-      type: KeyValueSet
     EIC_NUM_NONSEC_CHANNEL:
       attributes:
         id: EIC_NUM_NONSEC_CHANNEL
@@ -179,7 +169,7 @@ data:
       - children:
         - attributes:
             id: eic
-            value: '1'
+            value: '0'
           type: Dynamic
         type: Values
       type: Integer
@@ -203,7 +193,7 @@ data:
             id: enabled
           children:
           - type: Value
-            value: 'true'
+            value: 'false'
           type: Boolean
         type: Attributes
       type: File
@@ -216,7 +206,7 @@ data:
             id: enabled
           children:
           - type: Value
-            value: 'true'
+            value: 'false'
           type: Boolean
         type: Attributes
       type: File
@@ -229,7 +219,7 @@ data:
             id: enabled
           children:
           - type: Value
-            value: 'true'
+            value: 'false'
           type: Boolean
         type: Attributes
       type: File

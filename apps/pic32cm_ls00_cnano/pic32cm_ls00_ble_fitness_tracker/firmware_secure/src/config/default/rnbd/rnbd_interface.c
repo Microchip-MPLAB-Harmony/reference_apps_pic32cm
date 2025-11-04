@@ -335,10 +335,6 @@ static inline void RNBD_Delay(uint32_t delayCount)
     }
 }
 
-/* 
- * Note: Heart Rate 9 Click and RNBD Click shares the same RST pin.
- * The Heart Rate 9 Click RST pin is controlled here.
- */
 static void RNBD_Reset(bool value)
 {
     if (true == value)

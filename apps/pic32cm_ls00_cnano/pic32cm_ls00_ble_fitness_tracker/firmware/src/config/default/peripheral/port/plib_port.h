@@ -74,15 +74,6 @@
 #define EPAPER_2_9_296_128_DC_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 3)) & 0x01)
 #define EPAPER_2_9_296_128_DC_PIN                  PORT_PIN_PA03
 
-/*** Macros for BT_RST pin ***/
-#define BT_RST_Set()               (PORT_REGS->GROUP[0].PORT_OUTSET = 1 << 7)
-#define BT_RST_Clear()             (PORT_REGS->GROUP[0].PORT_OUTCLR = 1 << 7)
-#define BT_RST_Toggle()            (PORT_REGS->GROUP[0].PORT_OUTTGL = 1 << 7)
-#define BT_RST_OutputEnable()      (PORT_REGS->GROUP[0].PORT_DIRSET = 1 << 7)
-#define BT_RST_InputEnable()       (PORT_REGS->GROUP[0].PORT_DIRCLR = 1 << 7)
-#define BT_RST_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 7)) & 0x01)
-#define BT_RST_PIN                  PORT_PIN_PA07
-
 /*** Macros for EPAPER_2_9_296_128_CS pin ***/
 #define EPAPER_2_9_296_128_CS_Set()               (PORT_REGS->GROUP[0].PORT_OUTSET = 1 << 10)
 #define EPAPER_2_9_296_128_CS_Clear()             (PORT_REGS->GROUP[0].PORT_OUTCLR = 1 << 10)
@@ -118,10 +109,6 @@
 #define EPAPER_2_9_296_128_RST_InputEnable()       (PORT_REGS->GROUP[0].PORT_DIRCLR = 1 << 20)
 #define EPAPER_2_9_296_128_RST_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 20)) & 0x01)
 #define EPAPER_2_9_296_128_RST_PIN                  PORT_PIN_PA20
-
-/*** Macros for CNANO_BUTTON pin ***/
-#define CNANO_BUTTON_Get()               (((PORT_REGS->GROUP[0].PORT_IN >> 23)) & 0x01)
-#define CNANO_BUTTON_PIN                  PORT_PIN_PA23
 
 // *****************************************************************************
 /* PORT Group
@@ -176,16 +163,6 @@ typedef enum
 {
     /* PA03 pin */
     PORT_PIN_PA03 = 3,
-    /* PB08 pin */
-    PORT_PIN_PB08 = 40,
-    /* PB09 pin */
-    PORT_PIN_PB09 = 41,
-    /* PA04 pin */
-    PORT_PIN_PA04 = 4,
-    /* PA05 pin */
-    PORT_PIN_PA05 = 5,
-    /* PA07 pin */
-    PORT_PIN_PA07 = 7,
     /* PA08 pin */
     PORT_PIN_PA08 = 8,
     /* PA09 pin */
@@ -198,14 +175,8 @@ typedef enum
     PORT_PIN_PA14 = 14,
     /* PA15 pin */
     PORT_PIN_PA15 = 15,
-    /* PA16 pin */
-    PORT_PIN_PA16 = 16,
-    /* PA17 pin */
-    PORT_PIN_PA17 = 17,
     /* PA20 pin */
     PORT_PIN_PA20 = 20,
-    /* PA23 pin */
-    PORT_PIN_PA23 = 23,
     /* This element should not be used in any of the PORT APIs.
      * It will be used by other modules or application to denote that none of
      * the PORT Pin is used */

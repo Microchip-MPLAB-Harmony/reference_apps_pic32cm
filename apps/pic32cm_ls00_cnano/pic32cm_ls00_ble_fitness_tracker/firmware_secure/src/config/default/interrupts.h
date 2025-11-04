@@ -62,6 +62,9 @@ void HardFault_Handler (void);
 void SVCall_Handler (void);
 void PendSV_Handler (void);
 void SysTick_Handler (void);
+void EIC_EXTINT_2_InterruptHandler (void);
+void SERCOM0_USART_InterruptHandler (void);
+void SERCOM1_USART_InterruptHandler (void);
 
 
 

@@ -38,6 +38,7 @@
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
 #include <stddef.h>
+#include "definitions.h"
 
 /* Declaration of these functions are missing in stdio_s.h for ARM parts*/
 /* MISRAC 2012 deviation block start */
@@ -46,12 +47,31 @@
 
 int read(int handle, void *buffer, unsigned int len)
 {
-   return -1;
+    int nChars = 0;
+    bool success = false;
+    (void)len;
+    if ((handle == 0)  && (len > 0))
+    {
+        do
+        {
+            success = SERCOM3_USART_Read(buffer, 1);
+        }while( !success);
+        nChars = 1;
+    }
+    return nChars;
 }
 
 int write(int handle, void * buffer, size_t count)
 {
-   return -1;
+   bool success = false;
+   if (handle == 1)
+   {
+       do
+       {
+           success = SERCOM3_USART_Write(buffer, count);
+       }while( !success);
+   }
+   return count;
 }
 
 /* MISRAC 2012 deviation block end */

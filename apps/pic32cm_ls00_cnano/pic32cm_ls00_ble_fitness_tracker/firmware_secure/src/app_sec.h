@@ -5,7 +5,7 @@
     Microchip Technology Inc.
 
   File Name:
-    app.h
+    app_sec.h
 
   Summary:
     This header file provides prototypes and definitions for the application.
@@ -54,7 +54,7 @@
 #include <stdbool.h>
 #include <stddef.h>
 #include <stdlib.h>
-#include "configuration.h"
+#include "peripheral/eic/plib_eic.h"
 #include "peripheral/port/plib_port.h"
 #include "definitions.h"
 
@@ -83,16 +83,32 @@ extern "C" {
 
 typedef enum
 {
+    /* RNBD Initial state. */
+    APP_RNBD_INIT_STATE,
+
     /* Initial state. */
     APP_INIT_STATE,
 
-    /* E-Paper Update state */
-    APP_EINK_EPAPER_2_9_296_128_UPDATE_STATE,
+    /* Checking, is Heartrate 9 data ready */
+    CHKNG_HEART_RATE_DATA_RDY_STATE,
+
+    /* Process the Heartrate 9 sensor read data */
+    HEART_RATE_SENSOR_DATA_PROSS_STATE,
+
+    /* Error state */
+    EINK_EPAPER_2_9_296_128_UPDATE_STATE,
+
+    /* Idle state */
+    APP_IDLE_STATE,
 
 } APP_STATES;
 
+#define QUERY_DELAY        500        // 1/2 sec
+
 typedef struct
 {
+    uint16_t queryDelay;
+    /* The application's current state */
     APP_STATES app_state;
 } APP_DATA;
 

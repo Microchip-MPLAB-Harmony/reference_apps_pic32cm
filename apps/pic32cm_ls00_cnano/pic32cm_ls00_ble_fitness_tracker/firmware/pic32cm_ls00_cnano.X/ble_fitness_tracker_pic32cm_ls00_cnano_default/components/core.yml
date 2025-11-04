@@ -112,7 +112,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '1'
+            value: '0'
           type: Dynamic
         type: Values
       type: KeyValueSet
@@ -156,7 +156,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '1'
+            value: '0'
           type: Dynamic
         type: Values
       type: KeyValueSet
@@ -200,7 +200,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '1'
+            value: '0'
           type: Dynamic
         type: Values
       type: KeyValueSet
@@ -244,7 +244,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '1'
+            value: '0'
           type: Dynamic
         type: Values
       type: KeyValueSet
@@ -288,7 +288,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '1'
+            value: '0'
           type: Dynamic
         type: Values
       type: KeyValueSet
@@ -332,7 +332,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '1'
+            value: '0'
           type: Dynamic
         type: Values
       type: KeyValueSet
@@ -376,7 +376,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '1'
+            value: '0'
           type: Dynamic
         type: Values
       type: KeyValueSet
@@ -420,7 +420,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '1'
+            value: '0'
           type: Dynamic
         type: Values
       type: KeyValueSet
@@ -475,7 +475,7 @@ data:
       - children:
         - attributes:
             id: sercom0
-            value: 'true'
+            value: 'false'
           type: Dynamic
         type: Values
       type: Boolean
@@ -530,7 +530,7 @@ data:
       - children:
         - attributes:
             id: sercom0
-            value: 'true'
+            value: 'false'
           type: Dynamic
         type: Values
       type: Boolean
@@ -585,7 +585,7 @@ data:
       - children:
         - attributes:
             id: sercom0
-            value: 'true'
+            value: 'false'
           type: Dynamic
         type: Values
       type: Boolean
@@ -662,7 +662,7 @@ data:
       - children:
         - attributes:
             id: sercom0
-            value: 'true'
+            value: 'false'
           type: Dynamic
         type: Values
       type: Boolean
@@ -717,7 +717,7 @@ data:
       - children:
         - attributes:
             id: sercom3
-            value: 'true'
+            value: 'false'
           type: Dynamic
         type: Values
       type: Boolean
@@ -772,7 +772,7 @@ data:
       - children:
         - attributes:
             id: sercom3
-            value: 'true'
+            value: 'false'
           type: Dynamic
         type: Values
       type: Boolean
@@ -827,7 +827,7 @@ data:
       - children:
         - attributes:
             id: sercom3
-            value: 'true'
+            value: 'false'
           type: Dynamic
         type: Values
       type: Boolean
@@ -904,7 +904,7 @@ data:
       - children:
         - attributes:
             id: sercom3
-            value: 'true'
+            value: 'false'
           type: Dynamic
         type: Values
       type: Boolean
@@ -970,8 +970,11 @@ data:
       - children:
         - attributes:
             id: core
-            value: '1'
+            value: '0'
           type: Dynamic
+        - attributes:
+            value: '0'
+          type: User
         type: Values
       type: KeyValueSet
     EIC_EXTINT_2_SET_NON_SECURE:
@@ -981,7 +984,7 @@ data:
       - children:
         - attributes:
             id: eic
-            value: 'true'
+            value: 'false'
           type: Dynamic
         type: Values
       type: Boolean
@@ -1120,6 +1123,10 @@ data:
       children:
       - children:
         - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
+        - attributes:
             value: 'true'
           type: User
         type: Values
@@ -1131,7 +1138,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: 'true'
+            value: 'false'
           type: Dynamic
         type: Values
       type: Boolean
@@ -1142,18 +1149,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: 'false'
-          type: Dynamic
-        type: Values
-      type: Boolean
-    SysTick_INTERRUPT_ENABLE:
-      attributes:
-        id: SysTick_INTERRUPT_ENABLE
-      children:
-      - children:
-        - attributes:
-            id: core
-            value: 'false'
+            value: 'true'
           type: Dynamic
         type: Values
       type: Boolean
@@ -1164,18 +1160,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: 'false'
-          type: Dynamic
-        type: Values
-      type: Boolean
-    SysTick_INTERRUPT_HANDLER_LOCK:
-      attributes:
-        id: SysTick_INTERRUPT_HANDLER_LOCK
-      children:
-      - children:
-        - attributes:
-            id: core
-            value: 'false'
+            value: 'true'
           type: Dynamic
         type: Values
       type: Boolean
@@ -1184,6 +1169,18 @@ data:
         id: USE_SYSTICK_INTERRUPT
       children:
       - children:
+        - attributes:
+            id: readOnly
+          children:
+          - type: Value
+            value: 'false'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            id: core
+            value: 'false'
+          type: Dynamic
         - attributes:
             value: 'true'
           type: User
@@ -1548,7 +1545,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '1'
+            value: '0'
           type: Dynamic
         type: Values
       type: KeyValueSet
@@ -1559,7 +1556,7 @@ data:
       - children:
         - attributes:
             id: sercom1
-            value: 'true'
+            value: 'false'
           type: Dynamic
         type: Values
       type: Boolean
@@ -1570,7 +1567,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '1'
+            value: '0'
           type: Dynamic
         type: Values
       type: KeyValueSet
@@ -1581,7 +1578,7 @@ data:
       - children:
         - attributes:
             id: sercom1
-            value: 'true'
+            value: 'false'
           type: Dynamic
         type: Values
       type: Boolean
@@ -1592,7 +1589,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '1'
+            value: '0'
           type: Dynamic
         type: Values
       type: KeyValueSet
@@ -1603,7 +1600,7 @@ data:
       - children:
         - attributes:
             id: sercom1
-            value: 'true'
+            value: 'false'
           type: Dynamic
         type: Values
       type: Boolean
@@ -1614,7 +1611,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '1'
+            value: '0'
           type: Dynamic
         type: Values
       type: KeyValueSet
@@ -1625,7 +1622,7 @@ data:
       - children:
         - attributes:
             id: sercom1
-            value: 'true'
+            value: 'false'
           type: Dynamic
         type: Values
       type: Boolean
@@ -2191,7 +2188,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '9686968'
+            value: '1101576'
           type: Dynamic
         type: Values
       type: Hex
@@ -2201,7 +2198,7 @@ data:
       children:
       - children:
         - attributes:
-            value: '1'
+            value: '0'
           type: User
         type: Values
       type: KeyValueSet
@@ -2348,7 +2345,7 @@ data:
       children:
       - children:
         - attributes:
-            value: '1'
+            value: '0'
           type: User
         type: Values
       type: KeyValueSet
@@ -2358,7 +2355,7 @@ data:
       children:
       - children:
         - attributes:
-            value: '1'
+            value: '0'
           type: User
         type: Values
       type: KeyValueSet
@@ -2493,7 +2490,7 @@ data:
       children:
       - children:
         - attributes:
-            value: '1'
+            value: '0'
           type: User
         type: Values
       type: KeyValueSet
@@ -2680,7 +2677,7 @@ data:
       children:
       - children:
         - attributes:
-            value: '1'
+            value: '0'
           type: User
         type: Values
       type: KeyValueSet
@@ -2690,7 +2687,7 @@ data:
       children:
       - children:
         - attributes:
-            value: '1'
+            value: '0'
           type: User
         type: Values
       type: KeyValueSet
@@ -3565,7 +3562,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '1'
+            value: '0'
           type: Dynamic
         type: Values
       type: KeyValueSet
@@ -3575,7 +3572,7 @@ data:
       children:
       - children:
         - attributes:
-            value: 'true'
+            value: 'false'
           type: User
         type: Values
       type: Boolean
@@ -3586,7 +3583,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '1'
+            value: '0'
           type: Dynamic
         type: Values
       type: KeyValueSet
@@ -3596,7 +3593,7 @@ data:
       children:
       - children:
         - attributes:
-            value: 'true'
+            value: 'false'
           type: User
         type: Values
       type: Boolean
@@ -3628,7 +3625,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '1'
+            value: '0'
           type: Dynamic
         type: Values
       type: KeyValueSet
@@ -3638,7 +3635,7 @@ data:
       children:
       - children:
         - attributes:
-            value: 'true'
+            value: 'false'
           type: User
         type: Values
       type: Boolean
@@ -3825,7 +3822,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '48000000'
+            value: '0'
           type: Dynamic
         type: Values
       type: Integer
@@ -3836,7 +3833,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '48000000'
+            value: '0'
           type: Dynamic
         type: Values
       type: Integer
@@ -3847,7 +3844,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: 'true'
+            value: 'false'
           type: Dynamic
         type: Values
       type: Boolean
@@ -3858,7 +3855,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: 'true'
+            value: 'false'
           type: Dynamic
         type: Values
       type: Boolean
@@ -3869,7 +3866,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: 'false'
+            value: 'true'
           type: Dynamic
         type: Values
       type: Boolean
@@ -3880,7 +3877,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: 'true'
+            value: 'false'
           type: Dynamic
         type: Values
       type: Boolean
@@ -3891,7 +3888,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: TC0_TimerInterruptHandler
+            value: TC0_Handler
           type: Dynamic
         type: Values
       type: String
@@ -3902,7 +3899,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: 'true'
+            value: 'false'
           type: Dynamic
         type: Values
       type: Boolean
@@ -3913,54 +3910,10 @@ data:
       - children:
         - attributes:
             id: core
-            value: '1'
+            value: '0'
           type: Dynamic
         type: Values
       type: KeyValueSet
-    TC0_INTERRUPT_ENABLE:
-      attributes:
-        id: TC0_INTERRUPT_ENABLE
-      children:
-      - children:
-        - attributes:
-            id: tc0
-            value: 'true'
-          type: Dynamic
-        type: Values
-      type: Boolean
-    TC0_INTERRUPT_HANDLER:
-      attributes:
-        id: TC0_INTERRUPT_HANDLER
-      children:
-      - children:
-        - attributes:
-            id: tc0
-            value: TC0_TimerInterruptHandler
-          type: Dynamic
-        type: Values
-      type: String
-    TC0_INTERRUPT_HANDLER_LOCK:
-      attributes:
-        id: TC0_INTERRUPT_HANDLER_LOCK
-      children:
-      - children:
-        - attributes:
-            id: tc0
-            value: 'true'
-          type: Dynamic
-        type: Values
-      type: Boolean
-    TC0_SET_NON_SECURE:
-      attributes:
-        id: TC0_SET_NON_SECURE
-      children:
-      - children:
-        - attributes:
-            id: tc0
-            value: 'true'
-          type: Dynamic
-        type: Values
-      type: Boolean
     FUSE_SYMBOL_VALUE46:
       attributes:
         id: FUSE_SYMBOL_VALUE46
@@ -3968,7 +3921,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '1'
+            value: '0'
           type: Dynamic
         type: Values
       type: KeyValueSet
@@ -3978,7 +3931,7 @@ data:
       children:
       - children:
         - attributes:
-            value: 'true'
+            value: 'false'
           type: User
         type: Values
       type: Boolean
@@ -4126,7 +4079,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '768'
+            value: '0'
           type: Dynamic
         type: Values
       type: Hex
@@ -4136,7 +4089,7 @@ data:
       children:
       - children:
         - attributes:
-            value: '1'
+            value: '0'
           type: User
         type: Values
       type: KeyValueSet
@@ -4146,10 +4099,104 @@ data:
       children:
       - children:
         - attributes:
-            value: '1'
+            value: '0'
           type: User
         type: Values
       type: KeyValueSet
+    SYSTICK_SECURE_FILE_0:
+      attributes:
+        id: SYSTICK_SECURE_FILE_0
+      children:
+      - children:
+        - attributes:
+            id: enabled
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      type: File
+    SYSTICK_SECURE_FILE_1:
+      attributes:
+        id: SYSTICK_SECURE_FILE_1
+      children:
+      - children:
+        - attributes:
+            id: enabled
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      type: File
+    SYSTICK_SECURE_FILE_2:
+      attributes:
+        id: SYSTICK_SECURE_FILE_2
+      children:
+      - children:
+        - attributes:
+            id: enabled
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      type: File
+    systickSecureSystemInitFile:
+      attributes:
+        id: systickSecureSystemInitFile
+      children:
+      - children:
+        - attributes:
+            id: enabled
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      type: File
+    systickSecureEnable:
+      attributes:
+        id: systickSecureEnable
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    SysTick_INTERRUPT_ENABLE:
+      attributes:
+        id: SysTick_INTERRUPT_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    SysTick_INTERRUPT_HANDLER_LOCK:
+      attributes:
+        id: SysTick_INTERRUPT_HANDLER_LOCK
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    USE_SYSTICK_SECURE_INTERRUPT:
+      attributes:
+        id: USE_SYSTICK_SECURE_INTERRUPT
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
   userData:
     children:
     - attributes:

@@ -1,5 +1,24 @@
+
 /*******************************************************************************
-* Copyright (C) 2019 Microchip Technology Inc. and its subsidiaries.
+ Non-secure entry header File for non-secure project
+
+  Company:
+    Microchip Technology Inc.
+
+  File Name:
+    non_secure_entry.h
+
+  Summary:
+    Function prototype declarations for Non-secure callable functions
+
+  Description:
+    This file is used to declare non-secure callable functions in non-secure project.
+
+ *******************************************************************************/
+
+// DOM-IGNORE-BEGIN
+/*******************************************************************************
+* Copyright (C) 2023 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -19,10 +38,22 @@
 * FULLEST EXTENT ALLOWED BY LAW, MICROCHIP'S TOTAL LIABILITY ON ALL CLAIMS IN
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
-*******************************************************************************/
+ *******************************************************************************/
+// DOM-IGNORE-END
 
-#ifndef OSAL_DEFINITIONS_H
-#define OSAL_DEFINITIONS_H
+// *****************************************************************************
+// *****************************************************************************
+// Section: Included Files
+// *****************************************************************************
+// *****************************************************************************
 
-#include "osal/osal_impl_basic.h"
-#endif// OSAL_DEFINITIONS_H
+#ifndef NON_SECURE_ENTRY_H_
+#define NON_SECURE_ENTRY_H_
+
+
+
+
+
+
+
+#endif /* NON_SECURE_ENTRY_H_ */

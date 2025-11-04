@@ -44,6 +44,10 @@ int main ( void )
     /* Initialize all modules */
     SYS_Initialize ( NULL );
 
+    SYSTICK_TimerStart();
+
+    APP_Initialize();
+
     if (msp_ns != 0xFFFFFFFF)
     {
         /* Set non-secure main stack (MSP_NS) */

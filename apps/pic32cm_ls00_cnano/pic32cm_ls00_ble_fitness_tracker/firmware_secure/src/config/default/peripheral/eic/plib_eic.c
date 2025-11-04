@@ -115,7 +115,7 @@ void EIC_Initialize (void)
     /* Callbacks for enabled interrupts */
     eicCallbackObject[0].eicPinNo = EIC_PIN_MAX;
     eicCallbackObject[1].eicPinNo = EIC_PIN_MAX;
-    eicCallbackObject[2].eicPinNo = EIC_PIN_MAX;
+    eicCallbackObject[2].eicPinNo = EIC_PIN_2;
     eicCallbackObject[3].eicPinNo = EIC_PIN_MAX;
     eicCallbackObject[4].eicPinNo = EIC_PIN_MAX;
     eicCallbackObject[5].eicPinNo = EIC_PIN_MAX;
@@ -130,7 +130,6 @@ void EIC_Initialize (void)
     eicCallbackObject[14].eicPinNo = EIC_PIN_MAX;
     eicCallbackObject[15].eicPinNo = EIC_PIN_MAX;
 
-    EIC_SEC_REGS->EIC_NONSEC = 0x4 ;
     /* Enable the EIC */
     EIC_SEC_REGS->EIC_CTRLA |= EIC_CTRLA_ENABLE_Msk;
 
@@ -161,4 +160,17 @@ void EIC_CallbackRegister(EIC_PIN pin, EIC_CALLBACK callback, uintptr_t context)
 }
 
 
+void __attribute__((used)) EIC_EXTINT_2_InterruptHandler(void)
+{
+    /* Clear interrupt flag */
+    EIC_SEC_REGS->EIC_INTFLAG = (1UL << 2);
+    (void)EIC_SEC_REGS->EIC_INTFLAG;
+    /* Find any associated callback entries in the callback table */
+    if ((eicCallbackObject[2].callback != NULL))
+    {
+        uintptr_t context = eicCallbackObject[2].context;
+        eicCallbackObject[2].callback(context);
+    }
+
+}
 

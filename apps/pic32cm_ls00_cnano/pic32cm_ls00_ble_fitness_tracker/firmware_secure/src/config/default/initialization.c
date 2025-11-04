@@ -91,13 +91,13 @@
 #pragma config NONSECB_DMAC = CLEAR
 #pragma config NONSECB_USB = CLEAR
 #pragma config NONSECC_EVSYS = CLEAR
-#pragma config NONSECC_SERCOM0 = SET
-#pragma config NONSECC_SERCOM1 = SET
+#pragma config NONSECC_SERCOM0 = CLEAR
+#pragma config NONSECC_SERCOM1 = CLEAR
 #pragma config NONSECC_SERCOM2 = SET
-#pragma config NONSECC_SERCOM3 = SET
+#pragma config NONSECC_SERCOM3 = CLEAR
 #pragma config NONSECC_SERCOM4 = CLEAR
 #pragma config NONSECC_SERCOM5 = CLEAR
-#pragma config NONSECC_TC0 = SET
+#pragma config NONSECC_TC0 = CLEAR
 #pragma config NONSECC_TC1 = CLEAR
 #pragma config NONSECC_TC2 = CLEAR
 #pragma config NONSECC_TCC0 = CLEAR
@@ -171,6 +171,26 @@
 // *****************************************************************************
 // *****************************************************************************
 
+/*******************************************************************************
+  Function:
+    void STDIO_BufferModeSet ( void )
+
+  Summary:
+    Sets the buffering mode for stdin and stdout
+
+  Remarks:
+ ********************************************************************************/
+static void STDIO_BufferModeSet(void)
+{
+
+    /* Make stdin unbuffered */
+    setbuf(stdin, NULL);
+
+    /* Make stdout unbuffered */
+    setbuf(stdout, NULL);
+}
+
+
 
 
 /*******************************************************************************
@@ -190,6 +210,9 @@ void SYS_Initialize ( void* data )
 
     NVMCTRL_SEC_REGS->NVMCTRL_CTRLB = NVMCTRL_CTRLB_RWS(2);
 
+    STDIO_BufferModeSet();
+
+
   
     PORT_Initialize();
 
@@ -197,12 +220,18 @@ void SYS_Initialize ( void* data )
 
 
 
+    SERCOM3_USART_Initialize();
+
     NVMCTRL_Initialize();
+
+    SERCOM1_USART_Initialize();
+
+    SERCOM0_USART_Initialize();
 
     EVSYS_Initialize();
 
+	SYSTICK_TimerInitialize();
     EIC_Initialize();
-
 
     NVIC_Initialize();
 

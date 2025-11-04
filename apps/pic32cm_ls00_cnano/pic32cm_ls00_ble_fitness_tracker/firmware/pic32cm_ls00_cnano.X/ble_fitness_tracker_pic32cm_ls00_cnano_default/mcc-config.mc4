@@ -20,9 +20,7 @@ modules:
 - sercom1
 - sercom2
 - sercom3
-- stdio
-- sys_time
-- tc0
+- stdio_s
 generatedFileHashHistoryMap:
 - file: ..\..\firmware\src\app.c
   hash: 632c78c323cb9f8c6359f20337440c08f8461eb4b0304552b6a3cfd5c4052620
@@ -31,9 +29,9 @@ generatedFileHashHistoryMap:
 - file: ..\..\firmware\src\config\default\PIC32CM5164LS00048.ld
   hash: 30191e9762084f61078552f0f3c0c72f9ae205f659a0b5c8a39366bd0f159676
 - file: ..\..\firmware\src\config\default\configuration.h
-  hash: 1fe32a9efb8ecbe831234cf9242f48cede8fe54f19f6bc2243b10ff8d546497e
+  hash: 321175fed312776d5e0da9d63da1fca0673933ab0298c1d9a4aeb32cf5873639
 - file: ..\..\firmware\src\config\default\definitions.h
-  hash: 8eafd820bb54d559235acc5939b3b1f12f0892cbbe3784db588f041c68ddbb02
+  hash: f612a91e526b957744e166e502e288d26346bf93bf047948f0a5cd71246ff0a2
 - file: ..\..\firmware\src\config\default\device.h
   hash: 93a786fe6c731ae7fed16e8e6f02040c17e745ffa9b8b884d51ec7bdb658f951
 - file: ..\..\firmware\src\config\default\device_cache.h
@@ -43,95 +41,39 @@ generatedFileHashHistoryMap:
 - file: ..\..\firmware\src\config\default\exceptions.c
   hash: b0b65c30aa1f7a01ef7be6c1628c331a5ca3eae7dc3bd76ebe647703b76f432d
 - file: ..\..\firmware\src\config\default\initialization.c
-  hash: eccde74ba7a77068e74e5d17b5f0a361c7555e51a23ddaab98b3b8ad44dd4081
+  hash: 4c3dfe069a89da622e757fc3f335a68b176f64752d4b4d3d49f5431257b17b3c
 - file: ..\..\firmware\src\config\default\interrupts.c
-  hash: c844e00ed97b29f8cae453c2fd2ace8eaa3eec31c5820003519a074728919f08
+  hash: 81474acc233b27ae5204b912bd59101e1dc609907a1118a6515c87d6fad6749f
 - file: ..\..\firmware\src\config\default\interrupts.h
-  hash: e6b5813afb5f4ccbcb5662b015fe26606d8026859b0ff96dca87d624fcb7c0d0
+  hash: 098fc0a292d4f26819a1bc4c743a2e58478b05a9f5fc26be1f90308e443cb8f8
 - file: ..\..\firmware\src\config\default\libc_syscalls.c
   hash: 88bb2e34c939601b5b7ad076556e3ee0fcedf388436b8cddb6d6fd3e9d07472f
-- file: ..\..\firmware\src\config\default\osal\osal.h
-  hash: 1cfe3b61d9693b2369922041eef33fe16b3c1ccd9c85d4ded808b805f90a869c
-- file: ..\..\firmware\src\config\default\osal\osal_definitions.h
-  hash: 5f0a2513a093b6d228e2b50646b204923a82047335a47f3d35a2938309ab6f37
-- file: ..\..\firmware\src\config\default\osal\osal_impl_basic.h
-  hash: 65e68edbc0320d0407399f65e6d06ff7e6d3d7697231cf1fe0a1fdf1d65f0463
-- file: ..\..\firmware\src\config\default\peripheral\eic\plib_eic.c
-  hash: d2692e1fb466bb97f7bd859a365b468878fc8a6b3ff851b369c7529a5e5418b8
-- file: ..\..\firmware\src\config\default\peripheral\eic\plib_eic.h
-  hash: 04d53e6ba0facca0713c8ec4d17361eb7de82e2c7c670c4ddf9fd7789a9c0b07
 - file: ..\..\firmware\src\config\default\peripheral\nvic\plib_nvic.c
-  hash: 8665711ee290bb6be497d85d0340e62c81c50f148aa6af14f0cc1502660679ae
+  hash: 768d9f37cccadb222ff66dc883225dd7c16e5b2b730f6bb95c81867c8d71d1fa
 - file: ..\..\firmware\src\config\default\peripheral\nvic\plib_nvic.h
   hash: 9936ac782115af41003255283fa2f603f4ff2212d16275b7c80ea8d067a9e208
 - file: ..\..\firmware\src\config\default\peripheral\port\plib_port.c
   hash: c5272f06ad2d2ad55fd87b491edb908257f7ea7edcb721940d922743d3b41da6
 - file: ..\..\firmware\src\config\default\peripheral\port\plib_port.h
-  hash: ddd9e0660807d518c78a8babd7db7a63b8b3db114d632ec544cf312c8c406302
+  hash: 35160aa61171c875f9ed4e6103296fb3a250cb306193f4a71438cf2c439e674d
 - file: ..\..\firmware\src\config\default\peripheral\sercom\spi_master\plib_sercom2_spi_master.c
   hash: 2383f98789222228731bc4ce71027a93e4f720819d1a079d447629b050927811
 - file: ..\..\firmware\src\config\default\peripheral\sercom\spi_master\plib_sercom2_spi_master.h
   hash: c558db3860f3f81dea950f84ed9ea3c07634dd0368302968a49a43a52818395a
 - file: ..\..\firmware\src\config\default\peripheral\sercom\spi_master\plib_sercom_spi_master_common.h
   hash: 06e3c7813e1608b5008e3c8955569f9cff04bef321a34c35421f7979368a4ada
-- file: ..\..\firmware\src\config\default\peripheral\sercom\usart\plib_sercom0_usart.c
-  hash: 510aa623dd25b68807fa4e82ca9093bc653dfe1e6dfbdf4eb099bf295c24a711
-- file: ..\..\firmware\src\config\default\peripheral\sercom\usart\plib_sercom0_usart.h
-  hash: 0df2c338e8de7443bc597e108b579c4f29d23090bba433ebddf71d0eac3d218a
-- file: ..\..\firmware\src\config\default\peripheral\sercom\usart\plib_sercom1_usart.c
-  hash: 1e41fa97c753ab3e9aaa6c61f9d4e5d94c5696269e6a9aee43b0999d79c5f4c6
-- file: ..\..\firmware\src\config\default\peripheral\sercom\usart\plib_sercom1_usart.h
-  hash: f139e664f91fb7ed962f61e210a4fd17059e895a06a64a243d2fd979ac59b674
-- file: ..\..\firmware\src\config\default\peripheral\sercom\usart\plib_sercom3_usart.c
-  hash: 37d594b7addf2927753b7ccfe5da5d6ba47e7183b534cabb8842027dfc29611f
-- file: ..\..\firmware\src\config\default\peripheral\sercom\usart\plib_sercom3_usart.h
-  hash: e6b3c5a74a4cc6d70a66fbe08e802db7436d4ec81921d06c37d35e2ca30fe870
-- file: ..\..\firmware\src\config\default\peripheral\sercom\usart\plib_sercom_usart_common.h
-  hash: 3653b66472c558c50f7037a1dd25d2678e9a13aa718f3c53a2195e6f3919ea48
 - file: ..\..\firmware\src\config\default\peripheral\systick\plib_systick.c
   hash: df4bbe2a5fc85a321f00e90a9b8735bf3ccf1a3a964f3ea9c610c3e5923fc5c3
 - file: ..\..\firmware\src\config\default\peripheral\systick\plib_systick.h
   hash: a189d32422a5de630f963f5ec70b0ee72a7718647f35bd391e13badd54e4f701
-- file: ..\..\firmware\src\config\default\peripheral\tc\plib_tc0.c
-  hash: e3365cd58ab8be52018fe243e49ee1b99f7b4218e372b9a506ee9fc8fa6a4959
-- file: ..\..\firmware\src\config\default\peripheral\tc\plib_tc0.h
-  hash: c71eb1c99c9c3244b6d2a5030b97723a3d32d7a2c83c4ab2374c2e947e64b0c0
-- file: ..\..\firmware\src\config\default\peripheral\tc\plib_tc_common.h
-  hash: 487b4f489229b8e16b24ab48ddc1f414b095585439f0e10d53b2285fc3979f63
 - file: ..\..\firmware\src\config\default\pin_configurations.csv
   hash: 4f7feb4a4757316b510d74e368f5af1b017770848446502a611da18317800cc5
-- file: ..\..\firmware\src\config\default\rnbd\rnbd_interface.c
-  hash: 3b50a534cbee9e4cae8d9643a8aacb40d374449687df8aedb8c7feaef105e310
-- file: ..\..\firmware\src\config\default\rnbd\rnbd_interface.h
-  hash: 72b84a4708a98c76138d38663ad66155564a74dbf4e5e7b73b7ea997999ec704
 - file: ..\..\firmware\src\config\default\startup_xc32.c
   hash: e6227d89e36b74af1bc21e00e80b390502c97aaaa65796291f63b2d96cf0678e
 - file: ..\..\firmware\src\config\default\stdio\xc32_monitor.c
-  hash: 09d37ac05bc55063350404f9ca3d5e26c415b893bf2c260503cd3b3e8de6894b
+  hash: 858f8710d4287200a5ee7f3b3ad7c24f505aed9c05c16956ab0ff9f7bb162a6a
 - file: ..\..\firmware\src\config\default\sys_tasks.h
   hash: 21f254f497a18a024cd00128d06c4776c2643f867a460c1ba9880a7dd41a8d56
-- file: ..\..\firmware\src\config\default\system\debug\sys_debug.h
-  hash: 4162d9e1fab93b8b33f6c8a24726f5dc287ea05c31e3ab984c3c920c725d0882
-- file: ..\..\firmware\src\config\default\system\int\src\sys_int.c
-  hash: 4281667cc2b84c9e4be1f0dfb3f7d42b77d36c5dcf6513d29ff40262f746cfc6
-- file: ..\..\firmware\src\config\default\system\int\sys_int.h
-  hash: dc104ae181fd5309e1bb42896246644fae95915a8e639b23ecfccc8840850274
-- file: ..\..\firmware\src\config\default\system\int\sys_int_mapping.h
-  hash: 5abf8528dabc1b17378f5d137870597037214fddf33880fa40e9263352da3008
-- file: ..\..\firmware\src\config\default\system\system.h
-  hash: 2b75f8e370e5cb2c54f70da7351ee149f0d5a7673e700f39b373099716b31b55
-- file: ..\..\firmware\src\config\default\system\system_common.h
-  hash: c9f34bd226f8efab12f5766e77f8355996cd0430b50e0f6ee30258664c494984
-- file: ..\..\firmware\src\config\default\system\system_module.h
-  hash: 96c74368801b0a7aaa25aec3ec2cb0d483250385f103ffc1ff64089b4ca2c6d9
-- file: ..\..\firmware\src\config\default\system\time\src\sys_time.c
-  hash: fa2d85ab967b80157caf8483f6e28a23b12b548844a1d80f2fef760cd9b99271
-- file: ..\..\firmware\src\config\default\system\time\src\sys_time_local.h
-  hash: df56f970664902417d798760e44978cf4b84c108cf0761647a383e91db76980c
-- file: ..\..\firmware\src\config\default\system\time\sys_time.h
-  hash: 6357468f7670698b16bfb6439d9919ed38eba99d4f03277a8b43ac34586fa1b3
-- file: ..\..\firmware\src\config\default\system\time\sys_time_definitions.h
-  hash: b8c332f36f8a6ed230dc25b1f9f7f2970699947567f80cb06534d405b7a0dd9d
 - file: ..\..\firmware\src\config\default\tasks.c
   hash: 36364a39e784157f4aac281dfecc1f19be971c9935e6299a6f37a78cd98d1d46
 - file: ..\..\firmware\src\config\default\toolchain_specifics.h
@@ -314,16 +256,14 @@ generatedFileHashHistoryMap:
   hash: 6b201b7e112206605eaf39fb6b37200eda14e59cf5f00ba06aa4c0088f7c602c
 - file: ..\..\firmware\src\packs\PIC32CM5164LS00048_DFP\pio\pic32cm5164ls00048.h
   hash: c1cdff26e2eb749cb83c11735fb9eafba15b1f27a75c008c41f0920d1d5954d7
-- file: ..\..\firmware\src\rnbd\rnbd.c
-  hash: d663d58cb61e9cb72661d9aead3ef6955e49520c1cdc1135ec49946c30150669
-- file: ..\..\firmware\src\rnbd\rnbd.h
-  hash: e92c139daf6e44808b716185f3fe8bf1e3662a299163f15295c768aedd031e58
 - file: ..\..\firmware\src\trustZone\nonsecure_entry.h
   hash: 9e0dffed059e825cb174ea36db2db88b0ae63e786e393d9fcbe8a20c4078e598
+- file: ..\..\firmware\src\trustZone\rnbd\non_secure_entry.h
+  hash: 6455c1d39007b481db6da24f7b71e8678393b4896d45af58b50e522881d967c5
 - file: ..\..\firmware_secure\src\config\default\PIC32CM5164LS00048.ld
   hash: 30191e9762084f61078552f0f3c0c72f9ae205f659a0b5c8a39366bd0f159676
 - file: ..\..\firmware_secure\src\config\default\definitions.h
-  hash: 86224353b1acad1807ddecf8e042433f41435369b9c095350480c9298bbe9814
+  hash: 8829b82316095691a05daf909746963d17fd273a4c661cd0181cb20b41e0e357
 - file: ..\..\firmware_secure\src\config\default\device.h
   hash: 93a786fe6c731ae7fed16e8e6f02040c17e745ffa9b8b884d51ec7bdb658f951
 - file: ..\..\firmware_secure\src\config\default\device_cache.h
@@ -333,27 +273,27 @@ generatedFileHashHistoryMap:
 - file: ..\..\firmware_secure\src\config\default\exceptions.c
   hash: 2c3b450b059db8a8839fdf58893f4c471cb9254fbf22dd5a210c6f358b2776f4
 - file: ..\..\firmware_secure\src\config\default\initialization.c
-  hash: b8717d85c511964b2fce2a4837bdc10619b810051f26f429cb24707ea1ba55d4
+  hash: 1a39c02d9a5f0f79461dfb5195cbba6f2482fd3e5f3a13ffbf13cd18b4e8a7b9
 - file: ..\..\firmware_secure\src\config\default\interrupts.c
-  hash: 8b32e6ca3a09429cf45652c8274e509fd73942862b025c7dcd613d2761c89599
+  hash: 096b548f0be761740236015e6961feb721e1ab45d2d0a2096fa7eb87dc11e33c
 - file: ..\..\firmware_secure\src\config\default\interrupts.h
-  hash: b4dd0ce5d3e62a422c995a0846d00a8df0ced7850bfb1bb9917cbac4df94f18d
+  hash: 3b9baae82834951534bbe24b0ee03b1d655654e12f9ebbe917fd7c71e640b6ee
 - file: ..\..\firmware_secure\src\config\default\libc_syscalls.c
   hash: 88bb2e34c939601b5b7ad076556e3ee0fcedf388436b8cddb6d6fd3e9d07472f
 - file: ..\..\firmware_secure\src\config\default\peripheral\clock\plib_clock.c
-  hash: c2d328d711ecef849e343d52c0c63dc9bea89bb84323fef7bd2b854bd6cdae80
+  hash: de3fc8f305703d2cd0239c892bf24136bc84f935e1e8c3cce5309d2ef6e4907d
 - file: ..\..\firmware_secure\src\config\default\peripheral\clock\plib_clock.h
   hash: 48855ddfcdc10b43a141321e043ab6ad2eb994b09fdba511f17f1d93911c536c
 - file: ..\..\firmware_secure\src\config\default\peripheral\eic\plib_eic.c
-  hash: 4bb7d6151cda839e16ed68388599abeff7aa18c0b01f1da6665751cf73be33ba
+  hash: a222edb03fa469a73bb75610e1fd6635d71707ff71bf323060bc772ab1045581
 - file: ..\..\firmware_secure\src\config\default\peripheral\eic\plib_eic.h
-  hash: 8fb0ac9bb8891b86555f3e2a3ccfa80fb81efbf261358b7bf927cd213dd819b7
+  hash: dc9f97bb42755bc45cd7462671b9e15b0f7b6dcc5d9972f0bce9cd27fb700552
 - file: ..\..\firmware_secure\src\config\default\peripheral\evsys\plib_evsys.c
   hash: 171913270aa095f1e8ff9192995129ff7bab22e5c793c4223f9046802e69d1e6
 - file: ..\..\firmware_secure\src\config\default\peripheral\evsys\plib_evsys.h
   hash: f7d08eb8162f271ce1db384c082586a6624e506aa7f502c64c4ab5a1aadac47d
 - file: ..\..\firmware_secure\src\config\default\peripheral\nvic\plib_nvic.c
-  hash: 2d00fb8f179bf2bb08416734f06b432a0946cf512bbefd45163cfc081adaed5a
+  hash: 3438180e7ea838e6ec7e39e254d34712d92399e3f537cc34db131687aa17b0d0
 - file: ..\..\firmware_secure\src\config\default\peripheral\nvic\plib_nvic.h
   hash: 9936ac782115af41003255283fa2f603f4ff2212d16275b7c80ea8d067a9e208
 - file: ..\..\firmware_secure\src\config\default\peripheral\nvmctrl\plib_nvmctrl.c
@@ -365,13 +305,35 @@ generatedFileHashHistoryMap:
 - file: ..\..\firmware_secure\src\config\default\peripheral\pm\plib_pm.h
   hash: 027462b9369dc5bb8873f96fc3b5ca69ceaf3bd205be7246e58a093b16ee633c
 - file: ..\..\firmware_secure\src\config\default\peripheral\port\plib_port.c
-  hash: 2fa347a945cd53d5455d6526dbd828e22e71817026f823c106576872b66a89f5
+  hash: 33da8cc0eb66513b27ae7cba2f3c5f461f6d29d9877f0e73cb15d34a960bb112
 - file: ..\..\firmware_secure\src\config\default\peripheral\port\plib_port.h
-  hash: 4cf90a46775a35c9e65bc5bcced7b49975be5c8e511876ca0433167b8daf4c43
+  hash: 62f9028a17cdea214ca8e2a140bf621daf9696969e19a45ab9f7cb47cb1eae23
+- file: ..\..\firmware_secure\src\config\default\peripheral\sercom\usart\plib_sercom0_usart.c
+  hash: 510aa623dd25b68807fa4e82ca9093bc653dfe1e6dfbdf4eb099bf295c24a711
+- file: ..\..\firmware_secure\src\config\default\peripheral\sercom\usart\plib_sercom0_usart.h
+  hash: 0df2c338e8de7443bc597e108b579c4f29d23090bba433ebddf71d0eac3d218a
+- file: ..\..\firmware_secure\src\config\default\peripheral\sercom\usart\plib_sercom1_usart.c
+  hash: 1e41fa97c753ab3e9aaa6c61f9d4e5d94c5696269e6a9aee43b0999d79c5f4c6
+- file: ..\..\firmware_secure\src\config\default\peripheral\sercom\usart\plib_sercom1_usart.h
+  hash: f139e664f91fb7ed962f61e210a4fd17059e895a06a64a243d2fd979ac59b674
+- file: ..\..\firmware_secure\src\config\default\peripheral\sercom\usart\plib_sercom3_usart.c
+  hash: 37d594b7addf2927753b7ccfe5da5d6ba47e7183b534cabb8842027dfc29611f
+- file: ..\..\firmware_secure\src\config\default\peripheral\sercom\usart\plib_sercom3_usart.h
+  hash: e6b3c5a74a4cc6d70a66fbe08e802db7436d4ec81921d06c37d35e2ca30fe870
+- file: ..\..\firmware_secure\src\config\default\peripheral\sercom\usart\plib_sercom_usart_common.h
+  hash: 3653b66472c558c50f7037a1dd25d2678e9a13aa718f3c53a2195e6f3919ea48
+- file: ..\..\firmware_secure\src\config\default\peripheral\systick\plib_systick.c
+  hash: 13df7b3b0be0749b01ae71f387486c6749afb93e09f0f61a237e0201445c95da
+- file: ..\..\firmware_secure\src\config\default\peripheral\systick\plib_systick.h
+  hash: 545ac922723aa3bdb6dac6c7665f794cd74820c811a629e385b6dcc8a82cdc67
+- file: ..\..\firmware_secure\src\config\default\rnbd\rnbd_interface.c
+  hash: 3b50a534cbee9e4cae8d9643a8aacb40d374449687df8aedb8c7feaef105e310
+- file: ..\..\firmware_secure\src\config\default\rnbd\rnbd_interface.h
+  hash: 72b84a4708a98c76138d38663ad66155564a74dbf4e5e7b73b7ea997999ec704
 - file: ..\..\firmware_secure\src\config\default\startup_xc32.c
   hash: e6227d89e36b74af1bc21e00e80b390502c97aaaa65796291f63b2d96cf0678e
 - file: ..\..\firmware_secure\src\config\default\stdio\xc32_monitor.c
-  hash: 5f5a687b7a63b5d88010003acaadf1ba2a00b188fb24407883a40760a3de08cd
+  hash: bdbc80f3134c8673e37178ac3d96e3dfd3002db8ce529d0236fa656679de16c7
 - file: ..\..\firmware_secure\src\config\default\toolchain_specifics.h
   hash: a4f1774c6f1f8c6cd522567536c9e9d75ca63259b868015ac9b0fb0aeeffe1f4
 - file: ..\..\firmware_secure\src\main.c
@@ -550,5 +512,11 @@ generatedFileHashHistoryMap:
   hash: 6b201b7e112206605eaf39fb6b37200eda14e59cf5f00ba06aa4c0088f7c602c
 - file: ..\..\firmware_secure\src\packs\PIC32CM5164LS00048_DFP\pio\pic32cm5164ls00048.h
   hash: c1cdff26e2eb749cb83c11735fb9eafba15b1f27a75c008c41f0920d1d5954d7
+- file: ..\..\firmware_secure\src\rnbd\rnbd.c
+  hash: d663d58cb61e9cb72661d9aead3ef6955e49520c1cdc1135ec49946c30150669
+- file: ..\..\firmware_secure\src\rnbd\rnbd.h
+  hash: e92c139daf6e44808b716185f3fe8bf1e3662a299163f15295c768aedd031e58
 - file: ..\..\firmware_secure\src\trustZone\nonsecure_entry.c
   hash: 60217d96bd5dc9dc5567affd81197c8ae35e604fd864453cc25414d8b5a0fdd5
+- file: ..\..\firmware_secure\src\trustZone\rnbd\non_secure_entry.c
+  hash: 10b6b98457be752e68e9b0db3b4cf3830d64041131ea9aa5ad71c28c5e4f8c5d

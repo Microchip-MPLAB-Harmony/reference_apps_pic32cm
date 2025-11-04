@@ -565,22 +565,18 @@ bool RNBD_Disconnect(void)
 
     return RNBD_ReadDefaultResponse();
 }
-
 void RNBD_set_StatusDelimter(char Delimter_Character)
 {
 	STATUS_MESSAGE_DELIMITER = Delimter_Character;
 }
-
 char RNBD_get_StatusDelimter(void)
 {
 	return STATUS_MESSAGE_DELIMITER;
 }
-
 void RNBD_set_NoDelimter(bool value)
 {
     skip_Delimter=value;
 }
-
 bool RNBD_get_NoDelimter(void)
 {
     return skip_Delimter;

@@ -65,6 +65,19 @@
 // *****************************************************************************
 // *****************************************************************************
 
+/*** Macros for BT_RST pin ***/
+#define BT_RST_Set()               (PORT_SEC_REGS->GROUP[0].PORT_OUTSET = ((uint32_t)1U << 7U))
+#define BT_RST_Clear()             (PORT_SEC_REGS->GROUP[0].PORT_OUTCLR = ((uint32_t)1U << 7U))
+#define BT_RST_Toggle()            (PORT_SEC_REGS->GROUP[0].PORT_OUTTGL = ((uint32_t)1U << 7U))
+#define BT_RST_OutputEnable()      (PORT_SEC_REGS->GROUP[0].PORT_DIRSET = ((uint32_t)1U << 7U))
+#define BT_RST_InputEnable()       (PORT_SEC_REGS->GROUP[0].PORT_DIRCLR = ((uint32_t)1U << 7U))
+#define BT_RST_Get()               (((PORT_SEC_REGS->GROUP[0].PORT_IN >> 7U)) & 0x01U)
+#define BT_RST_PIN                  PORT_PIN_PA07
+
+/*** Macros for CNANO_BUTTON pin ***/
+#define CNANO_BUTTON_Get()               (((PORT_SEC_REGS->GROUP[0].PORT_IN >> 23U)) & 0x01U)
+#define CNANO_BUTTON_PIN                  PORT_PIN_PA23
+
 // *****************************************************************************
 /* PORT Group
 
@@ -142,12 +155,26 @@ typedef enum
     PORT_PIN_PA01 = 1U,
     /* PA02 pin */
     PORT_PIN_PA02 = 2U,
+    /* PB08 pin */
+    PORT_PIN_PB08 = 40U,
+    /* PB09 pin */
+    PORT_PIN_PB09 = 41U,
+    /* PA04 pin */
+    PORT_PIN_PA04 = 4U,
+    /* PA05 pin */
+    PORT_PIN_PA05 = 5U,
     /* PA06 pin */
     PORT_PIN_PA06 = 6U,
+    /* PA07 pin */
+    PORT_PIN_PA07 = 7U,
     /* PA12 pin */
     PORT_PIN_PA12 = 12U,
     /* PA13 pin */
     PORT_PIN_PA13 = 13U,
+    /* PA16 pin */
+    PORT_PIN_PA16 = 16U,
+    /* PA17 pin */
+    PORT_PIN_PA17 = 17U,
     /* PA18 pin */
     PORT_PIN_PA18 = 18U,
     /* PA19 pin */
@@ -156,6 +183,8 @@ typedef enum
     PORT_PIN_PA21 = 21U,
     /* PA22 pin */
     PORT_PIN_PA22 = 22U,
+    /* PA23 pin */
+    PORT_PIN_PA23 = 23U,
     /* PA24 pin */
     PORT_PIN_PA24 = 24U,
     /* PA25 pin */
