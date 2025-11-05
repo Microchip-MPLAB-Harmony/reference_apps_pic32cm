@@ -463,10 +463,6 @@ void secureApp ( void )
             break;
 
         case APP_IDLE_STATE:
-            if (appData.queryDelay == 0)
-            {
-                appData.queryDelay = QUERY_DELAY;
-            }
             if(button_pressed == true)
             {
                 appData.app_state       = CHKNG_HEART_RATE_DATA_RDY_STATE;

@@ -22,8 +22,8 @@ data:
     - children:
       - attributes:
           id: RNBD_Dependency
-          x: '412'
-          y: '136'
+          x: '421'
+          y: '133'
         type: ElementPosition
       type: ElementPositions
     type: ComponentGraph

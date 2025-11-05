@@ -107,7 +107,6 @@ typedef enum
 
 typedef struct
 {
-    uint16_t queryDelay;
     /* The application's current state */
     APP_STATES app_state;
 } APP_DATA;

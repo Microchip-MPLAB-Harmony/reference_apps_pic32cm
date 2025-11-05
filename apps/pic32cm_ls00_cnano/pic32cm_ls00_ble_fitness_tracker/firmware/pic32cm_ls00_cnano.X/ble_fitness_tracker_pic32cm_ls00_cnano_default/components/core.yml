@@ -4197,6 +4197,27 @@ data:
           type: User
         type: Values
       type: Boolean
+    FUSE_SYMBOL_VALUE21:
+      attributes:
+        id: FUSE_SYMBOL_VALUE21
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: '1'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    PM_IS_NON_SECURE:
+      attributes:
+        id: PM_IS_NON_SECURE
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
   userData:
     children:
     - attributes:

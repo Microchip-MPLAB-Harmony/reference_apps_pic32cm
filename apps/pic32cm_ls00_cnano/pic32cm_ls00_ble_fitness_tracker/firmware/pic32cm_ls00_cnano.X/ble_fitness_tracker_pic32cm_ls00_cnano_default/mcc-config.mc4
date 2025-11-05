@@ -31,7 +31,7 @@ generatedFileHashHistoryMap:
 - file: ..\..\firmware\src\config\default\configuration.h
   hash: 321175fed312776d5e0da9d63da1fca0673933ab0298c1d9a4aeb32cf5873639
 - file: ..\..\firmware\src\config\default\definitions.h
-  hash: f612a91e526b957744e166e502e288d26346bf93bf047948f0a5cd71246ff0a2
+  hash: ef5ff53c2db7968c338651ee7ce0c79407f670e96a74b6480e3fd031e8e1aa85
 - file: ..\..\firmware\src\config\default\device.h
   hash: 93a786fe6c731ae7fed16e8e6f02040c17e745ffa9b8b884d51ec7bdb658f951
 - file: ..\..\firmware\src\config\default\device_cache.h
@@ -52,6 +52,10 @@ generatedFileHashHistoryMap:
   hash: 768d9f37cccadb222ff66dc883225dd7c16e5b2b730f6bb95c81867c8d71d1fa
 - file: ..\..\firmware\src\config\default\peripheral\nvic\plib_nvic.h
   hash: 9936ac782115af41003255283fa2f603f4ff2212d16275b7c80ea8d067a9e208
+- file: ..\..\firmware\src\config\default\peripheral\pm\plib_pm.c
+  hash: 891927e49045c98c84497fe571102252e5695deeedb1a4ae82a6af9db765ca12
+- file: ..\..\firmware\src\config\default\peripheral\pm\plib_pm.h
+  hash: 64a3707c2c8a6d15570c507469630397420df6a0afc7e8acac75b1fb64f95721
 - file: ..\..\firmware\src\config\default\peripheral\port\plib_port.c
   hash: c5272f06ad2d2ad55fd87b491edb908257f7ea7edcb721940d922743d3b41da6
 - file: ..\..\firmware\src\config\default\peripheral\port\plib_port.h
@@ -263,7 +267,7 @@ generatedFileHashHistoryMap:
 - file: ..\..\firmware_secure\src\config\default\PIC32CM5164LS00048.ld
   hash: 30191e9762084f61078552f0f3c0c72f9ae205f659a0b5c8a39366bd0f159676
 - file: ..\..\firmware_secure\src\config\default\definitions.h
-  hash: 8829b82316095691a05daf909746963d17fd273a4c661cd0181cb20b41e0e357
+  hash: dce36acccf3b7cdd0515a3b5174de5f69dbb7bf53590a534ecd2e57801719fed
 - file: ..\..\firmware_secure\src\config\default\device.h
   hash: 93a786fe6c731ae7fed16e8e6f02040c17e745ffa9b8b884d51ec7bdb658f951
 - file: ..\..\firmware_secure\src\config\default\device_cache.h
@@ -273,7 +277,7 @@ generatedFileHashHistoryMap:
 - file: ..\..\firmware_secure\src\config\default\exceptions.c
   hash: 2c3b450b059db8a8839fdf58893f4c471cb9254fbf22dd5a210c6f358b2776f4
 - file: ..\..\firmware_secure\src\config\default\initialization.c
-  hash: 1a39c02d9a5f0f79461dfb5195cbba6f2482fd3e5f3a13ffbf13cd18b4e8a7b9
+  hash: ebcfa7e7f812a00dcefe7174364ed750d328842b29e7fe9a6b26a83ec00dd23b
 - file: ..\..\firmware_secure\src\config\default\interrupts.c
   hash: 096b548f0be761740236015e6961feb721e1ab45d2d0a2096fa7eb87dc11e33c
 - file: ..\..\firmware_secure\src\config\default\interrupts.h
@@ -301,9 +305,9 @@ generatedFileHashHistoryMap:
 - file: ..\..\firmware_secure\src\config\default\peripheral\nvmctrl\plib_nvmctrl.h
   hash: 47415c66165be8150b7ebddecf82a43d8da510edd333c89965cea85516cdcdd3
 - file: ..\..\firmware_secure\src\config\default\peripheral\pm\plib_pm.c
-  hash: 298850e9d54d237f93b16abca226d64f1db961004ab900ba052fb3cba31af461
+  hash: 9775fa6afa191c5186a09a13c9219bbeb248e86b0d3980dc6634798eac842546
 - file: ..\..\firmware_secure\src\config\default\peripheral\pm\plib_pm.h
-  hash: 027462b9369dc5bb8873f96fc3b5ca69ceaf3bd205be7246e58a093b16ee633c
+  hash: b892222b3cb4bbec8ef3f7b307210c7aea2df87ccaf3e8151a12bb6da51be88e
 - file: ..\..\firmware_secure\src\config\default\peripheral\port\plib_port.c
   hash: 33da8cc0eb66513b27ae7cba2f3c5f461f6d29d9877f0e73cb15d34a960bb112
 - file: ..\..\firmware_secure\src\config\default\peripheral\port\plib_port.h

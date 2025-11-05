@@ -27,5 +27,83 @@ data:
         type: ElementPosition
       type: ElementPositions
     type: ComponentGraph
-  symbols: {}
+  symbols:
+    PM_HEADER:
+      attributes:
+        id: PM_HEADER
+      children:
+      - children:
+        - attributes:
+            id: security
+          children:
+          - type: Value
+            value: NON_SECURE
+          type: String
+        type: Attributes
+      type: File
+    PM_SOURCE:
+      attributes:
+        id: PM_SOURCE
+      children:
+      - children:
+        - attributes:
+            id: security
+          children:
+          - type: Value
+            value: NON_SECURE
+          type: String
+        type: Attributes
+      type: File
+    PM_SYS_DEF:
+      attributes:
+        id: PM_SYS_DEF
+      children:
+      - children:
+        - attributes:
+            id: name
+          children:
+          - type: Value
+            value: core.LIST_SYSTEM_DEFINITIONS_H_INCLUDES
+          type: String
+        type: Attributes
+      type: File
+    PM_HEADER_SECURE:
+      attributes:
+        id: PM_HEADER_SECURE
+      children:
+      - children:
+        - attributes:
+            id: enabled
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      type: File
+    PM_SOURCE_SECURE:
+      attributes:
+        id: PM_SOURCE_SECURE
+      children:
+      - children:
+        - attributes:
+            id: enabled
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      type: File
+    PM_SYS_DEF_SECURE:
+      attributes:
+        id: PM_SYS_DEF_SECURE
+      children:
+      - children:
+        - attributes:
+            id: enabled
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      type: File
   userData: {}

@@ -5,10 +5,10 @@
     Microchip Technology Inc.
 
   File Name
-    plib_pm.c
+    plib_pm.h
 
   Summary
-    PM PLIB Implementation File.
+    PM PLIB Header File.
 
   Description
     This file defines the interface to the PM peripheral library. This
@@ -45,6 +45,9 @@
 *******************************************************************************/
 // DOM-IGNORE-END
 
+#ifndef PLIB_PM_H    // Guards against multiple inclusion
+#define PLIB_PM_H
+
 // *****************************************************************************
 // *****************************************************************************
 // Section: Included Files
@@ -53,23 +56,42 @@
 /* This section lists the other files that are included in this file.
 */
 
-#include "device.h"
-#include "plib_pm.h"
-void PM_Initialize( void )
+#include <stdbool.h>
+#include <stddef.h>
+
+// DOM-IGNORE-BEGIN
+#ifdef __cplusplus // Provide C++ Compatibility
+
+    extern "C" {
+
+#endif
+// DOM-IGNORE-END
+
+// *****************************************************************************
+// *****************************************************************************
+// Section: Interface Routines
+// *****************************************************************************
+// *****************************************************************************
+void PM_IdleModeEnter( void );
+
+void PM_StandbyModeEnter( void );
+
+void PM_OffModeEnter( void );
+
+typedef enum
 {
-    /* Configure PM */
-    PM_REGS->PM_STDBYCFG = PM_STDBYCFG_VREGSMOD(0);
+    PLCFG_PLSEL0 = PM_PLCFG_PLSEL_PL0,
+    PLCFG_PLSEL2 = PM_PLCFG_PLSEL_PL2
+}PLCFG_PLSEL;
 
-    /* Clear INTFLAG.PLRDY */
-    PM_REGS->PM_INTFLAG |= PM_INTENCLR_PLRDY_Msk;
+bool PM_ConfigurePerformanceLevel(PLCFG_PLSEL plsel);
 
-    if ((PM_REGS->PM_PLCFG & PM_PLCFG_PLSEL_Msk) != PM_PLCFG_PLSEL_PL2)
-    {
-        /* Configure performance level */
-        PM_REGS->PM_PLCFG = PM_PLCFG_PLSEL_PL2;
+// DOM-IGNORE-BEGIN
+#ifdef __cplusplus  // Provide C++ Compatibility
 
-        /* Wait for performance level transition to complete */
-        while(!(PM_REGS->PM_INTFLAG & PM_INTFLAG_PLRDY_Msk));
     }
-}
 
+#endif
+// DOM-IGNORE-END
+
+#endif /* PLIB_PM_H */

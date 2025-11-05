@@ -72,7 +72,7 @@
 #pragma config IDAU_RS = 0x100U
 #pragma config NVMCTRL_URWEN = SET
 #pragma config NONSECA_PAC = CLEAR
-#pragma config NONSECA_PM = CLEAR
+#pragma config NONSECA_PM = SET
 #pragma config NONSECA_MCLK = CLEAR
 #pragma config NONSECA_RSTC = CLEAR
 #pragma config NONSECA_OSCCTRL = CLEAR
@@ -226,12 +226,13 @@ void SYS_Initialize ( void* data )
 
     SERCOM1_USART_Initialize();
 
-    SERCOM0_USART_Initialize();
-
     EVSYS_Initialize();
+
+    SERCOM0_USART_Initialize();
 
 	SYSTICK_TimerInitialize();
     EIC_Initialize();
+
 
     NVIC_Initialize();
 

@@ -80,6 +80,7 @@ void APP_Tasks ( void )
     {
         /* Application's initial state. */
         case APP_INIT_STATE:
+            /* Switch off LED */
             LED_Clear();
             eink_epaper_2_9_296_128_init();
             eink_epaper_2_9_296_128_fill_screen( EINK_EPAPER_2_9_296_128_COLOR_BLACK );
@@ -93,13 +94,19 @@ void APP_Tasks ( void )
             // Get HeartRate Info from Secure world
             if (readHeartRateData(nonSecureHeartRateBuf) == true)
             {
-                LED_Clear();
+                /* Switch on LED */
+                LED_Set();
                 eink_epaper_2_9_296_128_fill_screen( EINK_EPAPER_2_9_296_128_COLOR_BLACK );
                 eink_epaper_2_9_296_128_image_bmp(heartrate_image);
                 eink_epaper_2_9_296_128_set_font( guiFont_Tahoma_10_Regular, EINK_EPAPER_2_9_296_128_COLOR_WHITE, FO_HORIZONTAL );
                 nonSecureHeartRateBuf[9]='\0';
                 eink_epaper_2_9_296_128_text(nonSecureHeartRateBuf, 14, 148 );
-                LED_Set();
+
+                EPAPER_2_9_296_128_DelayMs(500);
+                /* Switch off LED */
+                LED_Clear();
+                /* Put device in Standby mode */
+                PM_StandbyModeEnter ();
             }
             // Secure Application Entry
             secureAppEntry();

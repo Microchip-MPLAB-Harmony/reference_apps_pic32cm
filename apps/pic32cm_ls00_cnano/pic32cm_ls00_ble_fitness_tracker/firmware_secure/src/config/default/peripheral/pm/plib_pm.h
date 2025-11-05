@@ -72,20 +72,8 @@
 // Section: Interface Routines
 // *****************************************************************************
 // *****************************************************************************
+
 void PM_Initialize( void );
-void PM_IdleModeEnter( void );
-
-void PM_StandbyModeEnter( void );
-
-void PM_OffModeEnter( void );
-
-typedef enum
-{
-    PLCFG_PLSEL0 = PM_PLCFG_PLSEL_PL0,
-    PLCFG_PLSEL2 = PM_PLCFG_PLSEL_PL2
-}PLCFG_PLSEL;
-
-bool PM_ConfigurePerformanceLevel(PLCFG_PLSEL plsel);
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
