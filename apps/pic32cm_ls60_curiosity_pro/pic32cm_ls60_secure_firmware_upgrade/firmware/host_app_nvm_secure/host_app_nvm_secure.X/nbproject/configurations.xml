@@ -224,7 +224,7 @@
         </logicalFolder>
       </logicalFolder>
       <itemPath>../src/config/pic32cm_ls60_cpro/device.h</itemPath>
-      <itemPath>D:/pic32cm_ls60_secure_firmware_upgrade/firmware/host_app_nvm_secure/src/app_nvm.h</itemPath>
+      <itemPath>../src/app_nvm.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -381,11 +381,12 @@
         </logicalFolder>
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
-      <itemPath>D:/pic32cm_ls60_secure_firmware_upgrade/firmware/host_app_nvm_secure/src/app_nvm.c</itemPath>
+      <itemPath>../src/app_nvm.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
     <Elem>D:\pic32cm_ls60_secure_firmware_upgrade\firmware\host_app_nvm_secure\src</Elem>
+    <Elem>../src</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>

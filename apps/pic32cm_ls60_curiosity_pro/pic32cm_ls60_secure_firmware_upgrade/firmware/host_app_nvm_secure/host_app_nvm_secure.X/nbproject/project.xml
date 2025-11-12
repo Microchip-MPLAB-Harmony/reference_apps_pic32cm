@@ -10,6 +10,7 @@
             <make-dep-projects/>
             <sourceRootList>
                 <sourceRootElem>D:\pic32cm_ls60_secure_firmware_upgrade\firmware\host_app_nvm_secure\src</sourceRootElem>
+                <sourceRootElem>../src</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>
