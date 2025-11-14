@@ -3,6 +3,36 @@
 
 # Microchip MPLAB® Harmony 3 Release Notes
 
+## Reference Applications for PIC32CM MCUs Release v1.1.0
+
+The following table provides the list of new applications:
+
+| Application | Description | MCU | Development Board/Kit |
+| --- | --- | --- | --- |
+| [pic32cm_gv_vl_cnano_getting_started](./apps/pic32cm_gv_vl_cnano/pic32cm_gv_vl_cnano_getting_started/readme.md) |  Getting Started using Harmony v3 Peripheral Libraries | [PIC32CM GV00](https://www.microchip.com/en-us/product/PIC32CM3204GV00064) | [PIC32CM GV-Value Line Curiosity Nano + Touch Evaluation Kit](https://www.microchip.com/en-us/development-tool/EV80D90A)|
+| [pic32cm_gv_vl_cnano_low_power_acoustic_logger](./apps/pic32cm_gv_vl_cnano/pic32cm_gv_vl_cnano_low_power_acoustic_logger/readme.md) |  Low Power Acoustic Detection with Integrated Data Logging | [PIC32CM GV00](https://www.microchip.com/en-us/product/PIC32CM3204GV00064) | [PIC32CM GV-Value Line Curiosity Nano + Touch Evaluation Kit](https://www.microchip.com/en-us/development-tool/EV80D90A)|
+| [pic32cm_gv_mcp25625](./apps/pic32cm_gv_vl_cnano/pic32cm_gv_vl_cnano_mikroe_click/pic32cm_gv_mcp25625/readme.md) |  SHD based Click board (CAN-mcp25625) example | [PIC32CM GV00](https://www.microchip.com/en-us/product/PIC32CM3204GV00064) | [PIC32CM GV-Value Line Curiosity Nano + Touch Evaluation Kit](https://www.microchip.com/en-us/development-tool/EV80D90A)|
+| [pic32cm_jh_vl_cnano_getting_started](./apps/pic32cm_jh_vl_cnano/pic32cm_jh_vl_cnano_getting_started/readme.md) |  Getting Started using Harmony v3 Peripheral Libraries | [PIC32CM JH00](https://www.microchip.com/en-us/product/pic32cm5164jh00064) | [PIC32CM JH-Value Line Curiosity Nano + Touch Evaluation Kit](https://www.microchip.com/en-us/development-tool/ev16b95a)|
+| [pic32cm_jh_vl_cnano_smart_appliance_control](./apps/pic32cm_jh_vl_cnano/pic32cm_jh_vl_cnano_smart_appliance_control/readme.md) |  Smart Appliance Control | [PIC32CM JH00](https://www.microchip.com/en-us/product/pic32cm5164jh00064) | [PIC32CM JH-Value Line Curiosity Nano + Touch Evaluation Kit](https://www.microchip.com/en-us/development-tool/ev16b95a)|
+| [pic32cm_jh_vl_cnano_smart_pid](./apps/pic32cm_jh_vl_cnano/pic32cm_jh_vl_cnano_smart_pid/readme.md) |  Smart PID fan Control with AWS IoT | [PIC32CM JH00](https://www.microchip.com/en-us/product/pic32cm5164jh00064) | [PIC32CM JH-Value Line Curiosity Nano + Touch Evaluation Kit](https://www.microchip.com/en-us/development-tool/ev16b95a)|
+| [pic32cm_jh_mcp25625](./apps/pic32cm_jh_vl_cnano/pic32cm_jh_vl_cnano_mikroe_click/pic32cm_jh_mcp25625/readme.md) |  SHD based Click board (CAN-mcp25625) example | [PIC32CM JH00](https://www.microchip.com/en-us/product/pic32cm5164jh00064) | [PIC32CM JH-Value Line Curiosity Nano + Touch Evaluation Kit](https://www.microchip.com/en-us/development-tool/ev16b95a)|
+| [mcu_sample_kit1_pic32cm_jh01_get_start](./apps/mcu_sample_kit1/mcu_sample_kit1_pic32cm_jh01_get_start/readme.md) | Getting Started with Sample kit | [PIC32CM JH01](https://www.microchip.com/en-us/product/PIC32CM5164JH01032) | [MCU Sample Kit 1](https://www.microchip.com/en-us/development-tool/BB37Z60A)|
+| [pic32cm_ls60_secure_firmware_upgrade](./apps/pic32cm_ls60_curiosity_pro/pic32cm_ls60_secure_firmware_upgrade/readme.md) | Secure Firmware Upgrade | [PIC32CM LS60](https://www.microchip.com/en-us/product/PIC32CM5164LS60100) | [PIC32CM LS60 Curiosity Pro Evaluation Kit](https://www.microchip.com/en-us/development-tool/EV76R77A)|
+| [pic32cm_ls00_ble_fitness_tracker](./apps/pic32cm_ls00_cnano/pic32cm_ls00_ble_fitness_tracker/readme.md) | BLE Fitness Tracker  | [PIC32CM LS00](https://www.microchip.com/wwwproducts/en/PIC32CM5164LS00048) | [PIC32CM LS00 Curiosity Nano+ Touch Evaluation Kit](https://www.microchip.com/en-us/development-tool/EV41C56A)|
+
+
+### Known Issues
+- NA
+ 
+### Development Tools
+
+- [MPLAB® X IDE v6.25](https://www.microchip.com/mplab/mplab-x-ide)
+- [MPLAB® XC32 C/C++ Compiler v4.60](https://www.microchip.com/mplab/compilers)
+- MPLAB® X IDE plug-ins:
+  - MPLAB Code Configurator (MCC) v5.6.2   
+
+
+
 ## Reference Applications for PIC32CM MCUs Release v1.0.0
 
 The following table provides the list of new applications:

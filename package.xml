@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Package name="reference_apps_pic32cm">
     <Dependencies>
-        <Dependency name="csp" version="v3.22.2"/>
-        <Dependency name="core" version="v3.14.1"/>
-        <Dependency name="bsp" version="3.21.1"/>
-        <Dependency name="gfx" version="v3.15.3"/>
-        <Dependency name="touch" version="3.17.0"/>
-        <Dependency name="wireless_wifi" version="v3.12.0"/>
-        <Dependency name="bootloader" version="3.7.0"/>
-        <Dependency name="cryptoauthlib" version="v3.5.1"/>
-        <Dependency name="wireless_rnbd" version="v2.0.4"/>
+        <Dependency name="csp" version="v3.23.0"/>
+        <Dependency name="core" version="v3.15.5"/>
+        <Dependency name="bsp" version="3.23.0"/>
+        <Dependency name="gfx" version="v3.16.3"/>
+        <Dependency name="touch" version="v3.19.0"/>
+        <Dependency name="wireless_wifi" version="v3.12.1"/>
+        <Dependency name="bootloader" version="v3.8.0"/>
+        <Dependency name="cryptoauthlib" version="v3.7.9"/>
+        <Dependency name="wireless_rnbd" version="v2.0.6"/>
 		<Dependency name="wireless_system_rnwf" version="v3.0.0"/>
     </Dependencies>
 </Package>

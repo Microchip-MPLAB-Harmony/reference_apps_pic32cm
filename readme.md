@@ -36,7 +36,7 @@ The above application types serve as a reference source to evaluate solutions fo
 **To know more about 32-bit Microcontroller Applications, Reference Designs and Solutions, [Click Here](https://www.microchip.com/en-us/tools-resources/reference-designs)**
 
 - [Release Notes](./release_notes.md)
-- [MPLAB® Harmony License](Microchip_SLA001.md)
+- [MPLAB® Harmony License](License.md)
 - [Applications Index](./apps/readme.md)
 
 
@@ -59,7 +59,7 @@ To view the documentation offline, follow these steps:
 
 ____
 
-[![License](https://img.shields.io/badge/license-Harmony%20license-orange.svg)](https://github.com/Microchip-MPLAB-Harmony/replaceme/blob/master/Microchip_SLA001.md)
+[![License](https://img.shields.io/badge/license-Harmony%20license-orange.svg)](https://github.com/Microchip-MPLAB-Harmony/replaceme/blob/master/License.md)
 [![Commit activity](https://img.shields.io/github/commit-activity/y/Microchip-MPLAB-Harmony/replaceme.svg)](https://github.com/Microchip-MPLAB-Harmony/replaceme/graphs/commit-activity)
 [![Contributors](https://img.shields.io/github/contributors-anon/Microchip-MPLAB-Harmony/replaceme.svg)]()
 
