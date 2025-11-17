@@ -106,25 +106,6 @@ SYSTEM_OBJECTS sysObj;
 // Section: System Initialization
 // *****************************************************************************
 // *****************************************************************************
-// <editor-fold defaultstate="collapsed" desc="SYS_TIME Initialization Data">
-
-static const SYS_TIME_PLIB_INTERFACE sysTimePlibAPI = {
-    .timerCallbackSet = (SYS_TIME_PLIB_CALLBACK_REGISTER)SYSTICK_TimerCallbackSet,
-    .timerStart = (SYS_TIME_PLIB_START)SYSTICK_TimerStart,
-    .timerStop = (SYS_TIME_PLIB_STOP)SYSTICK_TimerStop,
-    .timerFrequencyGet = (SYS_TIME_PLIB_FREQUENCY_GET)SYSTICK_TimerFrequencyGet,
-    .timerInterruptRestore = (SYS_TIME_PLIB_INTERRUPT_RESTORE)SYSTICK_TimerInterruptRestore,
-    .timerInterruptDisable = (SYS_TIME_PLIB_INTERRUPT_DISABLE)SYSTICK_TimerInterruptDisable,
-    .timerPeriodSet = (SYS_TIME_PLIB_PERIOD_SET)SYSTICK_TimerPeriodSet,
-};
-
-static const SYS_TIME_INIT sysTimeInitData =
-{
-    .timePlib = &sysTimePlibAPI,
-    .hwTimerIntNum = SysTick_IRQn,
-};
-
-// </editor-fold>
 
 
 
@@ -192,20 +173,18 @@ void SYS_Initialize ( void* data )
 
     SERCOM3_USART_Initialize();
 
-    SERCOM2_I2C_Initialize();
-
     NVMCTRL_Initialize( );
 
 	BSP_Initialize();
-    SERCOM1_USART_Initialize();
+    SERCOM2_I2C_Initialize();
 
-    EVSYS_Initialize();
+    SERCOM1_USART_Initialize();
 
     SERCOM0_SPI_Initialize();
 
-	SYSTICK_TimerInitialize();
-    TC0_TimerInitialize();
+    EVSYS_Initialize();
 
+	SYSTICK_TimerInitialize();
     RTC_Initialize();
 
 
@@ -215,12 +194,6 @@ void SYS_Initialize ( void* data )
     /* MISRA C-2012 Rule 11.8 - Deviation record ID - H3_MISRAC_2012_R_11_8_DR_1 */
 
 
-    /* MISRA C-2012 Rule 11.3, 11.8 deviated below. Deviation record ID -  
-    H3_MISRAC_2012_R_11_3_DR_1 & H3_MISRAC_2012_R_11_8_DR_1*/
-        
-    sysObj.sysTime = SYS_TIME_Initialize(SYS_TIME_INDEX_0, (SYS_MODULE_INIT *)&sysTimeInitData);
-    
-    /* MISRAC 2012 deviation block end */
 
     
 	touch_init();

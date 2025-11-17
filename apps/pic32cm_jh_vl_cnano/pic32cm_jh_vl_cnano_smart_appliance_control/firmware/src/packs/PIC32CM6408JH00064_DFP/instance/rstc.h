@@ -25,7 +25,7 @@
 
 
 /* ========== Instance Parameter definitions for RSTC peripheral ========== */
-#define RSTC_INSTANCE_ID                         (3)        
+#define RSTC_INSTANCE_ID                         (3)
 #define RSTC_NUMBER_OF_EXTWAKE                   (0)        /* number of external wakeup line */
 
 #endif /* _PIC32CMJH00_RSTC_INSTANCE_ */

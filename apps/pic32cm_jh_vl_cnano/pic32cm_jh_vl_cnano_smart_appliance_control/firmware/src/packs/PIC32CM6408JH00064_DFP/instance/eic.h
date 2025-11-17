@@ -27,7 +27,7 @@
 /* ========== Instance Parameter definitions for EIC peripheral ========== */
 #define EIC_EXTINT_NUM                           (16)       /* Number of external interrupts */
 #define EIC_GCLK_ID                              (2)        /* Generic Clock index */
-#define EIC_INSTANCE_ID                          (10)       
+#define EIC_INSTANCE_ID                          (10)
 #define EIC_NUMBER_OF_CONFIG_REGS                (2)        /* Number of CONFIG registers */
 #define EIC_NUMBER_OF_INTERRUPTS                 (16)       /* Number of external interrupts (obsolete) */
 

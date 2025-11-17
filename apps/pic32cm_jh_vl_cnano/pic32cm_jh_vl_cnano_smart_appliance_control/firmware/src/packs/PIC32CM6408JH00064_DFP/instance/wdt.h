@@ -25,6 +25,6 @@
 
 
 /* ========== Instance Parameter definitions for WDT peripheral ========== */
-#define WDT_INSTANCE_ID                          (8)        
+#define WDT_INSTANCE_ID                          (8)
 
 #endif /* _PIC32CMJH00_WDT_INSTANCE_ */

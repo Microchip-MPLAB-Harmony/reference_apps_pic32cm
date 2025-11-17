@@ -25,13 +25,13 @@
 
 
 /* ========== Instance Parameter definitions for TC4 peripheral ========== */
-#define TC4_CC_NUM                               (2)        
+#define TC4_CC_NUM                               (2)
 #define TC4_DMAC_ID_MC0                          (40)       /* Indexes of DMA Match/Compare 0 trigger */
 #define TC4_DMAC_ID_MC1                          (41)       /* Indexes of DMA Match/Compare 1 trigger */
 #define TC4_DMAC_ID_OVF                          (39)       /* Indexes of DMA Overflow trigger */
 #define TC4_EXT                                  (0)        /* Coding of implemented extended features (keep 0 value) */
 #define TC4_GCLK_ID                              (32)       /* Index of Generic Clock */
-#define TC4_INSTANCE_ID                          (80)       
+#define TC4_INSTANCE_ID                          (80)
 #define TC4_MASTER_SLAVE_MODE                    (0)        /* TC type 0 : NA, 1 : Master, 2 : Slave */
 #define TC4_OW_NUM                               (2)        /* Number of Output Waveforms */
 

@@ -222,7 +222,7 @@ void PTC_Handler                   ( void );
 /* CMSIS includes */
 #include "core_cm0plus.h"
 #if defined USE_CMSIS_INIT
-#include "system_pic32cmjh00.h"
+#include "system_pic32cm6408jh00064.h"
 #endif /* USE_CMSIS_INIT */
 
 /* ************************************************************************** */

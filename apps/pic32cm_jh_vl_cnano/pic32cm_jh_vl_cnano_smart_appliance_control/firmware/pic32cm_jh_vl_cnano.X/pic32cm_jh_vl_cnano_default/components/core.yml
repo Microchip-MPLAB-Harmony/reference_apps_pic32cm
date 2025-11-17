@@ -1,6 +1,6 @@
 configVersion: 1.0.0
 componentName: core
-coreVersion: 5.8.2
+coreVersion: 5.8.3
 device: PIC32CM6408JH00064
 library: []
 dependency:
@@ -11,7 +11,7 @@ dependency:
 - dependencyPackage: ''
   name: csp
   type: package
-  version: v3.22.4
+  version: v3.23.0
 customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
 data:
   attachments: {}
@@ -296,7 +296,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: 'true'
+            value: 'false'
           type: Dynamic
         type: Values
       type: Boolean
@@ -307,7 +307,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '48000000'
+            value: '0'
           type: Dynamic
         type: Values
       type: Integer
@@ -484,7 +484,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '0x40101f'
+            value: '0x40001f'
           type: Dynamic
         type: Values
       type: String
@@ -2540,7 +2540,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: 'true'
+            value: 'false'
           type: Dynamic
         type: Values
       type: Boolean
@@ -2551,7 +2551,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: '48000000'
+            value: '0'
           type: Dynamic
         type: Values
       type: Integer
@@ -2575,14 +2575,17 @@ data:
             id: readOnly
           children:
           - type: Value
-            value: 'true'
+            value: 'false'
           type: Boolean
         type: Attributes
       - children:
         - attributes:
             id: core
-            value: 'true'
+            value: 'false'
           type: Dynamic
+        - attributes:
+            value: 'true'
+          type: User
         type: Values
       type: Boolean
     systickEnable:
@@ -2594,14 +2597,17 @@ data:
             id: readOnly
           children:
           - type: Value
-            value: 'true'
+            value: 'false'
           type: Boolean
         type: Attributes
       - children:
         - attributes:
             id: core
-            value: 'true'
+            value: 'false'
           type: Dynamic
+        - attributes:
+            value: 'true'
+          type: User
         type: Values
       type: Boolean
     SYSTICK_SYS_TIME_COMPONENT_ID:
@@ -2611,7 +2617,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: sys_time
+            value: None
           type: Dynamic
         type: Values
       type: String
@@ -2624,7 +2630,7 @@ data:
             id: readOnly
           children:
           - type: Value
-            value: 'true'
+            value: 'false'
           type: Boolean
         type: Attributes
       - children:
@@ -2704,7 +2710,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: 'true'
+            value: 'false'
           type: Dynamic
         type: Values
       type: Boolean
@@ -2715,7 +2721,7 @@ data:
       - children:
         - attributes:
             id: core
-            value: 'true'
+            value: 'false'
           type: Dynamic
         type: Values
       type: Boolean
@@ -2726,39 +2732,6 @@ data:
       - children:
         - attributes:
             id: core
-            value: 'true'
-          type: Dynamic
-        type: Values
-      type: Boolean
-    TC0_INTERRUPT_ENABLE:
-      attributes:
-        id: TC0_INTERRUPT_ENABLE
-      children:
-      - children:
-        - attributes:
-            id: tc0
-            value: 'false'
-          type: Dynamic
-        type: Values
-      type: Boolean
-    TC0_INTERRUPT_HANDLER:
-      attributes:
-        id: TC0_INTERRUPT_HANDLER
-      children:
-      - children:
-        - attributes:
-            id: tc0
-            value: TC0_Handler
-          type: Dynamic
-        type: Values
-      type: String
-    TC0_INTERRUPT_HANDLER_LOCK:
-      attributes:
-        id: TC0_INTERRUPT_HANDLER_LOCK
-      children:
-      - children:
-        - attributes:
-            id: tc0
             value: 'false'
           type: Dynamic
         type: Values
@@ -2784,38 +2757,6 @@ data:
           type: Dynamic
         type: Values
       type: String
-    KEIL_HEAP_SIZE:
-      attributes:
-        id: KEIL_HEAP_SIZE
-      children:
-      - children:
-        - attributes:
-            value: '128'
-          type: User
-        type: Values
-      type: Integer
-    SysTick_INTERRUPT_ENABLE:
-      attributes:
-        id: SysTick_INTERRUPT_ENABLE
-      children:
-      - children:
-        - attributes:
-            id: core
-            value: 'true'
-          type: Dynamic
-        type: Values
-      type: Boolean
-    SysTick_INTERRUPT_HANDLER_LOCK:
-      attributes:
-        id: SysTick_INTERRUPT_HANDLER_LOCK
-      children:
-      - children:
-        - attributes:
-            id: core
-            value: 'true'
-          type: Dynamic
-        type: Values
-      type: Boolean
     PTC_INTERRUPT_ENABLE:
       attributes:
         id: PTC_INTERRUPT_ENABLE
@@ -3102,6 +3043,48 @@ data:
           type: Dynamic
         type: Values
       type: String
+    SysTick_INTERRUPT_ENABLE:
+      attributes:
+        id: SysTick_INTERRUPT_ENABLE
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    SysTick_INTERRUPT_HANDLER_LOCK:
+      attributes:
+        id: SysTick_INTERRUPT_HANDLER_LOCK
+      children:
+      - children:
+        - attributes:
+            id: core
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    KEIL_HEAP_SIZE:
+      attributes:
+        id: KEIL_HEAP_SIZE
+      children:
+      - children:
+        - attributes:
+            value: '128'
+          type: User
+        type: Values
+      type: Integer
+    XC32_HEAP_SIZE:
+      attributes:
+        id: XC32_HEAP_SIZE
+      children:
+      - children:
+        - attributes:
+            value: '128'
+          type: User
+        type: Values
+      type: Integer
   userData:
     children:
     - attributes:

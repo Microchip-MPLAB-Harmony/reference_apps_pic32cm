@@ -25,11 +25,11 @@
 
 
 /* ========== Instance Parameter definitions for PORT peripheral ========== */
-#define PORT_BITS                                (64)       
+#define PORT_BITS                                (64)
 #define PORT_DRVSTR                              (1)        /* DRVSTR supported */
-#define PORT_EV_NUM                              (4)        
-#define PORT_GROUPS                              (2)        
-#define PORT_INSTANCE_ID                         (32)       
+#define PORT_EV_NUM                              (4)
+#define PORT_GROUPS                              (2)
+#define PORT_INSTANCE_ID                         (32)
 #define PORT_ODRAIN                              (0)        /* ODRAIN supported */
 #define PORT_SLEWLIM                             (0)        /* SLEWLIM supported */
 

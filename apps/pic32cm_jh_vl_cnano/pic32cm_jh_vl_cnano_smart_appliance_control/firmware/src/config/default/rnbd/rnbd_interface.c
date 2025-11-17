@@ -317,6 +317,11 @@ bool UART_BLE_TransmitDone(void)
     return SERCOM3_USART_WriteCountGet()!=0U? false:true;
 }
 
+static inline void RNBD_Nop(void)
+{
+    __asm volatile ("NOP");
+}
+
 static inline void RNBD_Delay(uint32_t delayCount)
 {
     if(delayCount > 0U)

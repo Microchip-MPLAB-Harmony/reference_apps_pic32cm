@@ -50,21 +50,19 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include "peripheral/sercom/usart/plib_sercom3_usart.h"
-#include "peripheral/sercom/i2c_master/plib_sercom2_i2c_master.h"
 #include "peripheral/nvmctrl/plib_nvmctrl.h"
 #include "bsp/bsp.h"
+#include "peripheral/sercom/i2c_master/plib_sercom2_i2c_master.h"
 #include "peripheral/sercom/usart/plib_sercom1_usart.h"
-#include "peripheral/evsys/plib_evsys.h"
 #include "peripheral/sercom/spi_master/plib_sercom0_spi_master.h"
+#include "peripheral/evsys/plib_evsys.h"
 #include "peripheral/port/plib_port.h"
 #include "peripheral/clock/plib_clock.h"
 #include "peripheral/nvic/plib_nvic.h"
 #include "peripheral/systick/plib_systick.h"
 #include "peripheral/pm/plib_pm.h"
-#include "peripheral/tc/plib_tc0.h"
 #include "touch/touch.h"
 #include "peripheral/rtc/plib_rtc.h"
-#include "system/time/sys_time.h"
 #include "system/int/sys_int.h"
 #include "system/ports/sys_ports.h"
 #include "system/dma/sys_dma.h"
@@ -198,8 +196,7 @@ Remarks:
 
 typedef struct
 {
-    SYS_MODULE_OBJ  sysTime;
-
+    char reserved;
 } SYSTEM_OBJECTS;
 
 // *****************************************************************************

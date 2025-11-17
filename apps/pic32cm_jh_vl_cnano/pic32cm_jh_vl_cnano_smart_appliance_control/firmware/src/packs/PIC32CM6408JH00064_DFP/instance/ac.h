@@ -27,7 +27,7 @@
 /* ========== Instance Parameter definitions for AC peripheral ========== */
 #define AC_COMPCTRL_MUXNEG_OPAMP                 (7)        /* OPAMP selection for MUXNEG */
 #define AC_GCLK_ID                               (40)       /* Index of Generic Clock */
-#define AC_INSTANCE_ID                           (84)       
+#define AC_INSTANCE_ID                           (84)
 #define AC_NUM_CMP                               (2)        /* Number of comparators */
 #define AC_PAIRS                                 (1)        /* Number of pairs of comparators */
 #define AC_SPEED_LEVELS                          (2)        /* Number of speed values */
