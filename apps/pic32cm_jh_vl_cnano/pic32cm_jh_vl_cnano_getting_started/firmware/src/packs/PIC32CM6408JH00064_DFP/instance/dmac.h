@@ -29,7 +29,7 @@
 #define DMAC_CH_NUM                              (6)        /* Number of channels */
 #define DMAC_EVIN_NUM                            (4)        /* Number of input events */
 #define DMAC_EVOUT_NUM                           (4)        /* Number of output events */
-#define DMAC_INSTANCE_ID                         (35)       
+#define DMAC_INSTANCE_ID                         (35)
 #define DMAC_LVL_BITS                            (2)        /* Number of bit to select level priority */
 #define DMAC_LVL_NUM                             (4)        /* Enable priority level number */
 #define DMAC_QOSCTRL_D_RESETVALUE                (2)        /* QOS dmac ahb interface reset value */

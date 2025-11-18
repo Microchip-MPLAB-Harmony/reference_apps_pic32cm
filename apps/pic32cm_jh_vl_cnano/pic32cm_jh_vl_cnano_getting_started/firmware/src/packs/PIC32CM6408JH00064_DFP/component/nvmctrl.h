@@ -23,6 +23,8 @@
 #ifndef _PIC32CMJH00_NVMCTRL_COMPONENT_H_
 #define _PIC32CMJH00_NVMCTRL_COMPONENT_H_
 
+#include "core_cm0plus.h"
+
 /* ************************************************************************** */
 /*                    SOFTWARE API DEFINITION FOR NVMCTRL                     */
 /* ************************************************************************** */

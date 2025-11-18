@@ -29,7 +29,7 @@
 #define RTC_COMP16_NUM                           (2)        /* Number of 16-bit Comparators */
 #define RTC_COMP32_NUM                           (1)        /* Number of 32-bit Comparators */
 #define RTC_GPR_NUM                              (0)        /* Number of General-Purpose Registers */
-#define RTC_INSTANCE_ID                          (9)        
+#define RTC_INSTANCE_ID                          (9)
 #define RTC_PER_NUM                              (8)        /* Number of Periodic Intervals */
 
 #endif /* _PIC32CMJH00_RTC_INSTANCE_ */

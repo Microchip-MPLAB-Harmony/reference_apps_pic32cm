@@ -25,19 +25,19 @@
 
 
 /* ========== Instance Parameter definitions for HMATRIXHS peripheral ========== */
-#define HMATRIXHS_INSTANCE_ID                    (37)       
-#define HMATRIXHS_MASTER_CM0PLUS                 (0)        
-#define HMATRIXHS_MASTER_DMAC                    (2)        
-#define HMATRIXHS_MASTER_DSU                     (1)        
-#define HMATRIXHS_MASTER_NUM                     (3)        
-#define HMATRIXHS_SLAVE_DIVAS                    (7)        
-#define HMATRIXHS_SLAVE_FLASH                    (0)        
-#define HMATRIXHS_SLAVE_HPB0                     (4)        
-#define HMATRIXHS_SLAVE_HPB1                     (3)        
-#define HMATRIXHS_SLAVE_HPB2                     (5)        
-#define HMATRIXHS_SLAVE_HSRAMCM0P                (1)        
-#define HMATRIXHS_SLAVE_HSRAMDSU                 (2)        
-#define HMATRIXHS_SLAVE_LPRAMDMAC                (6)        
-#define HMATRIXHS_SLAVE_NUM                      (8)        
+#define HMATRIXHS_INSTANCE_ID                    (37)
+#define HMATRIXHS_MASTER_CM0PLUS                 (0)
+#define HMATRIXHS_MASTER_DMAC                    (2)
+#define HMATRIXHS_MASTER_DSU                     (1)
+#define HMATRIXHS_MASTER_NUM                     (3)
+#define HMATRIXHS_SLAVE_DIVAS                    (7)
+#define HMATRIXHS_SLAVE_FLASH                    (0)
+#define HMATRIXHS_SLAVE_HPB0                     (4)
+#define HMATRIXHS_SLAVE_HPB1                     (3)
+#define HMATRIXHS_SLAVE_HPB2                     (5)
+#define HMATRIXHS_SLAVE_HSRAMCM0P                (1)
+#define HMATRIXHS_SLAVE_HSRAMDSU                 (2)
+#define HMATRIXHS_SLAVE_LPRAMDMAC                (6)
+#define HMATRIXHS_SLAVE_NUM                      (8)
 
 #endif /* _PIC32CMJH00_HMATRIXHS_INSTANCE_ */

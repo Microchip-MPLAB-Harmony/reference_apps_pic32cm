@@ -27,6 +27,6 @@
 /* ========== Instance Parameter definitions for FREQM peripheral ========== */
 #define FREQM_GCLK_ID_MSR                        (3)        /* Index of measure generic clock */
 #define FREQM_GCLK_ID_REF                        (4)        /* Index of reference generic clock */
-#define FREQM_INSTANCE_ID                        (11)       
+#define FREQM_INSTANCE_ID                        (11)
 
 #endif /* _PIC32CMJH00_FREQM_INSTANCE_ */

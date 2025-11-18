@@ -25,6 +25,6 @@
 
 
 /* ========== Instance Parameter definitions for MTB peripheral ========== */
-#define MTB_INSTANCE_ID                          (36)       
+#define MTB_INSTANCE_ID                          (36)
 
 #endif /* _PIC32CMJH00_MTB_INSTANCE_ */

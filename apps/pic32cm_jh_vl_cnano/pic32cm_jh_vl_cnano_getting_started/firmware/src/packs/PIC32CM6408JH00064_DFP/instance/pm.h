@@ -26,7 +26,7 @@
 
 /* ========== Instance Parameter definitions for PM peripheral ========== */
 #define PM_BIAS_RAM_HS                           (1)        /* one if RAM HS can be back biased */
-#define PM_INSTANCE_ID                           (1)        
+#define PM_INSTANCE_ID                           (1)
 #define PM_PD_NUM                                (0)        /* Number of switchable Power Domain */
 
 #endif /* _PIC32CMJH00_PM_INSTANCE_ */

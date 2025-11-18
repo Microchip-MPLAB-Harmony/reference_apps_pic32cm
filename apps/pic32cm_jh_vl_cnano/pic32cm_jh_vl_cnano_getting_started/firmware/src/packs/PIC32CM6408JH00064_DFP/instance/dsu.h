@@ -25,6 +25,6 @@
 
 
 /* ========== Instance Parameter definitions for DSU peripheral ========== */
-#define DSU_INSTANCE_ID                          (33)       
+#define DSU_INSTANCE_ID                          (33)
 
 #endif /* _PIC32CMJH00_DSU_INSTANCE_ */

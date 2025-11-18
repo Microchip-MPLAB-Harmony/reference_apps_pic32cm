@@ -26,7 +26,7 @@
 
 /* ========== Instance Parameter definitions for PAC peripheral ========== */
 #define PAC_HPB_NUM                              (3)        /* Number of bridges AHB/APB */
-#define PAC_INSTANCE_ID                          (0)        
+#define PAC_INSTANCE_ID                          (0)
 #define PAC_INTFLAG_NUM                          (4)        /* Number of intflag registers */
 
 #endif /* _PIC32CMJH00_PAC_INSTANCE_ */
