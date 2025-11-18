@@ -1,6 +1,6 @@
 configVersion: 1.0.0
 componentName: ptc
-coreVersion: 5.8.2
+coreVersion: 5.8.3
 device: PIC32CM6408JH00064
 library: []
 dependency:
@@ -44,8 +44,8 @@ data:
     - children:
       - attributes:
           id: ptc
-          x: '16'
-          y: '368'
+          x: '15'
+          y: '382'
         type: ElementPosition
       type: ElementPositions
     type: ComponentGraph

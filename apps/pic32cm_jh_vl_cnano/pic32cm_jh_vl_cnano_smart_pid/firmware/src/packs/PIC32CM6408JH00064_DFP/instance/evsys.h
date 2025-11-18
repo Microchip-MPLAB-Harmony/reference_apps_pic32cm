@@ -37,7 +37,7 @@
 #define EVSYS_GCLK_ID_5                          (11)       /* Index of Generic Clock 5 */
 #define EVSYS_GENERATORS                         (87)       /* Total Number of Event Generators */
 #define EVSYS_GENERATORS_BITS                    (7)        /* Number of bits to select Event Generator */
-#define EVSYS_INSTANCE_ID                        (64)       
+#define EVSYS_INSTANCE_ID                        (64)
 #define EVSYS_USERS                              (47)       /* Total Number of Event Users */
 #define EVSYS_USERS_BITS                         (6)        /* Number of bits to select Event User */
 

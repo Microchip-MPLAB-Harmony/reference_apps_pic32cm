@@ -278,15 +278,15 @@ void SYS_Initialize ( void* data )
 
     SERCOM2_I2C_Initialize();
 
-    SERCOM0_USART_Initialize();
-
     EVSYS_Initialize();
+
+    SERCOM0_USART_Initialize();
 
     DMAC_Initialize();
 
-    TC0_TimerInitialize();
-
     RTC_Initialize();
+
+    TC0_TimerInitialize();
 
     TC3_CompareInitialize();
 

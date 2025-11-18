@@ -33,12 +33,12 @@
 #define TCC2_DTI                                 (0)        /* Dead-Time-Insertion feature implemented */
 #define TCC2_EXT                                 (0)        /* Coding of implemented extended features */
 #define TCC2_GCLK_ID                             (29)       /* Index of Generic Clock */
-#define TCC2_INSTANCE_ID                         (75)       
+#define TCC2_INSTANCE_ID                         (75)
 #define TCC2_MASTER_SLAVE_MODE                   (0)        /* TCC type 0 : NA, 1 : Master, 2 : Slave */
 #define TCC2_OTMX                                (0)        /* Output Matrix feature implemented */
 #define TCC2_OW_NUM                              (2)        /* Number of Output Waveforms */
 #define TCC2_PG                                  (0)        /* Pattern Generation feature implemented */
-#define TCC2_SIZE                                (16)       
+#define TCC2_SIZE                                (16)
 #define TCC2_SWAP                                (0)        /* DTI outputs swap feature implemented */
 
 #endif /* _PIC32CMJH00_TCC2_INSTANCE_ */

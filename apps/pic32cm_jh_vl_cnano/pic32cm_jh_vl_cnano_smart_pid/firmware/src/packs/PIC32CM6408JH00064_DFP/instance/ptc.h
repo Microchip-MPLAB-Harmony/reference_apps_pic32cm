@@ -29,7 +29,7 @@
 #define PTC_DMAC_ID_SEQ                          (48)       /* Index of DMA SEQ trigger */
 #define PTC_DMAC_ID_WCOMP                        (47)       /* Index of DMA WCOMP trigger */
 #define PTC_GCLK_ID                              (37)       /* Index of Generic Clock */
-#define PTC_INSTANCE_ID                          (86)       
+#define PTC_INSTANCE_ID                          (86)
 #define PTC_MUTUAL_CAP_CHANNELS_NUM              (256)      /* Number of mutual-capacitance channels */
 #define PTC_SELF_CAP_CHANNELS_NUM                (32)       /* Number of self-capacitance channels */
 #define PTC_X_LINES_NUM                          (16)       /* Number of X lines */

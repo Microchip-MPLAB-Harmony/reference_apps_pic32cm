@@ -28,7 +28,7 @@
 #define ADC0_DMAC_ID_RESRDY                      (42)       /* index of DMA RESRDY trigger */
 #define ADC0_EXTCHANNEL_MSB                      (11)       /* Number of external channels */
 #define ADC0_GCLK_ID                             (33)       /* index of Generic Clock */
-#define ADC0_INSTANCE_ID                         (81)       
+#define ADC0_INSTANCE_ID                         (81)
 #define ADC0_INT_CH30                            (0)        /* Select OPAMP or CTAT on Channel 30 */
 #define ADC0_LOAD_CALIB                          (1)        /* CALIB register to be loaded from NVM */
 #define ADC0_MASTER_SLAVE_MODE                   (0)        /* ADC Master/Slave Mode */

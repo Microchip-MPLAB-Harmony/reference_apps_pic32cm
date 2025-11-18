@@ -26,7 +26,7 @@
 
 /* ========== Instance Parameter definitions for CCL peripheral ========== */
 #define CCL_GCLK_ID                              (38)       /* GCLK index for CCL */
-#define CCL_INSTANCE_ID                          (87)       
+#define CCL_INSTANCE_ID                          (87)
 #define CCL_IO_NUM                               (12)       /* Numer of input pins */
 #define CCL_LUT_NUM                              (4)        /* Number of LUT in a CCL */
 #define CCL_SEQ_NUM                              (2)        /* Number of SEQ in a CCL */
