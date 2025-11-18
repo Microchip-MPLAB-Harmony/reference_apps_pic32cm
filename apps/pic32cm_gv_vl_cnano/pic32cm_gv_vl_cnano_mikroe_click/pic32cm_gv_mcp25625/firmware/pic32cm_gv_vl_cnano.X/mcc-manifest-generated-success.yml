@@ -2,15 +2,15 @@
 
 manifest_file_version: 1.0.0
 project: mcp25625_click_pic32cm_gv_vl_cnano
-creation_date: 2025-09-19T11:51:01.503+05:30[Asia/Calcutta]
+creation_date: 2025-11-18T14:12:24.858+05:30[Asia/Calcutta]
 operating_system: Windows 11
 mcc_mode: IDE
 mcc_mode_version: v6.25
 device_name: PIC32CM3204GV00064
-compiler: XC32 4.60
-mcc_version: 5.6.2
-mcc_core_version: 5.8.2
-content_manager_version: 6.0.2
+compiler: XC32 5.00
+mcc_version: 5.6.3
+mcc_core_version: 5.8.3
+content_manager_version: 6.0.3
 is_mcc_offline: false
 is_using_prerelease_versions: false
 mcc_content_registries: https://registry.npmjs.org/

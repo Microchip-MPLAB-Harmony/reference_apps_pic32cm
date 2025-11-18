@@ -176,16 +176,16 @@
                      displayName="mcp25625_click_pic32cm_gv_vl_cnano_pic32cm_gv_vl_cnano"
                      projectFiles="true">
         <logicalFolder name="components" displayName="components" projectFiles="true">
-          <itemPath>mcp25625_click_pic32cm_gv_vl_cnano_pic32cm_gv_vl_cnano/components/core.yml</itemPath>
-          <itemPath>mcp25625_click_pic32cm_gv_vl_cnano_pic32cm_gv_vl_cnano/components/sercom2.yml</itemPath>
-          <itemPath>mcp25625_click_pic32cm_gv_vl_cnano_pic32cm_gv_vl_cnano/components/dfp.yml</itemPath>
-          <itemPath>mcp25625_click_pic32cm_gv_vl_cnano_pic32cm_gv_vl_cnano/components/evsys.yml</itemPath>
-          <itemPath>mcp25625_click_pic32cm_gv_vl_cnano_pic32cm_gv_vl_cnano/components/HarmonyCore.yml</itemPath>
           <itemPath>mcp25625_click_pic32cm_gv_vl_cnano_pic32cm_gv_vl_cnano/components/mainBoard_PIC32CMGV_CURIOSITY_NANO_EXPLORER.yml</itemPath>
           <itemPath>mcp25625_click_pic32cm_gv_vl_cnano_pic32cm_gv_vl_cnano/components/nvmctrl.yml</itemPath>
           <itemPath>mcp25625_click_pic32cm_gv_vl_cnano_pic32cm_gv_vl_cnano/components/cmsis.yml</itemPath>
+          <itemPath>mcp25625_click_pic32cm_gv_vl_cnano_pic32cm_gv_vl_cnano/components/core.yml</itemPath>
+          <itemPath>mcp25625_click_pic32cm_gv_vl_cnano_pic32cm_gv_vl_cnano/components/dfp.yml</itemPath>
           <itemPath>mcp25625_click_pic32cm_gv_vl_cnano_pic32cm_gv_vl_cnano/components/sercom5.yml</itemPath>
           <itemPath>mcp25625_click_pic32cm_gv_vl_cnano_pic32cm_gv_vl_cnano/components/stdio.yml</itemPath>
+          <itemPath>mcp25625_click_pic32cm_gv_vl_cnano_pic32cm_gv_vl_cnano/components/evsys.yml</itemPath>
+          <itemPath>mcp25625_click_pic32cm_gv_vl_cnano_pic32cm_gv_vl_cnano/components/HarmonyCore.yml</itemPath>
+          <itemPath>mcp25625_click_pic32cm_gv_vl_cnano_pic32cm_gv_vl_cnano/components/sercom2.yml</itemPath>
         </logicalFolder>
         <itemPath>mcp25625_click_pic32cm_gv_vl_cnano_pic32cm_gv_vl_cnano/mcc-config.mc4</itemPath>
       </logicalFolder>
@@ -285,11 +285,11 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>nEdbgTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.60</languageToolchainVersion>
+        <languageToolchainVersion>5.00</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="PIC32CM-GV_DFP" vendor="Microchip" version="1.1.14"/>
+        <pack name="PIC32CM-GV_DFP" vendor="Microchip" version="1.2.26"/>
         <pack name="CMSIS" vendor="ARM" version="6.2.0"/>
       </packs>
       <ScriptingSettings>
@@ -320,9 +320,8 @@
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
       <C32>
-        <property key="additional-warnings" value="false"/>
+        <property key="additional-warnings" value="true"/>
         <property key="addresss-attribute-use" value="false"/>
-        <property key="appendMe" value=""/>
         <property key="cast-align" value="false"/>
         <property key="code-model" value="default"/>
         <property key="const-model" value="default"/>
@@ -342,7 +341,7 @@
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
         <property key="keep-inline" value="false"/>
-        <property key="make-warnings-into-errors" value="false"/>
+        <property key="make-warnings-into-errors" value="true"/>
         <property key="oXC16gcc-errata" value=""/>
         <property key="oXC16gcc-large-aggregate" value="false"/>
         <property key="oXC16gcc-mpa-lvl" value=""/>
@@ -446,7 +445,6 @@
       <C32CPP>
         <property key="additional-warnings" value="false"/>
         <property key="addresss-attribute-use" value="false"/>
-        <property key="appendMe" value=""/>
         <property key="check-new" value="false"/>
         <property key="eh-specs" value="true"/>
         <property key="enable-app-io" value="false"/>
