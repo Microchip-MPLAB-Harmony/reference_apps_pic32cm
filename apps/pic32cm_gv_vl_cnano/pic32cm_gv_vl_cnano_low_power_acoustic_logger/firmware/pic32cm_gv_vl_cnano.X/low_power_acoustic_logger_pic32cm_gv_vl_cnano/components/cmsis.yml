@@ -1,6 +1,6 @@
 configVersion: 1.0.0
 componentName: cmsis
-coreVersion: 5.8.2
+coreVersion: 5.8.3
 device: PIC32CM3204GV00064
 library: []
 dependency:
@@ -11,11 +11,11 @@ dependency:
 - dependencyPackage: ''
   name: CMSIS_5
   type: package
-  version: 5.9.1-dev
+  version: 5.9.0
 - dependencyPackage: ''
   name: csp
   type: package
-  version: v3.22.7
+  version: v3.23.0
 customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
 data:
   attachments: {}

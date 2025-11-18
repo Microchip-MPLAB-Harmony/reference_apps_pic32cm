@@ -1,6 +1,6 @@
 configVersion: 1.0.0
 componentName: lib_qtouch
-coreVersion: 5.8.2
+coreVersion: 5.8.3
 device: PIC32CM3204GV00064
 library: []
 dependency:

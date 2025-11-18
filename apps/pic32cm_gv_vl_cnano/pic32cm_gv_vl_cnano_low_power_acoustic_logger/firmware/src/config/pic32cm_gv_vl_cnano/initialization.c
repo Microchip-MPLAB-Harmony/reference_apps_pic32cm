@@ -198,10 +198,10 @@ void SYS_Initialize ( void* data )
 	SYSTICK_TimerInitialize();
     SERCOM5_SPI_Initialize();
 
-    TC0_TimerInitialize();
+    RTC_Initialize();
 
     AC_Initialize();
-    RTC_Initialize();
+    TC0_TimerInitialize();
 
 
     /* MISRAC 2012 deviation block start */

@@ -1,6 +1,6 @@
 configVersion: 1.0.0
-coreVersion: 5.8.2
-spaHostVersion: 1.0.0
+coreVersion: 5.8.3
+spaHostVersion: 1.2.0
 device: PIC32CM3204GV00064
 deviceLibrary:
   className: com.microchip.mcc.harmony.Harmony3Library
@@ -28,7 +28,7 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\pic32cm_gv_vl_cnano\configuration.h
   hash: ad07aa84145794be7986923cd90ecda1dc8832a9fdfc77b614e5535cbd7394bc
 - file: ..\src\config\pic32cm_gv_vl_cnano\definitions.h
-  hash: 9f36c40c48a65bc2923a07d12066abc482330d8483dbb6dd72b5c4c97bba1ff4
+  hash: 591218b16d2dae2d33fdade20c17e6143495fad89828664143c0b43bd388c009
 - file: ..\src\config\pic32cm_gv_vl_cnano\device.h
   hash: 0646c4898d4228be017060c9b2d06d435dcadfc3e140a4ead235ba8c11d2ef34
 - file: ..\src\config\pic32cm_gv_vl_cnano\device_cache.h
@@ -42,7 +42,7 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\pic32cm_gv_vl_cnano\exceptions.c
   hash: b0b65c30aa1f7a01ef7be6c1628c331a5ca3eae7dc3bd76ebe647703b76f432d
 - file: ..\src\config\pic32cm_gv_vl_cnano\initialization.c
-  hash: f688b7d7c559187a0307dbbc47882f0231337391afb7401658b470f8b761dde9
+  hash: 2faf0fe1a70ff0edcbd2398778ace583a6b20bc15842056dcaafb2da75a5680d
 - file: ..\src\config\pic32cm_gv_vl_cnano\interrupts.c
   hash: 4c7c135585a4ea82ff229857786ad765d20e922d4c723e4e71633cb488464755
 - file: ..\src\config\pic32cm_gv_vl_cnano\interrupts.h
