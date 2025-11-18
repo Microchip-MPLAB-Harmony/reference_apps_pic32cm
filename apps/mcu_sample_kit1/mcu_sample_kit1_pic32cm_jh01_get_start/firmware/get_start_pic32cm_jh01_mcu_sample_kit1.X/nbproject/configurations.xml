@@ -168,8 +168,26 @@
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
                    projectFiles="true">
+      <logicalFolder name="get_start_pic32cm_jh01_mcu_sample_kit1_mcu_sample_kit1"
+                     displayName="get_start_pic32cm_jh01_mcu_sample_kit1_mcu_sample_kit1"
+                     projectFiles="true">
+        <logicalFolder name="components" displayName="components" projectFiles="true">
+          <itemPath>get_start_pic32cm_jh01_mcu_sample_kit1_mcu_sample_kit1/components/evsys.yml</itemPath>
+          <itemPath>get_start_pic32cm_jh01_mcu_sample_kit1_mcu_sample_kit1/components/core.yml</itemPath>
+          <itemPath>get_start_pic32cm_jh01_mcu_sample_kit1_mcu_sample_kit1/components/rtc.yml</itemPath>
+          <itemPath>get_start_pic32cm_jh01_mcu_sample_kit1_mcu_sample_kit1/components/sercom0.yml</itemPath>
+          <itemPath>get_start_pic32cm_jh01_mcu_sample_kit1_mcu_sample_kit1/components/eic.yml</itemPath>
+          <itemPath>get_start_pic32cm_jh01_mcu_sample_kit1_mcu_sample_kit1/components/cmsis.yml</itemPath>
+          <itemPath>get_start_pic32cm_jh01_mcu_sample_kit1_mcu_sample_kit1/components/nvmctrl.yml</itemPath>
+          <itemPath>get_start_pic32cm_jh01_mcu_sample_kit1_mcu_sample_kit1/components/dfp.yml</itemPath>
+        </logicalFolder>
+        <itemPath>get_start_pic32cm_jh01_mcu_sample_kit1_mcu_sample_kit1/mcc-config.mc4</itemPath>
+      </logicalFolder>
       <itemPath>Makefile</itemPath>
-      <itemPath>get_start_pic32cm_jh01_mcu_sample_kit1.mc3</itemPath>
+    </logicalFolder>
+    <logicalFolder name="LibraryFiles"
+                   displayName="LibraryFiles"
+                   projectFiles="true">
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -244,12 +262,12 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>snap</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.60</languageToolchainVersion>
+        <languageToolchainVersion>5.00</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="CMSIS" vendor="ARM" version="6.1.0"/>
-        <pack name="PIC32CM-JH_DFP" vendor="Microchip" version="1.4.224"/>
+        <pack name="CMSIS" vendor="ARM" version="6.2.0"/>
+        <pack name="PIC32CM-JH_DFP" vendor="Microchip" version="1.5.236"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -279,7 +297,7 @@
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
       <C32>
-        <property key="additional-warnings" value="false"/>
+        <property key="additional-warnings" value="true"/>
         <property key="addresss-attribute-use" value="false"/>
         <property key="appendMe" value=""/>
         <property key="cast-align" value="false"/>
@@ -301,7 +319,7 @@
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
         <property key="keep-inline" value="false"/>
-        <property key="make-warnings-into-errors" value="false"/>
+        <property key="make-warnings-into-errors" value="true"/>
         <property key="oXC16gcc-errata" value=""/>
         <property key="oXC16gcc-large-aggregate" value="false"/>
         <property key="oXC16gcc-mpa-lvl" value=""/>
@@ -360,6 +378,7 @@
         <property key="additional-options-use-response-files" value="false"/>
         <property key="additional-options-write-sla" value="false"/>
         <property key="allocate-dinit" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="code-dinit" value="false"/>
         <property key="ebase-addr" value=""/>
         <property key="enable-check-sections" value="false"/>
@@ -486,6 +505,8 @@
                   value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-7ffff"/>
+        <property key="programmerToGoFilePath"
+                  value="C:/Users/X55309/Downloads/mcu_sample_kit1_pic32cm_jh01_get_start/firmware/get_start_pic32cm_jh01_mcu_sample_kit1.X/debug/mcu_sample_kit1/get_start_pic32cm_jh01_mcu_sample_kit1_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmentry.voltage" value="low"/>
@@ -539,6 +560,8 @@
                   value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-7ffff"/>
+        <property key="programmerToGoFilePath"
+                  value="C:/A_DFT/mcu_sample_kit1_pic32cm_jh01_get_start/firmware/get_start_pic32cm_jh01_mcu_sample_kit1.X/debug/mcu_sample_kit1/get_start_pic32cm_jh01_mcu_sample_kit1_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmentry.voltage" value="low"/>
