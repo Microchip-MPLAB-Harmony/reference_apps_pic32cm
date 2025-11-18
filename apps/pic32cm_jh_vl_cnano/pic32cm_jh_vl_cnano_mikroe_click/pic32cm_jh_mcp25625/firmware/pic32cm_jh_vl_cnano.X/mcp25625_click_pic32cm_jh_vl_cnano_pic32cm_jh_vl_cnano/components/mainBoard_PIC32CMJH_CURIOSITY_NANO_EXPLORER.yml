@@ -1,6 +1,6 @@
 configVersion: 1.0.0
 componentName: mainBoard_PIC32CMJH_CURIOSITY_NANO_EXPLORER
-coreVersion: 5.8.2
+coreVersion: 5.8.3
 device: PIC32CM6408JH00064
 library: []
 dependency:

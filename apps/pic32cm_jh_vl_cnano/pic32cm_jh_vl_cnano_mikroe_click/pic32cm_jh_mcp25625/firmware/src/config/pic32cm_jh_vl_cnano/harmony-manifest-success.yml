@@ -4,14 +4,14 @@
 
 
 project: mcp25625_click_pic32cm_jh_vl_cnano
-creation_date: 2025-09-23T11:59:48.305+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+creation_date: 2025-11-10T10:57:57.043+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
 operating_system: Windows 11
 mcc_mode: IDE            # [IDE|Standalone|Headless]
-mcc_version: v5.6.2
-mcc_core_version: v5.8.2
+mcc_version: v5.6.3
+mcc_core_version: v5.8.3
 mplabx_version: v6.25        # if MPLAB X plugin only
-harmony_version: v5.6.2
-compiler: XC32 4.60
+harmony_version: v5.6.3
+compiler: XC32 5.00
 
 modules:
     - {name: "csp", version: "v3.23.0"}
