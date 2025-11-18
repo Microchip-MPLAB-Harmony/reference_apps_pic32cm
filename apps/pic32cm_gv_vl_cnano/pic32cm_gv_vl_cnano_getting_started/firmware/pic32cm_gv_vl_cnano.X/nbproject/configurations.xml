@@ -50,16 +50,16 @@
           <logicalFolder name="CMSIS" displayName="CMSIS" projectFiles="true">
             <logicalFolder name="Core" displayName="Core" projectFiles="true">
               <logicalFolder name="Include" displayName="Include" projectFiles="true">
-                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_armcc.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/core_cm0plus.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_iccarm.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_compiler.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cachel1_armv7.h</itemPath>
                 <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_version.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_armclang_ltm.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/mpu_armv7.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_armclang.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_compiler.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_iccarm.h</itemPath>
                 <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_gcc.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_armcc.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_armclang.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cmsis_armclang_ltm.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/core_cm0plus.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/mpu_armv7.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core/Include/cachel1_armv7.h</itemPath>
               </logicalFolder>
             </logicalFolder>
           </logicalFolder>
@@ -131,8 +131,27 @@
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
                    projectFiles="true">
+      <logicalFolder name="getting_started_pic32cm_gv_vl_cnano_pic32cm_gv_vl_cnano"
+                     displayName="getting_started_pic32cm_gv_vl_cnano_pic32cm_gv_vl_cnano"
+                     projectFiles="true">
+        <logicalFolder name="components" displayName="components" projectFiles="true">
+          <itemPath>getting_started_pic32cm_gv_vl_cnano_pic32cm_gv_vl_cnano/components/sercom2.yml</itemPath>
+          <itemPath>getting_started_pic32cm_gv_vl_cnano_pic32cm_gv_vl_cnano/components/eic.yml</itemPath>
+          <itemPath>getting_started_pic32cm_gv_vl_cnano_pic32cm_gv_vl_cnano/components/cmsis.yml</itemPath>
+          <itemPath>getting_started_pic32cm_gv_vl_cnano_pic32cm_gv_vl_cnano/components/nvmctrl.yml</itemPath>
+          <itemPath>getting_started_pic32cm_gv_vl_cnano_pic32cm_gv_vl_cnano/components/rtc.yml</itemPath>
+          <itemPath>getting_started_pic32cm_gv_vl_cnano_pic32cm_gv_vl_cnano/components/dfp.yml</itemPath>
+          <itemPath>getting_started_pic32cm_gv_vl_cnano_pic32cm_gv_vl_cnano/components/stdio.yml</itemPath>
+          <itemPath>getting_started_pic32cm_gv_vl_cnano_pic32cm_gv_vl_cnano/components/evsys.yml</itemPath>
+          <itemPath>getting_started_pic32cm_gv_vl_cnano_pic32cm_gv_vl_cnano/components/core.yml</itemPath>
+        </logicalFolder>
+        <itemPath>getting_started_pic32cm_gv_vl_cnano_pic32cm_gv_vl_cnano/mcc-config.mc4</itemPath>
+      </logicalFolder>
       <itemPath>Makefile</itemPath>
-      <itemPath>pic32cm_gv_vl_cnano.mc3</itemPath>
+    </logicalFolder>
+    <logicalFolder name="LibraryFiles"
+                   displayName="LibraryFiles"
+                   projectFiles="true">
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -204,11 +223,11 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>nEdbgTool</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.60</languageToolchainVersion>
+        <languageToolchainVersion>5.00</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="PIC32CM-GV_DFP" vendor="Microchip" version="1.1.14"/>
+        <pack name="PIC32CM-GV_DFP" vendor="Microchip" version="1.2.26"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -238,7 +257,7 @@
         <makeCustomizationNormalizeHexFile>false</makeCustomizationNormalizeHexFile>
       </makeCustomizationType>
       <C32>
-        <property key="additional-warnings" value="false"/>
+        <property key="additional-warnings" value="true"/>
         <property key="addresss-attribute-use" value="false"/>
         <property key="appendMe" value=""/>
         <property key="cast-align" value="false"/>
@@ -260,7 +279,7 @@
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
         <property key="keep-inline" value="false"/>
-        <property key="make-warnings-into-errors" value="false"/>
+        <property key="make-warnings-into-errors" value="true"/>
         <property key="oXC16gcc-errata" value=""/>
         <property key="oXC16gcc-large-aggregate" value="false"/>
         <property key="oXC16gcc-mpa-lvl" value=""/>
@@ -507,6 +526,8 @@
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-7fff"/>
         <property key="poweroptions.powerenable" value="false"/>
+        <property key="programmerToGoFilePath"
+                  value="C:/A_DFT/pic32cm_gv_vl_cnano_getting_started/firmware/pic32cm_gv_vl_cnano.X/debug/pic32cm_gv_vl_cnano/pic32cm_gv_vl_cnano_ptg"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.preservedataflash" value="false"/>
         <property key="programoptions.preservedataflash.ranges"
