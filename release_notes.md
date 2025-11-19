@@ -27,9 +27,9 @@ The following table provides the list of new applications:
 ### Development Tools
 
 - [MPLAB® X IDE v6.25](https://www.microchip.com/mplab/mplab-x-ide)
-- [MPLAB® XC32 C/C++ Compiler v4.60](https://www.microchip.com/mplab/compilers)
+- [MPLAB® XC32 C/C++ Compiler v5.00](https://www.microchip.com/mplab/compilers)
 - MPLAB® X IDE plug-ins:
-  - MPLAB Code Configurator (MCC) v5.6.2   
+  - MPLAB Code Configurator (MCC) v5.6.3
 
 
 
