@@ -161,6 +161,7 @@
                    projectFiles="true">
       <itemPath>Makefile</itemPath>
       <itemPath>../../test_app/test_app.X/test_app.mc3</itemPath>
+      <itemPath>../../test_app/test_app.X/test_app_pic32cm_ls60_cpro/mcc-config.mc4</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -232,14 +233,14 @@
         <targetDevice>PIC32CM5164LS60100</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>EdbgTool</platformTool>
+        <platformTool>noID</platformTool>
         <languageToolchain>XC32</languageToolchain>
         <languageToolchainVersion>5.00</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
+        <pack name="CMSIS" vendor="ARM" version="6.2.0"/>
         <pack name="PIC32CM-LS_DFP" vendor="Microchip" version="1.3.278"/>
-        <pack name="CMSIS" vendor="ARM" version="5.8.0"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -351,6 +352,7 @@
         <property key="additional-options-use-response-files" value="false"/>
         <property key="additional-options-write-sla" value="false"/>
         <property key="allocate-dinit" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="code-dinit" value="false"/>
         <property key="ebase-addr" value=""/>
         <property key="enable-check-sections" value="false"/>
@@ -375,7 +377,7 @@
         <property key="kseg-origin" value=""/>
         <property key="linker-symbols" value=""/>
         <property key="map-file" value="${DISTDIR}/${PROJECTNAME}.${IMAGE_TYPE}.map"/>
-        <property key="no-device-startup-code" value="false"/>
+        <property key="no-device-startup-code" value="false;true"/>
         <property key="no-ivt" value="false"/>
         <property key="no-startup-files" value="false"/>
         <property key="oXC16ld-force-link" value="false"/>

@@ -88,6 +88,10 @@
 #define SHARED_LIB_IMPORT       extern
 #endif
 
+#ifdef __APPLE__
+#define ATCA_VECTOR_NO_PRAGMA_PACK
+#endif
+
 //#elif defined(__ICC) || defined(__INTEL_COMPILER)
 /* Intel ICC/ICPC. ------------------------------------------ */
 
@@ -139,6 +143,9 @@
 #define SHARED_LIB_IMPORT       extern
 #endif
 
+#ifdef __APPLE__
+#define ATCA_VECTOR_NO_PRAGMA_PACK
+#endif
 
 //#elif defined(__HP_cc) || defined(__HP_aCC)
 /* Hewlett-Packard C/aC++. ---------------------------------- */
@@ -184,14 +191,14 @@
 #elif defined __CC_ARM
 /* ARMCC/RealView ------------------------------------------- */
 #ifdef __BIG_ENDIAN
-#define ATCA_UINT16_HOST_TO_LE(x)  ((x >> 8) | ((x & 0xFF) << 8))
-#define ATCA_UINT16_LE_TO_HOST(x)  ((x >> 8) | ((x & 0xFF) << 8))
+#define ATCA_UINT16_HOST_TO_LE(x)  (((x) >> 8) | (((x) & 0xFF) << 8))
+#define ATCA_UINT16_LE_TO_HOST(x)  (((x) >> 8) | (((x) & 0xFF) << 8))
 #define ATCA_UINT32_HOST_TO_LE(x)  __rev(x)
 #define ATCA_UINT32_HOST_TO_BE(x)  (x)
 #define ATCA_UINT32_BE_TO_HOST(x)  (x)
 #define ATCA_UINT64_HOST_TO_BE(x)  (x)
 #define ATCA_UINT64_BE_TO_HOST(x)  (x)
-#define ATCA_UINT64_HOST_TO_LE(x)  (((uint64_t)__rev((uint32_t)x) << 32) | (uint64_t)__rev((uint32_t)(x >> 32)))
+#define ATCA_UINT64_HOST_TO_LE(x)  (((uint64_t)__rev((uint32_t)(x)) << 32) | (uint64_t)__rev((uint32_t)((x) >> 32)))
 #define ATCA_PLATFORM_BE
 #else
 #define ATCA_UINT16_HOST_TO_LE(x)  (x)
@@ -199,8 +206,8 @@
 #define ATCA_UINT32_HOST_TO_LE(x)  (x)
 #define ATCA_UINT32_HOST_TO_BE(x)  __rev(x)
 #define ATCA_UINT32_BE_TO_HOST(x)  __rev(x)
-#define ATCA_UINT64_HOST_TO_BE(x)  (((uint64_t)__rev((uint32_t)x) << 32) | (uint64_t)__rev((uint32_t)(x >> 32)))
-#define ATCA_UINT64_BE_TO_HOST(x)  (((uint64_t)__rev((uint32_t)x) << 32) | (uint64_t)__rev((uint32_t)(x >> 32)))
+#define ATCA_UINT64_HOST_TO_BE(x)  (((uint64_t)__rev((uint32_t)(x)) << 32) | (uint64_t)__rev((uint32_t)((x) >> 32)))
+#define ATCA_UINT64_BE_TO_HOST(x)  (((uint64_t)__rev((uint32_t)(x)) << 32) | (uint64_t)__rev((uint32_t)((x) >> 32)))
 #define ATCA_UINT64_HOST_TO_LE(x)  (x)
 #endif
 
@@ -220,7 +227,7 @@
 #define ATCA_UINT32_BE_TO_HOST(x)  (x)
 #define ATCA_UINT64_HOST_TO_BE(x)  (x)
 #define ATCA_UINT64_BE_TO_HOST(x)  (x)
-#define ATCA_UINT64_HOST_TO_LE(x)  (((uint64_t)__REV((uint32_t)x) << 32) | (uint64_t)__REV((uint32_t)(x >> 32)))
+#define ATCA_UINT64_HOST_TO_LE(x)  (((uint64_t)__REV((uint32_t)(x)) << 32) | (uint64_t)__REV((uint32_t)((x) >> 32)))
 #define ATCA_PLATFORM_BE
 #else
 #define ATCA_UINT16_HOST_TO_LE(x)  (x)
@@ -228,8 +235,8 @@
 #define ATCA_UINT32_HOST_TO_LE(x)  (x)
 #define ATCA_UINT32_HOST_TO_BE(x)  __REV(x)
 #define ATCA_UINT32_BE_TO_HOST(x)  __REV(x)
-#define ATCA_UINT64_HOST_TO_BE(x)  (((uint64_t)__REV((uint32_t)x) << 32) | (uint64_t)__REV((uint32_t)(x >> 32)))
-#define ATCA_UINT64_BE_TO_HOST(x)  (((uint64_t)__REV((uint32_t)x) << 32) | (uint64_t)__REV((uint32_t)(x >> 32)))
+#define ATCA_UINT64_HOST_TO_BE(x)  (((uint64_t)__REV((uint32_t)(x)) << 32) | (uint64_t)__REV((uint32_t)((x) >> 32)))
+#define ATCA_UINT64_BE_TO_HOST(x)  (((uint64_t)__REV((uint32_t)(x)) << 32) | (uint64_t)__REV((uint32_t)((x) >> 32)))
 #define ATCA_UINT64_HOST_TO_LE(x)  (x)
 #endif
 

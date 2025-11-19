@@ -138,8 +138,32 @@
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
                    projectFiles="true">
+      <logicalFolder name="host_app_nvm_pic32cm_ls60_cpro"
+                     displayName="host_app_nvm_pic32cm_ls60_cpro"
+                     projectFiles="true">
+        <logicalFolder name="components" displayName="components" projectFiles="true">
+          <itemPath>host_app_nvm_pic32cm_ls60_cpro/components/atecc608.yml</itemPath>
+          <itemPath>host_app_nvm_pic32cm_ls60_cpro/components/stdio_s.yml</itemPath>
+          <itemPath>host_app_nvm_pic32cm_ls60_cpro/components/BSP_PIC32CM_LS60_Curiosity_Pro.yml</itemPath>
+          <itemPath>host_app_nvm_pic32cm_ls60_cpro/components/pm.yml</itemPath>
+          <itemPath>host_app_nvm_pic32cm_ls60_cpro/components/cryptoauthlib.yml</itemPath>
+          <itemPath>host_app_nvm_pic32cm_ls60_cpro/components/core.yml</itemPath>
+          <itemPath>host_app_nvm_pic32cm_ls60_cpro/components/evsys.yml</itemPath>
+          <itemPath>host_app_nvm_pic32cm_ls60_cpro/components/sercom4.yml</itemPath>
+          <itemPath>host_app_nvm_pic32cm_ls60_cpro/components/atecc608_0.yml</itemPath>
+          <itemPath>host_app_nvm_pic32cm_ls60_cpro/components/nvmctrl.yml</itemPath>
+          <itemPath>host_app_nvm_pic32cm_ls60_cpro/components/cmsis.yml</itemPath>
+          <itemPath>host_app_nvm_pic32cm_ls60_cpro/components/dfp.yml</itemPath>
+          <itemPath>host_app_nvm_pic32cm_ls60_cpro/components/sercom1.yml</itemPath>
+          <itemPath>host_app_nvm_pic32cm_ls60_cpro/components/sercom3.yml</itemPath>
+        </logicalFolder>
+        <itemPath>host_app_nvm_pic32cm_ls60_cpro/mcc-config.mc4</itemPath>
+      </logicalFolder>
       <itemPath>Makefile</itemPath>
-      <itemPath>host_app_nvm.mc3</itemPath>
+    </logicalFolder>
+    <logicalFolder name="LibraryFiles"
+                   displayName="LibraryFiles"
+                   projectFiles="true">
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -194,12 +218,12 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>noID</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.60</languageToolchainVersion>
+        <languageToolchainVersion>5.00</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
+        <pack name="CMSIS" vendor="ARM" version="6.2.0"/>
         <pack name="PIC32CM-LS_DFP" vendor="Microchip" version="1.3.278"/>
-        <pack name="CMSIS" vendor="ARM" version="5.8.0"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>

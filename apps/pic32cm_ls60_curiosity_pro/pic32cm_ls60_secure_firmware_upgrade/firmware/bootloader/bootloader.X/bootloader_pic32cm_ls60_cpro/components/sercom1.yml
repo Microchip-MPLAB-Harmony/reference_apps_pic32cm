@@ -1,0 +1,177 @@
+configVersion: 1.0.0
+componentName: sercom1
+coreVersion: 5.8.3
+device: PIC32CM5164LS60100
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: sercom1
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: csp
+  type: package
+  version: v3.23.0
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments:
+    children:
+    - children:
+      - attributes:
+          id: SERCOM1_I2C
+        children:
+        - children:
+          - attributes:
+              id: targetComponentID
+            children:
+            - type: Value
+              value: atecc608_0
+            type: String
+          - attributes:
+              id: targetAttachmentID
+            children:
+            - type: Value
+              value: ATECC608_DEP_PLIB_I2C
+            type: String
+          type: Attributes
+        type: DirectCapability
+      type: Attachments
+    type: sercom1
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: sercom1
+          x: '19'
+          y: '206'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    I2CM_BAUD:
+      attributes:
+        id: I2CM_BAUD
+      children:
+      - children:
+        - attributes:
+            id: sercom1
+            value: '5643'
+          type: Dynamic
+        type: Values
+      type: Hex
+    I2CM_MODE:
+      attributes:
+        id: I2CM_MODE
+      children:
+      - children:
+        - attributes:
+            value: '1'
+          type: User
+        type: Values
+      type: KeyValueSet
+    I2CS_SDASETUP_TIME_REG_VALUE:
+      attributes:
+        id: I2CS_SDASETUP_TIME_REG_VALUE
+      children:
+      - children:
+        - attributes:
+            id: sercom1
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    I2CS_SDASETUP_TIME_SUPPORT:
+      attributes:
+        id: I2CS_SDASETUP_TIME_SUPPORT
+      children:
+      - children:
+        - attributes:
+            id: sercom1
+            value: 'true'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    I2C_CLOCK_SPEED:
+      attributes:
+        id: I2C_CLOCK_SPEED
+      children:
+      - children:
+        - attributes:
+            id: max
+          children:
+          - type: Value
+            value: '1000'
+          type: Integer
+        type: Attributes
+      - children:
+        - attributes:
+            value: '1000'
+          type: User
+        type: Values
+      type: Integer
+    I2C_CLOCK_SPEED_HZ:
+      attributes:
+        id: I2C_CLOCK_SPEED_HZ
+      children:
+      - children:
+        - attributes:
+            id: sercom1
+            value: '1000000'
+          type: Dynamic
+        type: Values
+      type: Integer
+    I2C_SCLSM:
+      attributes:
+        id: I2C_SCLSM
+      children:
+      - children:
+        - attributes:
+            id: sercom1
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: Integer
+    RECEIVE_DATA_REGISTER:
+      attributes:
+        id: RECEIVE_DATA_REGISTER
+      children:
+      - children:
+        - attributes:
+            id: sercom1
+            value: ''
+          type: Dynamic
+        type: Values
+      type: String
+    SERCOM_MODE:
+      attributes:
+        id: SERCOM_MODE
+      children:
+      - children:
+        - attributes:
+            id: readOnly
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            id: sercom1
+            value: '0'
+          type: Dynamic
+        type: Values
+      type: KeyValueSet
+    TRANSMIT_DATA_REGISTER:
+      attributes:
+        id: TRANSMIT_DATA_REGISTER
+      children:
+      - children:
+        - attributes:
+            id: sercom1
+            value: ''
+          type: Dynamic
+        type: Values
+      type: String
+  userData: {}

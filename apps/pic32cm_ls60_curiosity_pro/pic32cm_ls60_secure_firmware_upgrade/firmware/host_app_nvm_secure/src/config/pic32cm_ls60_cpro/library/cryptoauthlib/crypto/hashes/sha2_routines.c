@@ -30,7 +30,10 @@
 
 #ifdef __COVERITY__
 #pragma coverity compliance block \
-    (deviate "CERT INT30-C" "Wrap doesnt affect functionality for SHA")
+    (deviate "MISRA C-2012 Rule 20.7" "Macro expansion without parantheses doesnt affect functionality for SHA") \
+    (deviate "MISRA C-2012 Rule 10.1" "Essential type of operand doesnt affect functionality for SHA") \
+    (deviate "MISRA C-2012 Rule 10.3" "Essential type of operand doesnt affect functionality for SHA") \
+    (deviate "MISRA C-2012 Rule 10.4" "Essential type of operand doesnt affect functionality for SHA")
 #endif
 
 #define rotate_right(value, places) (((value) >> (places)) | ((value) << (32U - (places))))
@@ -84,7 +87,7 @@ static ATCA_STATUS sw_sha256_process(sw_sha256_ctx* ctx, const uint8_t* blocks, 
         uint32_t s0, s1 = 0U;
         uint32_t t1, t2 = 0U;
         uint32_t maj, ch = 0U;
-        uint32_t rotate_register[8] = {0U};
+        uint32_t rotate_register[8] = {0};
         const uint8_t* cur_msg_block = &blocks[block * SHA256_BLOCK_SIZE];
 
         // Swap word bytes
@@ -156,7 +159,7 @@ static ATCA_STATUS sw_sha256_process(sw_sha256_ctx* ctx, const uint8_t* blocks, 
 }
 #endif
 
-#if ATCA_CRYPTO_SHA512_EN
+#if ATCA_CRYPTO_SHA512_EN || ATCA_CRYPTO_SHA384_EN
 /**
  * \brief Processes whole blocks (128 bytes) of data.
  *
@@ -216,7 +219,7 @@ static ATCA_STATUS sw_sha512_process(sw_sha512_ctx* ctx, const uint8_t* blocks, 
          uint64_t s0, s1 = 0U;
          uint64_t t1, t2 = 0U;
          uint64_t maj, ch = 0U ;
-         uint64_t rotate_register[8] = {0U};
+         uint64_t rotate_register[8] = {0};
          const uint8_t* cur_msg_block = &blocks[block * SHA512_BLOCK_SIZE];
 
          // Swap word bytes
@@ -484,7 +487,7 @@ ATCA_STATUS sw_sha256(const uint8_t* message, unsigned int len, uint8_t digest[S
 }
 #endif
 
-#if ATCA_CRYPTO_SHA512_EN
+#if ATCA_CRYPTO_SHA512_EN || ATCA_CRYPTO_SHA384_EN
 /**
  * \brief Intialize the software SHA512.
  *
@@ -757,7 +760,7 @@ ATCA_STATUS sw_sha384_update(sw_sha512_ctx* ctx, const uint8_t* msg, uint32_t ms
 ATCA_STATUS sw_sha384_final(sw_sha512_ctx* ctx, uint8_t digest[SHA384_DIGEST_SIZE])
 {
    ATCA_STATUS status;
-   uint8_t tmp_dgst[SHA512_DIGEST_SIZE] = {0u};
+   uint8_t tmp_dgst[SHA512_DIGEST_SIZE] = {0};
 
    status = sw_sha512_final(ctx, tmp_dgst);
    // For SHA384 copy only 48 bytes to O/P digest
@@ -788,4 +791,11 @@ ATCA_STATUS sw_sha384(const uint8_t* message, unsigned int len, uint8_t digest[S
 
     return status;
 }
+#endif
+
+#ifdef __COVERITY__
+#pragma coverity compliance end_block "MISRA C-2012 Rule 20.7"  \
+#pragma coverity compliance end_block "MISRA C-2012 Rule 10.1"  \
+#pragma coverity compliance end_block "MISRA C-2012 Rule 10.3"  \
+#pragma coverity compliance end_block "MISRA C-2012 Rule 10.4"
 #endif

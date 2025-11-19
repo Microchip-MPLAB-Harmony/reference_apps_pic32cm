@@ -35,6 +35,9 @@
 #define ATCA_NO_HEAP
 #endif
 
+/** Define if the library is not to use malloc/free */
+#define ATCA_CHECK_PARAMS_EN               (FEATURE_ENABLED)
+
 /** Symmetric Commands Configurations */
 
 /* AES Command */
@@ -142,7 +145,7 @@
 
 /* Atcacert functionality required by the library  */
 
-#define ATCACERT_FULLSTOREDCERT_EN           (FEATURE_ENABLED)
+#define ATCACERT_FULLSTOREDCERT_EN           (FEATURE_DISABLED)
 
 #define ATCACERT_COMPCERT_EN                 (FEATURE_ENABLED)
 
@@ -172,9 +175,9 @@
 
 #define ATCAC_SHA256_EN                    (FEATURE_ENABLED)
 
-#define ATCAC_SHA384_EN                    (FEATURE_DISABLED)
+#define ATCAC_SHA384_EN                    (FEATURE_ENABLED)
 
-#define ATCAC_SHA512_EN                    (FEATURE_DISABLED)
+#define ATCAC_SHA512_EN                    (FEATURE_ENABLED)
 
 #define ATCAC_SHA256_HMAC_EN               (ATCAC_SHA256_EN)
 
@@ -184,11 +187,11 @@
 
 /* External Crypto libraries configurations for host side operations */
 
-#define ATCAC_RANDOM_EN                    (ATCA_HOSTLIB_EN)
+#define ATCAC_RANDOM_EN                    (FEATURE_DISABLED)
 
-#define ATCAC_SIGN_EN                      (ATCA_HOSTLIB_EN)
+#define ATCAC_SIGN_EN                      (FEATURE_DISABLED)
 
-#define ATCAC_VERIFY_EN                    (ATCA_HOSTLIB_EN)
+#define ATCAC_VERIFY_EN                    (FEATURE_DISABLED)
 
 
 #define atca_delay_ms   hal_delay_ms
@@ -219,8 +222,8 @@
 #define PLIB_I2C_ERROR_NONE     SERCOM_I2C_ERROR_NONE
 #define PLIB_I2C_TRANSFER_SETUP SERCOM_I2C_TRANSFER_SETUP
 
-typedef bool (* atca_i2c_plib_read)( uint16_t, uint8_t *, uint32_t );
-typedef bool (* atca_i2c_plib_write)( uint16_t, uint8_t *, uint32_t );
+typedef bool (* atca_i2c_plib_read)( uint16_t address, uint8_t * data, uint32_t datalen);
+typedef bool (* atca_i2c_plib_write)( uint16_t address, uint8_t * data, uint32_t datalen);
 typedef bool (* atca_i2c_plib_is_busy)( void );
 typedef PLIB_I2C_ERROR (* atca_i2c_error_get)( void );
 typedef bool (* atca_i2c_plib_transfer_setup)(PLIB_I2C_TRANSFER_SETUP* setup, uint32_t srcClkFreq);

@@ -63,12 +63,13 @@ ATCA_STATUS calib_ecdh_base(ATCADevice device, uint8_t mode, uint16_t key_id, co
 
     do
     {
+#if ATCA_CHECK_PARAMS_EN
         if (device == NULL)
         {
             status = ATCA_TRACE(ATCA_BAD_PARAM, "NULL pointer received");
             break;
         }
-
+#endif
 
         packet = calib_packet_alloc();
         if(NULL == packet)
@@ -180,7 +181,7 @@ ATCA_STATUS calib_ecdh_enc(ATCADevice device, uint16_t key_id, const uint8_t* pu
             (void)ATCA_TRACE(status, "ECDH Failed"); break;
         }
 #if defined(ATCA_USE_CONSTANT_HOST_NONCE)
-        if ((status = calib_read_enc(device, key_id | 0x0001, 0, pms, read_key, read_key_id)) != ATCA_SUCCESS)
+        if ((status = calib_read_enc(device, key_id | 0x0001u, 0, pms, read_key, read_key_id)) != ATCA_SUCCESS)
 #else
         if ((status = calib_read_enc(device, key_id | 0x0001u, 0, pms, read_key, read_key_id, num_in)) != ATCA_SUCCESS)
 #endif

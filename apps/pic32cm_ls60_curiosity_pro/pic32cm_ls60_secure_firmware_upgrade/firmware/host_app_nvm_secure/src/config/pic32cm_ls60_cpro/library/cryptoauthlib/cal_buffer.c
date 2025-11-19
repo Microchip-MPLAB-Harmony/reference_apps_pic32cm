@@ -693,6 +693,11 @@ ATCA_STATUS cal_buf_set(cal_buffer * dst, size_t dst_offset, uint8_t value, size
     return status;
 }
 
+#ifdef __GNUC__
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Waggregate-return"
+#endif
+
 /** \brief Initialize a cal buffer with constant pointer
  * Returns the initialized cal buffer
  */
@@ -707,6 +712,10 @@ cal_buffer cal_buf_init_const_ptr(size_t len,const uint8_t* message)
     return init_buf;
 }
 
+#ifdef __GNUC__
+#pragma GCC diagnostic pop
+#endif
+
 #ifdef ATCA_PRINTF
 void cal_buf_print(cal_buffer * buf)
 {
@@ -714,11 +723,11 @@ void cal_buf_print(cal_buffer * buf)
 
     if (NULL == buf)
     {
-        printf("Buffer is NULL\n");
+        (void)printf("Buffer is NULL\n");
     }
     else if (NULL == buf->buf)
     {
-        printf("Buffer is inconsistent\n");
+        (void)printf("Buffer is inconsistent\n");
     }
     else
     {
@@ -726,7 +735,7 @@ void cal_buf_print(cal_buffer * buf)
         {
             for (i = 0; i < buf->len; i++)
             {
-                printf("%02x ", buf->buf[i]);
+                (void)printf("%02x ", buf->buf[i]);
             }
 #if MULTIPART_BUF_EN
             buf = buf->next;

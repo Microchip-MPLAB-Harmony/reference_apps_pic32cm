@@ -1,0 +1,85 @@
+configVersion: 1.0.0
+componentName: cryptoauthlib
+coreVersion: 5.8.3
+device: PIC32CM5164LS60100
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: cryptoauthlib
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: cryptoauthlib
+  type: package
+  version: v3.7.9
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: cryptoauthlib
+          x: '199'
+          y: '398'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    CAL_ENABLE_RTOS:
+      attributes:
+        id: CAL_ENABLE_RTOS
+      children:
+      - children:
+        - attributes:
+            id: cryptoauthlib
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    CAL_ENABLE_TA10x_AES_AUTH:
+      attributes:
+        id: CAL_ENABLE_TA10x_AES_AUTH
+      children:
+      - children:
+        - attributes:
+            id: cryptoauthlib
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    CAL_ENABLE_TA10x_FCE:
+      attributes:
+        id: CAL_ENABLE_TA10x_FCE
+      children:
+      - children:
+        - attributes:
+            id: cryptoauthlib
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    CAL_ENABLE_WOLFCRYPTO:
+      attributes:
+        id: CAL_ENABLE_WOLFCRYPTO
+      children:
+      - children:
+        - attributes:
+            id: cryptoauthlib
+            value: 'false'
+          type: Dynamic
+        type: Values
+      type: Boolean
+    CAL_NON_SECURE:
+      attributes:
+        id: CAL_NON_SECURE
+      children:
+      - children:
+        - attributes:
+            value: '1'
+          type: User
+        type: Values
+      type: KeyValueSet
+  userData: {}

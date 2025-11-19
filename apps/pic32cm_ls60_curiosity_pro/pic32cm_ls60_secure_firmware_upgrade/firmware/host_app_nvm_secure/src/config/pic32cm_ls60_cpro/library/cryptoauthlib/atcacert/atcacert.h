@@ -67,7 +67,7 @@ extern "C" {
  * +---------------+---------------+-----------------------------------------------------------------------------------------------------+
  * | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | | |  | | |  | |
  * | 5 bits  | 4 bits| 5 bits  | 5 bits  | 5 bits  |             16 bits           | 4 bits| 4 bits| 4 bits| 4 bits|  2  |  2   | 4 bits |
- * |  Issue  | Issue |  Issue  | Issue   | Expire  |            Signer ID          |Templa | Chain |  SN   | Format| bits| bits |Reserved|
+ * | Issue   | Issue |  Issue  | Issue   | Expire  |            Signer ID          |Templa | Chain |  SN   | Format| bits| bits |Reserved|
  * |  Year   | Month |   Day   | Hour    | Years   |                               | te ID |   ID  | Source|Version|Issue|Expire|        |
  * |         |       |         |         |         |                               |       |       |       |       |Years|Years |        |
  * +---------+-------+---------+---------+---------+-------------------------------+-------+-------+-------+-------+-----+------+--------+
