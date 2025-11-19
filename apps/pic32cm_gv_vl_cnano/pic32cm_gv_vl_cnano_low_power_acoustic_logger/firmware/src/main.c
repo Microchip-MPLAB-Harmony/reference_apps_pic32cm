@@ -1,16 +1,19 @@
 /*******************************************************************************
-  System Initialization File
+  Main Source File
+
+  Company:
+    Microchip Technology Inc.
 
   File Name:
-    initialization.c
+    main.c
 
   Summary:
-    This file contains source code necessary to initialize the system.
+    This file contains the "main" function for a project.
 
   Description:
-    This file contains source code necessary to initialize the system.  It
-    implements the "SYS_Initialize" function, defines the configuration bits,
-    and allocates any necessary global system resources,
+    This file contains the "main" function for a project.  The
+    "main" function calls the "SYS_Initialize" function to initialize the state
+    machines of all modules in the system
  *******************************************************************************/
 
 // DOM-IGNORE-BEGIN
